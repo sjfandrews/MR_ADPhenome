@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+I22Go9	fGRgQP	Huang2017aaos	Jansen2018insom	5e-8	FALSE	Inverse variance weighted (fixed effects)	14	0	-0.21544832970565178	0.13299277688074326	0.10523222658022346
+I22Go9	fGRgQP	Huang2017aaos	Jansen2018insom	5e-8	FALSE	Weighted median	14	0	-0.21148617905913433	0.19127153939806454	0.268862642435115
+I22Go9	fGRgQP	Huang2017aaos	Jansen2018insom	5e-8	FALSE	Weighted mode	14	0	-0.1254500279748756	0.2784942079893582	0.659800834358238
+I22Go9	fGRgQP	Huang2017aaos	Jansen2018insom	5e-8	FALSE	MR Egger	14	0	-0.5324105506333876	0.7407513911325524	0.4860591685729434

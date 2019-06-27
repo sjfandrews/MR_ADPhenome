@@ -1,0 +1,17 @@
+.DS_Store
+._.DS_Store
+.Rapp.history
+.Rhistory
+.snakemake/*
+.snakejob/*
+raw/*
+docs/*
+Drafts*
+mrbase.oauth
+*.clumped.gz
+*.clumped
+*.log
+Rplots.pdf
+data/test/*
+results/test/*
+Shiny/.Rapp.history

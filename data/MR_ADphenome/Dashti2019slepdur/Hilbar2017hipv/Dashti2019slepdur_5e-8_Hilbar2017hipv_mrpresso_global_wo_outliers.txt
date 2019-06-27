@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+UQcrEJ	A21Vxi	Hilbar2017hipv	Dashti2019slepdur	5e-8	TRUE	5	104.68815963316112	0.0276

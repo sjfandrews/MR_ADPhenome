@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+IhRCDf	Pt59tf	Deming2017tau	Willer2013tg	5e-6	FALSE	0	132.73004284635022	0.0917

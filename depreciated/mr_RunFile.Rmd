@@ -1,0 +1,51 @@
+---
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    number_sections: false
+    toc_depth: 4
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+params:
+  rwd: rwd
+  trait1.summary: trait1.summary
+  trait1.clump: trait1.clump
+  trait1.name: trait1.name
+  trait1.blurb: trait1.blurb
+  trait1.code: trait1.code
+  trait2.summary: trait2.summary
+  trait2.clump: trait2.clump
+  trait2.name: trait2.name
+  trait2.blurb: trait2.blurb
+  trait2.code: trait2.code
+  trait1_exp.path: trait1_exp.path
+  trait2_exp.path: trait2_exp.path
+  out.path: out.path
+  p.threshold: p.threshold
+  pleitropy: pleitropy
+---
+
+# Mendelian Randomization Analysis: `r params$trait1.name` and `r params$trait2.name`
+By Dr. Shea Andrews, generated on `r Sys.Date()`
+
+---
+
+```{r MasterSetup, echo=FALSE, warning =FALSE, message=FALSE, include = F}
+knitr::opts_knit$set(root.dir = params$rwd)
+knitr::opts_chunk$set(echo = TRUE)
+
+ifelse(!dir.exists(paste0('../', params$out.path, params$trait1.code)), 
+       dir.create(paste0('../', params$out.path, params$trait1.code)), 
+       FALSE)
+
+knitr::opts_chunk$set(cache.path = paste0('../', params$out.path, params$trait1.code, '/MR_cache/'))
+
+```
+
+```{r DatasetCreation, child = 'mr_DataHarmonization.Rmd'}
+```
+
+```{r MRanalysis, child = 'mr_DataAnalysis.Rmd'}
+```

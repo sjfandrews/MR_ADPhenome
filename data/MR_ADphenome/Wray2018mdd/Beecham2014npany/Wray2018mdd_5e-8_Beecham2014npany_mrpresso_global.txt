@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+LNaLpI	bfp3DV	Beecham2014npany	Wray2018mdd	5e-8	FALSE	0	12.707277734205391	0.212

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Pkx1Um	uNy3oq	Hilbar2017hipv	NealeLab2018oilfish	5e-8	FALSE	-0.010708403227510419	0.009169694567654478	0.24903630827154274
+Pkx1Um	uNy3oq	Hilbar2017hipv	NealeLab2018oilfish	5e-8	TRUE	-0.007752642645565789	0.007460079982624141	0.30451222265509126

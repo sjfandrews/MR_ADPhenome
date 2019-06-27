@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+SMewTn	moEvqC	Kunkle2019load	Evangelou2018pp	5e-8	FALSE	0.004184255782174409	0.0025261379240773107	0.09820413090093712
+SMewTn	moEvqC	Kunkle2019load	Evangelou2018pp	5e-8	TRUE	0.005959427081908083	0.00215287547004988	0.0058256246458086944

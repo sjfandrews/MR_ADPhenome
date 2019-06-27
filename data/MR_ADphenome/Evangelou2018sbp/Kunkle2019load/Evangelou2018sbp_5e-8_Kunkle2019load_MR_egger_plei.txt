@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+BlsqCr	pYFiLa	Kunkle2019load	Evangelou2018sbp	5e-8	FALSE	0.0020787888530488727	0.0022503472593246782	0.3559385390015284
+BlsqCr	pYFiLa	Kunkle2019load	Evangelou2018sbp	5e-8	TRUE	0.0031461875830345347	0.0019901617836571303	0.1143761472888315

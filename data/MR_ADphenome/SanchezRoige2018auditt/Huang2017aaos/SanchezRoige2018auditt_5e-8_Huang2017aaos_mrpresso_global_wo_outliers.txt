@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Mfqpl7	L8pT7A	Huang2017aaos	SanchezRoige2018auditt	5e-8	TRUE	1	12.061917451570848	0.295

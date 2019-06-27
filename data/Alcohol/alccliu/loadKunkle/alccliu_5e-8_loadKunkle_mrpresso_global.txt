@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+H6i8GZ	W3Fem9	loadKunkle	alccliu	1	99.26177381496613	<2e-04

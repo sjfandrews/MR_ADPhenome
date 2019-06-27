@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+i72yhx	5fP75x	Hilbar2017hipv	Willer2013ldl	5e-8	TRUE	3	106.06622157128677	0.0457

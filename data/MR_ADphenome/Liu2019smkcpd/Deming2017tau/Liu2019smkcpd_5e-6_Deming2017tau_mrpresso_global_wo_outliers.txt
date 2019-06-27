@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+I64Lbr	CUWLVI	Deming2017tau	Liu2019smkcpd	5e-6	TRUE	2	62.77843378887229	0.716

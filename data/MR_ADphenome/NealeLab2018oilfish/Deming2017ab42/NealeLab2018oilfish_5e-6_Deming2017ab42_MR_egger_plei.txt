@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+3Eqf0u	KyGLTZ	Deming2017ab42	NealeLab2018oilfish	5e-6	FALSE	-4.115582808745692e-4	0.0020072273451281707	0.8378581212138798	NA

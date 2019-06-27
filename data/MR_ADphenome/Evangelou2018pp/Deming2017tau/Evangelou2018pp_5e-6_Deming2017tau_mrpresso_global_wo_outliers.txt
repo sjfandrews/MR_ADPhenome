@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+e1tiXT	YyYSSw	Deming2017tau	Evangelou2018pp	5e-6	TRUE	44	886.7211764471753	0.0132

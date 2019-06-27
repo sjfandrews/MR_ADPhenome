@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+ktvykp	jzBOJI	Deming2017ptau	Willer2013tc	5e-8	FALSE	-0.00232461477265916	0.001255400448538088	0.06717612828670705
+ktvykp	jzBOJI	Deming2017ptau	Willer2013tc	5e-8	TRUE	-1.2744474077567845e-4	0.0013887582156594572	0.9270769821841839

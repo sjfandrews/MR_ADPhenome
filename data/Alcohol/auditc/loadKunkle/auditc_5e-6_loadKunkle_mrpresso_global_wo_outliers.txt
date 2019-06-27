@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+KjrXdD	VW24hz	loadKunkle	auditc	1	75.62276109648883	0.0038

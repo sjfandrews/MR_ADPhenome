@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+imhkLT	txxs49	Deming2017ptau	Dashti2019slepdur	5e-8	FALSE	0	71.98083098735532	0.5748

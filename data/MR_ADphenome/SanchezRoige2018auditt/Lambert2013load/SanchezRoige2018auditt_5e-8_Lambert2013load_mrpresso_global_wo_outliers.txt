@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	TRUE	1	20.762827383303556	0.018

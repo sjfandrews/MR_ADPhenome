@@ -1,0 +1,642 @@
+---
+title: "Untitled"
+author: "Shea Andrews"
+date: "9/12/2018"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(TwoSampleMR)
+#library(dotwhisker)
+library(Hmisc)
+setwd('~/Dropbox/Research/PostDoc-MSSM/2_MR/')
+
+myspread <- function(df, key, value) {
+  # quote key
+  keyq <- rlang::enquo(key)
+  # break value vector into quotes
+  valueq <- rlang::enquo(value)
+  s <- rlang::quos(!!valueq)
+  df %>% gather(variable, value, !!!s) %>%
+    unite(temp, !!keyq, variable) %>%
+    spread(temp, value)
+}
+
+
+```
+
+
+```{r readin, echo=FALSE}
+path_derived <- '~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/'
+path_output <- '~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/'
+
+## MR-PRESSO gloabl tests
+filenames_mrpresso <- list.files(path_derived, pattern="*_mrpresso_global.txt", recursive = T) %>% 
+  paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', .)
+## MR-PRESSO dat 
+filenames_mrdat <- list.files(path_derived, pattern="*_mrpresso_MRdat.csv", recursive = T) %>% 
+  paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', .)
+## Heterogenity Test
+filenames_heterogenity <- list.files(path_output, pattern="*_heterogenity.csv", recursive = T) %>% 
+  paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', .)
+## Pleitropy Test
+filenames_egger <- list.files(path_output, pattern="*_egger_plei.csv", recursive = T) %>% 
+  paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', .)
+## MR results 
+filenames_res <- list.files(path_output, pattern="*_MR_Results.csv", recursive = T) %>% 
+  paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', .) 
+filenames_res <- filenames_res[grepl('OldReports', filenames_res) == F]
+## MR results after outlier removal
+filenames_res_mrpresso <- list.files(path_output, pattern="*_MRPRESSO_Results.csv", recursive = T) %>% 
+  paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/', .)
+```
+
+## Pleitropy
+### MR Egger Regession 
+```{r mr_egger, echo=FALSE}
+egger_5e6 <- map(grep('5e-6', filenames_egger, value = T), read_csv) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-6')
+egger_5e8 <- map(grep('5e-8', filenames_egger, value = T), read_csv) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-8')
+
+egger <- bind_rows(egger_5e6, egger_5e8) %>% 
+  select(exposure, outcome, pt, egger_intercept, se, pval)  %>% 
+  mutate(violated = pval < 0.05)
+```
+
+### Heterogenity Test 
+```{r mr_egger, echo=FALSE}
+het_5e6 <- map(grep('5e-6', filenames_heterogenity, value = T), read_csv) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-6')
+het_5e8 <- map(grep('5e-8', filenames_heterogenity, value = T), read_csv) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-8')
+
+het <- bind_rows(het_5e6, het_5e8) %>% 
+  select(exposure, outcome, pt, method, Q, Q_df, Q_pval) %>% 
+  mutate(violated = Q_pval < 0.05) %>% 
+  mutate(method = str_replace_all(method, c("Inverse variance weighted" = 'IVW',
+                                            "MR Egger" = "Egger"))) 
+
+het <- left_join(filter(het, method == 'Egger'), filter(het, method == 'IVW'), by = c('exposure', 'outcome', 'pt'), suffix = c('.Egger', '.IVW')) %>% 
+  select(-method.Egger, -method.IVW)
+  
+```
+
+### MR Presso Global Test 
+```{r mr_egger, echo=FALSE}
+mrpresso_5e6 <- map(grep('5e-6', filenames_mrpresso, value = T), read_tsv) %>% 
+  map(function(x){mutate(x,pval=as.character(pval))}) %>%
+  bind_rows() %>% 
+  mutate(pt = '5e-6')
+
+mrpresso_5e8 <- map(grep('5e-8', filenames_mrpresso, value = T), read_tsv) %>% 
+  map(function(x){mutate(x,pval=as.character(pval))}) %>%
+  bind_rows() %>% 
+  mutate(pt = '5e-8')
+
+mrpresso <- bind_rows(mrpresso_5e6, mrpresso_5e8) %>% 
+  select(exposure, outcome, pt, n_outliers, RSSobs, pval) %>% 
+  mutate(violated = pval < 0.05) %>% 
+  mutate(n_outliers = ifelse(is.na(n_outliers), 0, n_outliers))
+```
+
+### MR Results
+```{r mr_egger, echo=FALSE}
+res_5e6 <- map(grep('5e-6', filenames_res, value = T), read_csv) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-6')
+res_5e8 <- map(grep('5e-8', filenames_res, value = T), read_csv) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-8')
+
+res <- bind_rows(res_5e6, res_5e8) %>% 
+    mutate(Signif = symnum(pval, corr = FALSE, na = FALSE,
+                  cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
+                  symbols = c("***", "**", "*", ".", " "))) %>%
+  mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW')) %>%
+  select(exposure, outcome, pt, method, nsnp, b, se, pval, Signif) 
+```
+
+#### MR Results not present
+```{r , echo=FALSE}
+
+exposures <- c('alcc', 'alcd', 'audit', 'bmi', 'cpd', 'dep', 'diab', 'educ', 'fish', 'hdl', 'insom', 'ldl', 'mdd', 'mvpa', 'sleep', 'smkukbb', 'sociso', 'tc', 'trig', 'dbp', 'sbp', 'pp', 'hear')
+outcomes <- c('load', 'aaos', 'ab42', 'ptau', 'tau', 'hipv', 'hipv2015', 'npany', 'nft4', 'hips', 'vbiany')
+pt <- c('5e-6', '5e-8')
+method <- c('IVW', 'Weighted median', 'Weighted mode', 'MR Egger')
+variables <- expand.grid(exposures,outcomes,pt,method) %>% 
+  rename(exposure = Var1, outcome = Var2, pt = Var3, method = Var4) %>% 
+  as.tibble() %>% 
+  mutate_if(is.factor, as.character)
+
+# lifestyle -> load
+anti_join(variables, res) %>% distinct(exposure, outcome, pt) %>% arrange(exposure, outcome) %>% print(n = Inf)
+
+# load -> lifestyle
+anti_join(variables, res, by = c('exposure' = 'outcome', 'outcome' = 'exposure', 'pt' = 'pt', 'method' = 'method')) %>%
+  distinct(exposure, outcome, pt) %>% arrange(pt, outcome, exposure) %>% print(n = Inf)
+
+```
+
+### MR Results with outlier removal
+```{r mr_egger, echo=FALSE}
+resmrpresso_5e6 <- map(grep('5e-6', filenames_res_mrpresso, value = T), read_csv) %>% 
+  map(mutate, nsnp = as.numeric(nsnp)) %>% 
+  map(mutate, b = as.numeric(b)) %>% 
+  map(mutate, se = as.numeric(se)) %>% 
+  map(mutate, pval = as.numeric(pval)) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-6')
+resmrpresso_5e8 <- map(grep('5e-8', filenames_res_mrpresso, value = T), read_csv) %>% 
+  map(mutate, nsnp = as.numeric(nsnp)) %>% 
+  map(mutate, b = as.numeric(b)) %>% 
+  map(mutate, se = as.numeric(se)) %>% 
+  map(mutate, pval = as.numeric(pval)) %>% 
+  bind_rows() %>% 
+  mutate(pt = '5e-8')
+
+resmrpresso <- bind_rows(resmrpresso_5e6, resmrpresso_5e8) %>% 
+    mutate(Signif = symnum(pval, corr = FALSE, na = FALSE,
+                  cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
+                  symbols = c("***", "**", "*", ".", " "))) %>%
+  mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW')) %>%
+  select(exposure, outcome, pt, method, nsnp, b, se, pval, Signif) 
+```
+
+#### Remove tests where MR-PRESSO is avaliable
+##### LOAD as outcome
+```{r}
+
+res_noOutliers <- res %>% filter(exposure %nin% outcomes) %>% 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  filter(!(violated == T & n_outliers > 0)) 
+
+presso_outliers <- resmrpresso %>% filter(exposure %nin% outcomes) %>% filter(method != 'mrpresso') %>% 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  filter(violated == T) %>% 
+  mutate(mrpresso = TRUE)
+
+res_comb <- bind_rows(res_noOutliers, presso_outliers)
+
+```
+
+```{r}
+res.out <- res_comb %>% 
+  mutate(b = round(b, 2)) %>% 
+  mutate(se = round(se, 2)) %>% 
+  #mutate(pval = round(pval, 4)) %>% 
+  mutate(b.se = paste0(b, ' (', se, ')')) %>%
+  select(-Signif, -b, -se) %>% 
+  myspread(method, c(nsnp, pval, b.se)) %>% 
+  rename(nsnp = IVW_nsnp) %>% 
+  select(exposure, outcome, pt, nsnp, n_outliers, mrpresso, IVW_b.se, IVW_pval, `MR Egger_b.se`, `MR Egger_pval`, `Weighted median_b.se`, `Weighted median_pval`, `Weighted mode_b.se`, `Weighted mode_pval`) %>% 
+  arrange(outcome, exposure)
+
+
+test <- res.out %>% 
+  left_join(select(het, exposure, outcome, pt, violated.IVW, violated.Egger), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.HeterogeneityIVW = violated.IVW, violated.HeterogeneityEgger = violated.Egger) %>% 
+  left_join(select(egger, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.Egger = violated) %>% 
+  left_join(select(mrpresso, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.mrpresso = violated) %>% 
+  mutate(IVW_pval_fdr = p.adjust(IVW_pval, method = 'fdr')) %>% 
+  mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4) %>% 
+  group_by(exposure, outcome) %>% slice(which.min(IVW_pval)) %>%
+  arrange(IVW_pval) 
+
+test %>% filter(IVW_pval_fdr < 0.05) %>% print(n = Inf) %>% write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/Results/sig_res_LoadOutcome.csv')
+test %>% mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4)
+
+```
+
+##### LOAD as Exposure
+```{r}
+
+res_noOutliers <- res %>% filter(exposure %in% outcomes) %>% 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  filter(!(violated == T & n_outliers > 0)) 
+
+presso_outliers <- resmrpresso %>% filter(exposure %in% outcomes) %>% filter(method != 'mrpresso') %>% 
+  left_join(select(mrpresso, exposure, outcome, pt, n_outliers, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  filter(violated == T) %>% 
+  mutate(mrpresso = TRUE)
+
+res_comb <- bind_rows(res_noOutliers, presso_outliers)
+
+```
+
+```{r}
+res.out <- res_comb %>% 
+  mutate(b = round(b, 2)) %>% 
+  mutate(se = round(se, 2)) %>% 
+  #mutate(pval = round(pval, 4)) %>% 
+  mutate(b.se = paste0(b, ' (', se, ')')) %>%
+  select(-Signif, -b, -se) %>% 
+  myspread(method, c(nsnp, pval, b.se)) %>% 
+  rename(nsnp = IVW_nsnp) %>% 
+  select(exposure, outcome, pt, nsnp, n_outliers, mrpresso, IVW_b.se, IVW_pval, `MR Egger_b.se`, `MR Egger_pval`, `Weighted median_b.se`, `Weighted median_pval`, `Weighted mode_b.se`, `Weighted mode_pval`) %>% 
+  arrange(outcome, exposure)
+
+
+test <- res.out %>% 
+  left_join(select(het, exposure, outcome, pt, violated.IVW, violated.Egger), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.HeterogeneityIVW = violated.IVW, violated.HeterogeneityEgger = violated.Egger) %>% 
+  left_join(select(egger, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.Egger = violated) %>% 
+  left_join(select(mrpresso, exposure, outcome,  pt, violated), by = c('exposure', 'outcome', 'pt')) %>% 
+  rename(violated.mrpresso = violated) %>% 
+  mutate(IVW_pval_fdr = p.adjust(IVW_pval, method = 'fdr')) %>% 
+  mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4) %>% 
+  group_by(exposure, outcome) %>% slice(which.min(IVW_pval)) %>%
+  arrange(IVW_pval) 
+
+test %>% filter(IVW_pval_fdr < 0.05) %>% print(n = Inf) %>% write_csv('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/Results/sig_res_LoadExposure.csv')
+test %>% mutate_at(vars(matches("_pval")), as.numeric) %>% mutate_at(vars(matches("_pval")), round, 4)
+
+```
+
+
+## IVW Plots
+### LOAD
+
+```{r}
+res.plot <- res_comb %>% 
+  group_by(pt) %>%
+  mutate(b = round(b, 2)) %>% 
+  mutate(se = round(se, 2)) %>% 
+  mutate(pval = ifelse(pval > 0.0001, round(pval, 4), format(pval, digits = 2, scientific = TRUE))) %>%
+  mutate(exposure2 = ifelse(is.na(mrpresso), exposure, paste0(exposure, '*'))) %>% 
+  select(-Signif, -n_outliers, -violated, -mrpresso) %>%
+  mutate(method = str_replace_all(method, pattern=" ", repl="_")) %>%
+  myspread(method, c(nsnp, pval, b, se)) %>% 
+  mutate(IVW_b = as.numeric(IVW_b)) %>%
+  select(-MR_Egger_nsnp, -Weighted_median_nsnp, -Weighted_mode_nsnp) %>%
+  rename(nsnp = IVW_nsnp) %>% 
+  ungroup() %>% group_by(exposure, outcome) %>% 
+  arrange(as.numeric(IVW_pval)) %>% 
+  slice(1) %>% 
+  ungroup()
+
+```
+
+```{r , echo=FALSE}
+## =========== DW Plots - p models =========== ##
+## Plot LOAD results - IVW, all 
+res.load <- res.plot %>% 
+  filter(outcome == 'load') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.load,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="OR for LOAD per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/load_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### AAOS
+```{r , echo=FALSE}
+res.aaos <- res.plot %>% 
+  filter(outcome == 'aaos') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.aaos,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="HR for AAOS per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/aaos_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### Ab42
+```{r , echo=FALSE}
+res.ab42 <- res.plot %>% 
+  filter(outcome == 'ab42') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.ab42,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for CSF Ab42 per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### NP any
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("npany"), method == 'IVW') %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42.png', width = 8.5, height = 5.5, units = 'in')
+
+res.npany <- res.plot %>% 
+  filter(outcome == 'npany') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.npany,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="OR for Neuritic Plaques per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/NP_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### Ptau
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("ptau"), method == 'IVW') %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ptau.png', width = 8.5, height = 5.5, units = 'in')
+
+res.ptau <- res.plot %>% 
+  filter(outcome == 'ptau') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.ptau,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for CSF Ptau per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ptau_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### Tau
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("tau"), method == 'IVW') %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau.png', width = 8.5, height = 5.5, units = 'in')
+
+res.tau <- res.plot %>% 
+  filter(outcome == 'tau') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.tau,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for CSF Tau per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### ntf4
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("nft4"), method == 'IVW') %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = pt) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1")
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42.png', width = 8.5, height = 5.5, units = 'in')
+
+res.nft4 <- res.plot %>% 
+  filter(outcome == 'nft4') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.nft4,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for NFT per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/nft_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### HV 2017
+```{r , echo=FALSE}
+res.hipv <- res.plot %>% 
+  filter(outcome == 'hipv') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.hipv,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for HV per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### HV 2015
+```{r , echo=FALSE}
+res.hipv2015 <- res.plot %>% 
+  filter(outcome == 'hipv2015') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.hipv2015,b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for HV per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv2015_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### HS 2015
+```{r , echo=FALSE}
+res.hips<- res.plot %>% 
+  filter(outcome == 'hips') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.hips, b="IVW_b",se="IVW_se",
+                      exponentiate=F,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="identity", 
+                      xlab="Estimate for HS per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/HS_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+### VBI
+```{r , echo=FALSE}
+res.vbi <- res.plot %>% 
+  filter(outcome == 'vbiany') %>% 
+  arrange(-IVW_b) %>%
+  as.data.frame()
+  
+forest_plot_1_to_many(res.vbi,b="IVW_b",se="IVW_se",
+                      exponentiate=T,ao_slc=F, by = NULL,
+                      TraitM="exposure2", col1_title="Risk factor",
+                      trans="log2", 
+                      xlab="OR for VBI per SD increase in risk factor (95% confidence interval)", 
+                      addcols=c("nsnp","IVW_pval", 'Weighted_median_pval', 'Weighted_mode_pval', 'MR_Egger_pval'), 
+                      addcol_widths=c(0.75,0.75,0.75,0.75,0.8), addcol_titles=c("No. SNPs","P IVW", 'P wt. Median', 'P wt. Mode', 'P Egger'))
+ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/vbi_mr.png', width = 10, height = 5.5, units = 'in')
+```
+
+## Plot load results with all MR models
+### LOAD
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("load")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/load_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### AAOS
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("aaos")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/aaos_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### ab42
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("ab42")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### NP any
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("npany")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ab42_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### ptau
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("ptau")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/ptau_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### tau
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("tau")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### NFT4
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("nft4")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/tau_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### HV 2017
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("hipv")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### HV 2015
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("hipv2015")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### HS
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("hips")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+### VBI
+```{r , echo=FALSE}
+res_comb %>% 
+  filter(outcome == c("vbiany")) %>% 
+  rename(term = exposure, estimate = b, std.error = se, p.value = pval, model = method) %>% 
+  dwplot(.) + theme_bw() + geom_vline(xintercept = 0, colour = 'grey', linetype = 2) + facet_grid(. ~ pt) + 
+  theme(legend.position="bottom") + scale_colour_brewer(palette="Set1") 
+#ggsave('~/Dropbox/Research/PostDoc-MSSM/2_MR/4_Output/plots/MR/hipv_all.png', width = 8.5, height = 5.5, units = 'in')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

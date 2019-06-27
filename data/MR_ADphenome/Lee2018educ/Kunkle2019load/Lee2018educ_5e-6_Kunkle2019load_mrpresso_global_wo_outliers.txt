@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+hFJcAP	Uv9KZw	Kunkle2019load	Lee2018educ	5e-6	TRUE	35	1102.5550132622693	7.8e-4

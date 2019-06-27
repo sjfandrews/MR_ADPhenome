@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+tfh3jA	vsy7uL	Huang2017aaos	Liu2019drnkwk	5e-6	TRUE	5	169.6449191205404	0.1511

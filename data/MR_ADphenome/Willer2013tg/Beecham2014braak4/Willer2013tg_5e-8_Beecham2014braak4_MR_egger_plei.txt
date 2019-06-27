@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+TRAHie	vEo2om	Beecham2014braak4	Willer2013tg	5e-8	FALSE	0.005326474517888979	0.014454132404167637	0.7137909761605084
+TRAHie	vEo2om	Beecham2014braak4	Willer2013tg	5e-8	TRUE	9.429793156042817e-4	0.010874703295530806	0.931198230157698

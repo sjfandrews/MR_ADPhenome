@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+k79O6V,neorNN,aaos,alccliu,MR Egger,26.646246205838345,38,0.9165327744940079,2019-04-24
+k79O6V,neorNN,aaos,alccliu,Inverse variance weighted,26.68541507220141,39,0.9329614235370207,2019-04-24

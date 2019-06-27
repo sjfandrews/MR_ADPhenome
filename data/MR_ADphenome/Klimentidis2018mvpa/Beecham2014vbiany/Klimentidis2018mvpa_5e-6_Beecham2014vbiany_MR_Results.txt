@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+JUTSAS	zlUQqR	Beecham2014vbiany	Klimentidis2018mvpa	5e-6	FALSE	Inverse variance weighted (fixed effects)	105	0	-0.010196841400888954	0.532935074385332	0.9847347147245549
+JUTSAS	zlUQqR	Beecham2014vbiany	Klimentidis2018mvpa	5e-6	FALSE	Weighted median	105	0	-0.39599435012974826	0.7611375159573831	0.602877842661611
+JUTSAS	zlUQqR	Beecham2014vbiany	Klimentidis2018mvpa	5e-6	FALSE	Weighted mode	105	0	-0.35476261942905296	1.7608591445999462	0.8407235851828175
+JUTSAS	zlUQqR	Beecham2014vbiany	Klimentidis2018mvpa	5e-6	FALSE	MR Egger	105	0	-1.2699390568343363	2.3876047156209745	0.5959487250567059

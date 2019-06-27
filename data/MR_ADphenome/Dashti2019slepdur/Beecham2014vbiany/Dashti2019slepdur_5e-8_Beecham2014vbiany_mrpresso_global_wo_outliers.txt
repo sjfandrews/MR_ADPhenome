@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+QdJOnu	74mcIn	Beecham2014vbiany	Dashti2019slepdur	5e-8	TRUE	3	93.15561933772084	0.1658

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+LARpeI	SsH0Zi	Beecham2014braak4	Yengo2018bmi	5e-8	FALSE	0.002915850721926951	0.005501584213090703	0.5962500951824812
+LARpeI	SsH0Zi	Beecham2014braak4	Yengo2018bmi	5e-8	TRUE	4.488608453654076e-4	0.005166257202024587	0.9307850276872325

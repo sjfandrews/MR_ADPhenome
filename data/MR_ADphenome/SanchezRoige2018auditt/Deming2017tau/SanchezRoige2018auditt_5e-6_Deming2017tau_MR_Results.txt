@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+VQP6v6	lhHiMr	Deming2017tau	SanchezRoige2018auditt	5e-6	FALSE	Inverse variance weighted (fixed effects)	40	0	0.020382004369213513	0.1475707497670201	0.8901480837088592
+VQP6v6	lhHiMr	Deming2017tau	SanchezRoige2018auditt	5e-6	FALSE	Weighted median	40	0	0.23273370658901932	0.21436291108726038	0.2776119594988511
+VQP6v6	lhHiMr	Deming2017tau	SanchezRoige2018auditt	5e-6	FALSE	Weighted mode	40	0	0.36603062113468354	0.393553497581911	0.3580585545311532
+VQP6v6	lhHiMr	Deming2017tau	SanchezRoige2018auditt	5e-6	FALSE	MR Egger	40	0	0.44997069674660267	0.5345729034443728	0.40520054707027997

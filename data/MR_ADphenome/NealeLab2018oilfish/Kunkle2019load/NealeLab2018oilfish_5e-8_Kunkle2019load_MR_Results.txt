@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+bvZgYr	2ph5x0	Kunkle2019load	NealeLab2018oilfish	5e-8	FALSE	Inverse variance weighted (fixed effects)	46	0	0.26940399740342197	0.15530814113654606	0.0828042663727345
+bvZgYr	2ph5x0	Kunkle2019load	NealeLab2018oilfish	5e-8	FALSE	Weighted median	46	0	0.2140239344082294	0.2196406312481849	0.32984417784018105
+bvZgYr	2ph5x0	Kunkle2019load	NealeLab2018oilfish	5e-8	FALSE	Weighted mode	46	0	0.14959394353669664	0.5106229419633374	0.7708967014323973
+bvZgYr	2ph5x0	Kunkle2019load	NealeLab2018oilfish	5e-8	FALSE	MR Egger	46	0	0.8409776355633167	0.6574891525401694	0.207575516785416

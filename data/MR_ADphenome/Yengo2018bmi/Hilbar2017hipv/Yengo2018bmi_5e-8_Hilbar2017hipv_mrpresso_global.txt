@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+1aDeY6	dTN7hT	Hilbar2017hipv	Yengo2018bmi	5e-8	FALSE	1	1065.372218613711	<2e-05

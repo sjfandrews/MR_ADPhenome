@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
+QZywRL	TK9fmz	ggt	alccliu	2	30.55147243231854	0.5558

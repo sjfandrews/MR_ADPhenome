@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+KOAOtk,pN15B1,load,alcd,MR Egger,14.541475798350607,15,0.48492101084586536,2019-04-24
+KOAOtk,pN15B1,load,alcd,Inverse variance weighted,14.753213316291612,16,0.542782415891545,2019-04-24

@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+EQcWWQ,AdmIot,loadKunkle,alcc,MR Egger,64.2051391921186,46,0.039144652588392705,2019-04-24
+EQcWWQ,AdmIot,loadKunkle,alcc,Inverse variance weighted,64.92434148990799,47,0.04252443349609423,2019-04-24

@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	FALSE	Inverse variance weighted (fixed effects)	7	1	-0.3285308638218269	0.679234155672147	0.62861415191743
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	FALSE	Weighted median	7	1	-1.0005208598486264	0.9417984812913691	0.28807622444586467
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	FALSE	Weighted mode	7	1	-1.279673270962638	1.1343009837375073	0.30233349796642217
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	FALSE	MR Egger	7	1	-1.3617045339521343	2.9401134833642324	0.6627189923152215
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	TRUE	Inverse variance weighted (fixed effects)	6	1	-0.8411080998237479	0.6907741608315113	0.2233641913559581
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	TRUE	Weighted median	6	1	-1.077292550841993	0.9947901778251669	0.2788375208426385
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	TRUE	Weighted mode	6	1	-1.5548207867622548	1.2960234424412158	0.28400275362971744
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	TRUE	MR Egger	6	1	-1.4231404345503322	2.2305139523584985	0.5581487177946526

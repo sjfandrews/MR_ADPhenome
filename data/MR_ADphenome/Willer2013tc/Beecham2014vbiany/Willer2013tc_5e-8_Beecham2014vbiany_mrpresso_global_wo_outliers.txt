@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+qKLNfl	HhvE5R	Beecham2014vbiany	Willer2013tc	5e-8	TRUE	1	93.75516986217347	0.6323

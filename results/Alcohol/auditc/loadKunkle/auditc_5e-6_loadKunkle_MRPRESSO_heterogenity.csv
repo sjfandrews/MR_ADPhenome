@@ -1,0 +1,3 @@
+id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
+KjrXdD,VW24hz,loadKunkle,auditc,MR Egger,72.10153205002143,42,0.002632548833313468,2019-04-24
+KjrXdD,VW24hz,loadKunkle,auditc,Inverse variance weighted,72.1161709477405,43,0.0035522539894263785,2019-04-24

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+A943V9	D36lvq	Huang2017aaos	Klimentidis2018mvpa	5e-8	FALSE	-0.12134039714498168	0.09150734146686189	0.19731623594436315
+A943V9	D36lvq	Huang2017aaos	Klimentidis2018mvpa	5e-8	TRUE	-0.008215842366355332	0.020135907639561433	0.6873894845048146

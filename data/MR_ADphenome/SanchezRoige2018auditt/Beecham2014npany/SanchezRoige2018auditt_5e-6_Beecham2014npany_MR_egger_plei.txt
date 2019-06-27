@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+JOXxFx	KJ7zv9	Beecham2014npany	SanchezRoige2018auditt	5e-6	FALSE	0.011424209302144234	0.03703870428796426	0.7588922036121899	NA

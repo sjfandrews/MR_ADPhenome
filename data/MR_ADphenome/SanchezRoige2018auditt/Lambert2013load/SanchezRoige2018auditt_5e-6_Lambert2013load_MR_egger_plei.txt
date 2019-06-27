@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+EiHqXy	qORswk	Lambert2013load	SanchezRoige2018auditt	5e-6	FALSE	0.007022120221515454	0.008931730466370365	0.4353189213620072
+EiHqXy	qORswk	Lambert2013load	SanchezRoige2018auditt	5e-6	TRUE	0.007790184457751436	0.008115018831875397	0.3415989480328122

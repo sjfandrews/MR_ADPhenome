@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+ozNJ8x	4L2iXY	ggt	auditp	1	63.62271391464852	<0.001

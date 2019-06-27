@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+S3ihRf	hlQq2g	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	Inverse variance weighted (fixed effects)	90	0	-0.14396536972672117	0.6113677520801813	0.8138355762851759
+S3ihRf	hlQq2g	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	Weighted median	90	0	-0.010819176247779214	0.9028770598958482	0.9904391777305325
+S3ihRf	hlQq2g	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	Weighted mode	90	0	-0.6390322251893252	1.8415544804845974	0.7294052694496125
+S3ihRf	hlQq2g	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	MR Egger	90	0	-2.632861436322539	2.709283363420443	0.3338173519175741

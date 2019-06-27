@@ -1,0 +1,2 @@
+target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHROM,POS,REF.proxy,ALT.proxy,AF,BETA,SE,Z,P,N,TRAIT,ref,ref.proxy,alt,alt.proxy,ALT,REF,proxy.outcome
+rs4738684,rs9297994,1,1,AG/GA,NA,8,59392324,G,A,0.6545,0.0362,0.0458,0.7903930131004367,0.4293,4735,NFT_Braak_Four,A,G,G,A,G,A,TRUE

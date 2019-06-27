@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+igkMKo	3cPgfy	Beecham2014npany	Day2018sociso	5e-6	FALSE	0.06721707617710719	0.04180225157431464	0.11146336965671834	NA

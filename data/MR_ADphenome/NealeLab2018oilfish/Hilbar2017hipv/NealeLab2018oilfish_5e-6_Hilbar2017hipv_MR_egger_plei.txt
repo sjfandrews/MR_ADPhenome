@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+ING30l	IS4gSp	Hilbar2017hipv	NealeLab2018oilfish	5e-6	FALSE	-0.005152825234011077	0.0032722498704447693	0.1173124335260085	NA

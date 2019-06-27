@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+7XF9z7	fgqFyK	aaos	alcc	0	6.329557234868441	0.5

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
+d3hgdJ	ol4Ech	load	auditp	0	40.13137598149264	0.1548

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+lM9b4V	cpmsQ7	Beecham2014npany	Willer2013hdl	5e-8	FALSE	0.011816835063662892	0.021283340608036303	0.5799750835225854
+lM9b4V	cpmsQ7	Beecham2014npany	Willer2013hdl	5e-8	TRUE	0.010592510961763082	0.015967817251885515	0.5086223860220452

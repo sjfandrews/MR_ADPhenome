@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+pwxNld	08Hhcy	Deming2017ptau	NealeLab2018oilfish	5e-6	FALSE	MR Egger	240.15415867075913	140	2.8933468522462706e-7
+pwxNld	08Hhcy	Deming2017ptau	NealeLab2018oilfish	5e-6	FALSE	Inverse variance weighted	242.8598322226648	141	2.1276873288579074e-7
+pwxNld	08Hhcy	Deming2017ptau	NealeLab2018oilfish	5e-6	TRUE	MR Egger	144.6333099095545	139	0.35447419957906684
+pwxNld	08Hhcy	Deming2017ptau	NealeLab2018oilfish	5e-6	TRUE	Inverse variance weighted	145.48873923786735	140	0.35809708441911575

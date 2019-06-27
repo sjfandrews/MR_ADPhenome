@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+2KWddt	9n7vWt	Beecham2014vbiany	SanchezRoige2018auditt	5e-8	FALSE	0	11.139361018986374	0.229

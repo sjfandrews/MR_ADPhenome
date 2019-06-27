@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Uruu2h	Yxc6cW	Kunkle2019load	Day2018sociso	5e-6	FALSE	-0.002438189906702305	0.008714565256899825	0.7802584907753566
+Uruu2h	Yxc6cW	Kunkle2019load	Day2018sociso	5e-6	TRUE	-0.003674977258962449	0.007503249807751446	0.6254396067382553

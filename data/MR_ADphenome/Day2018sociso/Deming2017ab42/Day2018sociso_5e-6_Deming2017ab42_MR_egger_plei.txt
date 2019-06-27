@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+VLO8m3	IhlLvF	Deming2017ab42	Day2018sociso	5e-6	FALSE	-3.996431298187483e-4	0.002753087681361314	0.8849887388959863	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+yBOwsD	Qjg2sD	Huang2017aaos	Day2018sociso	5e-6	TRUE	3	111.55486076098013	0.1206

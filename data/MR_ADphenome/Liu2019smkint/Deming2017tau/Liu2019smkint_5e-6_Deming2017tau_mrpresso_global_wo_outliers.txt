@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+p6NGTy	usbGyC	Deming2017tau	Liu2019smkint	5e-6	TRUE	12	271.7583258124035	0.5232

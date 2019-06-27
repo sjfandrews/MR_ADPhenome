@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+z6YiDG	26cbIO	Deming2017tau	Willer2013tg	5e-8	TRUE	0	NA	NA

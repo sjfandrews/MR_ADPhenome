@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Xoqc9A	2VIUmB	Kunkle2019load	Klimentidis2018mvpa	5e-6	FALSE	3	4248.121596906093	<1e-04

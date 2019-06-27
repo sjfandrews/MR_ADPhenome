@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+leTtn3	1jvO72	Deming2017ab42	Evangelou2018dbp	5e-6	FALSE	2.85460395095466e-4	3.793606819575829e-4	0.4519428032041457	NA

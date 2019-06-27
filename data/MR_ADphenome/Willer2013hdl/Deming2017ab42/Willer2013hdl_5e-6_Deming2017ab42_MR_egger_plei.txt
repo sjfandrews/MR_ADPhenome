@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+3ksYPX	ExhiHQ	Deming2017ab42	Willer2013hdl	5e-6	FALSE	6.548772291460813e-5	0.0013681706573040494	0.9618869461436839
+3ksYPX	ExhiHQ	Deming2017ab42	Willer2013hdl	5e-6	TRUE	8.193810982170212e-4	8.043637391620623e-4	0.30999991861547954

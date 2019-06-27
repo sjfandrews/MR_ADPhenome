@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Xoqc9A	2VIUmB	Kunkle2019load	Klimentidis2018mvpa	5e-6	FALSE	-0.06578013619484263	0.03358216520556359	0.052602125126674885
+Xoqc9A	2VIUmB	Kunkle2019load	Klimentidis2018mvpa	5e-6	TRUE	-0.006414971082248383	0.006690223761859327	0.33973336147043875

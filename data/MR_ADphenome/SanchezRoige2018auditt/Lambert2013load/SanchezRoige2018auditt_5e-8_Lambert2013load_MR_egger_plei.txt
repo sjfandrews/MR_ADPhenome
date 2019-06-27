@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	FALSE	0.014643694628141876	0.034502218962795476	0.6888968901580523
+HJAOrc	nc91yC	Lambert2013load	SanchezRoige2018auditt	5e-8	TRUE	0.008364931277655283	0.026333086427925475	0.7666353132634193

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+nkEKJQ	H5bUg7	Hilbar2017hipv	Evangelou2018dbp	5e-8	FALSE	1	855.8081329495777	4e-5

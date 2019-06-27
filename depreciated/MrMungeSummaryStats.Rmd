@@ -1,0 +1,1772 @@
+---
+title: "Summary Statistic Cleaning"
+author: "Shea Andrews"
+date: "7/2/2018"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+params: 
+  hrc_file: '~/Dropbox/Research/Data/Summary_Statisitics/HRC/HRC_AF.tsv.gz'
+  kg_file: '~/Dropbox/Research/Data/Summary_Statisitics/EUR_SNPs.txt'
+  uk10k_file: '~/Dropbox/Research/Data/Summary_Statisitics/UK10K_COHORT.txt.gz'
+  load.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP2013/IGAP_stage_1.txt'
+  adpx.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/Marioni2018/3_UK_Biobank_parental_17May2018.gz'
+  aaos.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/IGAP_AAOS/IGAP_meta1_pos_1filtered.txt'
+  ab42.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_AB42_GWAS_summary_statistics.txt.gz'
+  ptau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_ptau_GWAS_summary_statistics.txt.gz'
+  tau.summary: '~/Dropbox/Research/Data/Summary_Statisitics/AD/CSF/Deming_ActaNeuropathol_CSF_tau_GWAS_summary_statistics.txt.gz'
+  hipv.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/Hilbar2017/CHARGE-ENIGMA-HV-METAANALYSIS-201311141.TBL.FINAL.gz'
+  hipv_2015.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Hippocampal_Volume/Hilbar2015/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz'
+  alc_cons.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_cons/ALC_CONS_GWAS_FORUKB.txt.gz'
+  alc_dep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/Alc_dep/daner_alcdep_eur_jul2017.gz.jul2017.min_n'
+  audit.summary: '~/LOAD_minerva/dummy/Data/GwasSummaryStatistics/UKB_AUDIT/AUDIT_UKB_2018_AJP.txt.gz'
+  bmi.summary: '~/Dropbox/Research/Data/Summary_Statisitics/BMI/Yengo2018/Meta-analysis_Locke_et_al+UKBiobank_2018_UPDATED.txt.gz'
+  smk_ukbb.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/ukbb/'
+  evrsmk.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/tag.evrsmk.tbl.gz'
+  cpd.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Smoking/cpd/cpd_summary.txt.gz'
+  mdd.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Depression/Wray2018/PGC_MDD2018_10kSNPs.gz'
+  dep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Depression/Howard2018/UKBiobank_broad_12Jan18.txt.gz'
+  diab.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Diabetes/T2D_Meta/Xue_et_al_T2D_META_Nat_Commun_2018.gz'
+  mvpa.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Exercise/MVPA_Model1_BOLTLMM_500K.txt.gz'
+  acc425.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Exercise/Acc425_Model1_BOLTLMM_500K.txt.gz'
+  accave.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Exercise/AccAve_Model1_BOLTLMM_500K.txt.gz'
+  ssoe.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Exercise/SSOE_Model1_BOLTLMM_500K.txt.gz'
+  vpa.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Exercise/VPA_Model1_BOLTLMM_500K.txt.gz'
+  edu10k.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Education/Lee2018/GWAS_EA.to10K.txt'
+  edu.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Education/Lee2018/GWAS_EA_excl23andMe.txt'
+  hdl.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Lipids/Willer2013/jointGwasMc_HDL.txt.gz'
+  ldl.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Lipids/Willer2013/jointGwasMc_LDL.txt.gz'
+  tc.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Lipids/Willer2013/jointGwasMc_TC.txt.gz'
+  tg.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Lipids/Willer2013/jointGwasMc_TG.txt.gz'
+  sociso.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Social_Isolation/Day2018/MTAG_results.txt.gz'
+  insom.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Sleep/Lane2017/Application6818_SleepTrait_data_Lane_RESULTS_DATA_INSOMNIA_SYMPTOMS_all.txt.gz'
+  sleep.summary: '~/Dropbox/Research/Data/Summary_Statisitics/Sleep/Lane2017/Application6818_SleepTrait_data_Lane_RESULTS_DATA_SLEEP_DURATION_all.txt.gz'
+  agree.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Agreeablness.txt
+  consc.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Conscientiousness.txt
+  extra.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Extraversion.txt
+  neuro.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Neuroticism.txt
+  openn.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Personality/Lo2016/Openness.txt
+  ibd.summary: ~/Dropbox/Research/Data/Summary_Statisitics/IBD/deLange2017/ibd_build37_59957_20161107.txt.gz
+  dbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Evangelou2018/UKB-ICBPmeta750k_DBPsummaryResults.txt.gz
+  pp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Evangelou2018/UKB-ICBPmeta750k_PPsummaryResults.txt.gz
+  sbp.summary: ~/Dropbox/Research/Data/Summary_Statisitics/BP/Evangelou2018/UKB-ICBPmeta750k_SBPsummaryResults.txt.gz
+  hear.summary: ~/Dropbox/Research/Data/Summary_Statisitics/ARHI/NealeLab/2247_0.gwas.imputed_v3.both_sexes.tsv.gz
+  height.summary: ~/Dropbox/Research/Data/Summary_Statisitics/Height/Meta-analysis_Wood_et_al+UKBiobank_2018.txt.gz
+  npany.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/np_any.Meta.annotate1.2013May03.txt.gz
+  npord.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/np_ord.Meta.annotate1.2013May22.txt.gz
+  braak4.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/braak_4.Meta.annotate1.2013May03.txt.gz
+  braakord.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/braak_ord.Meta.annotate1.2013May03.txt.gz
+  hips.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/med_temp_scler_any.Meta.annotate1.2013May03.txt.gz
+  vbiany.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/VBI_any.Meta.annotate1.2013May03.txt.gz 
+  vbiord.summary: ~/Dropbox/Research/Data/Summary_Statisitics/AD_Neuropath/vbi_ord.Meta.annotate1.2013May03.txt.gz 
+  ggt.summary: /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/GGT.txt 
+  alp.summary: /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ALP.txt 
+  alt.summary: /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ALT.txt 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+##  ---- SNP variance explained ---- ##
+# Ftraitoner DS, Mackay TFC. Introduction to Quantitative Genetics, 4th edn. 1996
+#  2 x EAF x (1 - EAF) x β^2
+
+snp.r2 <- function(eaf, beta){
+  2*eaf*(1 - eaf)*beta^2
+}
+
+## p = allele frequency
+## n = effective sample size
+## z = Z score
+z2se <- function(p, n, z){1/sqrt(2*p*(1-p)*(n+z^2))}
+
+
+findAF <- function(EA, NEA, REF, ALT, AF){
+  ifelse(is.na(REF), NA,
+         ifelse(!((EA == REF | EA ==  ALT) & (NEA == REF | NEA == ALT)), NA, 
+                ifelse(EA == ALT, AF, 
+                       ifelse(EA == REF, 1-AF, 
+                              ifelse(NEA == REF, AF, 
+                                     ifelse(NEA == ALT, 1-AF, NA)
+                              )
+                       )
+                )
+         )
+  )
+}
+
+snp.pve <- function(eaf, beta, se, n){
+  (2*eaf*(1 - eaf)*beta^2) / (2 * beta * eaf * (1-eaf) + se^2 * 2 * n * eaf * (1-eaf))
+}
+
+```
+
+Read: 
+[Tips for Formatting A Lot of GWAS Summary Association Statistics Data](http://huwenboshi.github.io/data%20management/2017/11/23/tips-for-formatting-gwas-summary-stats.html)
+
+[Across-cohort QC analyses of GWAS summary statistics from complex traits](https://doi.org/10.1038/ejhg.2016.106)
+
+[Convert Zscores to Beta and SE](https://www.biostars.org/p/276869/)
+
+### HRC Allele Freq
+```{r hrc}
+hrc.raw <- read_tsv(params$hrc_file, col_types = cols(CHROM = col_character()))
+hrc <- filter(hrc.raw, ID != '.') %>% 
+  unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
+  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F) %>% 
+  unite(CPAR, ChromPos, ALT, REF, sep = ':', remove = F)
+
+```
+
+### 1000 Genomes EUR Allele Freq
+```{r kg}
+kg.raw <- read_tsv(params$kg_file, col_names = F, col_types = cols(X2 = col_character())) %>% 
+   rename(ID = X1, CHROM = X2, POS = X3, REF = X4, ALT = X5,  AF = X6)
+kg <- filter(kg.raw, ID != '.') %>% 
+     filter(nchar(ALT) == 1) %>%
+  unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
+  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F) %>% 
+  unite(CPAR, ChromPos, ALT, REF, sep = ':', remove = F) %>% 
+  mutate(AF = as.numeric(AF))
+
+hrc_kg <- anti_join(kg, hrc, by = 'ID') %>% 
+  bind_rows(hrc)
+hrc_kg <- read_tsv('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/hrc_kg.snps.txt.gz', 
+                   col_types = cols(ChromPos = col_character(), CHROM = col_character()))
+```
+
+### UK10k Allele Freq
+```{r uk10k}
+uk10k.raw <- read_tsv(params$uk10k_file, col_names = F, comment = "#",col_types = cols(X2 = col_character())) %>%
+   rename(ID = X1, CHROM = X2, POS = X3, REF = X4, ALT = X5,  AF = X6, AF_TWINSUK = X7, AF_ALSPAC = X8, AF_AFR = X9, AF_AMR = X10, AF_ASN = X11, AF_EUR = X12, ESP_MAF = X13)
+uk10k <- filter(uk10k.raw, ID != '.') %>% 
+     filter(nchar(ALT) == 1) %>%
+  unite(ChromPos, CHROM, POS, sep = ':', remove = F) %>% 
+  unite(MarkerName, ChromPos, REF, ALT, sep = ':', remove = F) %>% 
+  unite(CPAR, ChromPos, ALT, REF, sep = ':', remove = F) %>% 
+  mutate(AF = as.numeric(AF))
+
+```
+
+## Format GWAS summary statistics for MR analysis 
+
+### AD Neuropathology - Beecham 2014
+#### Neuritic Plarques, Any
+```{r}
+npany.raw <- read_table2(params$npany.summary, col_types = cols(Locational_ID = col_character()))
+npany.dat <- npany.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(npany.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/npany_GWAS.Processed.gz'))
+npany.dat; rm(npany.raw, npany.dat)
+```
+
+#### Neuritic Plarques, Ordinal 
+```{r}
+npord.raw <- read_table2(params$npord.summary, col_types = cols(Locational_ID = col_character()))
+npord.dat <- npord.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(npord.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/npord_GWAS.Processed.gz'))
+npord.dat; rm(npord.raw, npord.dat)
+```
+
+#### NFT Braak (four category)
+```{r}
+nft4.raw <- read_table2(params$braak4.summary, col_types = cols(Locational_ID = col_character()))
+nft4.dat <- nft4.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(nft4.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/nft4_GWAS.Processed.gz'))
+nft4.dat; rm(nft4.raw, nft4.dat)
+```
+
+#### NFT Braak (seven category)
+```{r}
+nftord.raw <- read_table2(params$braakord.summary, col_types = cols(Locational_ID = col_character()))
+nftord.dat <- nftord.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(nftord.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/nftord_GWAS.Processed.gz'))
+nftord.dat; rm(nftord.raw, nftord.dat)
+```
+
+#### Hippocampal Sclerosis, MTS
+```{r}
+hips.raw <- read_table2(params$hips.summary, col_types = cols(Locational_ID = col_character()))
+hips.dat <- hips.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(hips.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hips_GWAS.Processed.gz'))
+hips.dat; rm(hips.raw, hips.dat)
+```
+
+#### Vascular Brain Injury, Any
+```{r}
+vbiany.raw <- read_table2(params$vbiany.summary, col_types = cols(Locational_ID = col_character()))
+vbiany.dat <- vbiany.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(vbiany.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/vbiany_GWAS.Processed.gz'))
+vbiany.dat; rm(vbiany.raw, vbiany.dat)
+```
+
+#### Vascular Brain Injury, Ordinal
+```{r}
+vbiord.raw <- read_table2(params$vbiord.summary, col_types = cols(Locational_ID = col_character()))
+vbiord.dat <- vbiord.raw %>%
+  select(-Effect_allele, -Reference_allele, -MarkerName_1) %>%
+  rename(CHR = chr, POS = pos, Effect_allele = allele1, Non_Effect_allele = allele2, EAF = freq1, Beta = Effect, SE = StdErr, P = Pval, SNP = MarkerName) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP2 = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  mutate(SNP = ifelse(is.na(SNP2), SNP, SNP2)) %>% 
+  filter(grepl('rs', SNP)) %>%
+  mutate(N = 4914) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(vbiord.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/vbiord_GWAS.Processed.gz'))
+vbiord.dat; rm(vbiord.raw, vbiord.dat)
+```
+
+### Hippocampal Volume - Hilbar 2017
+```{r}
+hipv.raw <- read_table2(params$hipv.summary)
+hipv.dat <- hipv.raw %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, P = `P-value`, SNP = RSNUMBERS) %>% 
+  separate(MarkerName, c('CHR', 'POS'), sep = ":") %>% 
+  mutate(SE = z2se(EAF, N, Zscore)) %>% 
+  mutate(Beta = Zscore*SE) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Zscore, Beta, SE, P, r2, N)
+  
+write_tsv(hipv.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hipv_GWAS.Processed.gz'))
+```
+
+### Hippocampal Volume - Hilbar 2015
+
+```{r}
+hipv2015.raw <- read_table2(params$hipv_2015.summary, col_types = cols(Freq_European_1000Genomes = col_character()))
+hipv2015.dat <- hipv2015.raw %>%
+  rename(SNP = RSID, EAF = Freq_European_1000Genomes, Beta = Effect_Beta, SE = StdErr, P = Pvalue, Effect_allele = Effect_Allele, Non_Effect_allele = Non_Effect_Allele) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  separate(CHR_BP_hg19b37, c('CHR', 'POS'), sep = ":") %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(hipv2015.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hipv2015_GWAS.Processed.gz'))
+```
+
+### Late Onset Alzheimer's Disease - Proxy Case/Control Status
+[Marioni et al Translational Psychiatry 2018](https://www.nature.com/articles/s41398-018-0150-6): We show that self-report of parental history of Alzheimer’s dementia for case ascertainment in a genome-wide association study of 314,278 participants from UK Biobank (27,696 maternal cases, 14,338 paternal cases) is a valid proxy for an AD genetic study. After meta-analysing with published consortium data (n = 74,046 with 25,580 cases across the discovery and replication analyses), three new AD-associated loci (P < 5 × 10−8) are identified.
+
+```{r}
+adpx.raw <- read_table2(params$adpx.summary)
+adpx.dat <- adpx.raw %>%
+  unite(ChromPos, CHR, BP, sep = ':', remove = F) %>% 
+  rename(Effect_allele = A1, Non_Effect_allele = A2, Beta = BETA, POS = BP) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(SNP = str_replace_all(SNP, '_', ':')) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('ChromPos' = 'ChromPos')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 314278 ) %>%
+  select(-SNP) %>% rename(SNP = ID) %>%
+  filter(!is.na(SNP)) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(adpx.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/adpx_GWAS.Processed.gz'))
+
+```
+
+Marioni with IGAP
+```{r}
+adpxigap.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/AD/Marioni2018/4_UK_Biobank_IGAP_17May2018.gz')
+adpxigap.dat <- adpxigap.raw %>%
+  unite(ChromPos, CHR, BP, sep = ':', remove = F) %>% 
+  rename(Effect_allele = A1, Non_Effect_allele = A2, Beta = BETA, POS = BP) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(SNP = str_replace_all(SNP, '_', ':')) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('ChromPos' = 'ChromPos')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 314278 ) %>%
+  select(-SNP) %>% rename(SNP = ID) %>%
+  filter(!is.na(SNP)) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+  
+write_tsv(adpxigap.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/adpxigap_GWAS.Processed.gz'))
+
+```
+
+### Late Onset Alzheimer's Disease
+[Lambert et al Nature Genet 2013](https://www.nature.com/articles/ng.2802): The International Genomics of Alzheimer’s Project (IGAP) is a meta-analysis of 4 previously published GWAS datasets: the European Alzheimer’s Disease Imitative (EADI), the Alzheimer Disease Genetics Consortium (ADGC), Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE), and Genetic and Environmental Risk in AD (GERAD) and includes a sample of 17,008 LOAD cases and 37,154 cognitively normal elder controls. Participants in IGAP were of European ancestry, the average age was 71 and 58.4% of participants were women.
+
+```{r data_wrangling_outcomes, echo=F, cache=TRUE}
+igap.dat.raw <- read_tsv(params$load.summary)
+aaos.dat.raw <- read_tsv(params$aaos.summary)
+```
+
+```{r}
+igap.dat <- igap.dat.raw %>%
+  left_join(select(aaos.dat.raw, SNP, Freq1), by = 'SNP') %>%
+  rename(EAF = Freq1) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 54162) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(igap.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/load_GWAS.Processed.gz'))
+```
+
+### Alzheimer's Age of Onset Surivial
+[Huang et al 2017](https://www.nature.com/articles/nn.4587): A GWAS of age of onset in LOAD was conducted in 14,406 AD case samples and 25,849 control samples from the IGAP using Cox proportional hazard regressions. Participants were of European ancestry, in cases the the average AAO was 74.8 and 61.7% were women, in controls the average AAE was 79.0 and 59.6% were women.
+```{r}
+aaos.dat.raw <- read_tsv(params$aaos.summary)
+aaos.dat <- aaos.dat.raw %>%
+  rename(POS = BP, Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, SE = StdErr, Beta = Effect) %>%
+  arrange(CHR, POS) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>% filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 40255) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(aaos.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/aaos_GWAS.Processed.gz'))
+```
+
+### Late Onset Alzheimer's Disease
+[Kunkle et al Nature Genet 2019](https://www.nature.com/articles/ng.2802): The International Genomics of Alzheimer’s Project (IGAP) is a meta-analysis of 4 previously published GWAS datasets: the European Alzheimer’s Disease Imitative (EADI), the Alzheimer Disease Genetics Consortium (ADGC), Cohorts for Heart and Aging Research in Genomic Epidemiology (CHARGE), and Genetic and Environmental Risk in AD (GERAD) and includes a sample of 17,008 LOAD cases and 37,154 cognitively normal elder controls. Participants in IGAP were of European ancestry, the average age was 71 and 58.4% of participants were women.
+
+```{r}
+loadKunkle.dat.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/AD/Kunkle2019/Kunkle_etal_2019_IGAP_Summary_statistics.with_allelefreqs.txt.gz')
+loadKunkle.dat <- loadKunkle.dat.raw %>%
+  rename(CHR = Chromosome, POS = Position, SNP = MarkerName, P = Pvalue, EAF = Effect_allele_freq) %>%
+  filter(nchar(Effect_allele) == 1) %>% filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta), N = 63926) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(loadKunkle.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadKunkle_GWAS.Processed.gz'))
+```
+
+### Late Onset Alzheimer's Disease stratified by APOE
+[Jun et al Mol Psychiatry 2016](https://www.ncbi.nlm.nih.gov/pubmed/25778476)
+
+```{r}
+loadAPOEcarriers.dat.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/AD/Jun2016/META_IGAP.7.ADGC.15_MODEL_APOE.e4.Carriers.txt.gz')
+loadAPOEcarriers.dat <- loadAPOEcarriers.dat.raw %>%
+  rename(CHR = `#CHR`, POS = BP, P = `P-value`, EAF = Freq1, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta), N = 22170) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(loadAPOEcarriers.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadAPOEcarriers_GWAS.Processed.gz'))
+```
+
+```{r}
+loadAPOEnoncarriers.dat.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/AD/Jun2016/META_IGAP.7.ADGC.15_MODEL_APOE.e4.Noncarriers.txt.gz')
+loadAPOEnoncarriers.dat <- loadAPOEnoncarriers.dat.raw %>%
+  rename(CHR = `#CHR`, POS = BP, P = `P-value`, EAF = Freq1, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  mutate(r2 = snp.r2(EAF, Beta), N = 26834) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(loadAPOEnoncarriers.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/loadAPOEnoncarriers_GWAS.Processed.gz'))
+```
+
+## CSF AB42, tau & ptau
+[Deming et al Acta Neuropathologica 2017](https://link.springer.com/article/10.1007%2Fs00401-017-1685-y): A GWAS of CSF AB42, ptau and tau levels (pg/mL) was conducted in 3,146 participants. Participants were of Eurpean ancestry.
+
+### AB42
+```{r}
+## ---- AB42 ---- ##
+#  rename and reorder columns
+ab42.raw <- read_table2(params$ab42.summary)
+ab42 <- ab42.raw %>%
+  left_join(select(hrc, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(A2 = ifelse(A1 == REF, ALT, REF)) %>% 
+  mutate(EAF = ifelse(A1 == ALT, AF, 1-AF)) %>%
+  rename(Beta = BETA, POS = BP, Effect_allele = A1, Non_Effect_allele = A2, N = NMISS) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ab42, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ab42_GWAS.Processed.gz'))
+```
+
+### Ptau
+```{r}
+## ---- ptau ---- ##
+#  rename and reorder columns
+ptau.raw <- read_table2(params$ptau.summary)
+ptau <- ptau.raw %>%
+  left_join(select(hrc, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(A2 = ifelse(A1 == REF, ALT, REF)) %>% 
+  mutate(EAF = ifelse(A1 == ALT, AF, 1-AF)) %>%
+  rename(Beta = BETA, POS = BP, Effect_allele = A1, Non_Effect_allele = A2, N = NMISS) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ptau, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ptau_GWAS.Processed.gz'))
+```
+
+### Tau
+```{r}
+## ---- tau ---- ##
+#  rename and reorder columns
+tau.raw <- read_table2(params$tau.summary)
+tau <- tau.raw %>%
+  left_join(select(hrc, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(A2 = ifelse(A1 == REF, ALT, REF)) %>% 
+  mutate(EAF = ifelse(A1 == ALT, AF, 1-AF)) %>%
+  rename(Beta = BETA, POS = BP, Effect_allele = A1, Non_Effect_allele = A2, N = NMISS) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(tau.dat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/tau_GWAS.Processed.gz'))
+```
+
+## Alcohol Consumption
+[Clarke et al Mol Psychiatr 2017](https://www.nature.com/articles/mp2017153): SNPs associated with alcohol consumption were selected from a GWAS of alcohol consumption (drinks per week adjusted for sex, age and weight) performed in 112,117 individuals from the UK Biobank. Participants were of European ancestry, mean age was 59.6 and 52.7% of the cohort was female.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alcc
+alc_cons.raw <- read_table2(params$alc_cons.summary)
+alc_cons <- alc_cons.raw %>% 
+  filter(nchar(A1) == 1) %>% 
+  filter(nchar(A2) == 1) %>% 
+  rename(Effect_allele = A1, Non_Effect_allele = A2, Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(alc_cons, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alcc_GWAS.Processed.gz'))
+
+```
+
+# Alcohol Consumption
+[Liu et al Nat Gent](https://doi.org/10.1038/s41588-018-0307-5): SNPs associated with alcohol consumption were selected from a GWAS meta-analysis performed by the GWAS & Sequencing Consortium of Alcohol and Nicotine use (GSCAN) consortium performed in 537,349 participants. Alcohol consumption was assessed as self-reported drinks per week.
+
+## Genome wide significant
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alcc
+alc_gscan.raw <- read_csv('~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/GSCAN.csv')
+alc_gscan <- alc_gscan.raw %>% 
+  rename(Effect_allele = 'Alternate Allele', Non_Effect_allele = 'Reference Allele', CHR = Chr, POS = Position, SNP = rsID, P = Pvalue, EAF = 'Alternate Allele Frequency') %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(alc_gscan, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alccGscan_GWAS.Processed.gz'))
+
+```
+
+## Full GWAS summary stats
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+liualcc.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Alcohol/liu2019/DrinksPerWeek.txt.gz')
+liualcc <- liualcc.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(liualcc, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alccliu_GWAS.Processed.gz'))
+
+```
+
+
+## Alcohol Dependence
+[Walters et al BioRxiv 2018](https://www.biorxiv.org/content/early/2018/03/10/257311): SNPs associated with alcohol dependnece were selected from a GWAS of DSM-IV diagnosed alcohol dependnece perfomred in 46,568 individules (11,569 cases and 34,999 controls) of European ancestry.  
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+alc_dep.raw <- read_table2(params$alc_dep.summary)
+alc_dep <- alc_dep.raw %>% 
+  rename(Effect_allele = A1, Non_Effect_allele = A2, POS = BP, N = Neff) %>% 
+  arrange(CHR, POS) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  mutate(Beta = log(OR)) %>%
+  mutate(EAF = ((Nca*FRQ_A_8485) + (Nco*FRQ_U_20272)) / (Nca + Nco)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(alc_dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alcd_GWAS.Processed.gz'))
+
+```
+
+## AUDIT 
+[Sanchez-Roige et al BioRxiv 2018](https://www.biorxiv.org/content/early/2018/08/02/275917): A GWAS of the Alcohol Use Disorder Identification Tes (AUDIT) was conducted in the British white individules in the UK Biobank. The GWAS meta-analysis with 23andMe, identified 10 genome-wide significant loci with SNP-heritability of 12%.   
+
+### AUDIT Total Score
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+audit.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Alcohol/UKB_AUDIT/AUDIT_UKB_2018_AJP.txt.gz')
+audit <- audit.raw %>% 
+  rename(Effect_allele = a_1, Non_Effect_allele = a_0, SNP = rsid) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  left_join(select(hrc_kg, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  filter(!is.na(POS)) %>%
+  mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF))
+
+audit_t <- audit %>% 
+  select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_T, se_T, p_T, N) %>% 
+  rename(CHR = chr, Beta = beta_T, SE = se_T, P = p_T) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>% 
+  filter()
+write_tsv(audit_t, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_GWAS.Processed.gz'))
+
+audit_c <- audit %>% 
+  select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_C, se_C, p_C, N) %>% 
+  rename(CHR = chr, Beta = beta_C, SE = se_C, P = p_C) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) 
+write_tsv(audit_c, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/auditc_GWAS.Processed.gz'))
+
+audit_p <- audit %>% 
+  select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_P, se_P, p_P, N) %>% 
+  rename(CHR = chr, Beta = beta_P, SE = se_P, P = p_P) %>%
+  mutate(r2 = snp.r2(EAF, Beta))
+write_tsv(audit_p, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/auditp_GWAS.Processed.gz'))
+
+
+```
+
+### AUDIT Consumption
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+audit.raw <- read_table2(params$audit.summary)
+audit <- audit.raw %>% 
+  rename(Effect_allele = a_1, Non_Effect_allele = a_0, SNP = rsid) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  left_join(select(hrc, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) 
+
+audit_c <- audit %>% 
+  select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_C, se_C, p_C, N) %>% 
+  rename(CHR = chr, Beta = beta_C, SE = se_C, P = p_C) %>%
+  mutate(r2 = snp.r2(EAF, Beta))
+
+write_tsv(audit_c, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_c_GWAS.Processed.gz'))
+
+```
+
+### AUDIT Problem Drinking
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+audit.raw <- read_table2(params$audit.summary)
+audit <- audit.raw %>% 
+  rename(Effect_allele = a_1, Non_Effect_allele = a_0, SNP = rsid) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  left_join(select(hrc, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) 
+
+audit_p <- audit %>% 
+  select(SNP, chr, POS, Effect_allele, Non_Effect_allele, EAF, beta_P, se_P, p_P, N) %>% 
+  rename(CHR = chr, Beta = beta_P, SE = se_P, P = p_P) %>%
+  mutate(r2 = snp.r2(EAF, Beta))
+
+write_tsv(audit_p, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/audit_p_GWAS.Processed.gz'))
+
+```
+
+## Body Mass Index
+[Yengo et al BioRxiv 2018](https://www.biorxiv.org/content/early/2018/03/22/274654): Meta-analysis of Giant Consortium GWAS of BMI (n = 234,069) and a new GWAS of BMI conducted in the UK Biobank (n = 456,426) for a total of 681,275 participants of European ancestry. 
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+
+bmi.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/BMI/Yengo2018/Meta-analysis_Locke_et_al+UKBiobank_2018_UPDATED.txt.gz')
+bmi <- bmi.raw %>% 
+  rename(Effect_allele = Tested_Allele, Non_Effect_allele = Other_Allele, Beta = BETA, EAF = Freq_Tested_Allele_in_HRS) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Z = Beta / SE) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(bmi, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/bmi_GWAS.Processed.gz'))
+```
+
+## Height
+[Yengo et al BioRxiv 2018](https://www.biorxiv.org/content/early/2018/03/22/274654): Meta-analysis of Giant Consortium GWAS of Height (n = 234,069) and a new GWAS of Height conducted in the UK Biobank (n = 456,426) for a total of 681,275 participants of European ancestry. 
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+height.raw <- read_table2(params$height.summary)
+height <- height.raw %>% 
+  rename(Effect_allele = Tested_Allele, Non_Effect_allele = Other_Allele, Beta = BETA, EAF = Freq_Tested_Allele_in_HRS) %>% 
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(height, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/height_GWAS.Processed.gz'))
+```
+
+## Major Depressive Disorder
+[Wray et al Nature Genet 2018](https://www.nature.com/articles/s41588-018-0090-3): The Psychiatric Genomics Consortium (PGC) conducted a GWAS meta-analysis across seven cohorts (PGC, deCODE, Generation Scotland, GERA, iPSYCH, UK Biobank, and 23andMe) containing 130,664 MDD cases and 330,470 controls. Participants were of European Ancestry. 
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+mdd.raw <- read_table2(params$mdd.summary)
+mdd <- mdd.raw %>% 
+  mutate(EAF = ((135458*FRQ_A_135458) + (344901*FRQ_U_344901)) / (135458 + 344901)) %>%
+  mutate(N = 135458 + 344901) %>%
+  rename(Effect_allele = A1, Non_Effect_allele = A2, POS = BP) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(Beta = log(OR)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(mdd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/mdd_GWAS.Processed.gz'))
+
+```
+
+## Broad Depression Symptons
+[Howard et al 2018](https://www.nature.com/articles/s41467-018-03819-3)): Using UK Biobank participants (113,769 cases and 208,811 controls, ntotal = 322,580, prevalence = 35.27%), broad depression was based on selfreported help-seeking behaviour for mental health difficulties from either a general practitioner or psychiatrist. 
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+dep.raw <- read_table2(params$dep.summary)
+dep <- dep.raw %>% 
+  rename(CHR = chr, SNP = rsid, POS = pos, Effect_allele = A1, Non_Effect_allele = A2, EAF = AlleleFreq, SE = StandardError) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(N = 322580) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(dep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/dep_GWAS.Processed.gz'))
+
+```
+
+## Type 2 Diabetes 
+[Xu et al Nature Genet 2018](https://www.nature.com/articles/s41467-018-04951-w): Here we conduct a meta-analysis of genome-wide association studies (GWAS) with ~16 million genetic variants in 62,892 T2D cases and 596,424 controls of European ancestry by combining 3 GWAS data sets of European ancestry: DIAbetes Genetics Replication and Meta-analysis (DIAGRAM), Genetic Epidemiology Research on Aging (GERA), and the full cohort release of the UK Biobank (UKB). We identify 139 common and 4 rare variants associated with T2D, 42 of which (39 common and 3 rare variants) are independent of the known variants.
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+diab.raw <- read_table2(params$diab.summary)
+diab <- diab.raw %>% 
+  rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = frq_A1, Beta = b, SE = se) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(diab, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/diab_GWAS.Processed.gz'))
+
+```
+
+## Physical Activity
+[Klimentidis et al Int J Obes 2018](https://www.nature.com/articles/s41366-018-0120-3): We used data from the UK Biobank to perform the largest genome-wide association study of PA to date, using three measures based on self-report (n = 377,234) and two measures based on wrist-worn accelerometry data (nmax = 91,084).
+
+### Moderate-to-vigorous PA (MVPA) 
+Was calculated by taking the sum of total minutes/week of MPA multiplied by four and the total number of VPA minutes/week multiplied by eight, corresponding to their metabolic equivalents, as previously described
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+mvpa.raw <- read_table2(params$mvpa.summary)
+mvpa <- mvpa.raw %>% 
+  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA, P = P_BOLT_LMM_INF) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 377234) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(mvpa, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/mvpa_GWAS.Processed.gz'))
+
+```
+
+### Vigorous PA
+We chose to dichotomize minutes/week of VPA into those who reported 0 days of VPA, and those reporting 3 or more days of VPA and also reporting a typical duration of VPA that is 25 min or greater - 98,060 cases; 162,995 controls
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+vpa.raw <- read_table2(params$vpa.summary)
+vpa <- vpa.raw %>% 
+  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA, P = P_BOLT_LMM_INF) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 98060  + 162995) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(vpa, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/vpa_GWAS.Processed.gz'))
+
+```
+
+### Strenuous sports or other exercises
+We identified individuals spending 2–3 days/week or more doing strenuous sports or other exercises (SSOE), for a duration of 15–30 min or greater. Controls were those individuals who did not indicate spending any time in the last 4 weeks doing either SSOE - 124,842 cases; 225,650 controls
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+ssoe.raw <- read_table2(params$ssoe.summary)
+ssoe <- ssoe.raw %>% 
+  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA, P = P_BOLT_LMM_INF) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 124842 + 225650) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ssoe, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ssoe_GWAS.Processed.gz'))
+
+```
+
+### Accelerometry – Fraction accelerations > 425 milli-gravities
+Also, in the UK Biobank, approximately 100,000 participants wore an Axivity AX3 wrist-worn accelerometer, as previously described. We examined two measures derived from up to seven days of accelerometer wear: overall acceleration average, and fraction of accelerations >425 milli-gravities (mg). The 425 mg cutoff was chosen because this corresponds to an equivalent of vigorous PA (6 METs).  
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+acc425.raw <- read_table2(params$acc425.summary)
+acc425 <- acc425.raw %>% 
+  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA, P = P_BOLT_LMM_INF) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 91084) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(acc425, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/acc425_GWAS.Processed.gz'))
+
+```
+
+### Accelerometry – Average acceleration (milli-gravities)
+Also, in the UK Biobank, approximately 100,000 participants wore an Axivity AX3 wrist-worn accelerometer, as previously described. We examined two measures derived from up to seven days of accelerometer wear: overall acceleration average, and fraction of accelerations >425 milli-gravities (mg). 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+accave.raw <- read_table2(params$accave.summary)
+accave <- accave.raw %>% 
+  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA, P = P_BOLT_LMM_INF) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 90667) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(accave, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/accave_GWAS.Processed.gz'))
+
+```
+
+### Educational Attainment 
+[Lee et al Nature Genet 2018](https://www.nature.com/articles/s41588-018-0147-3) Here we conducted a large-scale genetic association analysis of educational attainment in a sample of approximately 1.1 million individuals and identify 1,271 independent genome-wide-significant SNPs. 
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+educ.raw <- read_table2(params$edu10k.summary)
+educ <- educ.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = A1, Non_Effect_allele = A2, P = Pval) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 1131881) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(educ, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/educ_GWAS.Processed.gz'))
+
+```
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+educall.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Education/Lee2018/GWAS_EA_excl23andMe.txt')
+educall <- educall.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = A1, Non_Effect_allele = A2, P = Pval) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 766345) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(educall, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/educall_GWAS.Processed.gz'))
+
+```
+
+## Smoking TAG
+[TAG Nature Genet 2010](https://www.nature.com/articles/ng.571): TAG conducted a meta-analysis of Ever vs never smokers in 74,053 participants.
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+evrsmk.raw <- read_table2(params$evrsmk.summary) 
+
+evrsmk_hg18 <- evrsmk.raw %>% 
+  mutate(chrom = paste0('chr', CHR)) %>% 
+  mutate(chromEnd = as.integer(BP + 1)) %>% 
+  rename(chromStart = BP, name = SNP) %>% 
+  select(chrom, chromStart, chromEnd, name) %>% 
+  write_delim('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/evrsmk_hg18.BED', delim = " ", col_names = F)
+
+system('/Users/sheaandrews/Programs/liftOver/liftOver /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/evrsmk_hg18.BED /Users/sheaandrews/Programs/liftOver/hg18ToHg19.over.chain.gz  /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/evrsmk_hg19.BED  /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/evrsmk_hg19_unlifted.bed')
+
+evrsmk <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Smoking/tag/evrsmk_hg19.BED', col_names = F) %>% 
+  rename(POS_hg19 = X2, SNP = X4) %>% 
+  select(POS_hg19, SNP) %>% 
+  left_join(evrsmk.raw, by = 'SNP') %>% 
+  rename(Effect_allele = A1, Non_Effect_allele = A2, Beta = OR, POS = POS_hg19, EAF = FRQ_A) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 74053) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(evrsmk, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/evrsmk_GWAS.Processed.gz'))
+
+```
+
+## Oily Fish Intake UKB 
+### GeneAtlas 
+```{r fish_UKB}
+path <- '~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/'
+filenames <- list.files(path, pattern="*.csv.gz")
+
+## effects
+files <- paste(path, filenames[grep('allWhites', filenames)], sep="")
+out <- lapply(files, read_table2)
+out <- do.call(rbind, out)
+
+## snp info
+files <- paste(path, filenames[grep('snps.imputed', filenames)], sep="")
+info <- lapply(files, read_table2)
+info <- do.call(rbind, info)
+
+fish <- out %>% 
+  left_join(info, by = 'SNP') %>% 
+  left_join(hrc, by = c('SNP' = 'ID')) %>% 
+  filter(!is.na(CHROM)) %>% 
+  filter(`HWE-P` > 1e-6) %>% 
+  filter(MAF > 1e-4) %>% 
+  filter(iscores >= 0.8) %>%
+  mutate(A2 = ifelse(ALLELE == ALT, REF, ALLELE)) %>% 
+  mutate(N = 452264) %>%
+  rename(CHR = CHROM, Effect_allele = ALLELE, Non_Effect_allele = A2, Beta = `NBETA-1329-0.0`, SE = `NSE-1329-0.0`, P = `PV-1329-0.0`, EAF = MAF) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(CHR, POS, SNP, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, N, r2)
+
+write_tsv(fish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fish_GWAS.Processed.gz'))    
+```
+
+### NealeLab 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+oilfish.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/NealeLab/1329_gwas_imputed_v3_both_sexes_tsv.gz')
+oilfish <- oilfish.raw %>%
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>% 
+  filter(CHR != 'X') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>%
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples, MarkerName = variant) %>%
+  filter(!is.na(SNP)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != 'rs382362') %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(oilfish, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/oilfish_GWAS.Processed.gz'))
+
+```
+
+## Fish Consumer 
+### NealeLab 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+fishcons.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/FishIntake/103140.gwas.imputed_v3.both_sexes.tsv.gz')
+fishcons <- fishcons.raw %>%
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>% 
+  filter(CHR != 'X') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>%
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples, MarkerName = variant) %>%
+  filter(!is.na(SNP)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(fishcons, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fishcons_GWAS.Processed.gz'))
+```
+
+
+## HDL Cholesterol 
+[Willer et al Nat Genet 2013](https://www.nature.com/articles/ng.2797): To identify new loci and refine known loci influencing these lipids, we examined 188,577 individuals using genome-wide and custom genotyping arrays. We identify and annotate 157 loci associated with lipid levels at P < 5 × 10−8, including 62 loci not previously associated with lipid levels in humans. 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+hdl.raw <- read_table2(params$hdl.summary)
+hdl <- hdl.raw %>% 
+  rename(SNP = rsid, Effect_allele = A1, Non_Effect_allele = A2, P = `P-value`, EAF = Freq.A1.1000G.EUR, Beta = beta, SE = se) %>% 
+  separate(SNP_hg19, c('CHR', 'POS'), sep = ':') %>%
+  mutate(CHR = str_replace(CHR, 'chr', '')) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(hdl, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hdl_GWAS.Processed.gz'))
+
+```
+
+
+## LDL Cholesterol 
+[Willer et al Nat Genet 2013](https://www.nature.com/articles/ng.2797): To identify new loci and refine known loci influencing these lipids, we examined 188,577 individuals using genome-wide and custom genotyping arrays. We identify and annotate 157 loci associated with lipid levels at P < 5 × 10−8, including 62 loci not previously associated with lipid levels in humans. 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+ldl.raw <- read_table2(params$ldl.summary)
+ldl <- ldl.raw %>% 
+  rename(SNP = rsid, Effect_allele = A1, Non_Effect_allele = A2, P = `P-value`, EAF = Freq.A1.1000G.EUR, Beta = beta, SE = se) %>% 
+  separate(SNP_hg19, c('CHR', 'POS'), sep = ':') %>%
+  mutate(CHR = as.numeric(str_replace(CHR, 'chr', ''))) %>% 
+  arrange(CHR, POS) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs377481857') # rs377481857 caused issues
+
+write_tsv(ldl, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ldl_GWAS.Processed.gz'))
+
+```
+
+## Total Cholesterol 
+[Willer et al Nat Genet 2013](https://www.nature.com/articles/ng.2797): To identify new loci and refine known loci influencing these lipids, we examined 188,577 individuals using genome-wide and custom genotyping arrays. We identify and annotate 157 loci associated with lipid levels at P < 5 × 10−8, including 62 loci not previously associated with lipid levels in humans. 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+TC.raw <- read_table2(params$tc.summary)
+TC <- TC.raw %>% 
+  rename(SNP = rsid, Effect_allele = A1, Non_Effect_allele = A2, P = `P-value`, EAF = Freq.A1.1000G.EUR, Beta = beta, SE = se) %>% 
+  separate(SNP_hg19, c('CHR', 'POS'), sep = ':') %>%
+  mutate(CHR = as.numeric(str_replace(CHR, 'chr', ''))) %>% 
+  arrange(CHR, POS) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs377481857') # rs377481857 caused issues
+
+write_tsv(TC, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/tc_GWAS.Processed.gz'))
+
+```
+
+
+## Triglycerides  
+[Willer et al Nat Genet 2013](https://www.nature.com/articles/ng.2797): To identify new loci and refine known loci influencing these lipids, we examined 188,577 individuals using genome-wide and custom genotyping arrays. We identify and annotate 157 loci associated with lipid levels at P < 5 × 10−8, including 62 loci not previously associated with lipid levels in humans. 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+trig.raw <- read_table2(params$tg.summary)
+trig <- trig.raw %>% 
+  rename(SNP = rsid, Effect_allele = A1, Non_Effect_allele = A2, P = `P-value`, EAF = Freq.A1.1000G.EUR, Beta = beta, SE = se) %>% 
+  separate(SNP_hg19, c('CHR', 'POS'), sep = ':') %>%
+  mutate(CHR = as.numeric(str_replace(CHR, 'chr', ''))) %>% 
+  arrange(CHR, POS) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs377481857') # rs377481857 caused issues
+
+write_tsv(trig, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/trig_GWAS.Processed.gz'))
+
+```
+
+## Social Isolation
+[Day et al Nat Commu 2018](https://www.nature.com/articles/s41467-018-04930-1): In up to 452,302 UK Biobank study participants, we perform genome-wide association study analyses for loneliness and identify 15 genomic loci (P < 5 × 10−8) for loneliness. 
+
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+sociso.raw <- read_table2(params$sociso.summary)
+sociso <- sociso.raw %>% 
+  rename(SNP = snpid, CHR = chr, POS = bpos, Effect_allele = a1, Non_Effect_allele = a2, Beta = mtag_beta, SE = mtag_se, EAF = freq, P = mtag_pval, N = n) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(sociso, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sociso_GWAS.Processed.gz'))
+
+```
+
+## Insomnia 
+[Lane et al Nat Genet 2017](https://www.nature.com/articles/ng.3749#supplementary-information): We report single- and multiple-trait genome-wide association analyses of self-reported sleep duration, insomnia symptoms and excessive daytime sleepiness in the UK Biobank (n = 112,586).
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+insom.raw.2017 <- read_table2(params$insom.summary)
+insom2017 <- insom.raw.2017 %>% 
+  rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = MAF) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(CHR %in% 1:22) %>%
+  arrange(CHR, POS) %>% 
+  mutate(Beta = log(OR)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N) %>% 
+  filter(SNP != 'rs376775068')
+
+write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/insom2017_GWAS.Processed.gz'))
+
+```
+
+## Sleep Duration 
+[Lane et al Nat Genet 2017](https://www.nature.com/articles/ng.3749#supplementary-information): We report single- and multiple-trait genome-wide association analyses of self-reported sleep duration, insomnia symptoms and excessive daytime sleepiness in the UK Biobank (n = 112,586).
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+sleep.raw <- read_table2(params$sleep.summary)
+sleep <- sleep.raw %>% 
+  rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = MAF, Beta = BETA) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(CHR %in% 1:22) %>%
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(sleep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleep_GWAS.Processed.gz'))
+
+```
+
+[Dashti et al Nat Commun 2019](https://www.ncbi.nlm.nih.gov/pubmed/30846698): 
+Through genome-wide association analysis in 446,118 adults of European ancestry from the UK Biobank, we identify 78 loci for self-reported habitual sleep duration (p < 5 × 10-8; 43 loci at p < 6 × 10-9). Replication is observed for PAX8, VRK2, and FBXL12/UBL5/PIN1 loci in the CHARGE study (n = 47,180; p < 6.3 × 10-4), and 55 signals show sign-concordant effects. The 78 loci further associate with accelerometer-derived sleep duration, daytime inactivity, sleep efficiency and number of sleep bouts in secondary analysis (n = 85,499).
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+sleepDashti.raw <- read_tsv('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Sleep/Dashti2018/sleepdurationsumstats.txt.gz')
+sleepDashti <- sleepDashti.raw %>% 
+  rename(POS = BP, Effect_allele = ALLELE1, Non_Effect_allele = ALLELE0, EAF = A1FREQ, Beta = BETA_SLEEPDURATION, SE = SE_SLEEPDURATION, P = P_SLEEPDURATION) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(CHR %in% 1:22) %>%
+  arrange(CHR, POS) %>% 
+  mutate(N = 446118) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(sleepDashti, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleepDashti_GWAS.Processed.gz'))
+
+```
+
+[Lane et al Nat Genet 2017](https://www.nature.com/articles/ng.3749#supplementary-information): We report single- and multiple-trait genome-wide association analyses of self-reported sleep duration, insomnia symptoms and excessive daytime sleepiness in the UK Biobank (n = 112,586).
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+sleep.raw <- read_table2(params$sleep.summary)
+sleep <- sleep.raw %>% 
+  rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = MAF, Beta = BETA) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(CHR %in% 1:22) %>%
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(sleep, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sleep_GWAS.Processed.gz'))
+
+```
+
+## Insomnia 
+[Jansen et al 2018](https://www.nature.com/articles/ng.3749#supplementary-information): Here, we use an unprecedented large genetic association sample (N=1,331,010 - 23andME + UKBB) to allow detection of a substantial number of genetic variants and gain insight into biological functions, cell types and tissues involved in insomnia complaints. This file includes GWAS summary statistics of insomnia in UK Biobank (N=386,533 individuals).
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+insom.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Sleep/Jansen2018/Insomnia_sumstats_Jansenetal.txt.gz')
+insom <- insom.raw %>% 
+  mutate(Beta = log(OR)) %>% 
+  rename(POS = BP, Effect_allele = A1, Non_Effect_allele = A2, EAF = MAF, MarkerName = UNIQUE_ID) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(CHR %in% 1:22) %>%
+  arrange(CHR, POS) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(insom, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/insom_GWAS.Processed.gz'))
+
+```
+
+## Personality 
+[Lo et al Nat Genet 2017](https://dx.doi.org/10.1038%2Fng.3736) We identified six genetic loci, including five novel loci2,3, significantly associated with personality traits in a meta-analysis of genome-wide association studies (N=123,132–260,861). Summary statistics of GWAS from 23andMe (available in Supplementary Data Sets 1–5 for the top 10K SNPs) were combined with the two GPC samples separately.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+agree.raw <- read_table2(params$agree.summary, guess_max = 10000)
+agree <- agree.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = A1, Non_Effect_allele = A2, P = Pval) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 1131881) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(agree, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/agree_GWAS.Processed.gz'))
+
+```
+
+## IBD 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+ibd.raw <- read_table2(params$ibd.summary)
+ibd <- ibd.raw %>% 
+  separate(MarkerName, c('CHR', 'POS'), sep = ':', remove = F) %>% 
+  separate('POS', c('POS', 'REF', 'ALT'), sep = '_') %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr, P = P.value) %>% 
+  filter(nchar(Effect_allele) == 1 & Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(nchar(Non_Effect_allele) == 1 & Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, ID, POS, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(N = 59957) %>% 
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ibd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ibd_GWAS.Processed.gz'))
+
+```
+
+# Smoking
+[Liu et al 2019](https://www.nature.com/articles/s41588-018-0307-5) Tobacco and alcohol use are leading causes of mortality that influence risk for many complex diseases and disorders1 . They are heritable2,3 and etiologically related4,5 behaviors that have been resistant to gene discovery efforts6–11. In sample sizes up to 1.2 million individuals, we discovered 566 genetic variants in 406 loci associated with multiple stages of tobacco use (initiation, cessation, and heaviness) as well as alcohol use, with 150 loci evidencing pleiotropic association. Smoking phenotypes were positively genetically correlated with many health conditions, whereas alcohol use was negatively correlated with these conditions, such that increased genetic risk for alcohol use is associated with lower disease risk. We report evidence for the involvement of many systems in tobacco and alcohol use, including genes involved in nicotinic, dopaminergic, and glutamatergic neurotransmission. The results provide a solid starting point to evaluate the effects of these loci in model organisms and more precise substance use measures.
+
+## Age of Inition
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smkaoi.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/AgeOfInitiation.txt.gz')
+smkaoi <- smkaoi.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smkaoi, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkaoi_GWAS.Processed.gz'))
+
+```
+
+## Cigrates per day
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smkcpd.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/CigarettesPerDay.txt.gz')
+smkcpd <- smkcpd.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smkcpd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkcpd_GWAS.Processed.gz'))
+
+```
+
+## Smoking Ceassation 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smkc.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/SmokingCessation.txt.gz')
+smkc <- smkc.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  filter(SNP != "rs567151158") %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smkc, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smkc_GWAS.Processed.gz'))
+
+```
+
+## Smoking Initian 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Trait Code: alccukbgscan
+smki.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/liu2019/SmokingInitiation.txt.gz')
+smki <- smki.raw %>% 
+  rename(Effect_allele = 'ALT', Non_Effect_allele = 'REF', CHR = CHROM, SNP = RSID, P = PVALUE, EAF = 'AF', Beta = BETA) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  filter(SNP != '.') %>%
+  filter(SNP != 'rs199441') %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(smki, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/smki_GWAS.Processed.gz'))
+
+```
+
+## Cigrates per day 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+cpd.raw <- read_table2(params$cpd.summary)
+cpd <- cpd.raw %>% 
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>% 
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples) %>% 
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(!is.na(SNP)) %>%
+  filter(CHR != 'X') %>%
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(cpd, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/cpd_GWAS.Processed.gz'))
+
+```
+
+
+## Ever Smoker 
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+evrsmk.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Smoking/evrsmk/20160.gwas.imputed_v3.both_sexes.tsv.gz')
+evrsmk <- evrsmk.raw %>%
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>% 
+  filter(CHR != 'X') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>%
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples, MarkerName = variant) %>%
+  filter(!is.na(SNP)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(evrsmk, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/evrsmk_GWAS.Processed.gz'))
+
+```
+
+
+## Hearing Difficulties/Problems
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+hear.raw <- read_table2(params$hear.summary)
+hear <- hear.raw %>% 
+  separate(variant, c('CHR', 'POS', 'Ref', 'Alt'), sep = ':', remove = F) %>% 
+  filter(low_confidence_variant == 'false') %>%
+  left_join(select(hrc, MarkerName, ID), by = c('variant' = 'MarkerName')) %>% 
+  rename(SNP = ID, Effect_allele = Alt, Non_Effect_allele = Ref, Beta = beta, SE = se, P = pval, N = n_complete_samples) %>% 
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  filter(!is.na(SNP)) %>%
+  filter(CHR != 'X') %>%
+  mutate(EAF = ifelse(minor_allele == Effect_allele, minor_AF, 1-minor_AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(hear, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/hear_GWAS.Processed.gz'))
+
+```
+
+## Diastolic Blood Pressure
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+dbp.raw <- read_table2(params$dbp.summary)
+dbp <- dbp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'type'), sep = ':', remove = T) %>% 
+  filter(type != 'INDEL') %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, N = TotalSampleSize) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  filter(!is.na(SNP)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(dbp, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/dbp_GWAS.Processed.gz'))
+
+```
+
+## Systolic Blood Pressure
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+sbp.raw <- read_table2(params$sbp.summary)
+sbp <- sbp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'type'), sep = ':', remove = T) %>% 
+  filter(type != 'INDEL') %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, N = TotalSampleSize) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  filter(!is.na(SNP)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(sbp, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/sbp_GWAS.Processed.gz'))
+
+```
+
+## Pulse Pressure
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+pp.raw <- read_table2(params$pp.summary)
+pp <- pp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'type'), sep = ':', remove = T) %>% 
+  filter(type != 'INDEL') %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, N = TotalSampleSize) %>% 
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>%
+  filter(Effect_allele %in% c('A', 'C', 'T', 'G'))%>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'T', 'G')) %>% 
+  unite(ChrPosNaNea, c('CHR', 'POS', 'Effect_allele', 'Non_Effect_allele'), sep = ":", remove = F) %>% 
+  unite(ChrPosNeaNa, c('CHR', 'POS', 'Non_Effect_allele', 'Effect_allele'), sep = ":", remove = F) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNaNea' = 'MarkerName')) %>% 
+  left_join(select(hrc, MarkerName, ID), by = c('ChrPosNeaNa' = 'MarkerName')) %>% 
+  mutate(SNP = ifelse(is.na(ID.x), ID.y, ID.x)) %>% 
+  filter(!is.na(SNP)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(pp, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/pp_GWAS.Processed.gz'))
+
+```
+
+## GGT
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Read in data 
+dat_ggt.raw <- read_table2(params$ggt.summary)
+
+## Convert summary stats to a .bed format
+ggt.bed <- dat_ggt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  filter(!is.na(Chr36)) %>% 
+  mutate(chr = paste0('chr', Chr36)) %>% 
+  rename(chromStart = Position36) %>% 
+  mutate(chromEnd = as.integer(chromStart+1)) %>% 
+  select(chr, chromStart, chromEnd, MarkerName)
+
+## Write out
+write_delim(ggt.bed, '~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg18.bed', col_names = F, delim = " ")
+
+## LiftOver
+#./liftOver /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg18.bed \
+#   hg18ToHg19.over.chain.gz \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg19_lifted.bed \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg19_unlifted.bed
+
+## Read in hg19 positions
+dat_ggt.lifted <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/ggt_hg19_lifted.bed', col_names = F)
+
+## Merge hg19 positions and summary stats
+# restucture data
+dat_ggt.hg19 <- dat_ggt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  left_join(dat_ggt.lifted, by = c('MarkerName' = 'X4')) %>% 
+  select(-Position36, -X1, -X3) %>% 
+  rename(SNP = MarkerName, CHR = Chr36, POS = X2, Non_Effect_allele =  Other_allele, P = P_value, Beta = Effect, SE = StdErr) %>% 
+  mutate(Effect_allele = str_to_upper(Effect_allele)) %>% 
+  mutate(Non_Effect_allele = str_to_upper(Non_Effect_allele)) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, P_GC_MA_adj)
+
+write_tsv(dat_ggt.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ggt_GWAS.Processed.gz'))
+
+
+```
+
+## ALP
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Read in data 
+dat_alp.raw <- read_table2(params$alp.summary)
+
+## Convert summary stats to a .bed format
+alp.bed <- dat_alp.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  filter(!is.na(Chr36)) %>% 
+  mutate(chr = paste0('chr', Chr36)) %>% 
+  rename(chromStart = Position36) %>% 
+  mutate(chromEnd = as.integer(chromStart+1)) %>% 
+  select(chr, chromStart, chromEnd, MarkerName)
+
+## Write out
+write_delim(alp.bed, '~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg18.bed', col_names = F, delim = " ")
+
+## LiftOver
+#./liftOver /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg18.bed \
+#   hg18ToHg19.over.chain.gz \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg19_lifted.bed \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg19_unlifted.bed
+
+## Read in hg19 positions
+dat_alp.lifted <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alp_hg19_lifted.bed', col_names = F)
+
+## Merge hg19 positions and summary stats
+# restucture data
+dat_alp.hg19 <- dat_alp.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  left_join(dat_alp.lifted, by = c('MarkerName' = 'X4')) %>% 
+  select(-Position36, -X1, -X3) %>% 
+  rename(SNP = MarkerName, CHR = Chr36, POS = X2, Non_Effect_allele =  Other_allele, P = P_value, Beta = Effect, SE = StdErr) %>% 
+  mutate(Effect_allele = str_to_upper(Effect_allele)) %>% 
+  mutate(Non_Effect_allele = str_to_upper(Non_Effect_allele)) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, P_GC_MA_adj)
+
+write_tsv(dat_alp.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alp_GWAS.Processed.gz'))
+
+
+```
+
+
+## ALT
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+## Read in data 
+dat_alt.raw <- read_table2(params$alt.summary)
+
+## Convert summary stats to a .bed format
+alt.bed <- dat_alt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  filter(!is.na(Chr36)) %>% 
+  mutate(chr = paste0('chr', Chr36)) %>% 
+  rename(chromStart = Position36) %>% 
+  mutate(chromEnd = as.integer(chromStart+1)) %>% 
+  select(chr, chromStart, chromEnd, MarkerName)
+
+## Write out
+write_delim(alt.bed, '~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg18.bed', col_names = F, delim = " ")
+
+## LiftOver
+#./liftOver /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg18.bed \
+#   hg18ToHg19.over.chain.gz \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg19_lifted.bed \
+#   /Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg19_unlifted.bed
+
+## Read in hg19 positions
+dat_alt.lifted <- read_tsv('~/Dropbox/Research/Data/Summary_Statisitics/Liver_Enzymes/alt_hg19_lifted.bed', col_names = F)
+
+## Merge hg19 positions and summary stats
+# restucture data
+dat_alt.hg19 <- dat_alt.raw %>% 
+  arrange(Chr36, Position36) %>% 
+  left_join(dat_alt.lifted, by = c('MarkerName' = 'X4')) %>% 
+  select(-Position36, -X1, -X3) %>% 
+  rename(SNP = MarkerName, CHR = Chr36, POS = X2, Non_Effect_allele =  Other_allele, P = P_value, Beta = Effect, SE = StdErr) %>% 
+  mutate(Effect_allele = str_to_upper(Effect_allele)) %>% 
+  mutate(Non_Effect_allele = str_to_upper(Non_Effect_allele)) %>% 
+  left_join(select(hrc, MarkerName, ChromPos, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  mutate(EAF = ifelse(Effect_allele == ALT, AF, 1-AF)) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N, P_GC_MA_adj)
+
+write_tsv(dat_alt.hg19, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/alt_GWAS.Processed.gz'))
+```
+
+## PBC
+Primary biliary cirrhosis (PBC) is a classical autoimmune liver disease for which effective immunomodulatory therapy is lacking. Here we perform meta-analyses of discovery data sets from genome-wide association studies of European subjects (n=2,764 cases and 10,475 controls) followed by validation genotyping in an independent cohort (n=3,716 cases and 4,261 controls). https://www.nature.com/articles/ncomms9019
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+pbc.raw <- read_table2('/Users/sheaandrews/Downloads/26394269-GCST003129-EFO_1001486-Build37.f.tsv.gz')
+pbc <- pbc.raw %>% 
+  rename(SNP = variant_id, CHR = chromosome, POS = base_pair_location, Effect_allele = effect_allele, Non_Effect_allele = other_allele, Beta = beta, SE = standard_error, P = p_value) %>%
+  mutate(N = 13239) %>% 
+  left_join(select(hrc_kg, ID, REF, ALT, AF), by = c('SNP' = 'ID')) %>%
+  filter(!is.na(POS)) %>%
+  mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF)) %>%
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  select(SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(pbc, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/pbc_GWAS.Processed.gz'))
+
+```
+
+
+## Stroke
+### All Stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+as.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.1.AS.EUR.out')
+as <- as.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(as, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/as_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Any ischemic stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+ais.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.2.AIS.EUR.out')
+ais <- ais.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ais, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ais_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Large-artery stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+las.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.3.LAS.EUR.out')
+las <- las.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%o
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(las, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/las_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Cardioembolic stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+ces.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.4.CES.EUR.out')
+ces <- ces.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(ces, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/ces_GWAS.Processed.gz'))
+
+```
+
+## Stroke
+### Small-vessel stroke
+GWAS of stroke and strok subtypes in 40,585 cases and 406,111 controls of European Ancestry.
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+svs.raw <- read_table2('~/Dropbox/Research/Data/Summary_Statisitics/Stroke/Malik2018/MEGASTROKE.5.SVS.EUR.out')
+svs <- svs.raw %>% 
+  rename(SNP = MarkerName, Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, EAF = Freq1, SE = StdErr, P = `P-value`) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  left_join(select(hrc, MarkerName, CHROM, POS, ID), by = c('SNP' = 'ID')) %>% 
+  rename(CHR = CHROM) %>% 
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(svs, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/svs_GWAS.Processed.gz'))
+
+```
+
+## CRP
+```{r data_wrangling_exposure, echo=F, cache=TRUE}
+crp.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/CRP/1KG_CRP_GWAS_AJHG_2018.txt')
+crp <- crp.raw %>% 
+  separate(MarkerName, c('CHR', 'POS', 'Variant'), remove = F) %>%
+  filter(Variant == 'SNP') %>% 
+  mutate(z = Effect/StdErr) %>% 
+  mutate(P = 2*pnorm(-abs(z))) %>%
+  mutate(Allele1 = toupper(Allele1), Allele2 = toupper(Allele2)) %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr)
+
+write_tsv(crp, gzfile('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/CRP/crp_GWAS.Processed.txt.gz'))
+
+crp.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/CRP/1KG_CRP_GWAS_AJHG_2018.txt')
+crp.out <- crp.raw %>%
+  separate(MarkerName, c('CHR', 'POS', 'Variant'), remove = F) %>%
+  filter(Variant == 'SNP') %>% 
+  mutate(z = Effect/StdErr) %>% 
+  mutate(P = 2*pnorm(-abs(z))) %>%
+  mutate(Allele1 = toupper(Allele1), Allele2 = toupper(Allele2)) %>%
+  rename(Effect_allele = Allele1, Non_Effect_allele = Allele2, Beta = Effect, SE = StdErr) %>%
+  mutate(CHR = as.numeric(CHR), POS = as.numeric(POS)) %>%
+  left_join(select(hrc_kg, ID, CHROM, POS, REF, ALT, AF), by = c('CHR' = 'CHROM', 'POS' = 'POS')) %>%
+  mutate(EAF = findAF(Effect_allele, Non_Effect_allele, REF, ALT, AF)) %>%
+  mutate(N = 446696) %>% 
+  mutate(r2 = snp.r2(EAF, Beta)) %>%
+  rename(SNP = ID) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+write_tsv(crp.out, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/crp_GWAS.Processed.txt.gz'))
+
+  
+```
+
+## CRP
+```{r, data_wrangling_exposure, echo=F, cache=TRUE}
+
+cho.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Merino2018/CHO_2GC_ntotalget05_mafget0005_oevargt04.v2_1AUG2017.txt.gz')
+
+cho <- cho.raw %>% 
+  rename(MarkerName = SNPID, SNP = rsID, CHR = chr, POS = position, Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, Beta = beta, P = pval, N = TotalSampleSize) %>%
+   mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.pve(EAF, Beta, SE, N)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+write_tsv(cho, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/carb_GWAS.Processed.txt.gz'))
+
+fat.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Merino2018/FAT_2GC_ntotalget05_mafget0005_oevargt04.v2_1AUG2017.txt.gz')
+fat <- fat.raw %>% 
+  rename(MarkerName = SNPID, SNP = rsID, CHR = chr, POS = position, Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, Beta = beta, P = pval, N = TotalSampleSize) %>%
+   mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.pve(EAF, Beta, SE, N)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(fat, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/fat_GWAS.Processed.txt.gz'))
+
+pro.raw <- read_table2('/Users/sheaandrews/Dropbox/Research/Data/Summary_Statisitics/Merino2018/PRO_2GC_ntotalget05_mafget0005_oevargt04.v2_1AUG2017 (1).txt.gz')
+
+prot <- pro.raw %>% 
+  rename(MarkerName = SNPID, SNP = rsID, CHR = chr, POS = position, Effect_allele = Allele1, Non_Effect_allele = Allele2, EAF = Freq1, Beta = beta, P = pval, N = TotalSampleSize) %>%
+   mutate(Effect_allele = toupper(Effect_allele), Non_Effect_allele = toupper(Non_Effect_allele)) %>%
+  filter(nchar(Effect_allele) == 1) %>% 
+  filter(Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  filter(nchar(Non_Effect_allele) == 1) %>% 
+  filter(Non_Effect_allele %in% c('A', 'C', 'G', 'T')) %>% 
+  mutate(r2 = snp.pve(EAF, Beta, SE, N)) %>%
+  select(MarkerName, SNP, CHR, POS, Effect_allele, Non_Effect_allele, EAF, Beta, SE, P, r2, N)
+
+write_tsv(prot, gzfile('~/Dropbox/Research/PostDoc-MSSM/2_MR/1_RawData/GWAS/prot_GWAS.Processed.txt.gz'))
+ 
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,609 @@
+# snakemake -s mr.smk --configfile config.yaml -j 4 --keep-going
+# snakejob -s mr.smk --configfile config.yaml -j 500 --max-jobs-per-second 1 --keep-going
+# snakejob -s mr.smk --configfile config.yaml -j 500 --max-jobs-per-second 1 --keep-going --until manhattan_plot
+
+DataOut: "data/MR_ADphenome/"
+DataOutput: "4_Output/MR_ADphenome/"
+
+REF: 'raw/EUR_All_Chr'
+clumpr2: 0.001
+clumpkb: 1000
+Pthreshold: ['5e-8', '5e-6']
+
+## Forbidden wildcard combinations
+missing: [
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Huang2017aaos", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017ab42", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017ptau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Deming2017tau", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014npany", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014braak4", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Walters2018alcdep", "OutcomeCode" : "Beecham2014vbiany", "Pthreshold" : "5e-8"}
+ ]
+
+EXPOSURES:
+  -
+    CODE: Liu2019drnkwk
+    NAME: 'Alcohol Consumption'
+    FILE: raw/GWAS/Liu2019drnkwk.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Walters2018alcdep
+    NAME: 'Alcohol Dependence'
+    FILE: raw/GWAS/Walters2018alcdep.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: SanchezRoige2018auditt
+    NAME: 'AUDIT Total'
+    FILE: raw/GWAS/SanchezRoige2018auditt.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Yengo2018bmi
+    NAME: BMI
+    FILE: raw/GWAS/Yengo2018bmi.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Howard2018dep
+    NAME: 'Depressive Symptoms'
+    FILE: raw/GWAS/Howard2018dep.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Xu2018diab
+    NAME: Diabetes
+    FILE: raw/GWAS/Xu2018diab.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Lee2018educ
+    NAME: Education
+    FILE: raw/GWAS/Lee2018educ.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: NealeLab2018oilfish
+    NAME: 'Oily Fish Intake'
+    FILE: raw/GWAS/NealeLab2018oilfish.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013hdl
+    NAME: 'HDL cholesterol'
+    FILE: raw/GWAS/Willer2013hdl.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013ldl
+    NAME: 'LDL cholesterol'
+    FILE: raw/GWAS/Willer2013ldl.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013tc
+    NAME: 'Total cholesterol'
+    FILE: raw/GWAS/Willer2013tc.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013tg
+    NAME: 'Triglycerides'
+    FILE: raw/GWAS/Willer2013tg.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Jansen2018insom
+    NAME: 'Insomnia Symptoms'
+    FILE: raw/GWAS/Jansen2018insom.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Dashti2019slepdur
+    NAME: 'Sleep Duration'
+    FILE: raw/GWAS/Dashti2019slepdur.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Wray2018mdd
+    NAME: 'Major Depressive Disorder'
+    FILE: raw/GWAS/Wray2018mdd.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Klimentidis2018mvpa
+    NAME: 'Moderate-Vigours Physical Activity'
+    FILE: raw/GWAS/Klimentidis2018mvpa.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019smkcpd
+    NAME: 'Smoking Quantity'
+    FILE: raw/GWAS/Liu2019smkcpd.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019smkint
+    NAME: 'Somking Initiation'
+    FILE: raw/GWAS/Liu2019smkint.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Day2018sociso
+    NAME: 'Social Isolation'
+    FILE: raw/GWAS/Day2018sociso.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: NealeLab2018hear
+    NAME: 'Hearing Problems'
+    FILE: raw/GWAS/NealeLab2018hear.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Evangelou2018dbp
+    NAME: 'Diastolic Blood Pressure'
+    FILE: raw/GWAS/Evangelou2018dbp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Evangelou2018sbp
+    NAME: 'Systolic Blood Pressure'
+    FILE: raw/GWAS/Evangelou2018sbp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Evangelou2018pp
+    NAME: 'Pulse Pressure'
+    FILE: raw/GWAS/Evangelou2018pp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+
+
+OUTCOMES:
+  -
+    CODE: Lambert2013load
+    NAME: LOAD
+    FILE: raw/GWAS/Lambert2013load.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Kunkle2019load
+    NAME: LOAD
+    FILE: raw/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Huang2017aaos
+    NAME: AAOS
+    FILE: raw/GWAS/Huang2017aaos.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Deming2017ab42
+    NAME: 'CSF Ab42'
+    FILE: raw/GWAS/Deming2017ab42.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Deming2017ptau
+    NAME: 'CSF Ptau'
+    FILE: raw/GWAS/Deming2017ptau.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Deming2017tau
+    NAME: 'CSF Tau'
+    FILE: raw/GWAS/Deming2017tau.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Hilbar2017hipv
+    NAME: 'Hippocampal Volume'
+    FILE: raw/GWAS/Hilbar2017hipv.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Hilbar2015hipv
+    NAME: 'Hippocampal Volume'
+    FILE: raw/GWAS/Hilbar2015hipv.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Beecham2014npany
+    NAME: 'Any Neuritic Plaques'
+    FILE: raw/GWAS/Beecham2014npany.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Beecham2014braak4
+    NAME: 'Neurofibrillary Tangles'
+    FILE: raw/GWAS/Beecham2014braak4.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Beecham2014vbiany
+    NAME: 'Vascular Brain Injury'
+    FILE: raw/GWAS/Beecham2014vbiany.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT

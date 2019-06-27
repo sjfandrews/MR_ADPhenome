@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+QYVtdq	8c35zI	Kunkle2019load	Willer2013tg	5e-6	FALSE	MR Egger	749.3193383689686	118	1.8194462728738118e-92
+QYVtdq	8c35zI	Kunkle2019load	Willer2013tg	5e-6	FALSE	Inverse variance weighted	750.738876972755	119	2.5270884401359903e-92
+QYVtdq	8c35zI	Kunkle2019load	Willer2013tg	5e-6	TRUE	MR Egger	153.46328857990062	116	0.011351775976140635
+QYVtdq	8c35zI	Kunkle2019load	Willer2013tg	5e-6	TRUE	Inverse variance weighted	153.5746758837867	117	0.01314780063655658
