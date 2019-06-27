@@ -1,7 +1,8 @@
 library(tidyverse)
 library(ggiraph)
 library(TwoSampleMR)
-source('~/Dropbox/Research/PostDoc-MSSM/2_MR/3_Scripts/PowerFunctions.R', chdir = TRUE)
+source('src/PowerFunctions.R', chdir = TRUE)
+source('scripts/miscfunctions.R', chdir = TRUE)
 
 ## if value is less then 0.001, use scientific notation
 round_sci <- function(x){
