@@ -1,5 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,nsnp,b,se,pval,date
-YOuiGb,RYsYvo,aaos,auditp,Inverse variance weighted (fixed effects),31,-0.7433480270391458,0.5342853092481067,0.1641362460049385,2019-04-24
-YOuiGb,RYsYvo,aaos,auditp,Weighted median,31,-1.256613523952534,0.7906446541844224,0.11198069908109518,2019-04-24
-YOuiGb,RYsYvo,aaos,auditp,Weighted mode,31,-2.424432074153498,1.4464230654255907,0.10410022514802507,2019-04-24
-YOuiGb,RYsYvo,aaos,auditp,MR Egger,31,-3.4017904877798184,1.1850058947736914,0.007572542489426216,2019-04-24

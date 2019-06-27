@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-EQcWWQ	AdmIot	loadKunkle	alcc	0	68.78710248247121	0.0432

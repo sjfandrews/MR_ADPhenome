@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-8h4kTz	qMS3v2	ggt	audit	2	NA	NA

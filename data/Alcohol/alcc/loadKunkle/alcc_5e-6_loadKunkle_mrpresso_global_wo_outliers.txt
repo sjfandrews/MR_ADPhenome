@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-EQcWWQ	AdmIot	loadKunkle	alcc	0	NA	NA

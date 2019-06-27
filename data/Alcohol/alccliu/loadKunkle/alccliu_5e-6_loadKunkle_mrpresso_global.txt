@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-j2SxXS	hrCj5v	loadKunkle	alccliu	1	239.0916062225645	1e-4

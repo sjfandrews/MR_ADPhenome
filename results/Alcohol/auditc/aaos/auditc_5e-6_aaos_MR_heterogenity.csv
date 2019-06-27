@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-lOFqII,09tPhb,aaos,auditc,MR Egger,49.95433726741738,40,0.134525711771969,2019-04-24
-lOFqII,09tPhb,aaos,auditc,Inverse variance weighted,58.14132459975487,41,0.04000143299313014,2019-04-24

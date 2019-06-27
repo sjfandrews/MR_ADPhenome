@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-b4SCaI	Pi2CWb	loadKunkle	auditp	0	NA	NA

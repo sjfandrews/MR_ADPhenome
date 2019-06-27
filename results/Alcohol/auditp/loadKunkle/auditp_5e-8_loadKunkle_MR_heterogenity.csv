@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-b4SCaI,Pi2CWb,loadKunkle,auditp,MR Egger,2.3410225364704287,3,0.5047076621242188,2019-04-24
-b4SCaI,Pi2CWb,loadKunkle,auditp,Inverse variance weighted,7.061957193670602,4,0.13265007209785154,2019-04-24

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-SM0vXS	urdppH	load	auditc	1	29.434315746619205	0.003

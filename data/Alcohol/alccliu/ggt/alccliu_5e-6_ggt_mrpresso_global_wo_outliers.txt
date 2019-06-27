@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-WJiyST	mL8zUD	ggt	alccliu	2	166.13949867047128	0.0077

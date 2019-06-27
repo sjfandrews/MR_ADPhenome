@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n.outlier	RSSobs	pval
-68L130	1Bjk0K	aaos	audit	0	NA	NA

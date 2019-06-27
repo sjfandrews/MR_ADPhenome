@@ -1,3 +1,0 @@
-target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHR,POS,Effect_allele.proxy,Non_Effect_allele.proxy,EAF,Beta,SE,P,r2,N,ref,ref.proxy,alt,alt.proxy,Effect_allele,Non_Effect_allele,proxy.outcome
-rs578102530,rs2532419,0.83634,1,AT/GC,NA,17,44288281,T,C,0.1601,-0.0425,0.0233,0.06849,4.85765613875e-4,63926,A,T,G,C,A,G,TRUE
-rs554894200,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

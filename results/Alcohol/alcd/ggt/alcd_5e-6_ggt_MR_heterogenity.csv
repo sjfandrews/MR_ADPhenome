@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-z1fguU,GNTXHz,ggt,alcd,MR Egger,20.02414968043273,9,0.017763951606154356,2019-04-24
-z1fguU,GNTXHz,ggt,alcd,Inverse variance weighted,24.33777291408586,10,0.006752577852153376,2019-04-24

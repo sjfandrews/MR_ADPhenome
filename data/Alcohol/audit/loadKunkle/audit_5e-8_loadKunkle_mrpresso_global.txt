@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-CJ41MC	g8cS5Z	loadKunkle	audit	0	25.452949379223995	0.022

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	n_outliers	RSSobs	pval
-0fsWJk	36gG22	aaos	auditp	0	10.325344700627321	0.177

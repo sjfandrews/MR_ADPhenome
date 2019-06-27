@@ -1,3 +1,0 @@
-id.exposure,id.outcome,outcome,exposure,method,Q,Q_df,Q_pval,date
-ZhlaPS,dpj1mA,load,alccliu,MR Egger,53.25490879768405,38,0.0512280889601261,2019-04-24
-ZhlaPS,dpj1mA,load,alccliu,Inverse variance weighted,54.89948979870407,39,0.04701957103253568,2019-04-24

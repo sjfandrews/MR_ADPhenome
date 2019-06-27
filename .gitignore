@@ -5,7 +5,6 @@
 .snakemake/*
 .snakejob/*
 raw/*
-docs/*
 Drafts*
 mrbase.oauth
 *.clumped.gz
