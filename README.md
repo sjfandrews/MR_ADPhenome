@@ -1,7 +1,6 @@
 # Causal effect of modifiable risk factors on the Alzheimer’s phenome
 Esimating the causal associations between potentially modifiable risk factors and the Alzheimer’s phenome using Mendelian randomization
 
----
 ## Abstract
 **Background:** Potentially modifiable risk factors have been associated with Alzheimer’s disease (AD) that could be targeted to lifestyle interventions to reduce the prevalence of AD. However, the causality of these risk factors on AD is unclear. Using Mendelian randomization we evaluated the causal effect of potentially modifiable risk factors on AD and its associated endophenotypes.
 
