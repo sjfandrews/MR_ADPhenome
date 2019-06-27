@@ -50,6 +50,19 @@ samplesize <- tibble(
 ## negate
 `%nin%` = Negate(`%in%`)
 
+## Standardization of SNP effect and its standard error using z-statistic, allele 
+## frequency and sample size. Based on gsmr::std_effect. 
+## http://cnsgenomics.com/software/gsmr/#Tutorial
+std_beta = function(z, eaf, n){
+  std.b = z/sqrt(2 * eaf * (1 - eaf) * (n + z^2))
+  std.b
+}
+
+std_se = function(z, eaf, n){
+  std.se = 1/sqrt(2 * eaf * (1 - eaf) * (n + z^2))
+  std.se
+}
+
 # Calculated F-statistics 
 ## Burgess, Stephen, Simon G. Thompson, and CRP CHD Genetics Collaboration. 2011. 
 ## International Journal of Epidemiology 40 (3): 755–64.
