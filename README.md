@@ -9,10 +9,10 @@ Esimating the causal associations between potentially modifiable risk factors an
 **Conclusions:** Demonstration of a causal relationship between blood pressure, cholesterol levels, BMI, depression, insomnia symptoms, physical activity and educational attainment on the AD phenome strongly support public health programs to educate the public about these preventable causes of AD.
 
 ## MR Analysis
-Mendelian randomization was conducted using the [MR snakemake pipeline](https://github.com/marcoralab/MRPipeline). See the corresponding repo for more information
+Mendelian randomization was conducted using the [MR snakemake pipeline](https://github.com/marcoralab/MRPipeline). See the corresponding repo for more information.
 
 ## Data Avaliability
-The data used in these analysis are either pubilicaly avaliable or were made avaliable by request from the authors. Summary Statistics were harmonized using the [summary statistic munging pipeline](https://github.com/marcoralab/sumstats_munger).
+The data used in these analysis are either pubilicaly avaliable or were made avaliable by request from the authors. Summary Statistics were harmonized using the [Summary Statistic Munging pipeline](https://github.com/marcoralab/sumstats_munger).
 
 Harmonized exposure - outcome SNP sets for conducting MR analysis can be found in `docs/TableS1.csv`.
 
@@ -43,7 +43,7 @@ Hibar et al 2017 - http://enigma.ini.usc.edu/research/download-enigma-gwas-resul
 ## Shiny App
 An interactive Shiny App is avaliable at: https://sjfandrews.shinyapps.io/MR_ADPhenome/
 
-The shiny app can also be run localy using the `shiny/App.R` script by setting your working directory to the `MR_ADPhenome/shiny` and running the following code.
+The shiny app can also be run localy using the `shiny/App.R` script by setting your working directory to `MR_ADPhenome/shiny` and running the following code.
 
 ```
 setwd('MR_ADPhenome/shiny')
