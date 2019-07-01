@@ -41,7 +41,7 @@ Hibar et al 2017 - http://enigma.ini.usc.edu/research/download-enigma-gwas-resul
 
 
 ## Shiny App
-An interactive Shiny App is avaliable at:
+An interactive Shiny App is avaliable at: https://sjfandrews.shinyapps.io/MR_ADPhenome/
 
 The shiny app can also be run localy using the `shiny/App.R` script by setting your working directory to the `MR_ADPhenome/shiny` and running the following code.
 
