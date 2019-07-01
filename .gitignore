@@ -13,4 +13,7 @@ mrbase.oauth
 Rplots.pdf
 data/test/*
 results/test/*
-Shiny/.Rapp.history
+shiny/.Rapp.history
+shiny/rsconnect
+shiny/user_base.rds
+shiny/.httr-oauth
