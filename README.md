@@ -18,7 +18,7 @@ Harmonized exposure - outcome SNP sets for conducting MR analysis can be found i
 
 
 Liu et al 2019 - https://genome.psych.umn.edu/index.php/GSCAN#Summary_Statistics <br>
-Clarke et al 2017 - by request <br>
+Sanchez-Roige et al 2018 - by request <br>
 Walters et al 2018 - https://www.med.unc.edu/pgc/data-index/ <br>
 NealLab - http://www.nealelab.is/uk-biobank <br>
 Xue et al 2018 - http://cnsgenomics.com/data.html <br>
