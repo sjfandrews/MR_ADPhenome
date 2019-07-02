@@ -58,7 +58,7 @@ std.res <- mr(std.MRdat, method_list = c("mr_ivw_fe")) %>%
   mutate(beta = ifelse(logistic == FALSE, b, NA))
 
 ## Join std MR results with summary data for power analysis
-mrdat.power <- MRdat %>% 
+mrdat.power <- std.MRdat %>% 
   filter(mr_keep == TRUE) %>%
   group_by(exposure, outcome, pt) %>% 
   mutate(pve.exposure = snp.pve(eaf.exposure, beta.exposure, se.exposure, samplesize.exposure)) %>% 
@@ -75,7 +75,7 @@ mrdat.power <- MRdat %>%
 ## -------------------------------------------------------------------------------- ##
 ##            Rerun IVW MR analysis using standardized beta estimates 
 ##            Models in which outliers are removed 
-outlier_models <- MRdat %>% 
+outlier_models <- std.MRdat %>% 
   filter(mr_keep == TRUE) %>%
   group_by(exposure, outcome, pt) %>% 
   summarize(n = sum(!mrpresso_keep)) %>% 
@@ -94,7 +94,7 @@ std.res_wo_outliers <- std.MRdat %>%
   mutate(beta = ifelse(logistic == FALSE, b, NA))
 
 ## Join std MR results with summary data for power analysis
-mrdat.power_wo_outliers <- MRdat %>% 
+mrdat.power_wo_outliers <- std.MRdat %>% 
   filter(mr_keep == TRUE) %>%
   filter(mrpresso_keep == TRUE) %>%
   semi_join(outlier_models) %>% 
