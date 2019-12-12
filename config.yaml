@@ -1,5 +1,5 @@
 # snakemake -s mr.smk --configfile config.yaml -j 4 --keep-going
-# snakejob -s mr.smk --configfile config.yaml -j 500 --max-jobs-per-second 1 --keep-going
+# snakejob -s mr.smk --configfile config.yaml -j 1000 --max-jobs-per-second 1 --keep-going
 # snakejob -s mr.smk --configfile config.yaml -j 500 --max-jobs-per-second 1 --keep-going --until manhattan_plot
 
 DataOut: "data/MR_ADphenome/"
@@ -102,8 +102,7 @@ missing: [
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"}
-
- ]Wells2019hdiff
+ ]
 
 EXPOSURES:
   -
