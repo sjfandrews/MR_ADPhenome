@@ -44,23 +44,6 @@ EXPOSURES:
       N: N
       TRAIT: TRAIT
   -
-    CODE: Walters2018alcdep
-    NAME: 'Alcohol Dependence'
-    FILE: raw/GWAS/Walters2018alcdep.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
     CODE: SanchezRoige2018auditt
     NAME: 'AUDIT Total'
     FILE: raw/GWAS/SanchezRoige2018auditt.chrall.CPRA_b37.tsv.gz
