@@ -1,6 +1,6 @@
 __default__:
   project: acc_LOAD
-  partition: bode
+  partition: bode2
   queue: premium
   cores: 1
   mem: 16000
