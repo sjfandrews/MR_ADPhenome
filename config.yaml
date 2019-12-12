@@ -7,7 +7,7 @@ DataOutput: "4_Output/MR_ADphenome/"
 
 REF: 'raw/EUR_All_Chr'
 clumpr2: 0.001
-clumpkb: 1000
+clumpkb: 10000
 Pthreshold: ['5e-8', '5e-6']
 
 ## Forbidden wildcard combinations
@@ -350,9 +350,9 @@ EXPOSURES:
       N: N
       TRAIT: TRAIT
   -
-    CODE: NealeLab2018hear
-    NAME: 'Hearing Problems'
-    FILE: raw/GWAS/NealeLab2018hear.chrall.CPRA_b37.tsv.gz
+    CODE: Wells2019hdiff
+    NAME: 'Hearing Difficulty'
+    FILE: raw/GWAS/Helena2019hdiff.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
