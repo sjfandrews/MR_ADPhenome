@@ -35,6 +35,8 @@ proxy.dat <- read_csv(proxy.snps) %>%
 message("Harmonizing Exposure and Outcome \n")
 mr_exposure.dat <- format_data(exposure.dat, type = 'exposure',
                             snp_col = 'SNP',
+                            chr_col = 'CHROM',
+                            pos_col = 'POS',
                             beta_col = "BETA",
                             se_col = "SE",
                             eaf_col = "AF",
@@ -49,6 +51,8 @@ mr_exposure.dat$exposure =  ExposureCode
 # Format LOAD
 mr_outcome.dat <- format_data(outcome.dat, type = 'outcome',
                                  snp_col = 'SNP',
+                                 chr_col = 'CHROM',
+                                 pos_col = 'POS',
                                  beta_col = "BETA",
                                  se_col = "SE",
                                  eaf_col = "AF",
