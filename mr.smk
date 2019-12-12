@@ -5,7 +5,7 @@ from itertools import product
 import pandas as pd
 RWD = os.getcwd()
 
-shell.prefix('module load plink/1.90 R/3.5.1; ')
+shell.prefix('module load plink/1.90 R/3.5.3; ')
 
 
 REF = config['REF']
