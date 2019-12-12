@@ -3,7 +3,7 @@
 # snakejob -s mr.smk --configfile config.yaml -j 500 --max-jobs-per-second 1 --keep-going --until manhattan_plot
 
 DataOut: "data/MR_ADphenome/"
-DataOutput: "4_Output/MR_ADphenome/"
+DataOutput: "results/MR_ADphenome/"
 
 REF: 'raw/EUR_All_Chr'
 clumpr2: 0.001 ## Default in TwoSample MR
