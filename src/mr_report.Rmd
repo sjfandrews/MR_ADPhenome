@@ -126,7 +126,7 @@ SNPs that genome-wide significant in the outcome GWAS are likely pleitorpic and 
 
 
 **Table 5:** SNPs that were genome-wide significant in the `r outcome.name` GWAS
-```{r harmonized_table, echo=FALSE, message=F}
+```{r gws_table, echo=FALSE, message=F}
 mrdat_gws <- mrdat.raw %>%
   filter(pval.outcome <= 5e-8) %>%
   select(SNP, chr.outcome, pos.outcome, pval.exposure, pval.outcome)
