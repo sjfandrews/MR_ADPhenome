@@ -13,7 +13,9 @@ suppressMessages(library(MRPRESSO)) ## For detecting pleitropy
 ### ===== READ IN DATA ===== ###
 message("\n READING IN HARMONIZED MR DATA \n")
 mrdat.raw <- read_csv(infile)
-mrdat <- filter(mrdat.raw, mr_keep == TRUE)
+mrdat <- mrdat.raw %>% 
+  filter(mr_keep == TRUE) %>% 
+  filter(pval.outcome > 5e-8)
 
 ## Data Frame of nsnps and number of iterations
 df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
