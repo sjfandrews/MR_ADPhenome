@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-9DZluo	GPxLOp	Beecham2014braak4	SanchezRoige2018auditt	5e-8	FALSE	0.009490937024322004	0.040288301199939223	0.8205057382389335	NA
+NgD5OD	ll1pWm	Beecham2014braak4	SanchezRoige2018auditt	5e-8	FALSE	0.004947162600421879	0.041320896291505045	0.9086089126370853	NA

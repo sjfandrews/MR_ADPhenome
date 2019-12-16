@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-2N67RY	2xuhmU	Deming2017tau	Dashti2019slepdur	5e-8	TRUE	4	74.19464460325848	0.4346
+g4jEis	HpWJoI	Deming2017tau	Dashti2019slepdur	5e-8	TRUE	0	NA	NA

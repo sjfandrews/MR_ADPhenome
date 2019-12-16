@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-8qishF	nkU49L	Lambert2013load	Walters2018alcdep	5e-6	FALSE	0.02327095396535662	0.012345231245439495	0.07895144566931335	NA

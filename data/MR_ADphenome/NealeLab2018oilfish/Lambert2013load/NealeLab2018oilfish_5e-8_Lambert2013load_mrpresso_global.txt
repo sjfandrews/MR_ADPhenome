@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-o3T9fY	6oByt5	Lambert2013load	NealeLab2018oilfish	5e-8	FALSE	2	2706.103356951941	<2e-04

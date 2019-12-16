@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-QaX0n7	hvdBFR	Lambert2013load	Willer2013tc	5e-8	TRUE	8	112.94678719819775	0.0894

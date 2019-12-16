@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-LQlytV	jbQT4b	Lambert2013load	Evangelou2018sbp	5e-8	FALSE	MR Egger	981.7605261916945	658	3.25224051265113e-15
-LQlytV	jbQT4b	Lambert2013load	Evangelou2018sbp	5e-8	FALSE	Inverse variance weighted	982.4533845095875	659	3.549214621020424e-15
-LQlytV	jbQT4b	Lambert2013load	Evangelou2018sbp	5e-8	TRUE	MR Egger	861.4540430130572	656	1.0681098298806706e-7
-LQlytV	jbQT4b	Lambert2013load	Evangelou2018sbp	5e-8	TRUE	Inverse variance weighted	863.1797302808544	657	9.937290339050145e-8

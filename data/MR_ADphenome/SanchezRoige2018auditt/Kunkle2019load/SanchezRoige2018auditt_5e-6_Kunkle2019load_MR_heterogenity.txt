@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-omTRYb	lPHOET	Kunkle2019load	SanchezRoige2018auditt	5e-6	FALSE	MR Egger	84.91422817307789	56	0.007600553852944799
-omTRYb	lPHOET	Kunkle2019load	SanchezRoige2018auditt	5e-6	FALSE	Inverse variance weighted	86.0217324243364	57	0.007783966013823263

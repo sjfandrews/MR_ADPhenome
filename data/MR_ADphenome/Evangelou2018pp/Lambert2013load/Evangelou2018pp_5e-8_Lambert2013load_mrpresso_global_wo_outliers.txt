@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Ihwuu5	g8DjKg	Lambert2013load	Evangelou2018pp	5e-8	TRUE	33	697.8296227246423	<4e-05

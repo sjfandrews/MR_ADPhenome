@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-2TFVuw	oEf9ex	Lambert2013load	Lee2018educ	5e-8	FALSE	Inverse variance weighted (fixed effects)	427	0	-0.4058207837493489	0.06749367929346446	1.8243285173363544e-9
-2TFVuw	oEf9ex	Lambert2013load	Lee2018educ	5e-8	FALSE	Weighted median	427	0	-0.518979340745243	0.10881706349789365	1.8488303447437872e-6
-2TFVuw	oEf9ex	Lambert2013load	Lee2018educ	5e-8	FALSE	Weighted mode	427	0	-0.8899567724934538	0.34029425858899565	0.009232480935489873
-2TFVuw	oEf9ex	Lambert2013load	Lee2018educ	5e-8	FALSE	MR Egger	427	0	-0.9773476520777759	0.304281917101483	0.0014184678758375113

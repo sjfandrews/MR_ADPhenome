@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-tGQSJM	x6MB0F	Lambert2013load	Klimentidis2018mvpa	5e-6	FALSE	-0.09804946896603917	0.04346117026673673	0.026224758728932738
-tGQSJM	x6MB0F	Lambert2013load	Klimentidis2018mvpa	5e-6	TRUE	-0.005522186759276769	0.009664995758106502	0.5690379434434447

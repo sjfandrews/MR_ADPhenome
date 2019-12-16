@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-VjiHY9	2NiVoS	Deming2017ab42	Liu2019drnkwk	5e-6	TRUE	5	118.1191533788387	0.606
+SbJn7s	44uhMf	Deming2017ab42	Liu2019drnkwk	5e-6	TRUE	0	NA	NA

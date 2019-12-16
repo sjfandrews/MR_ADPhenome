@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-lro4Hv	hMTPzJ	Deming2017ptau	Klimentidis2018mvpa	5e-6	FALSE	-0.0015273882639674288	0.00463799105349941	0.7427045206407588
-lro4Hv	hMTPzJ	Deming2017ptau	Klimentidis2018mvpa	5e-6	TRUE	0.007823678431277717	0.003126058986397903	0.014215256190266238
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+0zMVT7	5VK3nc	Deming2017ptau	Klimentidis2018mvpa	5e-6	FALSE	0.004933114196655529	0.0034029438062645047	0.15143587636045985	NA

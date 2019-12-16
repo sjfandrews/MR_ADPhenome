@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-hhpNjb	Ui8S3t	Kunkle2019load	NealeLab2018hear	5e-6	FALSE	MR Egger	134.50980693253047	113	0.0818643258764125
-hhpNjb	Ui8S3t	Kunkle2019load	NealeLab2018hear	5e-6	FALSE	Inverse variance weighted	134.69953035761776	114	0.09024649024167472

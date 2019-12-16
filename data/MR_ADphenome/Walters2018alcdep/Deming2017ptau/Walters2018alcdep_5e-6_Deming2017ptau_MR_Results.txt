@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-aNona1	COd22O	Deming2017ptau	Walters2018alcdep	5e-6	FALSE	Inverse variance weighted (fixed effects)	14	0	0.019228712408264046	0.012724487813778152	0.1307481832499726
-aNona1	COd22O	Deming2017ptau	Walters2018alcdep	5e-6	FALSE	Weighted median	14	0	0.02819334552255766	0.018130008849826743	0.11993054609115181
-aNona1	COd22O	Deming2017ptau	Walters2018alcdep	5e-6	FALSE	Weighted mode	14	0	0.03538114784408694	0.03042790177273729	0.2658173544013164
-aNona1	COd22O	Deming2017ptau	Walters2018alcdep	5e-6	FALSE	MR Egger	14	0	0.03602848916426703	0.03815321777932778	0.363636483911684

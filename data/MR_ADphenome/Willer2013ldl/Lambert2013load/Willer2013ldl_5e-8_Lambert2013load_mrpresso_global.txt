@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-NHPtSK	qx43fR	Lambert2013load	Willer2013ldl	5e-8	FALSE	3	455.62848851005	<1e-04

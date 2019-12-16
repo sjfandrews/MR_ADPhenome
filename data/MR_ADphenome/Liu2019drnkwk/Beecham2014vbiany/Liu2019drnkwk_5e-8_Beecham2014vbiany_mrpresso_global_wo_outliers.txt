@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-y4VqR3	eBIlPK	Beecham2014vbiany	Liu2019drnkwk	5e-8	TRUE	0	NA	NA
+m72iLH	CO420r	Beecham2014vbiany	Liu2019drnkwk	5e-8	TRUE	0	NA	NA

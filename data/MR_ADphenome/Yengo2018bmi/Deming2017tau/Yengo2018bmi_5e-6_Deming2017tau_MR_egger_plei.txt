@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-AGSVai	e1p2Hi	Deming2017tau	Yengo2018bmi	5e-6	FALSE	-5.026625363461589e-4	5.195648543441708e-4	0.33347998214731756
-AGSVai	e1p2Hi	Deming2017tau	Yengo2018bmi	5e-6	TRUE	-8.122008635770557e-4	4.981160184882954e-4	0.10321526511704489
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+prtrr0	l0q19v	Deming2017tau	Yengo2018bmi	5e-6	FALSE	-7.920237641135783e-5	6.579639105470337e-4	0.9042230438972989	NA

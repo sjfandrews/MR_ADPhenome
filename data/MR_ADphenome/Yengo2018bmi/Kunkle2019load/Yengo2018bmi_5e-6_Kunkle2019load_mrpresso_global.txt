@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-oLl9Mi	7Khju9	Kunkle2019load	Yengo2018bmi	5e-6	FALSE	3	4971.92630169867	<1.33333333333333e-05
+jqSm7F	gtvCve	Kunkle2019load	Yengo2018bmi	5e-6	FALSE	2	857.5360297364243	<4e-05

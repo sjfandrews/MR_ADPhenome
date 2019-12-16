@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-oUspO9	v8n2KV	Hilbar2017hipv	SanchezRoige2018auditt	5e-8	FALSE	0	6.884054535024014	0.722

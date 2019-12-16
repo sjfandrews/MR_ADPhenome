@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-tVE6JK	lFixCs	Lambert2013load	NealeLab2018oilfish	5e-6	FALSE	-0.018171325758242998	0.025397845508650315	0.47539676190864755
-tVE6JK	lFixCs	Lambert2013load	NealeLab2018oilfish	5e-6	TRUE	0.0018559911922850893	0.00637514053046372	0.7713440493862797

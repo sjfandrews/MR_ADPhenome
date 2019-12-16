@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DOFOil	CpzWsH	Lambert2013load	Xu2018diab	5e-8	TRUE	5	183.47674434779296	0.0015

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Uruu2h	Yxc6cW	Kunkle2019load	Day2018sociso	5e-6	FALSE	1	150.9192713171639	4e-4
+kbgEt4	m0GX8b	Kunkle2019load	Day2018sociso	5e-6	FALSE	0	93.75521422490051	0.2707

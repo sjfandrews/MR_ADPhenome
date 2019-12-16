@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-fOKjig	HX2wPx	Hilbar2015hipv	Jansen2018insom	5e-6	FALSE	MR Egger	95.95772207607888	92	0.36817734178637374
-fOKjig	HX2wPx	Hilbar2015hipv	Jansen2018insom	5e-6	FALSE	Inverse variance weighted	98.27605524308348	93	0.3341591508209889

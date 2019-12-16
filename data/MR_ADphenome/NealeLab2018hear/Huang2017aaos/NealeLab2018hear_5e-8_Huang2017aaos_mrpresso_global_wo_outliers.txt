@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Zp44kG	iYRTOY	Huang2017aaos	NealeLab2018hear	5e-8	TRUE	2	23.334310164998495	0.69

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-rf0lE1	5OIK4y	Huang2017aaos	Willer2013tc	5e-8	TRUE	4	129.18306536648214	0.0223
+9KBtiB	YzanqE	Huang2017aaos	Willer2013tc	5e-8	TRUE	0	NA	NA

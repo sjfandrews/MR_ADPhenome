@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-gfyFvw	OX9Y3V	Hilbar2015hipv	Willer2013tc	5e-6	FALSE	Inverse variance weighted (fixed effects)	139	0	-19.865735058878997	10.91677606051295	0.06879803668605954
-gfyFvw	OX9Y3V	Hilbar2015hipv	Willer2013tc	5e-6	FALSE	Weighted median	139	0	-19.37455048574196	17.481447559317004	0.26773567976312973
-gfyFvw	OX9Y3V	Hilbar2015hipv	Willer2013tc	5e-6	FALSE	Weighted mode	139	0	-17.967781770167335	17.425551025195954	0.30428970629253443
-gfyFvw	OX9Y3V	Hilbar2015hipv	Willer2013tc	5e-6	FALSE	MR Egger	139	0	-3.6172163417943404	18.66010239108558	0.8465823269900143

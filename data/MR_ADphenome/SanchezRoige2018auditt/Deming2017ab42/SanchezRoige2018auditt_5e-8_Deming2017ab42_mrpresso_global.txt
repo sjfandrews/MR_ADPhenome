@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-AuLlSX	05j9Pg	Deming2017ab42	SanchezRoige2018auditt	5e-8	FALSE	0	2.635416195397857	0.69
+ffzChT	3Dno94	Deming2017ab42	SanchezRoige2018auditt	5e-8	FALSE	0	2.454657903147464	0.726

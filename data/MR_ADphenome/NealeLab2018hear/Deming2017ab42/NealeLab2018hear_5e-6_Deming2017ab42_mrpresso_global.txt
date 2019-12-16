@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-CslzVZ	ylpAUs	Deming2017ab42	NealeLab2018hear	5e-6	FALSE	1	112.2282081387324	0.0137

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-8Z1UUL	bQz1a8	Lambert2013load	Dashti2019slepdur	5e-6	FALSE	0.005832276532242675	0.005408763272845862	0.28199096488768516
-8Z1UUL	bQz1a8	Lambert2013load	Dashti2019slepdur	5e-6	TRUE	0.004810830949142023	0.00529444812430051	0.36445491429170407

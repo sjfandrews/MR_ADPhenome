@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-XyaL0e	7aPh2N	Kunkle2019load	Lee2018educ	5e-8	FALSE	0.0037178634356333467	0.0034838467305877753	0.28648883735423747
-XyaL0e	7aPh2N	Kunkle2019load	Lee2018educ	5e-8	TRUE	0.003474171559619885	0.0034292410160255663	0.31157843162498006
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+SCsMbm	bI7W79	Kunkle2019load	Lee2018educ	5e-8	FALSE	0.003472703188466737	0.003899249798406879	0.373848440308464	NA

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-RLb18f	IeCBPe	Lambert2013load	Evangelou2018dbp	5e-8	FALSE	0.0019213757171248542	0.0020488124932537565	0.3486808096981239
-RLb18f	IeCBPe	Lambert2013load	Evangelou2018dbp	5e-8	TRUE	0.002226987397835311	0.002024653614044559	0.271750825496893

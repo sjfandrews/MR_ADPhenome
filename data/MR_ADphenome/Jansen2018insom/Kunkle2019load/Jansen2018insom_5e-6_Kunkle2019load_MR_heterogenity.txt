@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-Zz6Uqf	5PpVwV	Kunkle2019load	Jansen2018insom	5e-6	FALSE	MR Egger	109.80637771217577	98	0.19521811330409344
-Zz6Uqf	5PpVwV	Kunkle2019load	Jansen2018insom	5e-6	FALSE	Inverse variance weighted	113.61411997748722	99	0.14956180661773436
+nuGw4B	ARcUvF	Kunkle2019load	Jansen2018insom	5e-6	FALSE	MR Egger	94.69141407005074	86	0.2444479835372384
+nuGw4B	ARcUvF	Kunkle2019load	Jansen2018insom	5e-6	FALSE	Inverse variance weighted	98.57847260645461	87	0.18629790221028258

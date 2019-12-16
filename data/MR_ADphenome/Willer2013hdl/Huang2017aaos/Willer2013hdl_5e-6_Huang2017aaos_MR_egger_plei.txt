@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-6vyE4b	orfAyj	Huang2017aaos	Willer2013hdl	5e-6	FALSE	0.0018967792214798548	0.005044109857564325	0.7073803024315591
-6vyE4b	orfAyj	Huang2017aaos	Willer2013hdl	5e-6	TRUE	3.8065570046625936e-4	0.0026032843457540907	0.8839295888486735
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Yqn1WX	Ndv0nE	Huang2017aaos	Willer2013hdl	5e-6	FALSE	-0.0018685227442522662	0.00291805436140598	0.5231384523103875	NA

@@ -1,3 +1,2 @@
-target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHROM,POS,REF.proxy,ALT.proxy,AF,BETA,SE,Z,P,N,TRAIT,ref,ref.proxy,alt,alt.proxy,ALT,REF,proxy.outcome
-rs9426656,rs6690574,1,1,GA/TG,NA,1,21504279,G,A,0.467,-0.0444,0.0143,-3.104895104895105,0.001917,63926,AD,G,A,T,G,G,T,TRUE
-rs142076278,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+proxy.outcome,target_snp,proxy_snp,ld.r2,Dprime,ref.proxy,alt.proxy,CHROM,POS,ALT.proxy,REF.proxy,AF,BETA,SE,P,N,ref,alt,ALT,REF,PHASE
+NA,rs142076278,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

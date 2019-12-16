@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-VM48fY	HUQwdQ	Hilbar2015hipv	Yengo2018bmi	5e-6	TRUE	34	1528.527523347176	0.046106666666666664

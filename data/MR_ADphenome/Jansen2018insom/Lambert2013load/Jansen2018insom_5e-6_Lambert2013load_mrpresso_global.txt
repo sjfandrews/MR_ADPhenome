@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-eu16w9	Hg798g	Lambert2013load	Jansen2018insom	5e-6	FALSE	0	101.31219527462655	0.3199

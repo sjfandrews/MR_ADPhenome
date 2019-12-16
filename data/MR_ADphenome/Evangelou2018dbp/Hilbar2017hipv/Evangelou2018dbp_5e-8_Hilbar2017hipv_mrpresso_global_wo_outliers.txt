@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-nkEKJQ	H5bUg7	Hilbar2017hipv	Evangelou2018dbp	5e-8	TRUE	25	838.3472874537703	4.4e-4
+NeNoUU	c5trWr	Hilbar2017hipv	Evangelou2018dbp	5e-8	TRUE	1	575.8771590152788	8e-5

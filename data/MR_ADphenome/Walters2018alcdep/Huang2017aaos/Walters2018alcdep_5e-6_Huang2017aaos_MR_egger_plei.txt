@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-n4ID02	Im9EZd	Huang2017aaos	Walters2018alcdep	5e-6	FALSE	0.027317792379237593	0.020785921601481024	0.20622143580812496
-n4ID02	Im9EZd	Huang2017aaos	Walters2018alcdep	5e-6	TRUE	0.03252838927900605	0.017332486647559348	0.07891475254666579

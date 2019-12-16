@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-DOFOil	CpzWsH	Lambert2013load	Xu2018diab	5e-8	FALSE	MR Egger	194.8808044879603	128	1.2806708090122828e-4
-DOFOil	CpzWsH	Lambert2013load	Xu2018diab	5e-8	FALSE	Inverse variance weighted	195.3539320480252	129	1.471196748551505e-4
-DOFOil	CpzWsH	Lambert2013load	Xu2018diab	5e-8	TRUE	MR Egger	180.46132586584537	127	0.001288393560140868
-DOFOil	CpzWsH	Lambert2013load	Xu2018diab	5e-8	TRUE	Inverse variance weighted	180.83873423332997	128	0.0014704499402938985

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-2ly99A	MHHB9W	Beecham2014vbiany	Walters2018alcdep	5e-6	FALSE	0	9.549181980962382	0.905

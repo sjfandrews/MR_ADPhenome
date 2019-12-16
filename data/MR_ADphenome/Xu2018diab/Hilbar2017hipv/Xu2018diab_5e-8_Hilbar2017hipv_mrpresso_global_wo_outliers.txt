@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-P3xAa6	v0aWFc	Hilbar2017hipv	Xu2018diab	5e-8	TRUE	2	190.64957572465858	7e-4
+HTSsNd	2ykKjM	Hilbar2017hipv	Xu2018diab	5e-8	TRUE	0	NA	NA

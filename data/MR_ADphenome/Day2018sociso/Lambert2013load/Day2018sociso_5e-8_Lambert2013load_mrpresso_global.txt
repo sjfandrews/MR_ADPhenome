@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-GwAIcy	1Jal97	Lambert2013load	Day2018sociso	5e-8	FALSE	1	38.701440145262495	<0.001

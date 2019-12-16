@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-2TFVuw	oEf9ex	Lambert2013load	Lee2018educ	5e-8	TRUE	14	525.8711301409029	8.4e-4

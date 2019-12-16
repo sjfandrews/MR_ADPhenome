@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-CBQKeq	RFloOy	Lambert2013load	Yengo2018bmi	5e-6	FALSE	2	4059.867698097604	<1.33333333333333e-05

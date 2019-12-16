@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-GrGMYg	oNJBCw	Lambert2013load	Klimentidis2018mvpa	5e-8	FALSE	-0.3024864339404693	0.1887690040469471	0.12332574848093489
-GrGMYg	oNJBCw	Lambert2013load	Klimentidis2018mvpa	5e-8	TRUE	-0.014769776407050208	0.021479873061052375	0.5015454189956414

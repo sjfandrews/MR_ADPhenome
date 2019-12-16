@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-NHPtSK	qx43fR	Lambert2013load	Willer2013ldl	5e-8	FALSE	-0.011749895685327978	0.008542280702263785	0.1729143430264998
-NHPtSK	qx43fR	Lambert2013load	Willer2013ldl	5e-8	TRUE	-0.005122790369226885	0.004482038029340971	0.256690585557045

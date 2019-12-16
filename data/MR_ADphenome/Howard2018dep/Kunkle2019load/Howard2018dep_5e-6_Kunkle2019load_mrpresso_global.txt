@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-2Z5AIb	KZmEn7	Kunkle2019load	Howard2018dep	5e-6	FALSE	0	161.10470070303526	0.0061
+hONOfD	AgRWPK	Kunkle2019load	Howard2018dep	5e-6	FALSE	0	138.56900683396532	0.0074

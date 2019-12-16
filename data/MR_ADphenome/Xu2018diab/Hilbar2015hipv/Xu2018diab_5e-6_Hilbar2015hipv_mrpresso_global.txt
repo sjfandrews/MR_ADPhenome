@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-wk7tPu	aseFlz	Hilbar2015hipv	Xu2018diab	5e-6	FALSE	0	290.5818857476017	0.2946

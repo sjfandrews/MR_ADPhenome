@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-pwxNld	08Hhcy	Deming2017ptau	NealeLab2018oilfish	5e-6	FALSE	-0.003473455620778695	0.0027657001557051157	0.21124243221044153
-pwxNld	08Hhcy	Deming2017ptau	NealeLab2018oilfish	5e-6	TRUE	-0.0019583184756524173	0.0021598222741123522	0.36613272177419676
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+nTt5ka	X9UkT3	Deming2017ptau	NealeLab2018oilfish	5e-6	FALSE	-0.003897888301265151	0.0026932028744278283	0.15090806606312787	NA

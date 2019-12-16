@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-EiHqXy	qORswk	Lambert2013load	SanchezRoige2018auditt	5e-6	FALSE	MR Egger	83.99482782913722	52	0.003267011182820434
-EiHqXy	qORswk	Lambert2013load	SanchezRoige2018auditt	5e-6	FALSE	Inverse variance weighted	84.99325066098021	53	0.003459838388631815
-EiHqXy	qORswk	Lambert2013load	SanchezRoige2018auditt	5e-6	TRUE	MR Egger	67.95227248125654	51	0.05632978223706858
-EiHqXy	qORswk	Lambert2013load	SanchezRoige2018auditt	5e-6	TRUE	Inverse variance weighted	69.18013637067565	52	0.05568148500513691
+alVreG	BEwkpq	Lambert2013load	SanchezRoige2018auditt	5e-6	FALSE	MR Egger	72.41221928940575	45	0.005903393005682457
+alVreG	BEwkpq	Lambert2013load	SanchezRoige2018auditt	5e-6	FALSE	Inverse variance weighted	72.81619649243096	46	0.00710789520780379
+alVreG	BEwkpq	Lambert2013load	SanchezRoige2018auditt	5e-6	TRUE	MR Egger	56.312667956698235	44	0.10088969603237981
+alVreG	BEwkpq	Lambert2013load	SanchezRoige2018auditt	5e-6	TRUE	Inverse variance weighted	56.8771703627727	45	0.11026874619093939

@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-3bjbV2	0EoHv6	Hilbar2017hipv	Liu2019smkint	5e-8	FALSE	0.005886161273918103	0.005745278690133484	0.30808593659077443
-3bjbV2	0EoHv6	Hilbar2017hipv	Liu2019smkint	5e-8	TRUE	0.005412703683082595	0.00507914815735067	0.2891906285909186
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+HA9rcj	Hw2lFF	Hilbar2017hipv	Liu2019smkint	5e-8	FALSE	0.005822995014854494	0.005733299606211822	0.31286049960150697	NA

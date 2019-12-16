@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-aZh9x3	3DfoCO	Kunkle2019load	Liu2019smkcpd	5e-8	FALSE	0	39.91048423134607	0.029
+7sJqh9	bfGNXM	Kunkle2019load	Liu2019smkcpd	5e-8	FALSE	0	39.91048423134607	0.025

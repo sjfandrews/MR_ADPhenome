@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-SgsncJ	CfFuxK	Lambert2013load	Wray2018mdd	5e-6	FALSE	MR Egger	56.29960381423191	59	0.575671145083514
-SgsncJ	CfFuxK	Lambert2013load	Wray2018mdd	5e-6	FALSE	Inverse variance weighted	56.641051654129406	60	0.5992286350489089

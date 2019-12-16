@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-F8L6A6	xD3Brx	Beecham2014braak4	Klimentidis2018mvpa	5e-6	FALSE	-0.07641682746473974	0.037219931147747166	0.04257125804797627
-F8L6A6	xD3Brx	Beecham2014braak4	Klimentidis2018mvpa	5e-6	TRUE	-0.012553068411139033	0.02659093600261937	0.63786778856939
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+oqV10e	sqalDe	Beecham2014braak4	Klimentidis2018mvpa	5e-6	FALSE	-0.012339701237973354	0.028414664399490818	0.6651417478348601	NA

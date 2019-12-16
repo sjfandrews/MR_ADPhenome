@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-a8w1qY	771FYh	Lambert2013load	Lee2018educ	5e-6	FALSE	MR Egger	1158.7899997558027	930	3.936280891191072e-7
-a8w1qY	771FYh	Lambert2013load	Lee2018educ	5e-6	FALSE	Inverse variance weighted	1165.9754299782855	931	2.096703713571272e-7

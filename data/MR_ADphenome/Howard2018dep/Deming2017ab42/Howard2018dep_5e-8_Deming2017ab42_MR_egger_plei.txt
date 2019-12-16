@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-ZuXxwU	F74ZBM	Deming2017ab42	Howard2018dep	5e-8	FALSE	-0.015059360033264788	0.007095000542760229	0.05357314763852702
-ZuXxwU	F74ZBM	Deming2017ab42	Howard2018dep	5e-8	TRUE	-0.014978573403242343	0.005954933470789025	0.02714135859604196
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+aQ0mvK	eceKrL	Deming2017ab42	Howard2018dep	5e-8	FALSE	-0.013742319858692486	0.008865253677176194	0.15215375802274247	NA

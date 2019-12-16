@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-GwAIcy	1Jal97	Lambert2013load	Day2018sociso	5e-8	FALSE	-0.00886176847123291	0.04362392469060865	0.8424293200235905
-GwAIcy	1Jal97	Lambert2013load	Day2018sociso	5e-8	TRUE	-0.036988562508297414	0.026791649196880298	0.19480923037629352

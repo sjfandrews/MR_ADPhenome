@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-FWCNIS	vwsRFu	Beecham2014braak4	Willer2013hdl	5e-6	FALSE	0.011588821275161504	0.010256024030123632	0.26016643889054286
-FWCNIS	vwsRFu	Beecham2014braak4	Willer2013hdl	5e-6	TRUE	0.008743960486597787	0.007383158292738723	0.23803515242895412
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+AIMxQ5	SM54Gv	Beecham2014braak4	Willer2013hdl	5e-6	FALSE	0.015756230173625665	0.008195691068922198	0.056836190730435984	NA

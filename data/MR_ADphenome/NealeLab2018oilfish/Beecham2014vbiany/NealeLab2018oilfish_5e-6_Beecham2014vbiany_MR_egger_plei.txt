@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-iqwfbJ	g7gLes	Beecham2014vbiany	NealeLab2018oilfish	5e-6	FALSE	0.014165972264098319	0.023672724743694203	0.5504461563572624	NA
+BlQKXE	5H581r	Beecham2014vbiany	NealeLab2018oilfish	5e-6	FALSE	0.006700230014045706	0.02601760108520764	0.7972283984170982	NA

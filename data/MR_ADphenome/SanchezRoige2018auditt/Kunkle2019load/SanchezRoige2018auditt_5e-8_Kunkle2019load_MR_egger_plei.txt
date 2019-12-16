@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-dedkKp	GhS4RO	Kunkle2019load	SanchezRoige2018auditt	5e-8	FALSE	0.005197395148059952	0.015533635513537392	0.7465379701976838	NA

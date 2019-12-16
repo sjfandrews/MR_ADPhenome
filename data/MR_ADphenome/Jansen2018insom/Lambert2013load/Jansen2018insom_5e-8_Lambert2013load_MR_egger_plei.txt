@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-AyEFVh	eBcAQI	Lambert2013load	Jansen2018insom	5e-8	FALSE	0.03369570434991824	0.023033064063288235	0.16918127003496983
-AyEFVh	eBcAQI	Lambert2013load	Jansen2018insom	5e-8	TRUE	0.022905214226652114	0.021093863159222032	0.3007594245274502

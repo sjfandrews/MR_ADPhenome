@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-B2DuuI	tqdFeG	Huang2017aaos	Yengo2018bmi	5e-8	FALSE	0.0032025531213661445	0.0020021174397467758	0.11006184232173473
-B2DuuI	tqdFeG	Huang2017aaos	Yengo2018bmi	5e-8	TRUE	0.0022554315637244924	0.0016368426188544988	0.16859144398583237
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+qPLRRg	ANUYuU	Huang2017aaos	Yengo2018bmi	5e-8	FALSE	0.0020723813280054734	0.0019515342488362608	0.28878072334263916	NA

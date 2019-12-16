@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-9kM5tE	mK0Wc8	Beecham2014npany	Willer2013ldl	5e-8	TRUE	1	90.26774531695611	0.2592
+qsRG7o	yS33gP	Beecham2014npany	Willer2013ldl	5e-8	TRUE	0	NA	NA

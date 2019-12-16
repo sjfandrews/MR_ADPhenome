@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-hhpNjb	Ui8S3t	Kunkle2019load	NealeLab2018hear	5e-6	FALSE	0	136.97623646629987	0.0917

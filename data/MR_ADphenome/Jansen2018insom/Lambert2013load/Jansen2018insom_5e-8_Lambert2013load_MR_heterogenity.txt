@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-AyEFVh	eBcAQI	Lambert2013load	Jansen2018insom	5e-8	FALSE	MR Egger	19.670343135075612	12	0.0735846225915123
-AyEFVh	eBcAQI	Lambert2013load	Jansen2018insom	5e-8	FALSE	Inverse variance weighted	23.17847845216074	13	0.03958365031358363
-AyEFVh	eBcAQI	Lambert2013load	Jansen2018insom	5e-8	TRUE	MR Egger	14.191049209836855	11	0.22260166163486814
-AyEFVh	eBcAQI	Lambert2013load	Jansen2018insom	5e-8	TRUE	Inverse variance weighted	15.712221088622883	12	0.2047752216536356

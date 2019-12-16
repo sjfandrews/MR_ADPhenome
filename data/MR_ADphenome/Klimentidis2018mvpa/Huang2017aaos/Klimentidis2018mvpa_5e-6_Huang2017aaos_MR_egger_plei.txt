@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-yfNBYn	X374V4	Huang2017aaos	Klimentidis2018mvpa	5e-6	FALSE	-0.04665702818760969	0.021565803449000893	0.03268877921850671
-yfNBYn	X374V4	Huang2017aaos	Klimentidis2018mvpa	5e-6	TRUE	-0.012557495770577328	0.009787418659280516	0.20223007923936873
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+1QEkq4	6CYg80	Huang2017aaos	Klimentidis2018mvpa	5e-6	FALSE	-0.01834247604084462	0.01106003935278122	0.1006333255537521	NA

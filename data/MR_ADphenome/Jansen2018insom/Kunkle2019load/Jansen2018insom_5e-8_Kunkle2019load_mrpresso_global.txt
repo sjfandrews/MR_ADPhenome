@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ZZoOoX	O6dNVy	Kunkle2019load	Jansen2018insom	5e-8	FALSE	0	18.39136586388309	0.275
+tkf9Q6	QaSxpG	Kunkle2019load	Jansen2018insom	5e-8	FALSE	0	17.70240230227424	0.212

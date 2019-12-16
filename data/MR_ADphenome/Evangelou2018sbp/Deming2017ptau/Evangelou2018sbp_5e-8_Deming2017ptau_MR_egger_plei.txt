@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-OAGCSF	5N2wdE	Deming2017ptau	Evangelou2018sbp	5e-8	FALSE	6.915836882205471e-4	7.242845360227726e-4	0.3400338691256648
-OAGCSF	5N2wdE	Deming2017ptau	Evangelou2018sbp	5e-8	TRUE	7.578099099291533e-4	7.161164090442462e-4	0.290376715876059
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+70a6Fp	psE69d	Deming2017ptau	Evangelou2018sbp	5e-8	FALSE	-5.576322776085834e-4	8.618086222418411e-4	0.5179879280397274	NA

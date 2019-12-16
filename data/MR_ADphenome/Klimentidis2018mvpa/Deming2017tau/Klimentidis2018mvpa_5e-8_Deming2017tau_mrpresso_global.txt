@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-GvPqfe	ul0zsR	Deming2017tau	Klimentidis2018mvpa	5e-8	FALSE	0	20.30733079175154	0.378
+CiLjoM	RpyqmW	Deming2017tau	Klimentidis2018mvpa	5e-8	FALSE	0	14.250501007357723	0.499

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-gwyvRx	nzdsMj	Deming2017ptau	NealeLab2018hear	5e-6	FALSE	MR Egger	110.57849239104603	87	0.04484367944907098
-gwyvRx	nzdsMj	Deming2017ptau	NealeLab2018hear	5e-6	FALSE	Inverse variance weighted	110.57969986750587	88	0.05216100225543972

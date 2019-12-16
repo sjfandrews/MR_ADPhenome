@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-RzBRtQ	1HB0tF	Beecham2014vbiany	Wray2018mdd	5e-6	TRUE	1	83.76029891012614	0.0372
+iBgzJm	KpYJnZ	Beecham2014vbiany	Wray2018mdd	5e-6	TRUE	0	NA	NA

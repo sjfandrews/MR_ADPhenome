@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-QIGaJV	zu2gos	Lambert2013load	Yengo2018bmi	5e-8	FALSE	0.0035039905374016555	0.0035789531702969204	0.32783322120698566
-QIGaJV	zu2gos	Lambert2013load	Yengo2018bmi	5e-8	TRUE	-6.699239120484108e-5	0.0019424883768504014	0.9724962265147423

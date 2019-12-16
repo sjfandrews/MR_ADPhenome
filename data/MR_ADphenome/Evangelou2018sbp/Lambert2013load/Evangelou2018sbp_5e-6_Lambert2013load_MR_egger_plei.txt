@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-Ila6lZ	jrCbx4	Lambert2013load	Evangelou2018sbp	5e-6	FALSE	0.002227676148380938	0.0016905840661609335	0.18787556816739664
-Ila6lZ	jrCbx4	Lambert2013load	Evangelou2018sbp	5e-6	TRUE	0.002976513498550849	0.00162779769988582	0.06773370970901242

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-h0gxm6	HJxTVL	Hilbar2017hipv	Day2018sociso	5e-8	TRUE	0	NA	NA
+sGzjaY	qejRRM	Hilbar2017hipv	Day2018sociso	5e-8	TRUE	0	NA	NA

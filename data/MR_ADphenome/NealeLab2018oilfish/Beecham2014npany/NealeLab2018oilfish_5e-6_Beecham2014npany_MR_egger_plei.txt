@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-pKv8tm	GKOAfx	Beecham2014npany	NealeLab2018oilfish	5e-6	FALSE	0.027803163377400516	0.03822223630499281	0.46809493043795125
-pKv8tm	GKOAfx	Beecham2014npany	NealeLab2018oilfish	5e-6	TRUE	0.04718640657480024	0.02890059304842616	0.10461269367256404
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+E8BC05	KpfciN	Beecham2014npany	NealeLab2018oilfish	5e-6	FALSE	0.04450258746704719	0.03529072770981243	0.2098291418801439	NA

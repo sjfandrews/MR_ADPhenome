@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-e7VbhW	XEbaYX	Lambert2013load	Day2018sociso	5e-6	FALSE	0.006179712912229016	0.010544560798716981	0.5593722591987681
-e7VbhW	XEbaYX	Lambert2013load	Day2018sociso	5e-6	TRUE	0.005603955930026798	0.009665355664235955	0.5635844001265895

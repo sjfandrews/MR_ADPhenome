@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-T5rAoj	BQmuPF	Beecham2014braak4	Walters2018alcdep	5e-6	FALSE	0.02296586595310594	0.05058022299254871	0.6567534139296619
-T5rAoj	BQmuPF	Beecham2014braak4	Walters2018alcdep	5e-6	TRUE	-0.0234236027352293	0.04908781089664968	0.6411578661343666

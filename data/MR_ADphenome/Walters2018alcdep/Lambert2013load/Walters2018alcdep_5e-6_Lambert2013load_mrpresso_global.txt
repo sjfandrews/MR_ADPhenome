@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-8qishF	nkU49L	Lambert2013load	Walters2018alcdep	5e-6	FALSE	0	17.195336715313005	0.506

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DuqDfF	vUfJXS	Hilbar2015hipv	NealeLab2018oilfish	5e-6	TRUE	5	167.24912000519208	0.1789

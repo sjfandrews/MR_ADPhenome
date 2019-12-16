@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-su8ocY	2euzU0	Deming2017ab42	Wray2018mdd	5e-8	FALSE	1	19.498941544671567	0.041
+c6tWKk	OfwYUI	Deming2017ab42	Wray2018mdd	5e-8	FALSE	1	16.840213812277177	0.039

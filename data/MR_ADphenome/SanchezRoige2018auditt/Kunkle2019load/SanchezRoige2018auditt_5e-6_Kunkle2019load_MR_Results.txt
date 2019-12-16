@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-omTRYb	lPHOET	Kunkle2019load	SanchezRoige2018auditt	5e-6	FALSE	Inverse variance weighted (fixed effects)	58	0	-0.17476422913541897	0.2786895439276673	0.5305983530631908
-omTRYb	lPHOET	Kunkle2019load	SanchezRoige2018auditt	5e-6	FALSE	Weighted median	58	0	-0.4443414979490309	0.48077395551975083	0.35537114286936616
-omTRYb	lPHOET	Kunkle2019load	SanchezRoige2018auditt	5e-6	FALSE	Weighted mode	58	0	-0.662256526644585	0.5719482435708231	0.251735331320393
-omTRYb	lPHOET	Kunkle2019load	SanchezRoige2018auditt	5e-6	FALSE	MR Egger	58	0	-0.6491624000010912	0.6526094517730288	0.32415225966504624

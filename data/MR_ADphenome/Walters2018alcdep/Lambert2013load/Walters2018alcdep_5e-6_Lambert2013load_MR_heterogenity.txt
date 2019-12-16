@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-8qishF	nkU49L	Lambert2013load	Walters2018alcdep	5e-6	FALSE	MR Egger	10.554296662791597	15	0.7835024676026111
-8qishF	nkU49L	Lambert2013load	Walters2018alcdep	5e-6	FALSE	Inverse variance weighted	14.107580622259093	16	0.5906994796497429

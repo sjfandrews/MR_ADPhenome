@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-YB7dRy	4WmZbW	Lambert2013load	Dashti2019slepdur	5e-8	TRUE	4	110.99219329223524	0.0142

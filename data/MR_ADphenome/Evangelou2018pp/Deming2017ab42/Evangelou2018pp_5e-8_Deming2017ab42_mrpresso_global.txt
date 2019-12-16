@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-RJwYbt	cMVJFZ	Deming2017ab42	Evangelou2018pp	5e-8	FALSE	0	488.41138138059875	0.47228
+OLnCBr	pMTPaG	Deming2017ab42	Evangelou2018pp	5e-8	FALSE	0	346.9269443963663	0.34192

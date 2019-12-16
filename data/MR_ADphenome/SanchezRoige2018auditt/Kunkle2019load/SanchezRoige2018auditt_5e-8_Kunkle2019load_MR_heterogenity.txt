@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-dedkKp	GhS4RO	Kunkle2019load	SanchezRoige2018auditt	5e-8	FALSE	MR Egger	21.420472793732472	8	0.006110501265623755
-dedkKp	GhS4RO	Kunkle2019load	SanchezRoige2018auditt	5e-8	FALSE	Inverse variance weighted	21.72022633166138	9	0.009809230292948041

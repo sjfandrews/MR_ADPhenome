@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-3yDw5y	AHCWVP	Beecham2014braak4	Yengo2018bmi	5e-6	FALSE	0.004282967729885313	0.003999465388338212	0.2844006915416837
-3yDw5y	AHCWVP	Beecham2014braak4	Yengo2018bmi	5e-6	TRUE	0.0023813954206115657	0.0038473745200756715	0.5360365569041758
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+uwMrXw	fW9fJ2	Beecham2014braak4	Yengo2018bmi	5e-6	FALSE	0.007624799207313763	0.005070688965703039	0.13312133189383124	NA

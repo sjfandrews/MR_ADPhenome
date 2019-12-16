@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-rta97o	lyoYIC	Hilbar2015hipv	Walters2018alcdep	5e-6	TRUE	1	27.127487861379063	0.115

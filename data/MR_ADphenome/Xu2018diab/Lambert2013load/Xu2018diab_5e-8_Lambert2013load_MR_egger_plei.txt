@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-DOFOil	CpzWsH	Lambert2013load	Xu2018diab	5e-8	FALSE	-0.0024932175111905945	0.0044725025018362815	0.5781903683558272
-DOFOil	CpzWsH	Lambert2013load	Xu2018diab	5e-8	TRUE	-0.0022271932823330104	0.004321578011605774	0.6071933930863043

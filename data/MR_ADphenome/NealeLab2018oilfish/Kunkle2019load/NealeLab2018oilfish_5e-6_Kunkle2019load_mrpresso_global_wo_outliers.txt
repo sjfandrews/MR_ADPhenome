@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-zDOH5i	fZ2wkQ	Kunkle2019load	NealeLab2018oilfish	5e-6	TRUE	4	183.30138212520686	0.1952
+jmL5aG	mpMXtG	Kunkle2019load	NealeLab2018oilfish	5e-6	TRUE	0	NA	NA

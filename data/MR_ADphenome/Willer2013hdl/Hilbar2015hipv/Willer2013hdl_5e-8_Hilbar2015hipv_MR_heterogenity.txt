@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-inP7LT	5gUWG9	Hilbar2015hipv	Willer2013hdl	5e-8	FALSE	MR Egger	114.86519007454272	100	0.14691749206474986
-inP7LT	5gUWG9	Hilbar2015hipv	Willer2013hdl	5e-8	FALSE	Inverse variance weighted	117.4377218132402	101	0.12600285342684714

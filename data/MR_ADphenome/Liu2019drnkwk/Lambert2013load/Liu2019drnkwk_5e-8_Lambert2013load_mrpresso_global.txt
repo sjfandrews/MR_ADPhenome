@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BS12Er	r8u12L	Lambert2013load	Liu2019drnkwk	5e-8	FALSE	1	80.10821260508834	0.0016
+EgSbQO	pXMfnD	Lambert2013load	Liu2019drnkwk	5e-8	FALSE	1	65.06335022793861	0.0044

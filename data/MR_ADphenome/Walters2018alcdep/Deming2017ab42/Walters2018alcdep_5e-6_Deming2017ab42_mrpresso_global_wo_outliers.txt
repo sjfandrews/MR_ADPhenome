@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-NsDkiI	JA0WKN	Deming2017ab42	Walters2018alcdep	5e-6	TRUE	1	9.06311383305519	0.797

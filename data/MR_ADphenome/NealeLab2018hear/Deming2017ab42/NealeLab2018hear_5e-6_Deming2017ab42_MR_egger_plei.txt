@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-CslzVZ	ylpAUs	Deming2017ab42	NealeLab2018hear	5e-6	FALSE	-0.001242715886163355	0.0021869277200517764	0.5714993402987145
-CslzVZ	ylpAUs	Deming2017ab42	NealeLab2018hear	5e-6	TRUE	-0.0019178747560088208	0.002074179126044102	0.35804048394439536

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-sHRJck	CCcVUG	Beecham2014npany	NealeLab2018hear	5e-8	FALSE	0	31.0171972135586	0.363

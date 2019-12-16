@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-S1SBN7	GNzosj	Deming2017ab42	Howard2018dep	5e-6	FALSE	0	120.06789923175305	0.1295
+1TnSCJ	nKIW3W	Deming2017ab42	Howard2018dep	5e-6	FALSE	0	92.24552483856057	0.2806

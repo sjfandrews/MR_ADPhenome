@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-RZ5aFg	OfhHc2	Deming2017ab42	Jansen2018insom	5e-6	FALSE	-0.002754289555776433	0.003365508098021424	0.41572865813134197
-RZ5aFg	OfhHc2	Deming2017ab42	Jansen2018insom	5e-6	TRUE	-0.0018493158638104757	0.003200875666049784	0.5651847333771842
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+3ezgSA	EKJIWx	Deming2017ab42	Jansen2018insom	5e-6	FALSE	-0.004383468862805288	0.0033507027801127835	0.19540485814568864	NA

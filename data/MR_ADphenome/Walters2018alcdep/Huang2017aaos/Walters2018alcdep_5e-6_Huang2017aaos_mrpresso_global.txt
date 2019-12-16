@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-n4ID02	Im9EZd	Huang2017aaos	Walters2018alcdep	5e-6	FALSE	1	47.427368991173246	0.002

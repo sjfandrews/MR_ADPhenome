@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-omTRYb	lPHOET	Kunkle2019load	SanchezRoige2018auditt	5e-6	TRUE	1	88.91595075048014	0.0084

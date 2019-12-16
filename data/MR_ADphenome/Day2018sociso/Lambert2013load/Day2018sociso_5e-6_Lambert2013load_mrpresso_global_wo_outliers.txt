@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-e7VbhW	XEbaYX	Lambert2013load	Day2018sociso	5e-6	TRUE	3	98.41423427296192	0.2123

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-gVpoJQ	SWuCz4	Hilbar2015hipv	Liu2019smkcpd	5e-6	TRUE	2	98.60647302412356	0.1953

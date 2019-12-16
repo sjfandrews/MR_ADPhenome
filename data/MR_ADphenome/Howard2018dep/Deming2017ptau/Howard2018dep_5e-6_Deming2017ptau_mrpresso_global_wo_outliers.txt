@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BWtifW	MX0Gar	Deming2017ptau	Howard2018dep	5e-6	TRUE	8	111.49795648949058	0.3346
+zJVAll	6sU6LP	Deming2017ptau	Howard2018dep	5e-6	TRUE	0	NA	NA
