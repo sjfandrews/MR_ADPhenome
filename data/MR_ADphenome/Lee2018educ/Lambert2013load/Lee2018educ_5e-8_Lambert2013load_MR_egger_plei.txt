@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+kIF91F	Aa3VOQ	Lambert2013load	Lee2018educ	5e-8	FALSE	0.006313555335634387	0.004539538199943769	0.16533302721537868	NA

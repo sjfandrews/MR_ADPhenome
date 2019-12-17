@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-9BKkrH	w4N7xy	Hilbar2017hipv	Lee2018educ	5e-6	TRUE	1	617.7299597328368	0.00428

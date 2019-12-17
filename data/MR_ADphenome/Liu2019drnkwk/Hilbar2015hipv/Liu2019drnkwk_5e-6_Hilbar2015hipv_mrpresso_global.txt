@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-NgNRpx	N0pCjB	Hilbar2015hipv	Liu2019drnkwk	5e-6	FALSE	0	121.3634034183518	0.5039
+t7u6zL	8UOn7z	Hilbar2015hipv	Liu2019drnkwk	5e-6	FALSE	0	121.3634034183518	0.4954
