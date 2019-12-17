@@ -44,7 +44,9 @@ std.MRdat <- "results/MR_ADphenome/All/mrpresso_MRdat.csv" %>%
   mutate(beta.outcome = st_beta.outcome, 
          se.outcome = st_se.outcome, 
          beta.exposure = st_beta.exposure, 
-         se.exposure = st_se.exposure) 
+         se.exposure = st_se.exposure) %>% 
+  ## Remove variants where pval.outcome < 5e-8
+  filter(pval.outcome > 5e-8)
 
 
 ## -------------------------------------------------------------------------------- ##

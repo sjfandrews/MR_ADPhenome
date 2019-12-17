@@ -12,12 +12,12 @@ mr_best <- read_csv('results/MR_ADphenome/All/MRbest.csv') %>%
     outcome.name, 'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau', 'Neuritic Plaques', 
     'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
   mutate(exposure.name = fct_relevel(
-    exposure.name, 'Alcohol Consumption', 'Alcohol Dependence', 'AUDIT', 
+    exposure.name, 'Alcohol Consumption', 'AUDIT', 
     'Smoking Initiation', 'Cigarettes per Day', 'Diastolic Blood Pressure', 
     'Systolic Blood Pressure', 'Pulse Pressure', "High-density lipoproteins", 
     "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
     'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
-    "Hearing Problems", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
+    "Hearing Difficulties", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
     "Depressive Symptoms", 'Major Depressive Disorder', "Social Isolation"))
 
 

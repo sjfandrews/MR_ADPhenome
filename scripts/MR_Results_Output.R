@@ -17,37 +17,23 @@ MR_results <- read_tsv("results/MR_ADphenome/All/MRresults.txt") %>%
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-## Remove associations between Kunkle 2019  and alcohol consumption, education (as per CHARGE usage)
-## Instead use the assocations with Lambert 2013 and Hilbar 2015
-forbiden_exposures <- c("Liu2019drnkwk", "Walters2018alcdep", "SanchezRoige2018auditt",  "Lee2018educ")
-forbidden <- MR_results %>% 
-  distinct(outcome, exposure) %>%
-  filter(!(outcome == 'Kunkle2019load' & exposure %in% forbiden_exposures)) %>%
-  filter(!(outcome == 'Lambert2013load' & exposure %nin% forbiden_exposures)) %>% 
-  filter(!(outcome == 'Hilbar2017hipv' & exposure %in% forbiden_exposures)) %>%
-  filter(!(outcome == 'Hilbar2015hipv' & exposure %nin% forbiden_exposures))
-
 MRdat.raw <- "results/MR_ADphenome/All/mrpresso_MRdat.csv" %>% 
   read_csv(., guess_max = 100000) %>% 
   filter(outcome %in% outcomes) %>% 
-  filter(exposure %in% exposures) %>% 
-  semi_join(forbidden)
+  filter(exposure %in% exposures) 
 
 mrpresso_global_comb <- read_tsv("results/MR_ADphenome/All/global_mrpresso.txt") %>% 
   filter(outcome %in% outcomes) %>% 
-  filter(exposure %in% exposures) %>% 
-  semi_join(forbidden)
+  filter(exposure %in% exposures) 
 
 egger_comb <- read_tsv("results/MR_ADphenome/All/pleiotropy.txt") %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) %>% 
-  rename(egger_se = se) %>% 
-  semi_join(forbidden)
+  rename(egger_se = se) 
 
 power <- read_csv("results/MR_ADphenome/All/power.csv") %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) %>% 
-  semi_join(forbidden) %>% 
   select(exposure, outcome, pt, outliers_removed, pve.exposure, F, Power) %>% 
   mutate(pve.exposure = round(pve.exposure*100, 2), 
          F = round(F, 2), 
@@ -77,7 +63,7 @@ MRdat <- MRdat.raw  %>%
                                     'Neuritic Plaques', 'Neurofibrillary Tangles',
                                     'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
   mutate(exposure.name = fct_relevel(exposure.name, 
-                                     'Alcohol Consumption', 'Alcohol Dependence',
+                                     'Alcohol Consumption', 
                                      'AUDIT', 'Smoking Initiation', 
                                      'Cigarettes per Day', 'Diastolic Blood Pressure',
                                      'Systolic Blood Pressure', 'Pulse Pressure', 
@@ -85,7 +71,7 @@ MRdat <- MRdat.raw  %>%
                                      "Low-density lipoproteins", "Total Cholesterol",
                                      "Triglycerides", 'Educational Attainment', 
                                      'BMI', 'Type 2 Diabetes', "Oily Fish Intake",
-                                     "Hearing Problems", "Insomnia Symptoms", 
+                                     "Hearing Difficulties", "Insomnia Symptoms", 
                                      "Sleep Duration", "Moderate-to-vigorous PA",
                                      "Depressive Symptoms", 
                                      'Major Depressive Disorder', "Social Isolation"))
@@ -105,7 +91,6 @@ MRdat %>%
 ##                               Merege datasets                                    ## 
 
 MRsummary <- MR_results %>% 
-  semi_join(forbidden) %>% 
   mutate(method = str_replace(method, "Inverse variance weighted \\(fixed effects\\)", 'IVW'), 
          method = str_replace(method, "MR Egger", 'Egger'), 
          method = str_replace(method, "Weighted median", 'WME'), 
@@ -132,12 +117,12 @@ MRsummary <- MR_results %>%
     outcome.name, 'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau', 'Neuritic Plaques', 
     'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
   mutate(exposure.name = fct_relevel(
-    exposure.name, 'Alcohol Consumption', 'Alcohol Dependence', 'AUDIT', 
+    exposure.name, 'Alcohol Consumption', 'AUDIT', 
     'Smoking Initiation', 'Cigarettes per Day', 'Diastolic Blood Pressure', 
     'Systolic Blood Pressure', 'Pulse Pressure', "High-density lipoproteins", 
     "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
     'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
-    "Hearing Problems", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
+    "Hearing Difficulties", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
     "Depressive Symptoms", 'Major Depressive Disorder', "Social Isolation"))
 
 ## -------------------------------------------------------------------------------- ##

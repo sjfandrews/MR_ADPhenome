@@ -6,10 +6,10 @@ outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos",
              "Hilbar2017hipv", "Hilbar2015hipv", 
              "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany")
 ## Exposures to include in the results
-exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "Walters2018alcdep",
-              "SanchezRoige2018auditt","Yengo2018bmi", "Howard2018dep", "Wray2018mdd",
+exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "SanchezRoige2018auditt",
+              "Yengo2018bmi", "Howard2018dep", "Wray2018mdd",
               "Day2018sociso", "Xu2018diab", "Lee2018educ", "NealeLab2018oilfish",
-              "NealeLab2018hear","Willer2013hdl", "Willer2013ldl", "Willer2013tc",
+              "Wells2019hdiff","Willer2013hdl", "Willer2013ldl", "Willer2013tc",
               "Willer2013tg", "Jansen2018insom", "Dashti2019slepdur",  
               "Klimentidis2018mvpa", "Evangelou2018dbp", "Evangelou2018sbp", 
               "Evangelou2018pp")
@@ -17,7 +17,7 @@ exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "Walters2018alc
 ## Sample Sizes
 samplesize <- tibble(
   code = c('Liu2019drnkwk', 'Liu2019smkint', 'Liu2019smkcpd', 'SanchezRoige2018auditt', 
-           'Walters2018alcdep', 'NealeLab2018oilfish', 'NealeLab2018hear', 'Xu2018diab',
+           'NealeLab2018oilfish', 'Wells2019hdiff', 'Xu2018diab',
            'Yengo2018bmi', 'Willer2013tc', 'Willer2013ldl', 'Willer2013hdl', 
            'Willer2013tg', 'Evangelou2018dbp', 'Evangelou2018sbp', 'Evangelou2018pp',
            'Howard2018dep', 'Wray2018mdd', 'Jansen2018insom', 'Dashti2019slepdur',
@@ -26,7 +26,7 @@ samplesize <- tibble(
            'Beecham2014braak4', 'Beecham2014npany', 'Deming2017ptau', 'Deming2017tau',
            'Beecham2014vbiany', 'Klimentidis2018mvpa'),
   trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", 
-            "AUDIT",  "Alcohol Dependence", "Oily Fish Intake", "Hearing Problems",
+            "AUDIT", "Oily Fish Intake", "Hearing Difficulties",
             "Type 2 Diabetes", 'BMI', "Total Cholesterol", "Low-density lipoproteins",
             "High-density lipoproteins", "Triglycerides", "Diastolic Blood Pressure",
             "Systolic Blood Pressure", "Pulse Pressure", "Depressive Symptoms", 
@@ -35,16 +35,17 @@ samplesize <- tibble(
             "Hippocampal Volume", "Hippocampal Volume", "LOAD", "LOAD",
             "Neurofibrillary Tangles", "Neuritic Plaques", "Ptau181", "Tau", 
             "Vascular Brain Injury", "Moderate-to-vigorous PA"),
-  logistic = c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 
+  pmid = c(30643251, 30643251, 30643251, 30336701, NA, 31564434, 30054458, 30124842, 24097068, 24097068, 24097068, 24097068, 30224653, 30224653, 30224653, 29662059, 29700475, 30804565, 30846698, 29970889, 30038396, 28628103, 28247064, 28098162, 25607358, 24162737, 30820047, 25188341, 25188341, 28247064, 28247064, 25188341, 29899525),
+  logistic = c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 
                FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, 
                TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE),
-  samplesize = c(537349, 262990, 263954, 121600, 46568, 359340, 346635, 659316, 690495, 188577, 
+  samplesize = c(537349, 262990, 263954, 121600, 359340, 250389, 659316, 690495, 188577, 
                  188577, 188577, 188577, 757601, 757601, 757601, 322580, 480359, 386533, 446118, 
                  452302, 766345, 40255, 3146, 26814, 13688, 54162, 63926, 4735, 4046, 3146, 3146, 
                  2764, 377234),
-  ncase = c(NA, NA, NA, NA, 11569, NA, 255838, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 
+  ncase = c(NA, NA, NA, NA, NA, 87056, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 
             135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, 2927, 3426, NA, NA, 992, NA),
-  ncontrol = c(NA, NA, NA, NA, 34999, NA, 90797, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 
+  ncontrol = c(NA, NA, NA, NA, NA, 163333, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 
                344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, 1808, 620, NA, NA, 1772, NA)) 
 
 ## negate
