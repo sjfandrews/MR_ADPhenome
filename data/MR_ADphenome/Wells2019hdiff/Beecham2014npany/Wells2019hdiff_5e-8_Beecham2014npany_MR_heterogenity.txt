@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+SuX76j	9SgRsR	Beecham2014npany	Wells2019hdiff	5e-8	FALSE	MR Egger	54.79916498765965	38	0.03807824219903995
+SuX76j	9SgRsR	Beecham2014npany	Wells2019hdiff	5e-8	FALSE	Inverse variance weighted	57.60295005474593	39	0.027757471659157054

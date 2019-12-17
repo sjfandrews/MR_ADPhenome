@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+VgSgiJ	CoESJE	Kunkle2019load	Wells2019hdiff	5e-8	FALSE	Inverse variance weighted (fixed effects)	40	0	-0.13151779311742548	0.2678924666545062	0.6234724081356271
+VgSgiJ	CoESJE	Kunkle2019load	Wells2019hdiff	5e-8	FALSE	Weighted median	40	0	-0.39520992163592866	0.3831214708468005	0.3022817890707344
+VgSgiJ	CoESJE	Kunkle2019load	Wells2019hdiff	5e-8	FALSE	Weighted mode	40	0	-0.39300558259066953	0.710116081684575	0.5831222890557382
+VgSgiJ	CoESJE	Kunkle2019load	Wells2019hdiff	5e-8	FALSE	MR Egger	40	0	-0.10296722198024999	1.186916650685947	0.9313242821268194
