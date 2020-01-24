@@ -669,3 +669,20 @@ OUTCOMES:
       Z: Z
       N: N
       TRAIT: TRAIT
+  -
+    CODE: Beecham2014status
+    NAME: 'Neuropathologic AD'
+    FILE: raw/GWAS/Beecham2014vbiany.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
