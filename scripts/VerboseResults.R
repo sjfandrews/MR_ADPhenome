@@ -7,12 +7,10 @@ message('Of these ', nrow(filter(out.final, qval < 0.05)), ' significant tests, 
 
 ## Generate Odds ratios
 res_odds <- mr_best %>% 
-  left_join(select(out, outcome, exposure, pt, outliers_removed, pass, Egger_MR.pval, WME_MR.pval, WMBE_MR.pval)) %>% 
   mutate(MRPRESSO.pval = as.numeric(str_replace(MRPRESSO.pval, '<', ""))) %>% 
-  rename(pval = MR.pval) %>%
   filter(qval < 0.05) %>% 
   filter(pass == TRUE) %>%
-  select(-nsnp, -n_outliers, -Signif, -pass, -RSSobs, -egger_intercept, -egger_se) %>%
+  select(outcome, exposure, pt, outliers_removed, qval, MRPRESSO.pval, Egger.pval, exposure.name, outcome.name, b = IVW_b, se = IVW_se, pval = IVW_MR.pval, Egger_MR.pval, WME_MR.pval, WMBE_MR.pval) %>%
   generate_odds_ratios(.) %>% 
   mutate(out = ifelse(outcome %in% c('Lambert2013load', 'Kunkle2019load', 'Huang2017aaos', 'Beecham2014npany', 'Beecham2014braak4', 'Beecham2014vbiany'), 
                       paste0(round(or, 2), ' [', round(or_lci95, 2), ', ', round(or_uci95, 2), ']'),

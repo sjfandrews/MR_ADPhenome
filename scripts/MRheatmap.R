@@ -104,3 +104,6 @@ poster <- ggplot(dat.plot) +
 poster 
 ggsave('docs/MR_heatmap_poster.pdf', plot = poster, width = 32, height =  14, units = 'in')
 
+
+
+

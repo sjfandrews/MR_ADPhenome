@@ -170,6 +170,10 @@ mrresults.methods_presso <- mrresults.methods %>%
 mrresults.methods_presso %>%
   write_csv('docs/TableS2.csv')
 
+message('Number of tests: ', nrow(mrresults.methods_presso))
+message('Number of Outcomes: ', nrow(distinct(mrresults.methods_presso, outcome.name)))
+message('Number of tests: ', nrow(distinct(mrresults.methods_presso, exposure.name)))
+
 ## -------------------------------------------------------------------------------- ##
 ##                      Filter results for MR-PRESSO and best PT                    ## 
 mr_res <- MRsummary %>% 
