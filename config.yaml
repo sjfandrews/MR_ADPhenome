@@ -101,8 +101,38 @@ missing: [
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"}
+   {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"}   
 ]
+
+
 
 EXPOSURES:
   -
@@ -466,6 +496,125 @@ EXPOSURES:
     CODE: Evangelou2018pp
     NAME: 'Pulse Pressure'
     FILE: raw/GWAS/Evangelou2018pp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Lee2018education23andMe
+    NAME: 'Education'
+    FILE: 1_RawData/GWAS/Lee2018education23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: SanchezRoige2019auditt23andMe
+    NAME: 'AUDIT Total'
+    FILE: 1_RawData/GWAS/SanchezRoige2019auditt23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Howard2019dep23andMe
+    NAME: 'Depression'
+    FILE: 1_RawData/GWAS/Howard2019dep23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Jansen2018insomnia23andMe
+    NAME: 'Insomnia'
+    FILE: 1_RawData/GWAS/Jansen2018insomnia23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019smkint23andMe
+    NAME: 'Somking Initiation'
+    FILE: 1_RawData/GWAS/Liu2019smkint23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019smkcpd23andMe
+    NAME: 'Smoking Quantity'
+    FILE: 1_RawData/GWAS/Liu2019smkcpd23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019drnkwk23andMe
+    NAME: 'Alcohol Consumption'
+    FILE: 1_RawData/GWAS/Liu2019drnkwk23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
