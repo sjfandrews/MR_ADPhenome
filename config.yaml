@@ -129,7 +129,7 @@ missing: [
    {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"}   
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"}
 ]
 
 
@@ -512,7 +512,7 @@ EXPOSURES:
   -
     CODE: Lee2018education23andMe
     NAME: 'Education'
-    FILE: 1_RawData/GWAS/Lee2018education23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Lee2018education23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -529,7 +529,7 @@ EXPOSURES:
   -
     CODE: SanchezRoige2019auditt23andMe
     NAME: 'AUDIT Total'
-    FILE: 1_RawData/GWAS/SanchezRoige2019auditt23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/SanchezRoige2019auditt23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -546,7 +546,7 @@ EXPOSURES:
   -
     CODE: Howard2019dep23andMe
     NAME: 'Depression'
-    FILE: 1_RawData/GWAS/Howard2019dep23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Howard2019dep23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -563,7 +563,7 @@ EXPOSURES:
   -
     CODE: Jansen2018insomnia23andMe
     NAME: 'Insomnia'
-    FILE: 1_RawData/GWAS/Jansen2018insomnia23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Jansen2018insomnia23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -580,7 +580,7 @@ EXPOSURES:
   -
     CODE: Liu2019smkint23andMe
     NAME: 'Somking Initiation'
-    FILE: 1_RawData/GWAS/Liu2019smkint23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Liu2019smkint23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -597,7 +597,7 @@ EXPOSURES:
   -
     CODE: Liu2019smkcpd23andMe
     NAME: 'Smoking Quantity'
-    FILE: 1_RawData/GWAS/Liu2019smkcpd23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Liu2019smkcpd23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -614,7 +614,7 @@ EXPOSURES:
   -
     CODE: Liu2019drnkwk23andMe
     NAME: 'Alcohol Consumption'
-    FILE: 1_RawData/GWAS/Liu2019drnkwk23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Liu2019drnkwk23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
