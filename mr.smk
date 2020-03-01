@@ -54,7 +54,6 @@ rule all:
 ## Formated summary stats are a temp file that is delted as the end
 rule FormatExposure:
     input:
-        script = 'src/FormatGwas.R',
         ss = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
     output:
         formated_ss = temp(DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz")
@@ -71,10 +70,8 @@ rule FormatExposure:
         z_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['Z'],
         n_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['N'],
         trait_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['TRAIT']
-    shell:
-        'Rscript {input.script} {input.ss} {output.formated_ss} {params.snp_col} {params.chrom_col} \
-        {params.pos_col} {params.ref_col} {params.alt_col} {params.af_col} {params.beta_col} \
-        {params.se_col} {params.p_col} {params.z_col} {params.n_col} {params.trait_col}'
+    script:
+        'src/FormatGwas.R'
 
 ## Read in Outcome summary statistics and format them to input required for pipeline
 ## Formated summary stats are a temp file that is delted as the end
@@ -97,10 +94,8 @@ rule FormatOutcome:
         z_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['Z'],
         n_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['N'],
         trait_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['TRAIT']
-    shell:
-        'Rscript {input.script} {input.ss} {output.formated_ss} {params.snp_col} {params.chrom_col} \
-        {params.pos_col} {params.ref_col} {params.alt_col} {params.af_col} {params.beta_col} \
-        {params.se_col} {params.p_col} {params.z_col} {params.n_col} {params.trait_col}'
+    script:
+        'src/FormatGwas.R'
 
 ## Peform LD clumping on exposure summary statisitics
 ## user defines r2 and window in config file
