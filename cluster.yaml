@@ -24,3 +24,7 @@ ssimp:
   mem: 8000
   cores: 2
   time: '24:00'
+FormatExposure:
+  mem: 16000
+  cores: 2
+  time: '24:00'
