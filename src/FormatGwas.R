@@ -26,7 +26,7 @@ out <- trait.gwas %>%
   filter(nchar(ALT) == 1) %>%
   select(SNP, CHROM, POS, REF, ALT, AF, BETA, SE, Z, P, N, TRAIT) %>%
   drop_na %>%
-  distinct(SNP, .keep_all = TRUE)
+  distinct(SNP, .keep_all = TRUE) %>%
   write_tsv(gzfile(outfile))
 
 message('\n', 'SNPs in orginal file: ', nrow(trait.gwas), '; SNPs in formated file: ', pos_col, ', REF: ', nrow(out), '\n')
