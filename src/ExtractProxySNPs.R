@@ -16,7 +16,7 @@ outcome.raw <- read_tsv(outcome.path)
 
 if(empty(proxy.dat)){
   message("NO PROXY SNPS AVALIABLE \n")
-  outcome.dat <- outcome.raw
+  outcome.dat <- outcome.raw %>% filter(!is.na(CHROM))
 } else if (empty(filter(proxy.dat, SNP_A != SNP_B))){
   message("NO PROXY SNPS AVALIABLE \n")
   outcome.dat <- outcome.raw %>% filter(!is.na(CHROM))
