@@ -134,15 +134,14 @@ rule ExposureSnps:
 ## Plot manhattan plot of exposure gwas highlight instruments
 rule manhattan_plot:
     input:
-        script = 'src/manhattan_plot.R',
         ingwas = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz",
         inclump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
         PlotTitle = "{ExposureCode}"
     output:
         out = DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png'
-    shell:
-        "Rscript {input.script} {input.ingwas} {input.inclump} {output.out} \"{params.PlotTitle}\""
+    script:
+        "src/manhattan_plot.R"
 
 ## Extract exposure instruments from outcome gwas
 rule OutcomeSnps:
