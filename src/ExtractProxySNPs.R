@@ -3,11 +3,10 @@ suppressMessages(library(plyr))
 suppressMessages(library(tidyverse))
 `%nin%` = Negate(`%in%`)
 
-args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
-summary.path = args[1] # Outcome Summary statistics
-proxy.path = args[2] # prox snps
-outcome.path = args[3]
-out = args[4]
+summary.path = snakemake@input[["OutcomeSummary"]] # Outcome Summary statistics
+proxy.path = snakemake@input[["OutcomeProxys"]] # prox snps
+outcome.path = snakemake@input[["OutcomeSNPs"]]
+out = snakemake@params[["Outcome"]]
 
 message("READING IN OUTCOME AND PROXY's \n")
 summary.dat <- read_tsv(summary.path, comment = '#', guess_max = 15000000)

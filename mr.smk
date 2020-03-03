@@ -182,7 +182,6 @@ rule FindProxySnps:
 ## Extract proxy SNPs from outcome gwas
 rule ExtractProxySnps:
     input:
-        script = 'src/ExtractProxySNPs.R',
         OutcomeSummary = DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz",
         OutcomeSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld"
@@ -191,8 +190,8 @@ rule ExtractProxySnps:
         DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
     params:
         Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
-    shell:
-        'Rscript {input.script} {input.OutcomeSummary} {input.OutcomeProxys} {input.OutcomeSNPs} {params.Outcome}'
+    script:
+        'src/ExtractProxySNPs.R'
 
 ## Use TwoSampleMR to harmonize exposure and outcome datasets
 rule Harmonize:
