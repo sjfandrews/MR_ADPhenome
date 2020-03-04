@@ -102,14 +102,6 @@ missing: [
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "SanchezRoige2019auditt23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
@@ -126,11 +118,19 @@ missing: [
    {"ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"}
-]
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Lee2018educ23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Lee2018educ23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-6"},
+   ]
 
 
 
