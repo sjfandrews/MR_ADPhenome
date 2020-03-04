@@ -49,6 +49,7 @@ rule all:
         DataOutput + 'All/heterogenity.txt',
         DataOutput + 'All/pleiotropy.txt',
         DataOutput + 'All/MRresults.txt',
+        DataOutput + 'All/global_mrpresso_wo_outliers.txt',
 
 ## Read in Exposure summar statistics and format them to input required for pipeline
 ## Formated summary stats are a temp file that is delted as the end
@@ -284,14 +285,25 @@ def mrpresso_global_wo_outliers_input(wildcards):
 
 rule merge_mrpresso_global:
     input:
-        mrpresso_global = mrpresso_global_input,
+        # mrpresso_global = mrpresso_global_input,
         mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
         #script = 'src/ConcatMRpresso.R'
     output:
         DataOutput + 'All/global_mrpresso.txt'
     shell:
         #'Rscript {input.script} {output} {input.mrpresso_global} {input.mrpresso_global_wo_outliers}'
-        "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} {input.mrpresso_global_wo_outliers} > {output}"
+        # "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} {input.mrpresso_global_wo_outliers} > {output}"
+        "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} > {output}"
+
+rule merge_mrpresso_global_wo_outliers:
+    input:
+        mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
+        #script = 'src/ConcatMRpresso.R'
+    output:
+        DataOutput + 'All/global_mrpresso_wo_outliers.txt'
+    shell:
+        #'Rscript {input.script} {output} {input.mrpresso_global} {input.mrpresso_global_wo_outliers}'
+        "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global_wo_outliers} > {output}"
 
 ## define list of Heterogenity tests so they can be merged into a single file
 def MR_heterogenity_input(wildcards):
