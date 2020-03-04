@@ -285,8 +285,8 @@ def mrpresso_global_wo_outliers_input(wildcards):
 
 rule merge_mrpresso_global:
     input:
-        # mrpresso_global = mrpresso_global_input,
-        mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
+        mrpresso_global = mrpresso_global_input,
+        # mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
         #script = 'src/ConcatMRpresso.R'
     output:
         DataOutput + 'All/global_mrpresso.txt'
