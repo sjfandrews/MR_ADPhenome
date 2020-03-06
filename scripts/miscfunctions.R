@@ -4,7 +4,7 @@
 outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos", 
              "Deming2017ab42", "Deming2017ptau", "Deming2017tau", 
              "Hilbar2017hipv", "Hilbar2015hipv", 
-             "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany")
+             "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany", "Beecham2014status")
 ## Exposures to include in the results
 exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "SanchezRoige2018auditt",
               "Yengo2018bmi", "Howard2018dep", "Wray2018mdd",
@@ -24,7 +24,11 @@ samplesize <- tibble(
            'Day2018sociso', 'Lee2018educ', 'Huang2017aaos', 'Deming2017ab42',
            'Hilbar2017hipv', 'Hilbar2015hipv', 'Lambert2013load', 'Kunkle2019load',
            'Beecham2014braak4', 'Beecham2014npany', 'Deming2017ptau', 'Deming2017tau',
-           'Beecham2014vbiany', 'Klimentidis2018mvpa'),
+           'Beecham2014vbiany', 'Klimentidis2018mvpa', "Beecham2014status"),
+  short = c('Alc. Cons.', 'Smoking', 'CPD', 'AUDIT', 'Fish', 'Hearing', 'Diabetes', 'BMI', 
+            'TC', 'LDL', 'HDL', 'TG', 'DBP', 'SBP', 'PP', 'Depression', 'MDD', 'Insomnia', 
+            'Sleep', 'Social', 'Education', 'AAOS', "CSF AB42",  "Hippo. Vol.", "Hippo. Vol.", 
+            "LOAD", "LOAD", "NFT", "Neur. Plaq.", "Ptau181", "Tau", "VBI", "MVPA", "Neuropath. AD"),
   trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", 
             "AUDIT", "Oily Fish Intake", "Hearing Difficulties",
             "Type 2 Diabetes", 'BMI', "Total Cholesterol", "Low-density lipoproteins",
@@ -34,19 +38,19 @@ samplesize <- tibble(
             "Social Isolation", "Educational Attainment", "AAOS", "AB42", 
             "Hippocampal Volume", "Hippocampal Volume", "LOAD", "LOAD",
             "Neurofibrillary Tangles", "Neuritic Plaques", "Ptau181", "Tau", 
-            "Vascular Brain Injury", "Moderate-to-vigorous PA"),
-  pmid = c(30643251, 30643251, 30643251, 30336701, NA, 31564434, 30054458, 30124842, 24097068, 24097068, 24097068, 24097068, 30224653, 30224653, 30224653, 29662059, 29700475, 30804565, 30846698, 29970889, 30038396, 28628103, 28247064, 28098162, 25607358, 24162737, 30820047, 25188341, 25188341, 28247064, 28247064, 25188341, 29899525),
+            "Vascular Brain Injury", "Moderate-to-vigorous PA", "Neuropathologic AD"),
+  pmid = c(30643251, 30643251, 30643251, 30336701, NA, 31564434, 30054458, 30124842, 24097068, 24097068, 24097068, 24097068, 30224653, 30224653, 30224653, 29662059, 29700475, 30804565, 30846698, 29970889, 30038396, 28628103, 28247064, 28098162, 25607358, 24162737, 30820047, 25188341, 25188341, 28247064, 28247064, 25188341, 29899525, 25188341),
   logistic = c(FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 
                FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, 
-               TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE),
+               TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE),
   samplesize = c(537349, 262990, 263954, 121600, 359340, 250389, 659316, 690495, 188577, 
                  188577, 188577, 188577, 757601, 757601, 757601, 322580, 480359, 386533, 446118, 
                  452302, 766345, 40255, 3146, 26814, 13688, 54162, 63926, 4735, 4046, 3146, 3146, 
-                 2764, 377234),
+                 2764, 377234, 4914),
   ncase = c(NA, NA, NA, NA, NA, 87056, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 
-            135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, 2927, 3426, NA, NA, 992, NA),
+            135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, 2927, 3426, NA, NA, 992, NA, 3887),
   ncontrol = c(NA, NA, NA, NA, NA, 163333, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 
-               344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, 1808, 620, NA, NA, 1772, NA)) 
+               344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, 1808, 620, NA, NA, 1772, NA, 1027)) 
 
 ## negate
 `%nin%` = Negate(`%in%`)
