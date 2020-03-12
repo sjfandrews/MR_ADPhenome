@@ -32,11 +32,11 @@ editor_options:
 ---
 ```{r test, include=FALSE, eval= FALSE}
 ## For testing
-rwd <- 'out'
-out <- 'out'
-exposure.code <- 'audit'
-outcome.code <- 'ggt'
-p.threshold <- '5e-8'
+# rwd <- 'out'
+# out <- 'out'
+# exposure.code <- 'audit'
+# outcome.code <- 'ggt'
+# p.threshold <- '5e-8'
 
 exposure.snps <- paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', exposure.code, '/', exposure.code, '_', p.threshold, '_SNPs.txt')
 outcome.snps <- paste0('~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/', exposure.code, '/', outcome.code, '/',
