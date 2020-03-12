@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-iQgP2t	my76LA	Kunkle2019load	Wells2019hdiff	5e-6	TRUE	0	NA	NA
+Oo0GhY	6LgbRz	Kunkle2019load	Wells2019hdiff	5e-6	TRUE	0	NA	NA

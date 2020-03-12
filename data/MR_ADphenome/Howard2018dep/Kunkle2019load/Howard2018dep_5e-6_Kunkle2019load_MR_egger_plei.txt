@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-hONOfD	AgRWPK	Kunkle2019load	Howard2018dep	5e-6	FALSE	-3.5340896987291667e-4	0.008126046275578658	0.9653987190565452	NA

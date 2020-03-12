@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-0SZzyA	dgdS7D	Kunkle2019load	Willer2013hdl	5e-8	FALSE	0.003437369999399168	0.0038044123184047944	0.3688024769580862
-0SZzyA	dgdS7D	Kunkle2019load	Willer2013hdl	5e-8	TRUE	0.0027831609762190624	0.0036178194950866652	0.44387756752843954
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+chcIpz	epW7oG	Kunkle2019load	Willer2013hdl	5e-8	FALSE	9.892881204933174e-4	0.0034465351072409376	0.774789738706692	NA

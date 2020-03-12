@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-NUI8IB	meWvqS	Hilbar2017hipv	Evangelou2018sbp	5e-6	TRUE	0	NA	NA
+OhApEf	IJ3BtD	Hilbar2017hipv	Evangelou2018sbp	5e-6	TRUE	0	NA	NA

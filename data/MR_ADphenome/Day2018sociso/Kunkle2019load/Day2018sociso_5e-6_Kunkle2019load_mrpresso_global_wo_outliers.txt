@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-kbgEt4	m0GX8b	Kunkle2019load	Day2018sociso	5e-6	TRUE	0	NA	NA
+uFIK2v	RFotI2	Kunkle2019load	Day2018sociso	5e-6	TRUE	0	NA	NA

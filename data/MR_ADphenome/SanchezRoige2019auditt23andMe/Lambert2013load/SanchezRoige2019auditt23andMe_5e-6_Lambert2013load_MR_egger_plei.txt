@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+jgLPjM	a5hTvZ	Lambert2013load	SanchezRoige2019auditt23andMe	5e-6	FALSE	-0.016907737755734453	0.020952892695818248	0.4236812457104363
+jgLPjM	a5hTvZ	Lambert2013load	SanchezRoige2019auditt23andMe	5e-6	TRUE	-0.006548387472864142	0.018614091719852045	0.7265967747150983

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-3mvNl1	Ae7s3W	Huang2017aaos	Evangelou2018sbp	5e-6	TRUE	0	NA	NA
+1hqZzy	hqsD1G	Huang2017aaos	Evangelou2018sbp	5e-6	TRUE	0	NA	NA

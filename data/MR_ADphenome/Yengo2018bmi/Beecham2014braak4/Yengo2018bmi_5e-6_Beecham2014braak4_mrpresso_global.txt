@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-uwMrXw	fW9fJ2	Beecham2014braak4	Yengo2018bmi	5e-6	FALSE	0	715.9713267155337	0.2002
+wVEIkF	iat7K0	Beecham2014braak4	Yengo2018bmi	5e-6	FALSE	0	715.9713267155337	0.19996

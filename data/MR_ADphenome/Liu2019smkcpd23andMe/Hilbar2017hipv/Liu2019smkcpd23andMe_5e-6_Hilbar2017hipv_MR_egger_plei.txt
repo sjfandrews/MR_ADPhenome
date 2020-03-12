@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+YyVRuH	uc8dua	Hilbar2017hipv	Liu2019smkcpd23andMe	5e-6	FALSE	0.0015419436023437778	0.0019728979820269866	0.4358926559652231	NA

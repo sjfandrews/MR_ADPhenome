@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-tNKTEv	mnbVJn	Hilbar2017hipv	NealeLab2018oilfish	5e-6	TRUE	0	NA	NA
+3m9em3	By5a8q	Hilbar2017hipv	NealeLab2018oilfish	5e-6	TRUE	0	NA	NA

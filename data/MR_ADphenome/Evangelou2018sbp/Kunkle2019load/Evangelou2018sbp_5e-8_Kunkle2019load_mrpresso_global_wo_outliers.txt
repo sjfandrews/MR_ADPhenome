@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-mPEkBu	KwJ9dv	Kunkle2019load	Evangelou2018sbp	5e-8	TRUE	1	579.4398979505509	<4e-05
+8czhrd	m70S21	Kunkle2019load	Evangelou2018sbp	5e-8	TRUE	1	579.4398979505509	<4e-05

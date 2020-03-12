@@ -12,7 +12,7 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 480.7914
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.40716
+[1] 0.40012
 
 
 

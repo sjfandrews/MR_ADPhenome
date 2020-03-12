@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-noKrtc	3EWBlM	Huang2017aaos	NealeLab2018oilfish	5e-8	FALSE	0	44.13956165256012	0.166
+mtcPVu	I9tYWp	Huang2017aaos	NealeLab2018oilfish	5e-8	FALSE	0	44.13956165256012	0.1734

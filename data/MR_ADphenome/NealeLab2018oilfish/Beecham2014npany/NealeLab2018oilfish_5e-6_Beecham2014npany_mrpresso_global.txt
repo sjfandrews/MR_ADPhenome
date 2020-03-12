@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-E8BC05	KpfciN	Beecham2014npany	NealeLab2018oilfish	5e-6	FALSE	0	140.75601708936654	0.0865
+rSSHtR	xndkWj	Beecham2014npany	NealeLab2018oilfish	5e-6	FALSE	0	140.75601708936654	0.0877

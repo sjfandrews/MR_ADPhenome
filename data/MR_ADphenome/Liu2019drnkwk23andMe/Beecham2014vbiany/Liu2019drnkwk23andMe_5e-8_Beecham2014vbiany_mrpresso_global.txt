@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+vftbzt	snUPHc	Beecham2014vbiany	Liu2019drnkwk23andMe	5e-8	FALSE	0	78.36421614797167	0.6522

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-OQkw2y	4ss9xt	Hilbar2017hipv	Willer2013ldl	5e-8	FALSE	3.268315626576727e-4	0.002213683501447414	0.8830218955398856	NA
+jbsYEH	ab4Kar	Hilbar2017hipv	Willer2013ldl	5e-8	FALSE	3.0423450032379283e-4	0.002207316362102185	0.8907392639448152	NA

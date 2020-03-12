@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-CKc36B	dVcdal	Huang2017aaos	SanchezRoige2018auditt	5e-8	TRUE	0	NA	NA

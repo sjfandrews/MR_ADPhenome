@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Xu1OA3	tKQVOQ	Deming2017ab42	Xu2018diab	5e-8	FALSE	0	119.68136048646589	0.188

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+4qeCE7	7944f0	Kunkle2019load	Xue2018diab	5e-6	FALSE	6.41024865879499e-4	0.0030731204216291894	0.8349642040211906
+4qeCE7	7944f0	Kunkle2019load	Xue2018diab	5e-6	TRUE	5.6125273078067e-4	0.002999536563971882	0.8517483717326289

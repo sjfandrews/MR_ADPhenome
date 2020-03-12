@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-3urke8	SSMQfP	Deming2017ab42	Liu2019smkint	5e-6	FALSE	-3.4316626219959705e-5	0.0014110635646666107	0.9806227348371762	NA

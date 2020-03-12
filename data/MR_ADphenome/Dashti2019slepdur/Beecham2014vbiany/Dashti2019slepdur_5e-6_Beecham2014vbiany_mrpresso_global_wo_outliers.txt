@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-JM0zPe	rPM5wr	Beecham2014vbiany	Dashti2019slepdur	5e-6	TRUE	0	NA	NA
+546l7K	GUchJq	Beecham2014vbiany	Dashti2019slepdur	5e-6	TRUE	0	NA	NA

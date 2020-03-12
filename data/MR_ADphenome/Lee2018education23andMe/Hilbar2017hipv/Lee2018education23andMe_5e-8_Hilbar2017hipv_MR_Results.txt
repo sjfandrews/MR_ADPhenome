@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+gJwf5I	lLOzHj	Hilbar2017hipv	Lee2018education23andMe	5e-8	FALSE	Inverse variance weighted (fixed effects)	484	0	0.04005538843559658	0.03799341524424675	0.2917584697739347
+gJwf5I	lLOzHj	Hilbar2017hipv	Lee2018education23andMe	5e-8	FALSE	Weighted median	484	0	0.0013996076416011058	0.06004910980904008	0.9814048163229099
+gJwf5I	lLOzHj	Hilbar2017hipv	Lee2018education23andMe	5e-8	FALSE	Weighted mode	484	0	-0.09894061912883334	0.18437544871352524	0.5917732101428359
+gJwf5I	lLOzHj	Hilbar2017hipv	Lee2018education23andMe	5e-8	FALSE	MR Egger	484	0	-0.03109545580230854	0.14282393132358545	0.8277403466463019

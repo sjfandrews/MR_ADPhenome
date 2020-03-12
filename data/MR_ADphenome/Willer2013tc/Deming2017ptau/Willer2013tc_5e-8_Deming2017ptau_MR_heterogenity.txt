@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-TwWzsh	aXQh77	Deming2017ptau	Willer2013tc	5e-8	FALSE	MR Egger	108.6763896325833	79	0.015061908720511958
-TwWzsh	aXQh77	Deming2017ptau	Willer2013tc	5e-8	FALSE	Inverse variance weighted	109.04880993188536	80	0.01712810147834924
-TwWzsh	aXQh77	Deming2017ptau	Willer2013tc	5e-8	TRUE	MR Egger	93.42335789941774	78	0.11231444354621353
-TwWzsh	aXQh77	Deming2017ptau	Willer2013tc	5e-8	TRUE	Inverse variance weighted	95.75406818904337	79	0.09662529741693433
+IQwcNv	KSubr7	Deming2017ptau	Willer2013tc	5e-8	FALSE	MR Egger	108.7748895391802	80	0.01789173483925702
+IQwcNv	KSubr7	Deming2017ptau	Willer2013tc	5e-8	FALSE	Inverse variance weighted	109.1057182704987	81	0.020396306876465573
+IQwcNv	KSubr7	Deming2017ptau	Willer2013tc	5e-8	TRUE	MR Egger	93.5970403038401	79	0.12530029528979966
+IQwcNv	KSubr7	Deming2017ptau	Willer2013tc	5e-8	TRUE	Inverse variance weighted	95.76591491508226	80	0.1103369423225142

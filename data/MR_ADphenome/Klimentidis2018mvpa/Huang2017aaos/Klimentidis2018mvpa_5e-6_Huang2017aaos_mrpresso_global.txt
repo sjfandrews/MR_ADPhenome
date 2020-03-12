@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-1QEkq4	6CYg80	Huang2017aaos	Klimentidis2018mvpa	5e-6	FALSE	0	130.2441552571259	0.0101
+EuvHi3	ICoeKH	Huang2017aaos	Klimentidis2018mvpa	5e-6	FALSE	0	130.2441552571259	0.0103

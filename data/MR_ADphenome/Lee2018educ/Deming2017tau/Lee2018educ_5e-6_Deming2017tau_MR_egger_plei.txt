@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-PuLLmO	Vuwmww	Deming2017tau	Lee2018educ	5e-6	FALSE	7.886754687047831e-4	0.0010958454273406627	0.47207458721117646	NA

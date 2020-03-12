@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-bJTue7	5wnNcS	Huang2017aaos	Evangelou2018sbp	5e-8	FALSE	-0.001133917305528285	0.0023228337716713057	0.6256827746342859
-bJTue7	5wnNcS	Huang2017aaos	Evangelou2018sbp	5e-8	TRUE	-0.0011630971672074283	0.0022962547023147066	0.612750601478717
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+o1Q5OW	nBSSOd	Huang2017aaos	Evangelou2018sbp	5e-8	FALSE	-0.001133917305528285	0.0023228337716713057	0.6256827746342859	NA

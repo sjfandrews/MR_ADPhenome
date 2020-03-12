@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-6thu9j	LlcLY0	Deming2017tau	Howard2018dep	5e-6	FALSE	0	82.30710535661797	0.564

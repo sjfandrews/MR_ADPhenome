@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-c6tWKk	OfwYUI	Deming2017ab42	Wray2018mdd	5e-8	FALSE	-0.021301040615572957	0.01730954396774868	0.30616272623832774
-c6tWKk	OfwYUI	Deming2017ab42	Wray2018mdd	5e-8	TRUE	-0.010620267634948157	0.01632404620084452	0.5820667396698262

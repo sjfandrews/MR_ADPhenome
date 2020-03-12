@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-cv2MwM	eWn7uO	Hilbar2017hipv	Dashti2019slepdur	5e-6	FALSE	0	254.7664682767521	0.0023
+H3vGTS	4Q1uTF	Hilbar2017hipv	Dashti2019slepdur	5e-6	FALSE	0	254.7664682767521	0.0021

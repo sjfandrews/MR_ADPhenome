@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-iqqM7X	D5OZVG	Beecham2014vbiany	Yengo2018bmi	5e-8	TRUE	0	NA	NA
+lAqSZw	iiqw7E	Beecham2014vbiany	Yengo2018bmi	5e-8	TRUE	0	NA	NA

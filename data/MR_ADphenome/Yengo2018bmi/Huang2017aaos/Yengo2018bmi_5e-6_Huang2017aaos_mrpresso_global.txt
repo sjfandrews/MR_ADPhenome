@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qunokI	rignXY	Huang2017aaos	Yengo2018bmi	5e-6	FALSE	0	741.323458849579	0.09904
+AbU7JQ	iBiESB	Huang2017aaos	Yengo2018bmi	5e-6	FALSE	0	741.323458849579	0.10048

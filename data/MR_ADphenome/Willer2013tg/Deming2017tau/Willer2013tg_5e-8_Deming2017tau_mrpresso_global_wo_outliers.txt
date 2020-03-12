@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Xw9sBb	wK45HB	Deming2017tau	Willer2013tg	5e-8	TRUE	1	49.73729538379764	0.5508
+l9oedO	NkeSqE	Deming2017tau	Willer2013tg	5e-8	TRUE	1	49.73729538379764	0.567

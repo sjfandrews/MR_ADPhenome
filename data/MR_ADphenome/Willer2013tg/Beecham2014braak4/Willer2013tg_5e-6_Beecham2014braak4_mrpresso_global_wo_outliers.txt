@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-SwSb54	TFH55K	Beecham2014braak4	Willer2013tg	5e-6	TRUE	0	NA	NA
+d0mkjH	bYIOtm	Beecham2014braak4	Willer2013tg	5e-6	TRUE	0	NA	NA

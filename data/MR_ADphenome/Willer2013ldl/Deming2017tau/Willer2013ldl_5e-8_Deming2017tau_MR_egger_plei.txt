@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-ZplXld	49LfwA	Deming2017tau	Willer2013ldl	5e-8	FALSE	-0.0018024029264259367	0.0014159705210934584	0.207584077848706	NA
+BEZ2hn	J3zBHB	Deming2017tau	Willer2013ldl	5e-8	FALSE	-0.001801446215832108	0.0014046996388842143	0.2041735490016287	NA

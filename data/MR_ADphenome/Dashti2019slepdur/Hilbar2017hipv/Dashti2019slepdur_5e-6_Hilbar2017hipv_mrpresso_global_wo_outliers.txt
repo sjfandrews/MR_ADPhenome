@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-cv2MwM	eWn7uO	Hilbar2017hipv	Dashti2019slepdur	5e-6	TRUE	0	NA	NA
+H3vGTS	4Q1uTF	Hilbar2017hipv	Dashti2019slepdur	5e-6	TRUE	0	NA	NA

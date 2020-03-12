@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-s3dAMM	AQemD5	Beecham2014vbiany	Liu2019smkint	5e-6	FALSE	Inverse variance weighted (fixed effects)	211	0	-0.5016625398130917	0.4645908226575054	0.28023377305641467
-s3dAMM	AQemD5	Beecham2014vbiany	Liu2019smkint	5e-6	FALSE	Weighted median	211	0	0.07043192461979927	0.6926499857673848	0.9190069254931617
-s3dAMM	AQemD5	Beecham2014vbiany	Liu2019smkint	5e-6	FALSE	Weighted mode	211	0	0.354250106902267	1.7148102485061718	0.836535939439351
-s3dAMM	AQemD5	Beecham2014vbiany	Liu2019smkint	5e-6	FALSE	MR Egger	211	0	-1.9923598310450341	2.0310797820824753	0.32775830556332697

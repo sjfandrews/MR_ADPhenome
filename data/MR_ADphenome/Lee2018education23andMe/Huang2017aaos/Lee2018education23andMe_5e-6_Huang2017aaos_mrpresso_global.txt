@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+awwXwv	Ty1Bxz	Huang2017aaos	Lee2018education23andMe	5e-6	FALSE	0	825.8208049508667	0.00248

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qLL8QS	Mysrke	Beecham2014npany	Jansen2018insom	5e-6	TRUE	0	NA	NA

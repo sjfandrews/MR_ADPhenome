@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-z2BYzR	nLC4cL	Kunkle2019load	Xu2018diab	5e-8	FALSE	-0.0043940359529858015	0.004392295344736891	0.31921910947328935
-z2BYzR	nLC4cL	Kunkle2019load	Xu2018diab	5e-8	TRUE	-0.004001532651442978	0.004226828247468906	0.3457947268328162

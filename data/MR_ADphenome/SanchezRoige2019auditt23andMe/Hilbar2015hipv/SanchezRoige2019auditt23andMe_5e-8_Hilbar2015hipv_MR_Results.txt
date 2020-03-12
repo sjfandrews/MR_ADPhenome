@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+LmCJdA	omBm7V	Hilbar2015hipv	SanchezRoige2019auditt23andMe	5e-8	FALSE	Inverse variance weighted (fixed effects)	10	0	-63.10508285651364	98.12963295418552	0.5201729946458138
+LmCJdA	omBm7V	Hilbar2015hipv	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted median	10	0	-99.77557156249202	131.00310709255336	0.44628234510333215
+LmCJdA	omBm7V	Hilbar2015hipv	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted mode	10	0	-150.80114147273002	162.12605112282125	0.37656942799863957
+LmCJdA	omBm7V	Hilbar2015hipv	SanchezRoige2019auditt23andMe	5e-8	FALSE	MR Egger	10	0	-268.82643408185623	529.09559932227	0.6251026469777519

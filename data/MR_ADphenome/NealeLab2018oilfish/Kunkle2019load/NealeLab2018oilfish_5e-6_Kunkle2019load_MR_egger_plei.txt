@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-jmL5aG	mpMXtG	Kunkle2019load	NealeLab2018oilfish	5e-6	FALSE	0.0036589296820457367	0.006290425169987519	0.5618558431293899	NA
+PzNYcH	HTd6z5	Kunkle2019load	NealeLab2018oilfish	5e-6	FALSE	0.0036589296820457367	0.006290425169987519	0.5618558431293899	NA

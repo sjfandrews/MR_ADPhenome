@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-AIMxQ5	SM54Gv	Beecham2014braak4	Willer2013hdl	5e-6	FALSE	MR Egger	117.62739952524399	124	0.6440384560611836
-AIMxQ5	SM54Gv	Beecham2014braak4	Willer2013hdl	5e-6	FALSE	Inverse variance weighted	121.32341238725549	125	0.5763496116930069
+FYAJBG	Srt0L3	Beecham2014braak4	Willer2013hdl	5e-6	FALSE	MR Egger	122.1693594191023	124	0.5296622642930656
+FYAJBG	Srt0L3	Beecham2014braak4	Willer2013hdl	5e-6	FALSE	Inverse variance weighted	123.3096485467342	125	0.5259788834228304

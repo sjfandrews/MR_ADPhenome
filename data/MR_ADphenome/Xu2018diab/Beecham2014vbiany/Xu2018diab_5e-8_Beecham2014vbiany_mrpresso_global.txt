@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-vl39FS	JMkcNi	Beecham2014vbiany	Xu2018diab	5e-8	FALSE	0	102.02908356913507	0.809

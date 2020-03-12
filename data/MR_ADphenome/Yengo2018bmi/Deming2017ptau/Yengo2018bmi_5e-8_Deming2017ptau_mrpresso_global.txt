@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-xbKo6N	ADWbqM	Deming2017ptau	Yengo2018bmi	5e-8	FALSE	0	477.08086090192285	0.71448
+MuDRr3	DplG2j	Deming2017ptau	Yengo2018bmi	5e-8	FALSE	0	477.08086090192285	0.71548
