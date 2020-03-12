@@ -8,7 +8,7 @@ outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos",
 ## Exposures to include in the results
 exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "SanchezRoige2018auditt",
               "Yengo2018bmi", "Howard2018dep", "Wray2018mdd",
-              "Day2018sociso", "Xu2018diab", "Lee2018educ", "NealeLab2018oilfish",
+              "Day2018sociso", "Xue2018diab", "Lee2018educ", "NealeLab2018oilfish",
               "Wells2019hdiff","Willer2013hdl", "Willer2013ldl", "Willer2013tc",
               "Willer2013tg", "Jansen2018insom", "Dashti2019slepdur",  
               "Klimentidis2018mvpa", "Evangelou2018dbp", "Evangelou2018sbp", 
@@ -19,7 +19,7 @@ exposures = c("Liu2019drnkwk", "Liu2019smkcpd", "Liu2019smkint", "SanchezRoige20
 ## Sample Sizes
 samplesize <- tibble(
   code = c('Liu2019drnkwk', 'Liu2019smkint', 'Liu2019smkcpd', 'SanchezRoige2018auditt', 
-           'NealeLab2018oilfish', 'Wells2019hdiff', 'Xu2018diab',
+           'NealeLab2018oilfish', 'Wells2019hdiff', 'Xue2018diab',
            'Yengo2018bmi', 'Willer2013tc', 'Willer2013ldl', 'Willer2013hdl', 
            'Willer2013tg', 'Evangelou2018dbp', 'Evangelou2018sbp', 'Evangelou2018pp',
            'Howard2018dep', 'Wray2018mdd', 'Jansen2018insom', 'Dashti2019slepdur',
