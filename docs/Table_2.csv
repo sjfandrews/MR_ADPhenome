@@ -2,75 +2,65 @@ outcome,exposure,outcome.name,exposure.name,pt,nsnp,n_outliers,IVW,qval,MR-Egger
 Kunkle2019load,Evangelou2018dbp,LOAD,Diastolic Blood Pressure,5e-6,630,1,"-0.012
 (0.0042)",0.085,"-0.018
 (0.011).","-0.0099
-(0.007) ","-0.023
-(0.014).",0.00196,0.52,FALSE
-Lambert2013load,Lee2018educ,LOAD,Educational Attainment,5e-6,520,0,"-0.35
-(0.066)",3.35e-05,"-0.82
-(0.26)**","-0.38
-(0.1)***","-1
-(0.34)**",0.01308,0.06,TRUE
-Huang2017aaos,Lee2018educ,AAOS,Educational Attainment,5e-6,530,0,"-0.3
-(0.061)",1.50e-04,"-0.28
-(0.24) ","-0.35
-(0.096)***","-0.5
-(0.25)*",0.00652,0.95,TRUE
-Huang2017aaos,Xu2018diab,AAOS,Type 2 Diabetes,5e-6,218,0,"0.072
-(0.017)",0.002,"0.035
+(0.0072) ","-0.023
+(0.014).",0.00204,0.52,FALSE
+Lambert2013load,Lee2018education23andMe,LOAD,Educational Attainment,5e-8,478,0,"-0.44
+(0.071)",2.01e-07,"-0.55
+(0.27)*","-0.44
+(0.11)***","-0.43
+(0.37) ",0.04244,0.68,TRUE
+Huang2017aaos,Lee2018education23andMe,AAOS,Educational Attainment,5e-6,716,0,"-0.28
+(0.058)",8.19e-05,"-0.19
+(0.21) ","-0.31
+(0.096)**","-0.28
+(0.26) ",0.00248,0.62,TRUE
+Huang2017aaos,Xue2018diab,AAOS,Type 2 Diabetes,5e-6,218,0,"0.072
+(0.017)",0.001,"0.035
 (0.044) ","0.045
 (0.032) ","0.067
-(0.035).",2e-4,0.34,FALSE
-Deming2017ab42,Liu2019drnkwk,AB42,Alcohol Consumption,5e-8,29,0,"-0.16
-(0.053)",0.049,"-0.26
-(0.17) ","-0.12
-(0.074).","-0.13
-(0.1) ",0.635,0.57,TRUE
+(0.034)*",1e-4,0.34,TRUE
 Deming2017tau,Evangelou2018dbp,Tau,Diastolic Blood Pressure,5e-6,519,0,"-0.0051
-(0.0018)",0.081,"-0.0035
+(0.0018)",0.084,"-0.0035
 (0.0045) ","-0.0062
 (0.0031)*","-0.0083
-(0.0056) ",0.0248,0.7,FALSE
-Deming2017tau,Willer2013ldl,Tau,Low-density lipoproteins,5e-6,101,0,"0.04
-(0.014)",0.085,"0.064
-(0.024)**","0.017
-(0.028) ","0.011
-(0.027) ",0.0774,0.2,FALSE
+(0.006) ",0.02636,0.7,FALSE
+Deming2017tau,Willer2013ldl,Tau,Low-density lipoproteins,5e-6,102,0,"0.04
+(0.014)",0.084,"0.063
+(0.024)**","0.018
+(0.027) ","0.01
+(0.025) ",0.0846,0.2,FALSE
 Beecham2014npany,Willer2013ldl,Neuritic Plaques,Low-density lipoproteins,5e-8,74,0,"0.7
-(0.19)",0.008,"0.67
+(0.19)",0.007,"0.67
 (0.32)*","0.51
 (0.33) ","0.21
-(0.42) ",0.266,0.91,TRUE
+(0.45) ",0.2534,0.91,TRUE
 Beecham2014npany,Willer2013tc,Neuritic Plaques,Total Cholesterol,5e-6,122,0,"0.69
-(0.18)",0.008,"0.7
+(0.18)",0.006,"0.7
 (0.31)*","0.8
-(0.3)**","0.71
-(0.41).",0.8552,0.95,TRUE
-Beecham2014braak4,Willer2013tc,Neurofibrillary Tangles,Total Cholesterol,5e-6,123,0,"0.33
-(0.11)",0.058,"0.28
-(0.23) ","0.15
-(0.19) ","0.32
-(0.2).",0.0052,0.76,FALSE
+(0.31)**","0.71
+(0.44) ",0.8574,0.95,TRUE
 Beecham2014vbiany,Evangelou2018dbp,Vascular Brain Injury,Diastolic Blood Pressure,5e-6,608,0,"0.073
-(0.017)",0.002,"0.1
+(0.017)",0.001,"0.1
 (0.041)*","0.068
-(0.03)*","0.022
-(0.06) ",0.59216,0.47,TRUE
+(0.028)*","0.022
+(0.054) ",0.59072,0.47,TRUE
 Beecham2014vbiany,Evangelou2018sbp,Vascular Brain Injury,Systolic Blood Pressure,5e-8,431,0,"0.031
-(0.011)",0.08,"0.061
+(0.011)",0.084,"0.061
 (0.029)*","0.035
 (0.018)*","0.017
-(0.044) ",0.26996,0.25,FALSE
+(0.04) ",0.2692,0.25,FALSE
 Beecham2014vbiany,Evangelou2018pp,Vascular Brain Injury,Pulse Pressure,5e-8,384,0,"0.058
-(0.017)",0.019,"0.14
+(0.017)",0.018,"0.14
 (0.045)**","0.055
-(0.027)*","0.033
-(0.067) ",0.17564,0.057,TRUE
-Hilbar2017hipv,Willer2013tc,Hippocampal Volume,Total Cholesterol,5e-6,124,0,"-0.07
-(0.02)",0.019,"-0.042
-(0.036) ","-0.085
-(0.036)*","-0.071
-(0.036)*",0.1107,0.32,TRUE
-Hilbar2017hipv,Jansen2018insom,Hippocampal Volume,Insomnia Symptoms,5e-8,13,0,"-0.22
-(0.073)",0.049,"0.083
-(0.28) ","-0.12
-(0.1) ","-0.065
-(0.14) ",0.108,0.27,TRUE
+(0.026)*","0.033
+(0.068) ",0.17116,0.057,TRUE
+Hilbar2017hipv,Liu2019smkint23andMe,Hippocampal Volume,Smoking Initiation,5e-6,556,0,"-0.2
+(0.073)",0.086,"0.21
+(0.3) ","-0.11
+(0.12) ","0.0087
+(0.28) ",0.15668,0.15,FALSE
+Hilbar2017hipv,Willer2013tc,Hippocampal Volume,Total Cholesterol,5e-6,125,0,"-0.065
+(0.02)",0.027,"-0.034
+(0.035) ","-0.084
+(0.034)*","-0.061
+(0.031)*",0.106,0.26,TRUE

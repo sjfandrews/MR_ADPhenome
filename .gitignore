@@ -19,3 +19,5 @@ shiny/user_base.rds
 shiny/.httr-oauth
 scripts/._*
 scripts/._*
+
+*_formated.txt.gz
