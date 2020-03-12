@@ -80,7 +80,7 @@ MRdat <- MRdat.raw  %>%
                                      'BMI', 'Type 2 Diabetes', "Oily Fish Intake",
                                      "Hearing Difficulties", "Insomnia Symptoms", 
                                      "Sleep Duration", "Moderate-to-vigorous PA",
-                                     "Depressive Symptoms", 
+                                     "Depression", 
                                      'Major Depressive Disorder', "Social Isolation"))
 
 write_csv(MRdat, 'docs/TableS1.csv')
@@ -130,7 +130,7 @@ MRsummary <- MR_results %>%
     "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
     'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
     "Hearing Difficulties", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
-    "Depressive Symptoms", 'Major Depressive Disorder', "Social Isolation"))
+    "Depression", 'Major Depressive Disorder', "Social Isolation"))
 
 ## -------------------------------------------------------------------------------- ##
 ##                Spread results by method and outlier removal                      ## 
