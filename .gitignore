@@ -17,3 +17,4 @@ shiny/.Rapp.history
 shiny/rsconnect
 shiny/user_base.rds
 shiny/.httr-oauth
+scripts/._*
