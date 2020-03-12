@@ -34,10 +34,10 @@ missing: [
    {"ExposureCode" : "Howard2018dep", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Howard2018dep", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Howard2018dep", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "Xu2018diab", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Xu2018diab", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "Xu2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "Xu2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Xue2018diab", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Xue2018diab", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Xue2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Xue2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
@@ -204,9 +204,9 @@ EXPOSURES:
       N: N
       TRAIT: TRAIT
   -
-    CODE: Xu2018diab
+    CODE: Xue2018diab
     NAME: Diabetes
-    FILE: raw/GWAS/Xu2018diab.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Xue2018diab.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
