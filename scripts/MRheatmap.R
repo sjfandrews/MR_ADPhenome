@@ -18,7 +18,7 @@ mr_best <-  mr_best %>% # read_csv('results/MR_ADphenome/All/MRbest.csv') %>%
     "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
     'Educational Attainment', "Educational Attainment (23andMe)", 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
     "Hearing Difficulties", "Insomnia Symptoms", "Insomnia Symptoms (23andMe)", "Sleep Duration", "Moderate-to-vigorous PA",
-    "Depressive Symptoms", 'Major Depressive Disorder', "Depression (23andMe)", "Social Isolation"))
+    "Depression", 'Major Depressive Disorder', "Depression (23andMe)", "Social Isolation"))
 
 
 ## Generate Frames for plot to indicate robust associations
