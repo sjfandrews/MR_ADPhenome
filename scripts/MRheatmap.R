@@ -6,19 +6,19 @@ library(tidyverse)
 source('scripts/miscfunctions.R', chdir = TRUE)
 
 ## Read in dataset
-mr_best <- read_csv('results/MR_ADphenome/All/MRbest.csv') %>% 
+mr_best <-  mr_best %>% # read_csv('results/MR_ADphenome/All/MRbest.csv') %>% 
   ## Arrange traits
   mutate(outcome.name = fct_relevel(
     outcome.name, 'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau', 'Neuritic Plaques', 
     'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
   mutate(exposure.name = fct_relevel(
-    exposure.name, 'Alcohol Consumption', 'AUDIT', 
-    'Smoking Initiation', 'Cigarettes per Day', 'Diastolic Blood Pressure', 
+    exposure.name, 'Alcohol Consumption', "Alcohol Consumption (23andMe)", 'AUDIT', "AUDIT (23andMe)",
+    'Smoking Initiation', "Smoking Initiation (23andMe)", 'Cigarettes per Day', "Cigarettes per Day (23andMe)", 'Diastolic Blood Pressure', 
     'Systolic Blood Pressure', 'Pulse Pressure', "High-density lipoproteins", 
     "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
-    'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
-    "Hearing Difficulties", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
-    "Depressive Symptoms", 'Major Depressive Disorder', "Social Isolation"))
+    'Educational Attainment', "Educational Attainment (23andMe)", 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
+    "Hearing Difficulties", "Insomnia Symptoms", "Insomnia Symptoms (23andMe)", "Sleep Duration", "Moderate-to-vigorous PA",
+    "Depressive Symptoms", 'Major Depressive Disorder', "Depression (23andMe)", "Social Isolation"))
 
 
 ## Generate Frames for plot to indicate robust associations

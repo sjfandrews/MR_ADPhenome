@@ -7,6 +7,7 @@ library(TwoSampleMR)
 library(gridExtra)
 library(qvalue)
 source('scripts/miscfunctions.R', chdir = TRUE)
+# setwd('/Users/sheaandrews/LOAD_minerva/dummy/shea/Projects/MR_ADPhenome')
 
 ## -------------------------------------------------------------------------------- ##
 ##  Read in R datasets
@@ -22,9 +23,15 @@ MRdat.raw <- "results/MR_ADphenome/All/mrpresso_MRdat.csv" %>%
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-mrpresso_global_comb <- read_tsv("results/MR_ADphenome/All/global_mrpresso.txt") %>% 
+mrpresso_global <- read_tsv("results/MR_ADphenome/All/global_mrpresso.txt") %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
+
+mrpresso_global_wo_outliers <- read_tsv("results/MR_ADphenome/All/global_mrpresso_wo_outliers.txt") %>% 
+  filter(outcome %in% outcomes) %>% 
+  filter(exposure %in% exposures) 
+
+mrpresso_global_comb <- bind_rows(mrpresso_global, mrpresso_global_wo_outliers)
 
 egger_comb <- read_tsv("results/MR_ADphenome/All/pleiotropy.txt") %>% 
   filter(outcome %in% outcomes) %>% 
@@ -81,10 +88,10 @@ write_csv(MRdat, 'docs/TableS1.csv')
 ## -------------------------------------------------------------------------------- ##
 ##                              Shiny datasets                                      ## 
 
-mrpresso_global_comb %>% 
+mrpresso_global_comb %>%
   write_tsv('shiny/mrpresso_global.txt')
 
-MRdat %>% 
+MRdat %>%
   write_csv('shiny/HarmonizedMRdat.csv')
 
 ## -------------------------------------------------------------------------------- ##

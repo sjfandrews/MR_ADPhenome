@@ -444,7 +444,7 @@ EXPOSURES:
   -
     CODE: Wells2019hdiff
     NAME: 'Hearing Difficulty'
-    FILE: raw/GWAS/Helena2019hdiff.chrall.CPRA_b37.tsv.gz
+    FILE: raw/GWAS/Wells2019hdiff.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -805,23 +805,6 @@ OUTCOMES:
     CODE: Beecham2014vbiany
     NAME: 'Vascular Brain Injury'
     FILE: raw/GWAS/Beecham2014vbiany.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Beecham2014status
-    NAME: 'Neuropathologic AD'
-    FILE: raw/GWAS/Beecham2014status.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
