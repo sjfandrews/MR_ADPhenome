@@ -142,40 +142,40 @@ missing: [
 
 
 EXPOSURES:
-  -
-    CODE: Liu2019drnkwk
-    NAME: 'Alcohol Consumption'
-    FILE: raw/GWAS/Liu2019drnkwk.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: SanchezRoige2018auditt
-    NAME: 'AUDIT Total'
-    FILE: raw/GWAS/SanchezRoige2018auditt.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
+  # -
+  #   CODE: Liu2019drnkwk
+  #   NAME: 'Alcohol Consumption'
+  #   FILE: raw/GWAS/Liu2019drnkwk.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
+  # -
+  #   CODE: SanchezRoige2018auditt
+  #   NAME: 'AUDIT Total'
+  #   FILE: raw/GWAS/SanchezRoige2018auditt.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
   -
     CODE: Yengo2018bmi
     NAME: BMI
@@ -193,23 +193,23 @@ EXPOSURES:
       Z: Z
       N: N
       TRAIT: TRAIT
-  -
-    CODE: Howard2018dep
-    NAME: 'Depressive Symptoms'
-    FILE: raw/GWAS/Howard2018dep.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
+  # -
+  #   CODE: Howard2018dep
+  #   NAME: 'Depressive Symptoms'
+  #   FILE: raw/GWAS/Howard2018dep.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
   -
     CODE: Xue2018diab
     NAME: Diabetes
@@ -227,23 +227,23 @@ EXPOSURES:
       Z: Z
       N: N
       TRAIT: TRAIT
-  -
-    CODE: Lee2018educ
-    NAME: Education
-    FILE: raw/GWAS/Lee2018educ.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
+  # -
+  #   CODE: Lee2018educ
+  #   NAME: Education
+  #   FILE: raw/GWAS/Lee2018educ.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
   -
     CODE: NealeLab2018oilfish
     NAME: 'Oily Fish Intake'
@@ -363,23 +363,23 @@ EXPOSURES:
       Z: Z
       N: N
       TRAIT: TRAIT
-  -
-    CODE: Jansen2018insom
-    NAME: 'Insomnia Symptoms'
-    FILE: raw/GWAS/Jansen2018insom.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
+  # -
+  #   CODE: Jansen2018insom
+  #   NAME: 'Insomnia Symptoms'
+  #   FILE: raw/GWAS/Jansen2018insom.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
   -
     CODE: Dashti2019slepdur
     NAME: 'Sleep Duration'
@@ -397,23 +397,23 @@ EXPOSURES:
       Z: Z
       N: N
       TRAIT: TRAIT
-  -
-    CODE: Wray2018mdd
-    NAME: 'Major Depressive Disorder'
-    FILE: raw/GWAS/Wray2018mdd.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
+  # -
+  #   CODE: Wray2018mdd
+  #   NAME: 'Major Depressive Disorder'
+  #   FILE: raw/GWAS/Wray2018mdd.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
   -
     CODE: Klimentidis2018mvpa
     NAME: 'Moderate-Vigours Physical Activity'
@@ -431,40 +431,40 @@ EXPOSURES:
       Z: Z
       N: N
       TRAIT: TRAIT
-  -
-    CODE: Liu2019smkcpd
-    NAME: 'Smoking Quantity'
-    FILE: raw/GWAS/Liu2019smkcpd.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
-  -
-    CODE: Liu2019smkint
-    NAME: 'Somking Initiation'
-    FILE: raw/GWAS/Liu2019smkint.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
+  # -
+  #   CODE: Liu2019smkcpd
+  #   NAME: 'Smoking Quantity'
+  #   FILE: raw/GWAS/Liu2019smkcpd.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
+  # -
+  #   CODE: Liu2019smkint
+  #   NAME: 'Somking Initiation'
+  #   FILE: raw/GWAS/Liu2019smkint.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
   -
     CODE: Day2018sociso
     NAME: 'Social Isolation'
