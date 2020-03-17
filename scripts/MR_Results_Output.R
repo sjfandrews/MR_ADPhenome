@@ -8,6 +8,7 @@ library(gridExtra)
 library(qvalue)
 source('scripts/miscfunctions.R', chdir = TRUE)
 # setwd('/Users/sheaandrews/LOAD_minerva/dummy/shea/Projects/MR_ADPhenome')
+# setwd('/Users/shea/minerva/sc/orga/projects/LOAD/shea/Projects/MR_ADPhenome')
 
 ## -------------------------------------------------------------------------------- ##
 ##  Read in R datasets
@@ -77,11 +78,11 @@ MRdat <- MRdat.raw  %>%
                                      "High-density lipoproteins", 
                                      "Low-density lipoproteins", "Total Cholesterol",
                                      "Triglycerides", 'Educational Attainment', 
-                                     'BMI', 'Type 2 Diabetes', "Oily Fish Intake",
+                                     'BMI', 'Type 2 Diabetes', 
+                                     'Meat diet', 'Fish and Plant diet',
                                      "Hearing Difficulties", "Insomnia Symptoms", 
                                      "Sleep Duration", "Moderate-to-vigorous PA",
-                                     "Depression", 
-                                     'Major Depressive Disorder', "Social Isolation"))
+                                     "Depression", "Social Isolation"))
 
 write_csv(MRdat, 'docs/TableS1.csv')
 
@@ -128,9 +129,9 @@ MRsummary <- MR_results %>%
     'Smoking Initiation', 'Cigarettes per Day', 'Diastolic Blood Pressure', 
     'Systolic Blood Pressure', 'Pulse Pressure', "High-density lipoproteins", 
     "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
-    'Educational Attainment', 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
+    'Educational Attainment', 'BMI', 'Type 2 Diabetes', 'Meat diet', 'Fish and Plant diet', 
     "Hearing Difficulties", "Insomnia Symptoms", "Sleep Duration", "Moderate-to-vigorous PA",
-    "Depression", 'Major Depressive Disorder', "Social Isolation"))
+    "Depression", "Social Isolation"))
 
 ## -------------------------------------------------------------------------------- ##
 ##                Spread results by method and outlier removal                      ## 
@@ -235,8 +236,18 @@ out.final <- mr_best %>%
 
 write_csv(out.final, 'docs/Table_2.csv')
 
-
-
+out.final <- mr_best %>% 
+  mutate(IVW = paste0(IVW_b, '\n(',IVW_se, ')')) %>% 
+  mutate(`MR-Egger` = paste0(Egger_b, '\n(', Egger_se, ')', Egger_Signif)) %>% 
+  mutate(`Weighted median` = paste0(WME_b, '\n(',WME_se, ')', WME_Signif)) %>%
+  mutate(`Weighted mode` = paste0(WMBE_b, '\n(',WMBE_se, ')', WMBE_Signif)) %>%
+  select(outcome, exposure, outcome.name, exposure.name, pt, nsnp, n_outliers, IVW, qval, 
+         `MR-Egger`, `Weighted median`, `Weighted mode`, MRPRESSO.pval, Egger.pval, pass) %>% 
+  mutate(Egger.pval = round_sci(Egger.pval)) %>%
+  arrange(outcome.name, exposure.name) %>% 
+  mutate(nsnp = nsnp + n_outliers) %>% 
+  filter(as.numeric(qval) < 0.1) %>% 
+  arrange(outcome.name, exposure.name)
 
 
 

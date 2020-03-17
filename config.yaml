@@ -37,10 +37,10 @@ missing: [
    {"ExposureCode" : "Xue2018diab", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Xue2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Xue2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
-   {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
-   {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   # {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   # {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   # {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   # {"ExposureCode" : "NealeLab2018oilfish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Willer2013hdl", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Willer2013hdl", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Willer2013hdl", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
@@ -244,23 +244,23 @@ EXPOSURES:
   #     Z: Z
   #     N: N
   #     TRAIT: TRAIT
-  -
-    CODE: NealeLab2018oilfish
-    NAME: 'Oily Fish Intake'
-    FILE: raw/GWAS/NealeLab2018oilfish.chrall.CPRA_b37.tsv.gz
-    COLUMNS:
-      SNP: DBSNP_ID
-      CHROM: CHROM
-      POS: POS
-      REF: REF
-      ALT: ALT
-      AF: AF
-      BETA: BETA
-      SE: SE
-      P: P
-      Z: Z
-      N: N
-      TRAIT: TRAIT
+  # -
+  #   CODE: NealeLab2018oilfish
+  #   NAME: 'Oily Fish Intake'
+  #   FILE: raw/GWAS/NealeLab2018oilfish.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT
   -
     CODE: Niarchou2020meat
     NAME: 'Meat related diet'

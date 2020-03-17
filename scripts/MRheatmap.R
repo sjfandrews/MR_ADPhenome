@@ -16,8 +16,10 @@ mr_best <-  mr_best %>% # read_csv('results/MR_ADphenome/All/MRbest.csv') %>%
     'Smoking Initiation', "Smoking Initiation (23andMe)", 'Cigarettes per Day', "Cigarettes per Day (23andMe)", 'Diastolic Blood Pressure', 
     'Systolic Blood Pressure', 'Pulse Pressure', "High-density lipoproteins", 
     "Low-density lipoproteins", "Total Cholesterol", "Triglycerides", 
-    'Educational Attainment', "Educational Attainment (23andMe)", 'BMI', 'Type 2 Diabetes', "Oily Fish Intake", 
-    "Hearing Difficulties", "Insomnia Symptoms", "Insomnia Symptoms (23andMe)", "Sleep Duration", "Moderate-to-vigorous PA",
+    'Educational Attainment', "Educational Attainment (23andMe)", 'BMI', 'Type 2 Diabetes', 
+    "Oily Fish Intake", 'Meat diet', 'Fish and Plant diet',
+    "Hearing Difficulties", "Insomnia Symptoms", "Insomnia Symptoms (23andMe)", 
+    "Sleep Duration", "Moderate-to-vigorous PA",
     "Depression", 'Major Depressive Disorder', "Depression (23andMe)", "Social Isolation"))
 
 
