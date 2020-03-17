@@ -69,6 +69,14 @@ missing: [
    # {"ExposureCode" : "Wray2018mdd", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    # {"ExposureCode" : "Wray2018mdd", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
    # {"ExposureCode" : "Wray2018mdd", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Klimentidis2018mvpa", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
    {"ExposureCode" : "Klimentidis2018mvpa", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
    {"ExposureCode" : "Klimentidis2018mvpa", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
@@ -240,6 +248,40 @@ EXPOSURES:
     CODE: NealeLab2018oilfish
     NAME: 'Oily Fish Intake'
     FILE: raw/GWAS/NealeLab2018oilfish.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Niarchou2020meat
+    NAME: 'Meat related diet'
+    FILE: raw/GWAS/Niarchou2020meat.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Niarchou2020fish
+    NAME: 'Fish and plant related diet'
+    FILE: raw/GWAS/Niarchou2020fish.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
