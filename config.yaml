@@ -809,6 +809,40 @@ OUTCOMES:
       N: N
       TRAIT: TRAIT
   -
+    CODE: Grasby2020thickness
+    NAME: 'Cortical Thickness'
+    FILE: raw/GWAS/Grasby2020thickness.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Grasby2020surfarea
+    NAME: 'Cortical Surface Area'
+    FILE: raw/GWAS/Grasby2020surfarea.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
     CODE: Beecham2014npany
     NAME: 'Any Neuritic Plaques'
     FILE: raw/GWAS/Beecham2014npany.chrall.CPRA_b37.tsv.gz
