@@ -3,7 +3,7 @@
 
 outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos", 
              "Deming2017ab42", "Deming2017ptau", "Deming2017tau", 
-             "Hilbar2017hipv", "Hilbar2015hipv", 
+             "Hilbar2017hipv", "Hilbar2015hipv", "Grasby2020surfarea", "Grasby2020thickness",
              "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany", "Beecham2014status")
 ## Exposures to include in the results
 exposures = c("Yengo2018bmi", "Xue2018diab",
@@ -28,7 +28,7 @@ samplesize <- tibble(
            'Beecham2014vbiany', 'Klimentidis2018mvpa', "Lee2018education23andMe",
            "Liu2019drnkwk23andMe", "Liu2019smkint23andMe", "Liu2019smkcpd23andMe", 
            "SanchezRoige2019auditt23andMe", "Jansen2018insomnia23andMe", "Howard2019dep23andMe", 
-           "Niarchou2020meat", "Niarchou2020fish"),
+           "Niarchou2020meat", "Niarchou2020fish", "Grasby2020surfarea", "Grasby2020thickness"),
   trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", 
             "AUDIT", "Oily Fish Intake", "Hearing Difficulties",
             "Type 2 Diabetes", 'BMI', "Total Cholesterol", "Low-density lipoproteins",
@@ -42,24 +42,24 @@ samplesize <- tibble(
             "Educational Attainment", "Alcohol Consumption", 
             "Smoking Initiation", "Cigarettes per Day",
             "AUDIT", "Insomnia Symptoms", "Depression", 
-            "Meat diet", "Fish and Plant diet"),
+            "Meat diet", "Fish and Plant diet", "Cortical Surface Area", "Cortical Thickness"),
   pmid = c(30643251, 30643251, 30643251, 30336701, NA, 31564434, 30054458, 30124842, 24097068, 24097068, 24097068, 24097068, 30224653, 30224653, 30224653, 29662059, 29700475, 30804565, 30846698, 29970889, 30038396, 28628103, 28247064, 28098162, 25607358, 24162737, 30820047, 25188341, 25188341, 28247064, 28247064, 25188341, 29899525, 
-           30038396, 30643251, 30643251, 30643251, 30336701, 30804565, 30718901, 32066663, 32066663),
+           30038396, 30643251, 30643251, 30643251, 30336701, 30804565, 30718901, 32066663, 32066663, 32193296, 32193296),
   logistic = c(FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, 
                FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, 
                TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, 
-               FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE),
+               FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE),
   samplesize = c(537349, 286736, 263954, 121600, 359340, 250389, 659316, 690495, 188577, 
                  188577, 188577, 188577, 757601, 757601, 757601, 322580, 480359, 386533, 446118, 
                  452302, 766345, 40255, 3146, 26814, 13688, 54162, 63926, 4735, 4046, 3146, 3146, 
                  2764, 377234, 
-                 1131881, 941280, 1232091, 337334, 141932, 1331010, 807553, 335576, 335576),
+                 1131881, 941280, 1232091, 337334, 141932, 1331010, 807553, 335576, 335576, 33709, 33709),
   ncase = c(NA, 156452, NA, NA, NA, 87056, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 
             135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, 2927, 3426, NA, NA, 992, NA, 
-            NA, NA, 557337, NA, NA, 397972, 246363, NA, NA),
+            NA, NA, 557337, NA, NA, 397972, 246363, NA, NA, NA, NA),
   ncontrol = c(NA, 130284, NA, NA, NA, 163333, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 
                344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, 1808, 620, NA, NA, 1772, NA, 
-               NA, NA, 674754, NA, NA, 933038, 561190, NA, NA)) 
+               NA, NA, 674754, NA, NA, 933038, 561190, NA, NA, NA, NA)) 
 
 
 ## negate

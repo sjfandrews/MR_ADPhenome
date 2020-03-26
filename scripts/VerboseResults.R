@@ -9,7 +9,7 @@ message('Of these ', nrow(filter(out.final, qval < 0.05)), ' significant tests, 
 res_odds <- mr_best %>% 
   mutate(MRPRESSO.pval = as.numeric(str_replace(MRPRESSO.pval, '<', ""))) %>% 
   filter(qval < 0.05) %>% 
-  filter(pass == TRUE) %>%
+#  filter(pass == TRUE) %>%
   select(outcome, exposure, pt, outliers_removed, qval, MRPRESSO.pval, Egger.pval, exposure.name, outcome.name, b = IVW_b, se = IVW_se, pval = IVW_MR.pval, Egger_MR.pval, WME_MR.pval, WMBE_MR.pval) %>%
   generate_odds_ratios(.) %>% 
   mutate(out = ifelse(outcome %in% c('Lambert2013load', 'Kunkle2019load', 'Huang2017aaos', 'Beecham2014npany', 'Beecham2014braak4', 'Beecham2014vbiany'), 
@@ -26,24 +26,26 @@ mr_senseitivy <- function(x){
   y <- str_replace(y, "2", 'Weighted median')
   y <- str_replace(y, "3", 'Weighted mode')
   
-  sensetivity_out <- if(length(y) == 1){
-    paste0(y,  " sensitivity analysis.")
+  sensetivity_out <- if(length(y) == 0){
+    paste0(" the associations were non-significant in the sensitivity analyses.")
+  } else if(length(y) == 1){
+    paste0("the associations were consistent in the ", y,  " sensitivity analysis.")
   } else if(length(y) == 2){
-    paste0(y[1], ' and ', y[2], " sensitivity analyses.")
+    paste0("the associations were consistent in the ", y[1], ' and ', y[2], " sensitivity analyses.")
   } else if(length(y) == 3){
-    paste0(y[1], ', ', y[2], ' and ', y[3], " sensitivity analyses.")
+    paste0("the associations were consistent in the ", y[1], ', ', y[2], ' and ', y[3], " sensitivity analyses.")
   }
   
   with(x, if(MRPRESSO.pval > 0.05 & Egger.pval > 0.05){
     "There was no evidence of heterogeneity or directional pleiotropy."
   } else if(MRPRESSO.pval < 0.05 & Egger.pval < 0.05){
-    paste0("There was evidence of heterogeneity and directional pleiotropy, however, the associations were consistent in the ", 
+    paste0("There was evidence of heterogeneity and directional pleiotropy, however, ", 
            sensetivity_out)
   } else if(MRPRESSO.pval < 0.05 & Egger.pval > 0.05){
-    paste0("There was evidence of heterogeneity, but not of directional pleiotropy, however, the associations were consistent in the ", 
+    paste0("There was evidence of heterogeneity, but not of directional pleiotropy, however, ", 
            sensetivity_out)
   } else if(MRPRESSO.pval > 0.05 & Egger.pval < 0.05){
-    paste0("There was evidence of directional pleiotropy, but not of heterogeneity, however, the associations were consistent in the ", 
+    paste0("There was evidence of directional pleiotropy, but not of heterogeneity, however, ", 
            sensetivity_out)
   })
 }
@@ -81,10 +83,22 @@ written_res <- lapply(1:nrow(res_odds), function(x){
                               " Alzheimer's age of onset ", 
                               ifelse(outliers_removed == TRUE, 'after outlier removal ', ""), 
                               '(HR [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
-  } else if(exposure_out$outcome == 'Hilbar2017hipv'){
+  } else if(exposure_out$outcome == 'Hilbar2017hipv' | exposure_out$outcome == 'Hilbar2015hipv'){
     with(exposure_out, paste0("Genetically predicted ", exposure.name, " was associated with significantly ", 
                               ifelse(b < 0, 'reduced', 'increased'), 
                               " hippocampal volume ", 
+                              ifelse(outliers_removed == TRUE, 'after outlier removal ', ""), 
+                              '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'Grasby2020surfarea'){
+    with(exposure_out, paste0("Genetically predicted ", exposure.name, " was associated with significantly ", 
+                              ifelse(b < 0, 'reduced', 'increased'), 
+                              " cortical surface area ", 
+                              ifelse(outliers_removed == TRUE, 'after outlier removal ', ""), 
+                              '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
+  } else if(exposure_out$outcome == 'Grasby2020thickness'){
+    with(exposure_out, paste0("Genetically predicted ", exposure.name, " was associated with significantly ", 
+                              ifelse(b < 0, 'reduced', 'increased'), 
+                              " cortical thickness ", 
                               ifelse(outliers_removed == TRUE, 'after outlier removal ', ""), 
                               '(β [CI]: ', out, "). ", mr_senseitivy(exposure_out)))
   } else if(exposure_out$outcome == 'Deming2017ab42'){

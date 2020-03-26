@@ -128,10 +128,14 @@ sum(lee2018 $n * lee2018 $female) / sum(lee2018 $n)
 ## Neale
 194174 / 361194
 
+## Grasby 2020 
+grasby2020 <- readxl::read_xlsx("/Users/shea/GitCode/MR_ADPhenome/docs/supplements/aay6690_Grasby_Tables_S1_to_S20.xlsx", sheet = 3, skip = 2, n_max = 58) %>% 
+  rename(Study_Design = `Study Design`, N = `Total N`, Age =`Mean Age`)
 
+grasby2020 %>% filter(Ancestry == 'European') %>% 
+  summarise(N = sum(N), Females = sum(Females) / sum(N))
 
-
-
+sum(grasby2020 $N * grasby2020 $Age) / sum(grasby2020 $N)
 
 
 

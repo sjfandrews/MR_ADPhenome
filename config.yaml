@@ -1,5 +1,5 @@
 # snakemake -s mr.smk --configfile config.yaml -j 4 --keep-going
-# snakejob -s mr.smk --configfile config.yaml -j 1000 --max-jobs-per-second 1 --keep-going --no-temp
+# snakejob -s mr.smk --configfile config.yaml -j 1000 --max-jobs-per-second 1 --keep-going --notemp
 
 DataOut: "data/MR_ADphenome/"
 DataOutput: "results/MR_ADphenome/"

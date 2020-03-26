@@ -8,7 +8,7 @@ library(gridExtra)
 library(qvalue)
 source('scripts/miscfunctions.R', chdir = TRUE)
 # setwd('/Users/sheaandrews/LOAD_minerva/dummy/shea/Projects/MR_ADPhenome')
-# setwd('/Users/shea/minerva/sc/orga/projects/LOAD/shea/Projects/MR_ADPhenome')
+# setwd('/Users/shea/minerva/sc/arion/projects/LOAD/shea/Projects/MR_ADPhenome')
 
 ## -------------------------------------------------------------------------------- ##
 ##  Read in R datasets
@@ -69,7 +69,8 @@ MRdat <- MRdat.raw  %>%
   mutate(outcome.name = fct_relevel(outcome.name, 
                                     'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau',
                                     'Neuritic Plaques', 'Neurofibrillary Tangles',
-                                    'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
+                                    'Vascular Brain Injury', 'Hippocampal Volume', 
+                                    "Cortical Surface Area", "Cortical Thickness")) %>% 
   mutate(exposure.name = fct_relevel(exposure.name, 
                                      'Alcohol Consumption', 
                                      'AUDIT', 'Smoking Initiation', 
@@ -123,7 +124,7 @@ MRsummary <- MR_results %>%
   ## Arrange traits
   mutate(outcome.name = fct_relevel(
     outcome.name, 'LOAD', 'AAOS', 'AB42', 'Ptau181', 'Tau', 'Neuritic Plaques', 
-    'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume')) %>% 
+    'Neurofibrillary Tangles', 'Vascular Brain Injury', 'Hippocampal Volume', "Cortical Surface Area", "Cortical Thickness")) %>% 
   mutate(exposure.name = fct_relevel(
     exposure.name, 'Alcohol Consumption', 'AUDIT', 
     'Smoking Initiation', 'Cigarettes per Day', 'Diastolic Blood Pressure', 
@@ -180,7 +181,7 @@ mrresults.methods_presso %>%
 
 message('Number of tests: ', nrow(mrresults.methods_presso))
 message('Number of Outcomes: ', nrow(distinct(mrresults.methods_presso, outcome.name)))
-message('Number of tests: ', nrow(distinct(mrresults.methods_presso, exposure.name)))
+message('Number of Exposures: ', nrow(distinct(mrresults.methods_presso, exposure.name)))
 
 ## -------------------------------------------------------------------------------- ##
 ##                      Filter results for MR-PRESSO and best PT                    ## 
@@ -231,7 +232,7 @@ out.final <- mr_best %>%
   mutate(qval = round_sci(qval)) %>%
   arrange(outcome.name, exposure.name) %>% 
   mutate(nsnp = nsnp + n_outliers) %>% 
-  filter(as.numeric(qval) < 0.1) %>% 
+  filter(as.numeric(qval) < 0.05) %>% 
   arrange(outcome.name, exposure.name)
 
 write_csv(out.final, 'docs/Table_2.csv')
