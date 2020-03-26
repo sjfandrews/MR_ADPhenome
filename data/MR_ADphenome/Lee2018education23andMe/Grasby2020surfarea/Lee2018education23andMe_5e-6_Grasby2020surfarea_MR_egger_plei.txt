@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+ZHurbG	18tNZ3	Grasby2020surfarea	Lee2018education23andMe	5e-6	FALSE	25.318219483336293	20.361703611434983	0.21412516061056633
+ZHurbG	18tNZ3	Grasby2020surfarea	Lee2018education23andMe	5e-6	TRUE	19.864128446980324	19.95969051630767	0.31997595822523933

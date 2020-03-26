@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+0yTGb0	egLsHE	Grasby2020surfarea	Dashti2019slepdur	5e-8	FALSE	MR Egger	112.57413890557316	61	6.541603143593662e-5
+0yTGb0	egLsHE	Grasby2020surfarea	Dashti2019slepdur	5e-8	FALSE	Inverse variance weighted	120.90624683792969	62	1.1216059829100427e-5
+0yTGb0	egLsHE	Grasby2020surfarea	Dashti2019slepdur	5e-8	TRUE	MR Egger	88.08293021083057	60	0.010573447734395312
+0yTGb0	egLsHE	Grasby2020surfarea	Dashti2019slepdur	5e-8	TRUE	Inverse variance weighted	93.13897981644122	61	0.00504693077766735

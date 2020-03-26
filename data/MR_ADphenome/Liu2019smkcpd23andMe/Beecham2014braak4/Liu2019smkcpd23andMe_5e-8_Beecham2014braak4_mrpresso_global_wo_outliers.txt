@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-kr5hXQ	4LIIqJ	Beecham2014braak4	Liu2019smkcpd23andMe	5e-8	TRUE	0	NA	NA
+bRQsyk	mEeQQ4	Beecham2014braak4	Liu2019smkcpd23andMe	5e-8	TRUE	0	NA	NA

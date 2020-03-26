@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-d3VjgD	749D0i	Deming2017ab42	Willer2013ldl	5e-6	FALSE	0	118.08473525214967	0.1453
+aixTMg	holHA3	Deming2017ab42	Willer2013ldl	5e-6	FALSE	0	118.08473525214967	0.1455

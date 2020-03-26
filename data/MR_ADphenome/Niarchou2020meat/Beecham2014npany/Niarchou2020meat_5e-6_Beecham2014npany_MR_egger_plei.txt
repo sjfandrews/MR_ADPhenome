@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+oNir5o	7ZVOCB	Beecham2014npany	Niarchou2020meat	5e-6	FALSE	0.007583019998218824	0.03771007411244339	0.8410790322315287	NA

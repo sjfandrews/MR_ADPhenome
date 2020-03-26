@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-nKtB4V	EhIZ8S	Deming2017ptau	Wells2019hdiff	5e-8	TRUE	0	NA	NA
+TdGHSV	NC85h5	Deming2017ptau	Wells2019hdiff	5e-8	TRUE	0	NA	NA

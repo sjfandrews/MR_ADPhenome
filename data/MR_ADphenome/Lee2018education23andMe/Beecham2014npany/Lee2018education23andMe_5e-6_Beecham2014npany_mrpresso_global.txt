@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-tjWuiR	uj8mwI	Beecham2014npany	Lee2018education23andMe	5e-6	FALSE	0	780.6651043459113	0.02172
+eNhNC3	NWFImH	Beecham2014npany	Lee2018education23andMe	5e-6	FALSE	0	780.6651043459113	0.023

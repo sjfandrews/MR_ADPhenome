@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-oGSMql	GDKNz1	Beecham2014vbiany	Willer2013ldl	5e-8	FALSE	-0.007775204634470252	0.014300633959904547	0.588329932065024	NA
+IiLHds	lbcCPB	Beecham2014vbiany	Willer2013ldl	5e-8	FALSE	-0.007775204634470252	0.014300633959904547	0.588329932065024	NA

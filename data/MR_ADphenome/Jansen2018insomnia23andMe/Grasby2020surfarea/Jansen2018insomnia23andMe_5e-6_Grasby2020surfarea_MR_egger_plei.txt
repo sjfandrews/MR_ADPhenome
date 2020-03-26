@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+eJCn70	lkCEcC	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	FALSE	-17.42114127584787	44.27776871477644	0.6942110561035586
+eJCn70	lkCEcC	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	4.304897844764018	41.531052537305506	0.9174995163725596

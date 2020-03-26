@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Yh3K5r	tE5ZSY	Grasby2020surfarea	Day2018sociso	5e-8	TRUE	1	19.47114808740985	0.205

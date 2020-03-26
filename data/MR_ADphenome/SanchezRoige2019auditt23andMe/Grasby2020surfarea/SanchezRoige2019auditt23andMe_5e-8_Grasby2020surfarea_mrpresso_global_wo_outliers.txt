@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Evwsm1	awxghN	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	TRUE	2	11.629521818242694	0.259

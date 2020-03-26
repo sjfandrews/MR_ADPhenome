@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-4NdCCl	Ymzr1N	Deming2017ptau	Lee2018education23andMe	5e-6	TRUE	0	NA	NA
+7LekP2	32Sdva	Deming2017ptau	Lee2018education23andMe	5e-6	TRUE	0	NA	NA

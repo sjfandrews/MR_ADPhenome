@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qVvFal	uki5Mt	Hilbar2017hipv	Jansen2018insomnia23andMe	5e-8	TRUE	1	188.45376656031277	0.1156
+vYSNUb	DwAoip	Hilbar2017hipv	Jansen2018insomnia23andMe	5e-8	TRUE	1	188.45376656031277	0.116

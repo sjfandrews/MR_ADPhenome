@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+604LN0	tpWVOR	Grasby2020thickness	Klimentidis2018mvpa	5e-6	FALSE	-4.524750188869436e-4	4.3985029111601463e-4	0.30637632487285577
+604LN0	tpWVOR	Grasby2020thickness	Klimentidis2018mvpa	5e-6	TRUE	-3.55079756666339e-4	4.1951125754837885e-4	0.39959253467675004

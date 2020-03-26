@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-JVkZm4	DoRPgf	Deming2017ptau	Evangelou2018dbp	5e-8	TRUE	0	NA	NA
+LTHOkM	jLBXPb	Deming2017ptau	Evangelou2018dbp	5e-8	TRUE	0	NA	NA

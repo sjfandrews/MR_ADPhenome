@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+IgkBNY	s1VBq3	Grasby2020surfarea	Niarchou2020meat	5e-6	FALSE	MR Egger	145.54204184943654	95	6.605178781907258e-4
+IgkBNY	s1VBq3	Grasby2020surfarea	Niarchou2020meat	5e-6	FALSE	Inverse variance weighted	145.7364226557108	96	8.036916879489835e-4

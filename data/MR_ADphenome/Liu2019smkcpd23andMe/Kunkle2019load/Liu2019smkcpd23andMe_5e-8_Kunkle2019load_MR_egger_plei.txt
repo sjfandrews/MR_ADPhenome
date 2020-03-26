@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-mhAto7	4S6RAD	Kunkle2019load	Liu2019smkcpd23andMe	5e-8	FALSE	0.011668108850739992	0.00467616148946352	0.01670587188453826	NA
+5QqmMZ	bbg7OT	Kunkle2019load	Liu2019smkcpd23andMe	5e-8	FALSE	0.011668108850739992	0.00467616148946352	0.01670587188453826	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+sFj12F	TxsgLo	Grasby2020surfarea	Wells2019hdiff	5e-6	FALSE	62.80386531783009	58.93093566645957	0.2891425361766091	NA

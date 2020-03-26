@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ai1vAE	ZmpLEo	Huang2017aaos	Klimentidis2018mvpa	5e-8	TRUE	0	NA	NA
+ziBSOS	iUHrlN	Huang2017aaos	Klimentidis2018mvpa	5e-8	TRUE	0	NA	NA

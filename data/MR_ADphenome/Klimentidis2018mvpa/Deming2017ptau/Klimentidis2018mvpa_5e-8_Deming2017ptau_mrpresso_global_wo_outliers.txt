@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-SwSVJw	vkTFnk	Deming2017ptau	Klimentidis2018mvpa	5e-8	TRUE	0	NA	NA
+uu3Iup	9fTibC	Deming2017ptau	Klimentidis2018mvpa	5e-8	TRUE	0	NA	NA

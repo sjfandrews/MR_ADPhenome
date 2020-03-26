@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+ulNex1	TPCpWd	Grasby2020thickness	Liu2019smkint23andMe	5e-6	FALSE	MR Egger	726.9350025539391	552	7.439470799868942e-7
+ulNex1	TPCpWd	Grasby2020thickness	Liu2019smkint23andMe	5e-6	FALSE	Inverse variance weighted	733.159658801412	553	3.906507725189733e-7
+ulNex1	TPCpWd	Grasby2020thickness	Liu2019smkint23andMe	5e-6	TRUE	MR Egger	711.6489519045145	551	4.1876550418528466e-6
+ulNex1	TPCpWd	Grasby2020thickness	Liu2019smkint23andMe	5e-6	TRUE	Inverse variance weighted	717.1257704119727	552	2.490915646148668e-6

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+ulNex1	TPCpWd	Grasby2020thickness	Liu2019smkint23andMe	5e-6	FALSE	3.7541051042342625e-4	1.7267401714889954e-4	0.030121782510040992
+ulNex1	TPCpWd	Grasby2020thickness	Liu2019smkint23andMe	5e-6	TRUE	3.524071147648905e-4	1.7113451198858925e-4	0.039940548658851945

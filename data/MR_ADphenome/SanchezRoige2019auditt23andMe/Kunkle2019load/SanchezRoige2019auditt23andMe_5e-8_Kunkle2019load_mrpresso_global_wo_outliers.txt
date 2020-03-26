@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-YJ7Hk3	YDKG6j	Kunkle2019load	SanchezRoige2019auditt23andMe	5e-8	TRUE	1	21.9785479295029	0.06
+sNKBvx	CbqqiG	Kunkle2019load	SanchezRoige2019auditt23andMe	5e-8	TRUE	1	21.9785479295029	0.069

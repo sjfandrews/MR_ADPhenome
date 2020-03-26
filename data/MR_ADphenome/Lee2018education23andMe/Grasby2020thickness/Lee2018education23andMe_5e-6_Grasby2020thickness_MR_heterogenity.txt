@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+DHFtD0	9ChpAc	Grasby2020thickness	Lee2018education23andMe	5e-6	FALSE	MR Egger	1041.9786529024802	708	3.4081562961907043e-15
+DHFtD0	9ChpAc	Grasby2020thickness	Lee2018education23andMe	5e-6	FALSE	Inverse variance weighted	1042.139281810817	709	4.0410222517393925e-15
+DHFtD0	9ChpAc	Grasby2020thickness	Lee2018education23andMe	5e-6	TRUE	MR Egger	965.1612792651191	705	2.1876834463405466e-10
+DHFtD0	9ChpAc	Grasby2020thickness	Lee2018education23andMe	5e-6	TRUE	Inverse variance weighted	965.1973080337326	706	2.5572472788921194e-10

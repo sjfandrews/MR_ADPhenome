@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-h1rXrd	NOGlZZ	Beecham2014npany	Liu2019smkint23andMe	5e-8	FALSE	0	336.9988473983197	0.45932
+PH824Z	fAeaM7	Beecham2014npany	Liu2019smkint23andMe	5e-8	FALSE	0	336.9988473983197	0.45904

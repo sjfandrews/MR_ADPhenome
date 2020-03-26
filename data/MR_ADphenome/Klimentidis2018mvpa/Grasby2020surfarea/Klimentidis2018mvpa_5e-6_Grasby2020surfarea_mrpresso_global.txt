@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+jusdfi	I3mDMj	Grasby2020surfarea	Klimentidis2018mvpa	5e-6	FALSE	0	136.7982087735109	0.0017

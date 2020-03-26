@@ -1,10 +1,10 @@
 $`Main MR results`
-       Exposure       MR Analysis Causal Estimate         Sd      T-stat
-1 beta.exposure               Raw    0.0006707877 0.04184282 0.016031129
-2 beta.exposure Outlier-corrected    0.0002155544 0.03823107 0.005638198
+       Exposure       MR Analysis Causal Estimate         Sd     T-stat
+1 beta.exposure               Raw    0.0006707877 0.04184282 0.01603113
+2 beta.exposure Outlier-corrected    0.0103078635 0.03987942 0.25847576
     P-value
 1 0.9872389
-2 0.9955119
+2 0.7965317
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -12,7 +12,7 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 150.6715
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.0084
+[1] 0.0063
 
 
 $`MR-PRESSO results`$`Outlier Test`
@@ -27,7 +27,7 @@ $`MR-PRESSO results`$`Outlier Test`
 8   2.525915e-04      1
 9   1.655897e-06      1
 10  3.622285e-04      1
-11  6.818710e-03  0.011
+11  6.818710e-03  0.066
 12  3.338855e-03      1
 13  3.106636e-04      1
 14  1.052828e-03      1
@@ -54,7 +54,7 @@ $`MR-PRESSO results`$`Outlier Test`
 35  5.042607e-05      1
 36  3.163248e-03      1
 37  3.321301e-03      1
-38  2.044282e-03  0.605
+38  2.044282e-03  0.638
 39  6.079466e-04      1
 40  1.197833e-04      1
 41  9.858405e-04      1
@@ -103,7 +103,7 @@ $`MR-PRESSO results`$`Outlier Test`
 84  1.980901e-04      1
 85  1.652988e-06      1
 86  9.820121e-05      1
-87  3.224245e-03 <0.011
+87  3.224245e-03  0.044
 88  1.216506e-04      1
 89  7.180718e-04      1
 90  6.526993e-03      1
@@ -121,7 +121,7 @@ $`MR-PRESSO results`$`Outlier Test`
 102 3.912277e-05      1
 103 6.217388e-06      1
 104 9.673492e-05      1
-105 2.695288e-03  0.594
+105 2.695288e-03  0.682
 106 1.312429e-05      1
 107 2.873070e-05      1
 108 1.736533e-06      1
@@ -130,14 +130,14 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] 11 87
+[1] 87
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
 beta.exposure 
-     211.1919 
+    -93.49247 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.0085
+[1] 0.8814
 
 
 

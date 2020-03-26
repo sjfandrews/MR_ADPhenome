@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+HTq2Wr	C6TbpL	Deming2017tau	Niarchou2020meat	5e-8	FALSE	0	22.706713482027038	0.326

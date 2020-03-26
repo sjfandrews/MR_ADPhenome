@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+rnJUbg	PAJzqI	Grasby2020surfarea	Liu2019smkint23andMe	5e-8	FALSE	MR Egger	609.0312699066835	335	3.516404386880681e-18
+rnJUbg	PAJzqI	Grasby2020surfarea	Liu2019smkint23andMe	5e-8	FALSE	Inverse variance weighted	614.1676353961866	336	1.4698044624631593e-18
+rnJUbg	PAJzqI	Grasby2020surfarea	Liu2019smkint23andMe	5e-8	TRUE	MR Egger	504.23619049974246	330	1.9985269908612494e-9
+rnJUbg	PAJzqI	Grasby2020surfarea	Liu2019smkint23andMe	5e-8	TRUE	Inverse variance weighted	507.0212527377808	331	1.513533506080421e-9

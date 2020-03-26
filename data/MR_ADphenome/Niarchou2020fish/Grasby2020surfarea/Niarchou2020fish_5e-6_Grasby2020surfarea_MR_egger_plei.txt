@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+I8ky4h	sqo2tF	Grasby2020surfarea	Niarchou2020fish	5e-6	FALSE	-38.74102866908261	55.924643899044725	0.48968289720478897
+I8ky4h	sqo2tF	Grasby2020surfarea	Niarchou2020fish	5e-6	TRUE	-35.4115961753392	54.16424730912585	0.5143897462911942

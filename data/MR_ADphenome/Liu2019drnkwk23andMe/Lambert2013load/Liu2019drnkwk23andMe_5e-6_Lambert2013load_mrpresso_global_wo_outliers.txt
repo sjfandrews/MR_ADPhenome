@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-SN6KH8	5Z1ieZ	Lambert2013load	Liu2019drnkwk23andMe	5e-6	TRUE	1	264.45250290878107	0.0053
+0B7eSf	pdWYSn	Lambert2013load	Liu2019drnkwk23andMe	5e-6	TRUE	1	264.45250290878107	0.0064

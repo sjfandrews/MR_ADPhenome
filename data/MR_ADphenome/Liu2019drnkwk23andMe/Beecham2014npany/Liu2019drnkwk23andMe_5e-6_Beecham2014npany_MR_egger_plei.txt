@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-kSOSz0	Rsr3VL	Beecham2014npany	Liu2019drnkwk23andMe	5e-6	FALSE	0.005514639059568056	0.018801505423916495	0.7695905694151155	NA
+J9jnwN	8QDyzr	Beecham2014npany	Liu2019drnkwk23andMe	5e-6	FALSE	0.005514639059568056	0.018801505423916495	0.7695905694151155	NA

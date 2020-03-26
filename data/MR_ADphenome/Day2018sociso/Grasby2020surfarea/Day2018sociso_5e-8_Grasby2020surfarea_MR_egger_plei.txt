@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Yh3K5r	tE5ZSY	Grasby2020surfarea	Day2018sociso	5e-8	FALSE	-56.212376220172	224.18839660527465	0.8059365968469082
+Yh3K5r	tE5ZSY	Grasby2020surfarea	Day2018sociso	5e-8	TRUE	-126.12899380053688	195.4725171173644	0.5309078115704552

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+dxTspT	rNkQvS	Deming2017ab42	Niarchou2020fish	5e-8	FALSE	0.0026417444711833208	0.004242238811191765	0.5371852368915188	NA

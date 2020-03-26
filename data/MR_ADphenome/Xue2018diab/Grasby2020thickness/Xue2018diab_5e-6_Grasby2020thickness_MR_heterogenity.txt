@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+atJMpp	RXPAW2	Grasby2020thickness	Xue2018diab	5e-6	FALSE	MR Egger	277.8567204053407	216	0.002863172467903104
+atJMpp	RXPAW2	Grasby2020thickness	Xue2018diab	5e-6	FALSE	Inverse variance weighted	279.6290017879476	217	0.002643271333922042

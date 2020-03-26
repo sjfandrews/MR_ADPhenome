@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+FkK9Nd	qWVHAL	Grasby2020surfarea	Yengo2018bmi	5e-6	FALSE	-15.333708463399395	14.455736943922904	0.2891808816722162
+FkK9Nd	qWVHAL	Grasby2020surfarea	Yengo2018bmi	5e-6	TRUE	-7.4316589346627495	14.069491737310445	0.597523290761975

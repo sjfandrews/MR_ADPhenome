@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-jD3L7W	wJRZOl	Beecham2014npany	Yengo2018bmi	5e-8	FALSE	0	479.5810553305191	0.73772
+sFa1yk	MpHRuP	Beecham2014npany	Yengo2018bmi	5e-8	FALSE	0	479.5810553305191	0.73548

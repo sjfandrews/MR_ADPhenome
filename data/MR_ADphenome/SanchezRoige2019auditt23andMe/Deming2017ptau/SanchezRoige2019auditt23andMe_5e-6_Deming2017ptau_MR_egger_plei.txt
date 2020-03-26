@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-jJd5U3	PamPxn	Deming2017ptau	SanchezRoige2019auditt23andMe	5e-6	FALSE	-0.011383524770515798	0.006102384472092996	0.06911777661432632	NA
+jyS82a	gtqe8q	Deming2017ptau	SanchezRoige2019auditt23andMe	5e-6	FALSE	-0.011383524770515798	0.006102384472092996	0.06911777661432632	NA

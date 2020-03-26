@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-eWg93a	NwtPXI	Deming2017ptau	Jansen2018insomnia23andMe	5e-8	FALSE	0	145.01413010621542	0.7073
+YUM7tu	cpmwX6	Deming2017ptau	Jansen2018insomnia23andMe	5e-8	FALSE	0	145.01413010621542	0.7016

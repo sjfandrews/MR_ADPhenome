@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+HVMip2	WeZYFO	Grasby2020thickness	Evangelou2018dbp	5e-6	FALSE	-1.9251657315813933e-4	1.0005106791319983e-4	0.054786830544197536
+HVMip2	WeZYFO	Grasby2020thickness	Evangelou2018dbp	5e-6	TRUE	-1.1897800692933078e-4	9.863946964178464e-5	0.22820331233954266

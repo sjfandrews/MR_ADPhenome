@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+atJMpp	RXPAW2	Grasby2020thickness	Xue2018diab	5e-6	TRUE	0	NA	NA

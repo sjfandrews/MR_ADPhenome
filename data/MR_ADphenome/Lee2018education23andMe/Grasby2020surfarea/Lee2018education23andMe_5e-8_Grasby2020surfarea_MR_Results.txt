@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	FALSE	Inverse variance weighted (fixed effects)	479	5	4917.495164237634	486.38411325493354	4.972563640732642e-24
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	FALSE	Weighted median	479	5	3034.4032592665153	781.2301889144845	1.0269497976135507e-4
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	FALSE	Weighted mode	479	5	93.59913203557517	3554.437354059442	0.9790026937470057
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	FALSE	MR Egger	479	5	1525.9437888617965	2367.290198233842	0.5194994404712009
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	TRUE	Inverse variance weighted (fixed effects)	474	5	4793.046675549438	489.5602090136223	1.2366412620505844e-22
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	TRUE	Weighted median	474	5	3022.9317823082974	812.5133523751304	1.9885214041293157e-4
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	TRUE	Weighted mode	474	5	110.78351526013284	3465.3092668975264	0.9745100178115058
+pPA8x2	1uqUKb	Grasby2020surfarea	Lee2018education23andMe	5e-8	TRUE	MR Egger	474	5	1612.9703866943144	2288.54374068693	0.48128103933327326

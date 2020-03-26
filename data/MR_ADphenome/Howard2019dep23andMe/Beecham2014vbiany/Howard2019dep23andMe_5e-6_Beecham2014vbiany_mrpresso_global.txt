@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ho2APH	DNEITZ	Beecham2014vbiany	Howard2019dep23andMe	5e-6	FALSE	0	250.81926443214388	0.4618
+1Zyh7b	04VkAM	Beecham2014vbiany	Howard2019dep23andMe	5e-6	FALSE	0	250.81926443214388	0.4577

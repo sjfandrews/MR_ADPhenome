@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+HVCrf8	245BPp	Hilbar2017hipv	Niarchou2020meat	5e-6	FALSE	0.0021332539026052044	0.003574510194028666	0.5520197291276069
+HVCrf8	245BPp	Hilbar2017hipv	Niarchou2020meat	5e-6	TRUE	0.0023338354185559918	0.0031895793824452553	0.46613026996454565

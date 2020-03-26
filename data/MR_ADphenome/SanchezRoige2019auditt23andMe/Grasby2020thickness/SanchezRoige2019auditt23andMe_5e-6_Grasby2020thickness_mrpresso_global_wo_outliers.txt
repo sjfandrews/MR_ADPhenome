@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+9KDe0W	jVR2hk	Grasby2020thickness	SanchezRoige2019auditt23andMe	5e-6	TRUE	1	80.98798732306393	0.008
