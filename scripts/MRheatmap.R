@@ -65,6 +65,7 @@ p1 <- ggplot(dat.plot) +
 p1
 
 ggsave('results/MR_ADphenome/All/MR_heatmap.pdf', plot = p1, width = 190, height =  120, units = 'mm')
+ggsave('results/MR_ADphenome/All/MR_heatmap.tiff', plot = p1, width = 170, height =  120, units = 'mm', dpi = 300)
 ggsave('results/MR_ADphenome/All/MR_heatmap.png', plot = p1, width = 190, height =  120, units = 'mm')
 
 ## Plot heatmap with causal estimate and qvalue
