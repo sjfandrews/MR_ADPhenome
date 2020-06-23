@@ -70,9 +70,15 @@ if(empty(proxy.dat) == FALSE){
 
 
 # harmonize LOAD
+# Remove Plietropic variatns
+## Exclude APOE locus, 1MB either side of APOE e4: rs429358 = 19:45411941 (GRCh37.p13)
+## Exclude variants that are genome-wide significant for outcome 
 harmonized.MRdat <- harmonise_data(mr_exposure.dat, mr_outcome.dat) %>%
   as_tibble() %>%
-  mutate(pt = pt)
+  mutate(pleitropy_keep = case_when(chr.exposure == 19 & between(pos.exposure, 44411941, 46411941) ~ FALSE,
+                                  pval.outcome <= 5e-8 ~ FALSE,
+                                  TRUE ~ TRUE),
+        pt = pt)
 
 ## Write out Harmonized data
 write_csv(harmonized.MRdat, out.harmonized)
