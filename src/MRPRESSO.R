@@ -13,9 +13,9 @@ suppressMessages(library(MRPRESSO)) ## For detecting pleitropy
 ### ===== READ IN DATA ===== ###
 message("\n READING IN HARMONIZED MR DATA \n")
 mrdat.raw <- read_csv(infile)
-mrdat <- mrdat.raw %>% 
-  filter(mr_keep == TRUE) %>% 
-  filter(pval.outcome > 5e-8)
+mrdat <- mrdat.raw %>%
+  filter(mr_keep == TRUE) %>%
+  filter(pleitropy_keep == TRUE)
 
 ## Data Frame of nsnps and number of iterations
 df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
@@ -62,7 +62,7 @@ if("Outlier Test" %in% names(mrpresso.out$`MR-PRESSO results`)){
     left_join(outliers, by = 'SNP')
 } else {
   mrdat.out <- mrdat.raw %>%
-    mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA) %>% 
+    mutate(mrpresso_RSSobs = NA, mrpresso_pval = NA) %>%
     mutate(mrpresso_keep = ifelse(mr_keep == TRUE, TRUE, NA))
 }
 

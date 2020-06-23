@@ -16,9 +16,9 @@ suppressMessages(library(MRPRESSO)) ## For detecting pleitropy
 
 ### ===== READ IN DATA ===== ###
 message("\n READING IN HARMONIZED MR DATA \n")
-mrdat.raw <- read_csv(infile, col_types = list(mrpresso_pval = col_character())) %>% 
-  filter(mr_keep == TRUE) %>% 
-  filter(pval.outcome > 5e-8)
+mrdat.raw <- read_csv(infile, col_types = list(mrpresso_pval = col_character())) %>%
+  filter(mr_keep == TRUE) %>%
+  filter(pleitropy_keep == TRUE)
 
 mrdat <- filter(mrdat.raw, mrpresso_keep == TRUE)
 
