@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+qGu2Z6	BAY22b	Lee2018education23andMe	Huang2017aaos	5e-6	FALSE	-5.003770034775716e-4	9.409933947486754e-4	0.597991598727567
+qGu2Z6	BAY22b	Lee2018education23andMe	Huang2017aaos	5e-6	TRUE	2.1369224545962515e-4	7.783657142575899e-4	0.7856854327139324

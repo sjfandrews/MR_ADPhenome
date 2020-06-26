@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+9PM8RE	IKlzfX	Lee2018education23andMe	Grasby2020surfarea	5e-8	FALSE	0.0022288126180302495	0.002297736922623301	0.3695060337647215	NA

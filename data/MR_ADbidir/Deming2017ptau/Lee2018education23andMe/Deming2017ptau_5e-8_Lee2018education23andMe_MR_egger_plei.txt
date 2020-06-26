@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+mcAVC2	cfEr1h	Lee2018education23andMe	Deming2017ptau	5e-8	FALSE	-0.0047349625500873295	0.005565506636100993	0.4574129561425259
+mcAVC2	cfEr1h	Lee2018education23andMe	Deming2017ptau	5e-8	TRUE	-0.004819219328100642	0.004788342250327729	0.4979540187813392

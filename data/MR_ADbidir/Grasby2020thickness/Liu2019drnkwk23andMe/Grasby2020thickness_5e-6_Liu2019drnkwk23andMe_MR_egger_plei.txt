@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+q4wpCy	bv7U6x	Liu2019drnkwk23andMe	Grasby2020thickness	5e-6	FALSE	0.001435205431263475	0.0013090068957043357	0.2806056491601935
+q4wpCy	bv7U6x	Liu2019drnkwk23andMe	Grasby2020thickness	5e-6	TRUE	0.001233175381518183	0.0010834949937364661	0.2637795585506286

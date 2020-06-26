@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+KHG9R0	AdxaNK	Howard2019dep23andMe	Grasby2020surfarea	5e-8	TRUE	1	21.671984350919804	0.066

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+fwQWTM	MwHS5l	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-6	FALSE	-2.5204639034503805e-4	7.987847067904243e-4	0.7539941668038015
+fwQWTM	MwHS5l	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-6	TRUE	-0.0014284731736215598	9.897439719220313e-4	0.15836926575111945

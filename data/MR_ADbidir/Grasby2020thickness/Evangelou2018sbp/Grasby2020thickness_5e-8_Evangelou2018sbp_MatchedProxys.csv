@@ -1,0 +1,2 @@
+target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHROM,POS,REF.proxy,ALT.proxy,AF,BETA,SE,Z,P,N,TRAIT,ref,ref.proxy,alt,alt.proxy,ALT,REF,proxy.outcome
+rs2316766,rs2106785,0.994535,1,TT/GC,NA,17,43919105,C,T,0.2189,-0.2661,0.0383,-6.947780678851175,3.841e-12,707437,Systolic_Blood_Pressure,T,T,G,C,T,G,TRUE

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+gMEoL4	q2pNEY	Willer2013tg	Hilbar2017hipv	5e-8	FALSE	-0.003324668224712786	0.006540150610354819	0.6617338867417327	NA

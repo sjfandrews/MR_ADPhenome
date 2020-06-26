@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+HQekd8	wrSuXh	Lee2018education23andMe	Lambert2013load	5e-6	FALSE	5	125.66013798828958	<2e-04

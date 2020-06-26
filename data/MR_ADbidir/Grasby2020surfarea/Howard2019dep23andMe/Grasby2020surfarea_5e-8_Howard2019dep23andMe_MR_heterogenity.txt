@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+KHG9R0	AdxaNK	Howard2019dep23andMe	Grasby2020surfarea	5e-8	FALSE	MR Egger	27.313662382723777	10	0.002322632783300531
+KHG9R0	AdxaNK	Howard2019dep23andMe	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted	27.734210227943557	11	0.0035548882803430925
+KHG9R0	AdxaNK	Howard2019dep23andMe	Grasby2020surfarea	5e-8	TRUE	MR Egger	18.70749690650945	9	0.02779809760079752
+KHG9R0	AdxaNK	Howard2019dep23andMe	Grasby2020surfarea	5e-8	TRUE	Inverse variance weighted	18.773170846791917	10	0.04324015934679557

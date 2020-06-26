@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+vnlDgt	arc7Vk	Klimentidis2018mvpa	Hilbar2017hipv	5e-6	FALSE	-8.080435859722255e-4	0.001977328283476368	0.6869307023357683
+vnlDgt	arc7Vk	Klimentidis2018mvpa	Hilbar2017hipv	5e-6	TRUE	-1.7393466501023145e-5	0.001383399140156385	0.9901067758022245

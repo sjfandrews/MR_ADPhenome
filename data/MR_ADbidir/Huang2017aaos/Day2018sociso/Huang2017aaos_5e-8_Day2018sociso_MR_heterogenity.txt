@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+bF9rvE	eqCAoG	Day2018sociso	Huang2017aaos	5e-8	FALSE	MR Egger	4.536800076666873	5	0.4749748641191953
+bF9rvE	eqCAoG	Day2018sociso	Huang2017aaos	5e-8	FALSE	Inverse variance weighted	5.531397144860408	6	0.4776700852746195

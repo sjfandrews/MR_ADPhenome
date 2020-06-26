@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+9EbiDZ	dV52o4	Niarchou2020meat	Grasby2020thickness	5e-8	FALSE	0	30.116511004440618	0.004

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+bDB6fC	JJRCS5	Jansen2018insomnia23andMe	Deming2017tau	5e-6	FALSE	Inverse variance weighted (fixed effects)	8	0	-0.029654409378587168	0.0072171691590519884	3.9759991008614367e-5
+bDB6fC	JJRCS5	Jansen2018insomnia23andMe	Deming2017tau	5e-6	FALSE	Weighted median	8	0	-0.02621559740588356	0.011142732948449781	0.01863726097437256
+bDB6fC	JJRCS5	Jansen2018insomnia23andMe	Deming2017tau	5e-6	FALSE	Weighted mode	8	0	-0.053192623669062834	0.011708763264266077	0.002658250136878955
+bDB6fC	JJRCS5	Jansen2018insomnia23andMe	Deming2017tau	5e-6	FALSE	MR Egger	8	0	-0.06278678356081485	0.027248452675364528	0.06074698746062785

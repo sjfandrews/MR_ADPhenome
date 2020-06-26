@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+BOPHKY	QjpYmW	Niarchou2020meat	Hilbar2017hipv	5e-6	FALSE	-6.522742950386263e-5	0.0018082984552685365	0.97156630256224	NA

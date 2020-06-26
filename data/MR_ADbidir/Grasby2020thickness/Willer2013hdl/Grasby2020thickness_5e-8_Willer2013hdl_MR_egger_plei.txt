@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+gJ6reJ	Yiem1k	Willer2013hdl	Grasby2020thickness	5e-8	FALSE	0.0053739491350197404	0.012605994740667566	0.69862717515972	NA

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+JP9TPn	8PrthB	Howard2019dep23andMe	Kunkle2019load	5e-6	FALSE	-5.415882140545533e-4	0.0015119492137923472	0.72217197411767
+JP9TPn	8PrthB	Howard2019dep23andMe	Kunkle2019load	5e-6	TRUE	-6.834669703680027e-4	0.003158142473395624	0.8299971540891483

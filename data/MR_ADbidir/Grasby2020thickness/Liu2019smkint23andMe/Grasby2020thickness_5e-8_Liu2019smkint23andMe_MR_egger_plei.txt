@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+rp5qPP	yjOVJb	Liu2019smkint23andMe	Grasby2020thickness	5e-8	FALSE	0.001849808766731452	0.010548577358681574	0.8769435015808984
+rp5qPP	yjOVJb	Liu2019smkint23andMe	Grasby2020thickness	5e-8	TRUE	0.01024199108959526	0.004693199933487856	0.2735414330729142

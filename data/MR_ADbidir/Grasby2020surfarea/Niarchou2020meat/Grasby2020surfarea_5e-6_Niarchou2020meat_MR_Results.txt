@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	FALSE	Inverse variance weighted (fixed effects)	43	2	-2.8735515979641316e-7	5.6371684773324e-7	0.6102260015686016
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	FALSE	Weighted median	43	2	-4.6243158398268524e-7	9.128202607963463e-7	0.6124379379314344
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	FALSE	Weighted mode	43	2	-5.59404535106296e-7	1.7737384859556643e-6	0.7540336789919753
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	FALSE	MR Egger	43	2	2.6647500133063817e-6	2.338939050089042e-6	0.2611913907526374
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	TRUE	Inverse variance weighted (fixed effects)	41	2	-7.635220058635046e-7	6.045136267253486e-7	0.2065765200658096
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	TRUE	Weighted median	41	2	-7.535219669839017e-7	9.266310670706114e-7	0.41611231820738276
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	TRUE	Weighted mode	41	2	-5.941377511003499e-7	1.4007651361321352e-6	0.6737272712735297
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	TRUE	MR Egger	41	2	-7.515726473649824e-7	2.3998221482190776e-6	0.7558138443099034

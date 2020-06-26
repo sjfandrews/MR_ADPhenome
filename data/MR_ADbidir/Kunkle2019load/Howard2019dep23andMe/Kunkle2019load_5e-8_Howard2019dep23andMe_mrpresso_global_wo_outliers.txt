@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+E1UMSG	I5gwKH	Howard2019dep23andMe	Kunkle2019load	5e-8	TRUE	0	NA	NA

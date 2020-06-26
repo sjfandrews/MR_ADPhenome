@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+9jFDbi	BF86Km	Evangelou2018sbp	Deming2017ptau	5e-6	FALSE	-0.00827008902796945	0.045114432749841955	0.8578871601494755
+9jFDbi	BF86Km	Evangelou2018sbp	Deming2017ptau	5e-6	TRUE	0.028137798798548885	0.051532905909675436	0.5970245050286306

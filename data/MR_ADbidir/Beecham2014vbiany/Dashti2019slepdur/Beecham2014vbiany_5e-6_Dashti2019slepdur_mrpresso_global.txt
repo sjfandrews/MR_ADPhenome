@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+unDpTb	GboQUI	Dashti2019slepdur	Beecham2014vbiany	5e-6	FALSE	0	2.735911021742239	0.678

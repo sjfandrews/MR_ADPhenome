@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+XFTOYf	euzbz5	Day2018sociso	Deming2017tau	5e-6	FALSE	MR Egger	3.9552382604654546	6	0.6827340046002087
+XFTOYf	euzbz5	Day2018sociso	Deming2017tau	5e-6	FALSE	Inverse variance weighted	3.9679341950971323	7	0.7834632802173458

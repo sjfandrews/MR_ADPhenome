@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	FALSE	-0.002424836687810448	0.001796571141809314	0.1845168885422095
+osK62J	YcPiCW	Niarchou2020meat	Grasby2020surfarea	5e-6	TRUE	-9.23697231037742e-6	0.0017582100447593727	0.9958350167117545

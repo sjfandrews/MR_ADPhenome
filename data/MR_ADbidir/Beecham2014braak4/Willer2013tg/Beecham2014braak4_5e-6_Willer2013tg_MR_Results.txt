@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+zEILjE	IPjogX	Willer2013tg	Beecham2014braak4	5e-6	FALSE	Inverse variance weighted (fixed effects)	5	0	3.790429266007353e-5	0.009888345932581265	0.9969415333925343
+zEILjE	IPjogX	Willer2013tg	Beecham2014braak4	5e-6	FALSE	Weighted median	5	0	-9.338078327257885e-4	0.012843744681160571	0.9420406605054544
+zEILjE	IPjogX	Willer2013tg	Beecham2014braak4	5e-6	FALSE	Weighted mode	5	0	-0.007621321490844553	0.017883474820841527	0.6919195926076807
+zEILjE	IPjogX	Willer2013tg	Beecham2014braak4	5e-6	FALSE	MR Egger	5	0	0.022172514495923716	0.039432442451597285	0.6131946267717114

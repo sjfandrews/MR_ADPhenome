@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	FALSE	2.199443531662371e-4	3.200910999367644e-4	0.4960664843879641
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	TRUE	2.8689328968785284e-4	2.635799337434046e-4	0.28452690487889387

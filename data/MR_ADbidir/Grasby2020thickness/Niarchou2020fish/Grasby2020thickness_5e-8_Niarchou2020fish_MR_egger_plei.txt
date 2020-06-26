@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+D0blRX	srO6MS	Niarchou2020fish	Grasby2020thickness	5e-8	FALSE	-0.013946649535663715	0.011472424374597829	0.290950697341604
+D0blRX	srO6MS	Niarchou2020fish	Grasby2020thickness	5e-8	TRUE	0.001520698324082755	0.014648506989600393	0.9238690556164876

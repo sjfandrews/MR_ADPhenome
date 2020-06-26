@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+ykmJ7T	KqWSZM	Howard2019dep23andMe	Deming2017tau	5e-6	FALSE	MR Egger	8.666167730755703	6	0.19324119166469586
+ykmJ7T	KqWSZM	Howard2019dep23andMe	Deming2017tau	5e-6	FALSE	Inverse variance weighted	8.717748392276162	7	0.2735607455311626

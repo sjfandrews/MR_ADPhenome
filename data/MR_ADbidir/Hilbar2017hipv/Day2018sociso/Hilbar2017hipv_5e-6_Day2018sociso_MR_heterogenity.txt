@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+Ba0hdh	p5EDpV	Day2018sociso	Hilbar2017hipv	5e-6	FALSE	MR Egger	30.72595689907448	21	0.0783412550305289
+Ba0hdh	p5EDpV	Day2018sociso	Hilbar2017hipv	5e-6	FALSE	Inverse variance weighted	31.49461244409925	22	0.08642986284300831

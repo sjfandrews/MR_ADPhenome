@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+ItApWc	7AHIfw	Evangelou2018dbp	Huang2017aaos	5e-8	FALSE	MR Egger	8.341105079121627	4	0.079852588919481493
+ItApWc	7AHIfw	Evangelou2018dbp	Huang2017aaos	5e-8	FALSE	Inverse variance weighted	9.903206764897572	5	0.07802475857722316
+ItApWc	7AHIfw	Evangelou2018dbp	Huang2017aaos	5e-8	TRUE	MR Egger	3.287939687033714	3	0.34932474619211346
+ItApWc	7AHIfw	Evangelou2018dbp	Huang2017aaos	5e-8	TRUE	Inverse variance weighted	4.033343870361477	4	0.4015120555900916

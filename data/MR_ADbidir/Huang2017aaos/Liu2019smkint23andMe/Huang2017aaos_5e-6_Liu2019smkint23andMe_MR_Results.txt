@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	FALSE	Inverse variance weighted (fixed effects)	41	7	3.601349426633678e-4	3.446553280189591e-4	0.2960630335059205
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	FALSE	Weighted median	41	7	6.026093938807615e-4	5.177596795159021e-4	0.24447322652464626
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	FALSE	Weighted mode	41	7	6.241181254515449e-4	4.226441828388858e-4	0.1475866086415343
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	FALSE	MR Egger	41	7	-3.0167176842647176e-5	7.625863128279407e-4	0.9686465072918566
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	TRUE	Inverse variance weighted (fixed effects)	34	7	9.152346614134696e-4	3.788367040538518e-4	0.015696022387220586
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	TRUE	Weighted median	34	7	7.842693998865491e-4	5.206488640810617e-4	0.1319822851330131
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	TRUE	Weighted mode	34	7	9.021813375214155e-4	4.5746370709569094e-4	0.05702294169113286
+Np3uhQ	atbZsa	Liu2019smkint23andMe	Huang2017aaos	5e-6	TRUE	MR Egger	34	7	4.191138030429427e-4	6.247336994376407e-4	0.5071183784045072

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+gHATRI	fbYIpo	Liu2019smkint23andMe	Kunkle2019load	5e-8	FALSE	9.180091539374173e-5	5.260677873902915e-4	0.8633154328396063
+gHATRI	fbYIpo	Liu2019smkint23andMe	Kunkle2019load	5e-8	TRUE	0.001085339066102087	8.151734776142489e-4	0.209984089191602

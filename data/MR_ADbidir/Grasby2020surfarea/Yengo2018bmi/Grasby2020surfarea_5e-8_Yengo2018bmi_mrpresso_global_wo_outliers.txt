@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+PJNmy8	GJeQ15	Yengo2018bmi	Grasby2020surfarea	5e-8	TRUE	2	11.47463892174524	0.149

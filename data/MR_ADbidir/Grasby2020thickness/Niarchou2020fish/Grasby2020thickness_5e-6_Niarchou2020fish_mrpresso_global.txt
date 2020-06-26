@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+STaUCB	IG4Rkf	Niarchou2020fish	Grasby2020thickness	5e-6	FALSE	3	100.61924908671729	<2e-04

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+OweEDx	KKIlLS	Jansen2018insomnia23andMe	Kunkle2019load	5e-6	FALSE	1.291569880482029e-4	2.9625366740672744e-4	0.665092987466392
+OweEDx	KKIlLS	Jansen2018insomnia23andMe	Kunkle2019load	5e-6	TRUE	-1.800823704706583e-4	3.816574940469871e-4	0.6401440337282428

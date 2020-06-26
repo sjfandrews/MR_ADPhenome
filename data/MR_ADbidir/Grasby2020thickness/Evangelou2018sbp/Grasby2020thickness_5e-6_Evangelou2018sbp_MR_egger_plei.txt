@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+JJRSeN	DPNW3Y	Evangelou2018sbp	Grasby2020thickness	5e-6	FALSE	-0.005296980989423731	0.0518011769403944	0.9191370988500912
+JJRSeN	DPNW3Y	Evangelou2018sbp	Grasby2020thickness	5e-6	TRUE	0.015730002304823427	0.03831069162725748	0.6842908056710792

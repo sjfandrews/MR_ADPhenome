@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	FALSE	Inverse variance weighted (fixed effects)	46	1	7.979540529154333e-7	4.5872694270389714e-7	0.08194741307672561
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	FALSE	Weighted median	46	1	-2.5324345505422392e-8	7.269271078678278e-7	0.9722092935381529
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	FALSE	Weighted mode	46	1	-1.6547620585773216e-7	7.370701615184868e-7	0.8233803875799177
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	FALSE	MR Egger	46	1	-5.759315595478005e-7	1.6240806663515178e-6	0.7245683202777569
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	TRUE	Inverse variance weighted (fixed effects)	45	1	4.6425702893292513e-7	4.663947590516164e-7	0.31953374706538035
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	TRUE	Weighted median	45	1	-2.2228672299298676e-7	7.255129711146551e-7	0.7593110752231174
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	TRUE	Weighted mode	45	1	-1.3413727603617278e-7	7.964466662907573e-7	0.8670249586972496
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	TRUE	MR Egger	45	1	-1.061562869864142e-6	1.5064813351204242e-6	0.4848188344700759

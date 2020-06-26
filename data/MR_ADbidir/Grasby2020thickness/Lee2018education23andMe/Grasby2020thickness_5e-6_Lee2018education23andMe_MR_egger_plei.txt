@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+q8XuTN	wRVNwJ	Lee2018education23andMe	Grasby2020thickness	5e-6	FALSE	-0.007530129929523918	0.0031651353713287402	0.023696354993884634
+q8XuTN	wRVNwJ	Lee2018education23andMe	Grasby2020thickness	5e-6	TRUE	3.5716983777847806e-4	0.002700920474641476	0.895996446043923

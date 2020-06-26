@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+bksCrN	sURxJm	Klimentidis2018mvpa	Grasby2020thickness	5e-8	FALSE	-0.005263710088640386	0.010369212467980516	0.6384241348414839
+bksCrN	sURxJm	Klimentidis2018mvpa	Grasby2020thickness	5e-8	TRUE	0.002972543423391104	0.00543405434721689	0.6224285903826159

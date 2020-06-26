@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+TBQHrn	v60siq	Evangelou2018dbp	Kunkle2019load	5e-6	FALSE	2	115.54145280895364	<2e-04

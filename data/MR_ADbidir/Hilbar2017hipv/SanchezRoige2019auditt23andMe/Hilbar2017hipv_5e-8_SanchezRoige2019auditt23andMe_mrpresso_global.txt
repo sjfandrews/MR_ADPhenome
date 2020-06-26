@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+tQXd8i	aEKHNf	SanchezRoige2019auditt23andMe	Hilbar2017hipv	5e-8	FALSE	0	15.99282072205343	0.059

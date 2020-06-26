@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+XY3Ikl	dW5pJP	Dashti2019slepdur	Kunkle2019load	5e-6	FALSE	4.8646415937368177e-4	8.037537803074406e-4	0.5482005089229998
+XY3Ikl	dW5pJP	Dashti2019slepdur	Kunkle2019load	5e-6	TRUE	-0.0012226455369426569	0.0017035132565741914	0.47783266791495516

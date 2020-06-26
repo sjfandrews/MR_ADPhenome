@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+unDpTb	GboQUI	Dashti2019slepdur	Beecham2014vbiany	5e-6	FALSE	-0.007780645670436987	0.0068229642318166465	0.37229201492392805	NA

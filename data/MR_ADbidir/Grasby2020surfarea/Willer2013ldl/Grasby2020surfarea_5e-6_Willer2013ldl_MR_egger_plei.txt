@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+WAgtr2	jQIxLy	Willer2013ldl	Grasby2020surfarea	5e-6	FALSE	0.0026108805351949885	0.0035361586826490317	0.46568991018271244	NA

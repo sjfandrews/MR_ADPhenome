@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+SjKY56	BIeLMF	Liu2019smkint23andMe	Beecham2014npany	5e-6	FALSE	-0.0011575034482311116	9.3940585592937e-4	0.24607273135164803
+SjKY56	BIeLMF	Liu2019smkint23andMe	Beecham2014npany	5e-6	TRUE	-0.0013925799653020912	9.654114068792463e-4	0.18715132005144705

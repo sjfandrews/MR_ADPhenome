@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Ba0hdh	p5EDpV	Day2018sociso	Hilbar2017hipv	5e-6	FALSE	0.001115597760667531	0.001539163701477587	0.47656907551035843	NA

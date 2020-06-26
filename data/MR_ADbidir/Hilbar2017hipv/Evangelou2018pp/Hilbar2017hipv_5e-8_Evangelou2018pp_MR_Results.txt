@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+WatZhp	eVyEa2	Evangelou2018pp	Hilbar2017hipv	5e-8	FALSE	Inverse variance weighted (fixed effects)	6	0	0.3439805993665369	0.12731465487011967	0.006896219481535839
+WatZhp	eVyEa2	Evangelou2018pp	Hilbar2017hipv	5e-8	FALSE	Weighted median	6	0	0.30992943669984635	0.16503959457019	0.06039353480697459
+WatZhp	eVyEa2	Evangelou2018pp	Hilbar2017hipv	5e-8	FALSE	Weighted mode	6	0	0.31180266330982886	0.19966968377168604	0.179139552829616
+WatZhp	eVyEa2	Evangelou2018pp	Hilbar2017hipv	5e-8	FALSE	MR Egger	6	0	0.16404347976816375	0.33694965501670465	0.6518389457731404

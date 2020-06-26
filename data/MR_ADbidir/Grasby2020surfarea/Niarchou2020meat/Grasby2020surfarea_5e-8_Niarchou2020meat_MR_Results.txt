@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted (fixed effects)	12	2	-1.6382877337536083e-7	8.341388176335781e-7	0.8442934280261457
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	Weighted median	12	2	-7.954984885814507e-7	1.3891046902353452e-6	0.5668681997429159
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	Weighted mode	12	2	-8.901638832236691e-7	2.7221957727503427e-6	0.7498043848819758
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	MR Egger	12	2	9.16306299860441e-6	3.835261952489372e-6	0.038012959331037946
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	Inverse variance weighted (fixed effects)	10	2	-1.6560331788441026e-6	9.851177011052943e-7	0.09275299263569217
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	Weighted median	10	2	-1.0288994424734625e-6	1.3617896983855691e-6	0.4499193801060764
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	Weighted mode	10	2	-8.155659575178162e-7	1.6324717454658308e-6	0.6293490325166462
+vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	MR Egger	10	2	8.245636597939723e-7	5.0787799586170905e-6	0.8750524383979773

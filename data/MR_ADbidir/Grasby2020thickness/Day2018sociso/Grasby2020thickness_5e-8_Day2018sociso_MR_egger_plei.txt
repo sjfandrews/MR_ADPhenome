@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+2DgZIC	nV3pgs	Day2018sociso	Grasby2020thickness	5e-8	FALSE	-0.0040206722230434234	0.011554527823481328	0.7454005529842225
+2DgZIC	nV3pgs	Day2018sociso	Grasby2020thickness	5e-8	TRUE	0.004332403659700723	0.010606479035720288	0.7225123429446889

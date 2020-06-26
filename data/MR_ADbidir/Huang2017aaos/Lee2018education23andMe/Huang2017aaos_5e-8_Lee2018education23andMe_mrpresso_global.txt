@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+kDEXdn	zPyFyk	Lee2018education23andMe	Huang2017aaos	5e-8	FALSE	1	34.79257835759411	0.005

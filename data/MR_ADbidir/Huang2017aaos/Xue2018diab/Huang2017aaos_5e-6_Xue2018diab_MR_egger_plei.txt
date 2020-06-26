@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+QexcEc	egU9JH	Xue2018diab	Huang2017aaos	5e-6	FALSE	0.007715301533403994	0.010121329874390522	0.4552517527596598
+QexcEc	egU9JH	Xue2018diab	Huang2017aaos	5e-6	TRUE	0.018033127192832035	0.009001715154045431	0.061352433976042633

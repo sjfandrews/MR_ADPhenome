@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+reZmkx	HZxbt9	Wells2019hdiff	Huang2017aaos	5e-6	FALSE	-3.863086095452354e-4	0.00058084886342600465	0.5103609312152959
+reZmkx	HZxbt9	Wells2019hdiff	Huang2017aaos	5e-6	TRUE	-2.1870471537346902e-4	6.615507314821931e-4	0.7432490182981516

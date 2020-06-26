@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+EZiFDn	OlZghu	Evangelou2018pp	Hilbar2017hipv	5e-6	FALSE	1	43.62585618557219	0.011

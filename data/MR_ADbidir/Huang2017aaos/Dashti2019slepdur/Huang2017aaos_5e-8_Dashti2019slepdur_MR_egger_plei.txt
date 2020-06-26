@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+QsMM3p	4nZm4K	Dashti2019slepdur	Huang2017aaos	5e-8	FALSE	0.0021360820790499715	0.0016245869646264236	0.2456356304535726	NA

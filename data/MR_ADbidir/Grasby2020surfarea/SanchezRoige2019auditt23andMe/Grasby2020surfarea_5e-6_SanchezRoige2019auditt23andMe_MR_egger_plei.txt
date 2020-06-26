@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	FALSE	0.0012989066475111643	0.001396490803662181	0.3573832065455058
+7GrsHp	Z3oOXv	SanchezRoige2019auditt23andMe	Grasby2020surfarea	5e-6	TRUE	0.0014381410062017904	0.0012885178336248656	0.27056902690107887
