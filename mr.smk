@@ -50,6 +50,7 @@ rule all:
         DataOutput + 'All/pleiotropy.txt',
         DataOutput + 'All/MRresults.txt',
         DataOutput + 'All/global_mrpresso_wo_outliers.txt',
+        DataOutput + 'All/power.txt'
 
 ## Read in Exposure summar statistics and format them to input required for pipeline
 ## Formated summary stats are a temp file that is delted as the end
@@ -251,6 +252,24 @@ rule MR_analysis:
     shell:
         'Rscript {input.script} {input.mrdat} {params.out}'
 
+rule power:
+    input: infile = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+    output: outfile = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_power.txt"
+    script: 'src/PowerEstimates.R'
+
+## define list of power estimates so they can be merged into a single file
+def MR_power_input(wildcards):
+    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_power.txt",
+        filtered_product,
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold)
+
+rule merge_power:
+    input: mr_power = MR_power_input
+    output: DataOutput + 'All/power.txt'
+    shell: "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_power} > {output}"
+
 ## define list of harmonized datasets so they can be merged into a single file
 def mrpresso_MRdat_input(wildcards):
     return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
@@ -267,7 +286,6 @@ rule merge_mrpresso_MRdat:
         DataOutput + 'All/mrpresso_MRdat.csv'
     shell:
         'Rscript {input.script} {output} {input.dat}'
-        #"awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.dat} > {output}"
 
 ## define list of global MR-PRESSO tests so they can be merged into a single file
 def mrpresso_global_input(wildcards):
@@ -286,23 +304,17 @@ def mrpresso_global_wo_outliers_input(wildcards):
 rule merge_mrpresso_global:
     input:
         mrpresso_global = mrpresso_global_input,
-        # mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
-        #script = 'src/ConcatMRpresso.R'
     output:
         DataOutput + 'All/global_mrpresso.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mrpresso_global} {input.mrpresso_global_wo_outliers}'
-        # "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} {input.mrpresso_global_wo_outliers} > {output}"
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} > {output}"
 
 rule merge_mrpresso_global_wo_outliers:
     input:
         mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
-        #script = 'src/ConcatMRpresso.R'
     output:
         DataOutput + 'All/global_mrpresso_wo_outliers.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mrpresso_global} {input.mrpresso_global_wo_outliers}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global_wo_outliers} > {output}"
 
 ## define list of Heterogenity tests so they can be merged into a single file
@@ -316,11 +328,9 @@ def MR_heterogenity_input(wildcards):
 rule merge_heterogenity:
     input:
         mr_heterogenity = MR_heterogenity_input,
-        #script = 'src/ConcatHeterogenity.R'
     output:
         DataOutput + 'All/heterogenity.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mr_heterogenity}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_heterogenity} > {output}"
 
 ## define list of MR Egger intercept tests so they can be merged into a single file
@@ -334,11 +344,9 @@ def MR_plei_input(wildcards):
 rule merge_egger:
     input:
         mr_pleiotropy = MR_plei_input,
-        #script = 'src/ConcatPleiotropy.R'
     output:
         DataOutput + 'All/pleiotropy.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mr_heterogenity}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_pleiotropy} > {output}"
 
 ## define list of MR results so they can be merged into a single file
@@ -352,25 +360,24 @@ def MR_Results_input(wildcards):
 rule merge_mrresults:
     input:
         mr_results = MR_Results_input,
-        #script = 'src/ConcatMRresults.R'
     output:
         DataOutput + 'All/MRresults.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mr_results}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_results} > {output}"
 
 ## Write a html Rmarkdown report
 rule html_Report:
     input:
-        script = 'src/mr_report.Rmd',
+        markdown = 'src/mr_report.Rmd',
         ExposureSnps = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
         ProxySnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
         HarmonizedDat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
         mrpresso_global = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
-        mrpresso_global_wo_outliers = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt"
+        mrpresso_global_wo_outliers = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
+        power = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_power.txt"
     output:
-        DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html"
+        outfile = DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html"
     params:
         rwd = RWD,
         output_dir = DataOutput + "{ExposureCode}/{OutcomeCode}/",
@@ -382,21 +389,4 @@ rule html_Report:
         kbthreshold = kb,
         Exposure = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['NAME'],
         Outcome = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['NAME']
-    shell:
-        "R -e 'rmarkdown::render("
-        """"{input.script}", clean = TRUE, intermediates_dir = "{params.output_dir}", output_file = "{output}", output_dir = "{params.output_dir}", \
-params = list(rwd = "{params.rwd}", \
-exposure.snps = "{input.ExposureSnps}", \
-outcome.snps = "{input.OutcomeSnps}", \
-proxy.snps = "{input.ProxySnps}", \
-harmonized.dat = "{input.HarmonizedDat}", \
-mrpresso_global = "{input.mrpresso_global}", \
-outcome.code = "{params.OutcomeCode}", \
-exposure.code = "{params.ExposureCode}", \
-Outcome = "{params.Outcome}", \
-Exposure = "{params.Exposure}", \
-p.threshold = "{params.Pthreshold}", \
-r2.threshold = "{params.r2threshold}", \
-kb.threshold = "{params.kbthreshold}", \
-out = "{params.output_name}"))' --slave
-        """
+    script: "src/RenderReport.R"
