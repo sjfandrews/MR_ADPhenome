@@ -10,6 +10,7 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_knit$set(root.dir = "/Users/sheaandrews/GitCode/MR_ADPhenome")
 # setwd("/Users/sheaandrews/GitCode/MR_ADPhenome")
+# setwd("/sc/arion/projects/LOAD/shea/Projects/MR_ADPhenome/")
 
 library(tidyverse)
 library(glue)
@@ -20,16 +21,20 @@ source('scripts/miscfunctions.R', chdir = TRUE)
 
 DATE = Sys.Date()
 
-MR_results.path = snakemake@input[["infile"]]
-MRdat.path = snakemake@input[["infile"]]
-mrpresso_global.path = snakemake@input[["infile"]]
-mrpresso_global_wo_outliers.path = snakemake@input[["infile"]]
-egger_comb.path = snakemake@input[["infile"]]
-power.path = snakemake@input[["infile"]]
+# model = output.path("results/MR_ADbidir/", '(?<=/)[:graph:]+(?=/)')
+# MR_results.path = snakemake@input[["infile"]]
+# MRdat.path = snakemake@input[["infile"]]
+# mrpresso_global.path = snakemake@input[["infile"]]
+# mrpresso_global_wo_outliers.path = snakemake@input[["infile"]]
+# egger_comb.path = snakemake@input[["infile"]]
+# power.path = snakemake@input[["infile"]]
+# output.path = snakemake@params[["DataOutput"]] 
+
 ```
 
-```{r sandbox, eval=FALSE, echo=FALSE}
-model <- "MR_ADphenome"
+```{r sandbox, eval=T, echo=FALSE}
+# model <- "MR_ADphenome"
+model <- "MR_ADbidir"
 
 MR_results.path = glue("results/{model}/All/MRresults.txt")
 MRdat.path = glue("results/{model}/All/mrpresso_MRdat.csv")
@@ -106,6 +111,11 @@ MRdat <- MRdat.raw  %>%
 
 ```
 
+```{r write-harmonized-data, echo=FALSE}
+write_csv(MRdat, glue("results/{model}/All/{model}_HarmonizedDatasets_{DATE}.csv"))
+```
+
+
 ## MR Resuts 
 
 ```{r}
@@ -174,9 +184,6 @@ mrresults.methods_presso <- mrresults.methods %>%
          TRUE_RSSobs, TRUE_MRPRESSO.pval, TRUE_egger_intercept, TRUE_egger_se, TRUE_Egger.pval) %>% 
          magrittr::set_colnames(colnames(.) %>% str_replace(., "FALSE_", "") %>% str_replace(., "TRUE_", "outlier_"))
 
-
-  
-
 ```
 
 
@@ -189,6 +196,18 @@ mrresults.methods_presso %>%
   kableExtra::kable_styling() %>% 
   kableExtra::add_header_above(c(" " = 7, "IVW" = 4, "MR Egger" = 3, "WME" = 3, "WBE" = 3, " " = 5,  "IVW" = 4, "MR Egger" = 3, "WME" = 3, "WBE" = 3, " " = 5))
 
+```
+
+```{r, write-wide-MR-results, echo=FALSE}
+mrresults.methods_presso %>% 
+  select(-outcome, -exposure, -ends_with("Signif")) %>%
+  replace_na(., list(outlier_IVW_b = "", outlier_IVW_se = "", outlier_IVW_MR.pval = "", outlier_Power = "", 
+                     outlier_Egger_b = "", outlier_Egger_se = "", outlier_Egger_MR.pval = "", 
+                     outlier_WME_b = "", outlier_WME_se = "", outlier_WME_MR.pval = "", 
+                     outlier_WMBE_b = "", outlier_WMBE_se = "", outlier_WMBE_MR.pval = "",
+                     outlier_RSSobs = "", outlier_MRPRESSO.pval = "", 
+                     outlier_egger_intercept = "", outlier_egger_se = "", outlier_Egger.pval = "")) %>%
+  write_csv(., glue("results/{model}/All/{model}_WideMRResults_{DATE}.csv"))
 ```
 
 
@@ -241,10 +260,23 @@ mr_best <- mr_res %>%
   }) %>%
   left_join(select(samplesize, code, domain), by = c("exposure" = "code")) %>% 
   left_join(select(samplesize, code, domain), by = c("outcome" = "code")) %>% 
-  rename(domain.exposure = domain.x, domain.outcome = domain.y) %>% 
+  rename(domain.exposure = domain.x, domain.outcome = domain.y) 
+
+
+if(model == "MR_ADbidir"){
+  mr_best <- mr_best %>% 
   mutate(domain.outcome = fct_relevel(domain.outcome, "Psychosocial", "Health", "Lifestyle"),
          domain.exposure = fct_relevel(domain.exposure, "Diagnosis", "CSF", "Neuropathology", "Neuroimaging"))
+} else if(model == "MR_ADphenome"){
+  mr_best <- mr_best %>% 
+  mutate(domain.exposure = fct_relevel(domain.exposure, "Psychosocial", "Health", "Lifestyle"),
+         domain.outcome = fct_relevel(domain.outcome, "Diagnosis", "CSF", "Neuropathology", "Neuroimaging"))
+}
 
+```
+
+```{r, write-MRbest}
+write_csv(mr_best, glue("results/{model}/All/{model}_MRbest_{DATE}.csv"))
 ```
 
 
@@ -266,6 +298,9 @@ out.final <- mr_best %>%
 
 ```
 
+```{r, write-publication-results, echo=FALSE}
+write_csv(out.final, glue("results/{model}/All/{model}_PublicationRes_{DATE}.csv"))
+```
 
 ## Heatmap 
 
