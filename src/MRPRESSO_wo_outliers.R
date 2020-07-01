@@ -6,9 +6,8 @@ args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
 infile = args[1] # Exposure summary statistics
 out = args[2]
 
-#infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/smki/load/smki_5e-8_load_mrpresso_MRdat.csv"
-#infile = "~/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/cpd/load/cpd_5e-6_load_mrpresso_MRdat.csv"
-#out = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/mvpa/load/mvpa_5e-6_load"
+# infile = "data/MR_ADbidir/Grasby2020thickness/Willer2013hdl/Grasby2020thickness_5e-6_Willer2013hdl_mrpresso_MRdat.csv"
+# out = "/Users/sheaandrews/Dropbox/Research/PostDoc-MSSM/2_MR/2_DerivedData/mvpa/load/mvpa_5e-6_load"
 
 ### ===== Load packages ===== ###
 suppressMessages(library(tidyverse))   ## For data wrangling

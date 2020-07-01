@@ -4,12 +4,13 @@
 library(tidyverse)
 library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
 
-args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
-input = args[1] # Harmonized MR data
-output = args[2] # Output
+input = snakemake@input[["mrdat"]] # Harmonized MR data
+output = snakemake@params[["out"]] # Output
 
-mrdat <- read_csv(input) %>% 
-  filter(pval.outcome > 5e-8)
+mrdat <- read_csv(input) %>%
+  filter(mr_keep == TRUE) %>%
+  filter(pleitropy_keep == TRUE)
+
 pt = mrdat %>% slice(1) %>% pull(pt)
 n_outliers <- nrow(mrdat %>% filter(mr_keep == TRUE)) - nrow(mrdat %>% filter(mr_keep == TRUE) %>% filter(mrpresso_keep == TRUE))
 
