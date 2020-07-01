@@ -8,37 +8,38 @@ library(gridExtra)
 library(qvalue)
 source('scripts/miscfunctions.R', chdir = TRUE)
 # setwd("/Users/sheaandrews/GitCode/MR_ADPhenome")
+model <- "MR_ADbidir"
 
 ## -------------------------------------------------------------------------------- ##
 ##  Read in R datasets
 ## Outcomes to include the results 
 
 ## Files
-MR_results <- read_tsv("results/MR_ADphenome/All/MRresults.txt") %>% 
+MR_results <- read_tsv(glue("results/{model}/All/MRresults.txt")) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-MRdat.raw <- "results/MR_ADphenome/All/mrpresso_MRdat.csv" %>% 
+MRdat.raw <- glue("results/{model}/All/mrpresso_MRdat.csv") %>% 
   read_csv(., guess_max = 100000) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-mrpresso_global <- read_tsv("results/MR_ADphenome/All/global_mrpresso.txt") %>% 
+mrpresso_global <- read_tsv(glue("results/{model}/All/global_mrpresso.txt")) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
-mrpresso_global_wo_outliers <- read_tsv("results/MR_ADphenome/All/global_mrpresso_wo_outliers.txt") %>% 
+mrpresso_global_wo_outliers <- read_tsv(glue("results/{model}/All/global_mrpresso_wo_outliers.txt")) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) 
 
 mrpresso_global_comb <- bind_rows(mrpresso_global, mrpresso_global_wo_outliers)
 
-egger_comb <- read_tsv("results/MR_ADphenome/All/pleiotropy.txt") %>% 
+egger_comb <- read_tsv(glue("results/{model}/All/pleiotropy.txt")) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) %>% 
   rename(egger_se = se) 
 
-power <- read_csv("results/MR_ADphenome/All/power.csv") %>% 
+power <- read_tsv(glue("results/{model}/All/power.txt")) %>% 
   filter(outcome %in% outcomes) %>% 
   filter(exposure %in% exposures) %>% 
   select(exposure, outcome, pt, outliers_removed, pve.exposure, F, Power) %>% 
