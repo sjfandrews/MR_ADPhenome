@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Incggx	nGF93r	Chauhan2019bi	Wells2019hdiff	5e-8	FALSE	0	40.89185291548404	0.4703

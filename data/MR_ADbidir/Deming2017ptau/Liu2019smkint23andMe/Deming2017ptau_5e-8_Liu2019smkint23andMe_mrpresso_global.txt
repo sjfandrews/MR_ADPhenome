@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-hnmArq	STINcT	Liu2019smkint23andMe	Deming2017ptau	5e-8	FALSE	0	10.740625055190689	0.112
+pq6xvU	nSXk8W	Liu2019smkint23andMe	Deming2017ptau	5e-8	FALSE	0	10.740625055190689	0.1199

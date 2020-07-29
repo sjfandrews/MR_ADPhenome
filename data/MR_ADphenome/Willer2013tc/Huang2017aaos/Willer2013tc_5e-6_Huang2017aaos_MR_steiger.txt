@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+NrcBCM	MKGMNR	Willer2013tc	Huang2017aaos	0.05981792749768957	0.0037982261995305046	TRUE	0	TRUE	5e-6
+NrcBCM	MKGMNR	Willer2013tc	Huang2017aaos	0.06185188663960022	0.004312781187027173	TRUE	0	FALSE	5e-6

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+HvX6n4	GaRh12	Chauhan2019bi	Evangelou2018pp	0.022734129646668964	1.9133891035923364e-5	TRUE	0	TRUE	5e-6
+HvX6n4	GaRh12	Chauhan2019bi	Evangelou2018pp	0.03494009212466903	4.367554929358886e-5	TRUE	0	FALSE	5e-6

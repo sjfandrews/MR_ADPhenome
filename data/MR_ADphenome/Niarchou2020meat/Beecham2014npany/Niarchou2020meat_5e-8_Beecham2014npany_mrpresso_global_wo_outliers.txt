@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-akftoh	DLzB9g	Beecham2014npany	Niarchou2020meat	5e-8	TRUE	0	NA	NA
+DDcynk	njicJi	Beecham2014npany	Niarchou2020meat	5e-8	TRUE	0	NA	NA

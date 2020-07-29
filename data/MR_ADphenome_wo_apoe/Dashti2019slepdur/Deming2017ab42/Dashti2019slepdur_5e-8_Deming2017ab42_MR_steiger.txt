@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+o64fgc	n1Rved	Dashti2019slepdur	Deming2017ab42	0.00600022037288451	0.023589579026046026	FALSE	1.612605712875137e-5	FALSE	5e-8

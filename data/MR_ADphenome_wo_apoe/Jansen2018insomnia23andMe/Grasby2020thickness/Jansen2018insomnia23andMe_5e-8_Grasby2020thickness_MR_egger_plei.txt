@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+U7Rox7	c4d0B9	Grasby2020thickness	Jansen2018insomnia23andMe	5e-8	FALSE	7.195956179465252e-4	5.332102849757033e-4	0.17903074795176582
+U7Rox7	c4d0B9	Grasby2020thickness	Jansen2018insomnia23andMe	5e-8	TRUE	5.850248661462832e-4	5.112327839959321e-4	0.25417003505521557

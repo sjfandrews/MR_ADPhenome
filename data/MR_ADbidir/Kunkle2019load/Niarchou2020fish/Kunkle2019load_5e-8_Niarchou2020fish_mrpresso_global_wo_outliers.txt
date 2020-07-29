@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-hyXB7f	EjEa7y	Niarchou2020fish	Kunkle2019load	5e-8	TRUE	1	16.51858511658548	0.342
+k2ts8O	p108sD	Niarchou2020fish	Kunkle2019load	5e-8	TRUE	1	16.51858511658548	0.3583

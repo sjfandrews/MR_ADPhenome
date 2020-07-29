@@ -1,9 +1,9 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	Inverse variance weighted (fixed effects)	434	1	4.736692237025524e-5	1.4093611965750396e-4	0.7368045940028067
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	Weighted median	434	1	-2.1455240775364074e-5	2.4206559990319967e-4	0.9293727915950089
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	Weighted mode	434	1	-1.3166387621594763e-4	4.5890312640373837e-4	0.7743185072726606
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	MR Egger	434	1	0.001015087841994321	4.1975168365070235e-4	0.016005601397588214
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	Inverse variance weighted (fixed effects)	433	1	-1.3693361515029901e-5	1.414525142633122e-4	0.9228809675525035
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	Weighted median	433	1	-7.786690474337781e-5	2.3499813578319736e-4	0.7403792521505688
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	Weighted mode	433	1	-1.3139903841983755e-4	5.376674322715309e-4	0.8070469832014138
-jshttd	rlndC3	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	MR Egger	433	1	7.579055501471324e-4	4.1697893254145256e-4	0.06981776972055602
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	Inverse variance weighted (fixed effects)	434	1	4.736692237025524e-5	1.4093611965750396e-4	0.7368045940028067
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	Weighted median	434	1	-2.1455240775364074e-5	2.3196220431487028e-4	0.9263051174648376
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	Weighted mode	434	1	-1.3166387621594763e-4	5.017629936355795e-4	0.7931359209627542
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	FALSE	MR Egger	434	1	0.001015087841994321	4.1975168365070235e-4	0.016005601397588214
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	Inverse variance weighted (fixed effects)	433	1	-1.3693361515029901e-5	1.414525142633122e-4	0.9228809675525035
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	Weighted median	433	1	-7.786690474337781e-5	2.3520931057951196e-4	0.7406039485713907
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	Weighted mode	433	1	-1.3139903841983755e-4	5.087919122677673e-4	0.7963316132430546
+TgafbG	z0QUpA	Grasby2020thickness	Evangelou2018sbp	5e-8	TRUE	MR Egger	433	1	7.579055501471324e-4	4.1697893254145256e-4	0.06981776972055602

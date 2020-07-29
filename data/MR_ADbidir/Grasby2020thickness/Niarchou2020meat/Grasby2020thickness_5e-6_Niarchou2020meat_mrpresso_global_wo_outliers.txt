@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ICFKFO	mGzjsa	Niarchou2020meat	Grasby2020thickness	5e-6	TRUE	0	NA	NA
+IJ96Sl	iuYiWc	Niarchou2020meat	Grasby2020thickness	5e-6	TRUE	0	NA	NA

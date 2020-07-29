@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-aYTtBi	C6O8TJ	Deming2017ab42	Wells2019hdiff	5e-8	FALSE	0	57.873808196987106	0.009
+ppIXMq	QncR6o	Deming2017ab42	Wells2019hdiff	5e-8	FALSE	0	57.873808196987106	0.0104

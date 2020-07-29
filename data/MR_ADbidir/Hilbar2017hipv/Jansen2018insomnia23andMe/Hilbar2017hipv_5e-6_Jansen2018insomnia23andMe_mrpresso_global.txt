@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-yuOOZa	9aaF5Y	Jansen2018insomnia23andMe	Hilbar2017hipv	5e-6	FALSE	0	37.82902642218328	0.083
+gyXnnZ	kCaA1N	Jansen2018insomnia23andMe	Hilbar2017hipv	5e-6	FALSE	0	37.82902642218328	0.0783

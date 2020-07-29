@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-hnmArq	STINcT	Liu2019smkint23andMe	Deming2017ptau	5e-8	FALSE	0.001801332257714241	0.002454974225950914	0.5162446251095092	NA
+pq6xvU	nSXk8W	Liu2019smkint23andMe	Deming2017ptau	5e-8	FALSE	-7.902174348193975e-4	0.004034937789305896	0.86282660864001115	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+wXTRen	vKeJlK	Liu2019drnkwk23andMe	Deming2017ab42	0.0039736697195604815	0.02487959984094061	FALSE	7.888020325808043e-8	FALSE	5e-8

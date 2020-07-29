@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-STaUCB	IG4Rkf	Niarchou2020fish	Grasby2020thickness	5e-6	FALSE	MR Egger	100.96981603760948	35	2.5726323174239976e-8
-STaUCB	IG4Rkf	Niarchou2020fish	Grasby2020thickness	5e-6	FALSE	Inverse variance weighted	101.13064655557774	36	4.2281230423607014e-8
-STaUCB	IG4Rkf	Niarchou2020fish	Grasby2020thickness	5e-6	TRUE	MR Egger	50.59581522195341	31	0.01459462931426519
-STaUCB	IG4Rkf	Niarchou2020fish	Grasby2020thickness	5e-6	TRUE	Inverse variance weighted	55.73117508734107	32	0.005799564144537394
+X1lF7B	VBmYRS	Niarchou2020fish	Grasby2020thickness	5e-6	FALSE	MR Egger	100.96981603760948	35	2.5726323174239976e-8
+X1lF7B	VBmYRS	Niarchou2020fish	Grasby2020thickness	5e-6	FALSE	Inverse variance weighted	101.13064655557774	36	4.2281230423607014e-8
+X1lF7B	VBmYRS	Niarchou2020fish	Grasby2020thickness	5e-6	TRUE	MR Egger	69.94908983373685	33	1.8323772277618582e-4
+X1lF7B	VBmYRS	Niarchou2020fish	Grasby2020thickness	5e-6	TRUE	Inverse variance weighted	71.68183539990366	34	1.6818991087186024e-4

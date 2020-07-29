@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-CYDM6s	GWtCum	Day2018sociso	Grasby2020surfarea	5e-8	FALSE	0.004244713903058196	0.0027223872536676036	0.1500112384812165	NA
+hpXfGc	ppLI9U	Day2018sociso	Grasby2020surfarea	5e-8	FALSE	0.004244713903058196	0.0027223872536676036	0.1500112384812165	NA

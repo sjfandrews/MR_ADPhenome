@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-AnnK0y	AzZSeu	Niarchou2020fish	Deming2017ptau	5e-8	TRUE	0	NA	NA
+kw6vvZ	TvDDhU	Niarchou2020fish	Deming2017ptau	5e-8	TRUE	0	NA	NA

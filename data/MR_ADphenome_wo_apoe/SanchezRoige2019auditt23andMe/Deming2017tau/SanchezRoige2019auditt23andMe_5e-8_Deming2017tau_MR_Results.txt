@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+9qbrtb	8MReGU	Deming2017tau	SanchezRoige2019auditt23andMe	5e-8	FALSE	Inverse variance weighted (fixed effects)	9	0	0.18014182688923475	0.1214606274991075	0.13804003567879072
+9qbrtb	8MReGU	Deming2017tau	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted median	9	0	0.16355386401169753	0.16108788629172266	0.30995890091339295
+9qbrtb	8MReGU	Deming2017tau	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted mode	9	0	0.24320504382732366	0.2222907565714883	0.305762499172554
+9qbrtb	8MReGU	Deming2017tau	SanchezRoige2019auditt23andMe	5e-8	FALSE	MR Egger	9	0	0.8825920578261611	0.6240026336835393	0.20014631306040193

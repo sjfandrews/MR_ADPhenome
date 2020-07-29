@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-eXSX17	rDOntm	Beecham2014vbiany	Niarchou2020meat	5e-8	FALSE	0	26.73362311415635	0.268
+5w5vJY	6ndk4w	Beecham2014vbiany	Niarchou2020meat	5e-8	FALSE	0	26.73362311415635	0.268

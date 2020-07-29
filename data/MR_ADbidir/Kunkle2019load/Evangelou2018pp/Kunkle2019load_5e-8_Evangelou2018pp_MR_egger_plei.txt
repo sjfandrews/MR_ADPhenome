@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-PvilYX	ucIbHA	Evangelou2018pp	Kunkle2019load	5e-8	FALSE	-0.01289787134647822	0.0081672494211783	0.13660829051362514	NA
+0sgvGb	OoLhn1	Evangelou2018pp	Kunkle2019load	5e-8	FALSE	-0.0023793630025239197	0.02323201785856933	0.9201169307552873	NA

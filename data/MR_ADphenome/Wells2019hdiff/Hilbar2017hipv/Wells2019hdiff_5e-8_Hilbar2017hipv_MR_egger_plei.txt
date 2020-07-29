@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-O1gMOf	vkxowE	Hilbar2017hipv	Wells2019hdiff	5e-8	FALSE	0.003452418317104659	0.007207627621167925	0.6346870676486522
-O1gMOf	vkxowE	Hilbar2017hipv	Wells2019hdiff	5e-8	TRUE	0.005953358859525461	0.006567183639301304	0.37052073967708044
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Lipmix	98b8CI	Hilbar2017hipv	Wells2019hdiff	5e-8	FALSE	0.003452418317104659	0.007207627621167925	0.6346870676486522	NA

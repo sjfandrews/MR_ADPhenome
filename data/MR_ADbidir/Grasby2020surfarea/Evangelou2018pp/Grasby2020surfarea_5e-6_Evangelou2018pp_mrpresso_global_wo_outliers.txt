@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Hsd2tE	xQ2EoU	Evangelou2018pp	Grasby2020surfarea	5e-6	TRUE	5	86.2583793490855	<2e-04
+FmJdb6	84st81	Evangelou2018pp	Grasby2020surfarea	5e-6	TRUE	6	76.74813241944888	1e-4

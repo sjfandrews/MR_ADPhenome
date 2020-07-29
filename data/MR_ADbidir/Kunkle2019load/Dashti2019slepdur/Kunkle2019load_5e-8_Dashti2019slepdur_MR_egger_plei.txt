@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-SQ3yUM	5CugoA	Dashti2019slepdur	Kunkle2019load	5e-8	FALSE	8.360982448287984e-4	9.757375860279025e-4	0.4027710745399181	NA
+mcNwme	SQteVo	Dashti2019slepdur	Kunkle2019load	5e-8	FALSE	0.001366652186829179	0.003229054810256549	0.6796094043758815	NA

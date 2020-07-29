@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-TfpRJk	egFiC2	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	FALSE	MR Egger	57.575371338044654	18	5.013002805781974e-6
-TfpRJk	egFiC2	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	FALSE	Inverse variance weighted	59.83203195797047	19	4.113837802844867e-6
-TfpRJk	egFiC2	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	TRUE	MR Egger	11.797088266729519	10	0.2988661975586932
-TfpRJk	egFiC2	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	TRUE	Inverse variance weighted	13.780068886153277	11	0.24540296736113343
+Ad8rZV	K9z4JX	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	FALSE	MR Egger	38.210066302984785	12	1.4187620344761965e-4
+Ad8rZV	K9z4JX	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	FALSE	Inverse variance weighted	38.30046141480745	13	2.58360999885281e-4
+Ad8rZV	K9z4JX	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	TRUE	MR Egger	22.666755579639172	11	0.019687783228821164
+Ad8rZV	K9z4JX	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	TRUE	Inverse variance weighted	23.329123740046533	12	0.025058237644576244

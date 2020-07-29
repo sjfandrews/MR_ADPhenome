@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+OYCAbK	jXWhG9	Grasby2020thickness	Evangelou2018sbp	5e-6	FALSE	1	836.4669026196027	<4e-05

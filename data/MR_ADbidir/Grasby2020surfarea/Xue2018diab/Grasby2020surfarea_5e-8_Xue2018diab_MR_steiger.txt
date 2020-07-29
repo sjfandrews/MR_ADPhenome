@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+02hG1j	vdTLNY	Grasby2020surfarea	Xue2018diab	0.014500637495053882	4.111458550011072e-5	TRUE	0	FALSE	5e-8

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ZGbhPU	q8ovYu	Lee2018education23andMe	Beecham2014braak4	5e-6	FALSE	0	8.83829686826712	0.458
+8fS5q7	MHkVjC	Lee2018education23andMe	Beecham2014braak4	5e-6	FALSE	0	8.83829686826712	0.4541

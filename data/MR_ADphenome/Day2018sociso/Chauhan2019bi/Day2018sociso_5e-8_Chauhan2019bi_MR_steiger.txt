@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+IMcJgn	Bblir9	Day2018sociso	Chauhan2019bi	0.0012764604247813773	5.030897203733043e-4	TRUE	0.055581259185321086	FALSE	5e-8

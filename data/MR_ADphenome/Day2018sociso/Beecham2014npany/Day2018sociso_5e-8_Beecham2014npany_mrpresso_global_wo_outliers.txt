@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-3JeUj4	EwiSeY	Beecham2014npany	Day2018sociso	5e-8	TRUE	0	NA	NA
+tAGWZj	r3sdW8	Beecham2014npany	Day2018sociso	5e-8	TRUE	0	NA	NA

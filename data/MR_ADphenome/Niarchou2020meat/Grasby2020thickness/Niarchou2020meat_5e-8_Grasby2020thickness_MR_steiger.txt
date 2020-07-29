@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+kW4keR	wA7ypd	Niarchou2020meat	Grasby2020thickness	0.0023557935177937694	7.790905739528829e-4	TRUE	3.0042738280511294e-4	TRUE	5e-8
+kW4keR	wA7ypd	Niarchou2020meat	Grasby2020thickness	0.0027627639564936106	0.0011599707256580247	TRUE	0.0011763376349724908	FALSE	5e-8

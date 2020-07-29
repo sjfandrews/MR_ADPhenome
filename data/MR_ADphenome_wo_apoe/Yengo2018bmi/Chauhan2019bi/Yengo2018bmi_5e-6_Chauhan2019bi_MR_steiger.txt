@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+5Itk3q	3jzyti	Yengo2018bmi	Chauhan2019bi	0.060221217584492455	0.04678381206703422	TRUE	8.292884266847267e-6	FALSE	5e-6

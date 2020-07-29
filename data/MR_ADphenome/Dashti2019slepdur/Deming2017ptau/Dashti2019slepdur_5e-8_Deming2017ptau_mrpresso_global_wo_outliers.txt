@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ZTqTQk	rkVngs	Deming2017ptau	Dashti2019slepdur	5e-8	TRUE	0	NA	NA
+3Nj0eM	0c4n0t	Deming2017ptau	Dashti2019slepdur	5e-8	TRUE	0	NA	NA

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+vpuVeM	SKlzpI	Deming2017ab42	Yengo2018bmi	0.05948456496595341	1.049630596163581e-5	TRUE	0	TRUE	5e-6
+vpuVeM	SKlzpI	Deming2017ab42	Yengo2018bmi	0.06624052514553962	3.763204029026844e-5	TRUE	0	FALSE	5e-6

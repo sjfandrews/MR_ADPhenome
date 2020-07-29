@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-qGu2Z6	BAY22b	Lee2018education23andMe	Huang2017aaos	5e-6	TRUE	5	51.5232592588419	0.019
+TPmpS3	PjqVbU	Lee2018education23andMe	Huang2017aaos	5e-6	TRUE	5	51.5232592588419	0.0141

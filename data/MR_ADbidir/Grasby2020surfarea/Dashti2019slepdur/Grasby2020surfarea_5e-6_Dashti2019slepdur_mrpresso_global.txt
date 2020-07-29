@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-MHHx9q	QzDHYy	Dashti2019slepdur	Grasby2020surfarea	5e-6	FALSE	3	104.64479550250563	<2e-04
+Wb9Knm	SYLJbF	Dashti2019slepdur	Grasby2020surfarea	5e-6	FALSE	3	104.64479550250563	<1e-04

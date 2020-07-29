@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-SQ3yUM	5CugoA	Dashti2019slepdur	Kunkle2019load	5e-8	TRUE	0	NA	NA
+mcNwme	SQteVo	Dashti2019slepdur	Kunkle2019load	5e-8	TRUE	0	NA	NA

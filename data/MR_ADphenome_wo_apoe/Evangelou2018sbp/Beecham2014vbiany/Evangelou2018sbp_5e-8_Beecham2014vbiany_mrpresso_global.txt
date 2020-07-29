@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Aqkcjc	jVrXkD	Beecham2014vbiany	Evangelou2018sbp	5e-8	FALSE	0	449.7238471498484	0.25392

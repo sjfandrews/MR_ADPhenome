@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-S35mKE	rdhqcB	Evangelou2018pp	Huang2017aaos	5e-6	TRUE	0	NA	NA
+odb8Zh	1FvgH5	Evangelou2018pp	Huang2017aaos	5e-6	TRUE	1	34.41518162487896	0.2513

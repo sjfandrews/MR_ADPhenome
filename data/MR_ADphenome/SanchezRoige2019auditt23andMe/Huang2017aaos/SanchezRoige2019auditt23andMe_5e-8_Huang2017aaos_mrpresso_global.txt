@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-lIRFCE	NYor86	Huang2017aaos	SanchezRoige2019auditt23andMe	5e-8	FALSE	0	18.599130304191863	0.161
+kQ1dGw	PX1XkA	Huang2017aaos	SanchezRoige2019auditt23andMe	5e-8	FALSE	0	18.599130304191863	0.1672

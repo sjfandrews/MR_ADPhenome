@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+4Tq0zH	7CQd3A	Niarchou2020meat	Chauhan2019bi	0.008181150407606998	0.007910763683281629	TRUE	0.8283421734515592	FALSE	5e-6

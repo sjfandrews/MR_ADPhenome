@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+VyoLsr	Yj9zVO	Hilbar2017hipv	Willer2013tg	5e-6	FALSE	-0.0026600194379728555	0.0021533431860512923	0.2198313837878311
+VyoLsr	Yj9zVO	Hilbar2017hipv	Willer2013tg	5e-6	TRUE	-0.0018129400778543045	0.0020457769045425026	0.3778275602544082

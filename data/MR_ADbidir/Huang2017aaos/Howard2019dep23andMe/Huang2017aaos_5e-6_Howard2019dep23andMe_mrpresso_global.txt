@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-HyYs5D	XNmH6t	Howard2019dep23andMe	Huang2017aaos	5e-6	FALSE	1	68.2469791742466	0.0012
+ipHWPQ	3lAxAm	Howard2019dep23andMe	Huang2017aaos	5e-6	FALSE	1	68.2469791742466	5e-4

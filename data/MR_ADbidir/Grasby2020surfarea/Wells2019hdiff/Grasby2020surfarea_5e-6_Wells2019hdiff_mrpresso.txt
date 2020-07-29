@@ -1,10 +1,10 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate           Sd    T-stat
 1 beta.exposure               Raw   -1.137119e-06 5.125391e-07 -2.218600
-2 beta.exposure Outlier-corrected   -9.122436e-07 4.873447e-07 -1.871865
+2 beta.exposure Outlier-corrected   -6.137056e-07 4.452955e-07 -1.378199
      P-value
 1 0.03148879
-2 0.06788183
+2 0.17544023
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -12,19 +12,19 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 144.0696
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] "<2e-04"
+[1] "<1e-04"
 
 
 $`MR-PRESSO results`$`Outlier Test`
          RSSobs  Pvalue
-1  1.645774e-05   0.141
+1  1.645774e-05  0.0846
 2  9.403598e-06       1
 3  6.650322e-06       1
 4  7.693544e-07       1
 5  3.014867e-06       1
 6  2.784252e-07       1
-7  2.860293e-05  0.0564
-8  4.472831e-05  0.0658
+7  2.860293e-05  0.1081
+8  4.472831e-05  0.0423
 9  4.832109e-06       1
 10 1.439551e-09       1
 11 4.124856e-06       1
@@ -32,7 +32,7 @@ $`MR-PRESSO results`$`Outlier Test`
 13 2.546130e-06       1
 14 2.368585e-07       1
 15 1.682928e-10       1
-16 5.748069e-05  0.0752
+16 5.748069e-05  0.0188
 17 4.360462e-07       1
 18 1.868870e-06       1
 19 2.361437e-07       1
@@ -42,12 +42,12 @@ $`MR-PRESSO results`$`Outlier Test`
 23 9.367085e-10       1
 24 7.447868e-08       1
 25 1.288986e-06       1
-26 1.673068e-05  0.2632
+26 1.673068e-05  0.1927
 27 8.573907e-06       1
 28 5.245157e-06       1
 29 2.100356e-06       1
-30 3.536968e-05 <0.0094
-31 2.148644e-05  0.1222
+30 3.536968e-05 <0.0047
+31 2.148644e-05  0.1692
 32 1.859644e-06       1
 33 8.920341e-08       1
 34 7.894279e-06       1
@@ -67,14 +67,14 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] 30 46
+[1]  8 16 30 46
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
 beta.exposure 
-    -24.65079 
+    -85.28735 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.4658
+[1] 0.0522
 
 
 

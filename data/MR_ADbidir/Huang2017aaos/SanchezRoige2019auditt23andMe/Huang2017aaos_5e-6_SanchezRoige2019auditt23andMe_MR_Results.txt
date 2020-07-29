@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-x4V9Uf	rsg7rX	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	Inverse variance weighted (fixed effects)	38	0	-0.0013318507215843833	0.001093990493332535	0.22344278356776132
-x4V9Uf	rsg7rX	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	Weighted median	38	0	-8.326796756039951e-4	0.0015687006434703678	0.5955514715166198
-x4V9Uf	rsg7rX	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	Weighted mode	38	0	-0.0011847269295800489	0.001307414480449884	0.37071463773515423
-x4V9Uf	rsg7rX	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	MR Egger	38	0	2.4473186973823714e-4	0.0018256781307406668	0.8941097730701959
+srnfFy	7owpaH	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	Inverse variance weighted (fixed effects)	33	0	-9.498949683766265e-4	0.0012199489743956458	0.43619475615181813
+srnfFy	7owpaH	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	Weighted median	33	0	-8.170021883338814e-4	0.0018286259808673838	0.6550304884787954
+srnfFy	7owpaH	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	Weighted mode	33	0	-6.522654259972921e-4	0.0013976852882311367	0.6438938287202212
+srnfFy	7owpaH	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	MR Egger	33	0	0.0010676606205923002	0.0019025139225404615	0.5787064583772886

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-lkAmEe	LJtJ1s	Liu2019smkint23andMe	Hilbar2017hipv	5e-6	TRUE	2	26.229120525480997	0.319
+NtYlrP	9mySax	Liu2019smkint23andMe	Hilbar2017hipv	5e-6	TRUE	2	26.229120525480997	0.3086

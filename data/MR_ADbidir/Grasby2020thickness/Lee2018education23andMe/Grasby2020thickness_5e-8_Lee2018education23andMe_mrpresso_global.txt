@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-EVm0GE	kYQUXF	Lee2018education23andMe	Grasby2020thickness	5e-8	FALSE	3	53.634885138693825	<0.001
+FZVV6p	1RoOwr	Lee2018education23andMe	Grasby2020thickness	5e-8	FALSE	3	53.634885138693825	<1e-04

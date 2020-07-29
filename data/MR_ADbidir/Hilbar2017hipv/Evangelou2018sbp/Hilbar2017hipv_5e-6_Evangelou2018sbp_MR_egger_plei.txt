@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-CI1AIJ	Te6mEv	Evangelou2018sbp	Hilbar2017hipv	5e-6	FALSE	-0.0020927866940628837	0.03150182692498841	0.9477265249797615
-CI1AIJ	Te6mEv	Evangelou2018sbp	Hilbar2017hipv	5e-6	TRUE	0.03180410139611853	0.0219122291655681	0.16486406892773622
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+1SAL2u	XIEDNV	Evangelou2018sbp	Hilbar2017hipv	5e-6	FALSE	0.0039495033067856065	0.027451273061577557	0.8871990897476527	NA

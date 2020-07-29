@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-aQi8dQ	xc1JBI	Niarchou2020fish	Beecham2014braak4	5e-6	FALSE	0	29.821349654693773	0.096
+dze58l	Kn6G58	Niarchou2020fish	Beecham2014braak4	5e-6	FALSE	0	29.821349654693773	0.075

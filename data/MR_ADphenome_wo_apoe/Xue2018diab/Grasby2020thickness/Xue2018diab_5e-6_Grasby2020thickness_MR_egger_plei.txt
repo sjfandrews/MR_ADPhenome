@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+EpThyN	HBPdfe	Grasby2020thickness	Xue2018diab	5e-6	FALSE	-1.7977298676828096e-4	1.5315870066826893e-4	0.24178001750837275	NA

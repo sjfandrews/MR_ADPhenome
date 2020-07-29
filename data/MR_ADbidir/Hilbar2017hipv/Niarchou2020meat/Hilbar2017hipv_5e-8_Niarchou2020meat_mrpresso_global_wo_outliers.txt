@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-JnNN8O	6Kwokf	Niarchou2020meat	Hilbar2017hipv	5e-8	TRUE	0	NA	NA
+Wz2CoA	ddugzD	Niarchou2020meat	Hilbar2017hipv	5e-8	TRUE	0	NA	NA

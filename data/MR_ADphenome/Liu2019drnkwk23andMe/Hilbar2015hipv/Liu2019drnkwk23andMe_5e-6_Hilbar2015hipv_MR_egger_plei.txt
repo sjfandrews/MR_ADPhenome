@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-CQOLnQ	4KECA6	Hilbar2015hipv	Liu2019drnkwk23andMe	5e-6	FALSE	0.4262587264129723	1.2767949403760879	0.7388492292302762	NA
+lefMfL	FzygOV	Hilbar2015hipv	Liu2019drnkwk23andMe	5e-6	FALSE	0.4262587264129723	1.2767949403760879	0.7388492292302762	NA

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-J6ogSG	jcKeFz	Niarchou2020fish	Beecham2014vbiany	5e-6	FALSE	MR Egger	7.372290314942059	2	0.025068450956035222
-J6ogSG	jcKeFz	Niarchou2020fish	Beecham2014vbiany	5e-6	FALSE	Inverse variance weighted	7.395565991348867	3	0.060303406741577525

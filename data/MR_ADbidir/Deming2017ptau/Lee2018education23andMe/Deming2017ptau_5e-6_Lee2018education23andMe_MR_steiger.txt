@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+0oQ82M	lYTdPS	Deming2017ptau	Lee2018education23andMe	0.078474581487559	5.615905206178512e-6	TRUE	0	TRUE	5e-6
+0oQ82M	lYTdPS	Deming2017ptau	Lee2018education23andMe	0.09875695306383989	2.304621606310084e-5	TRUE	0	FALSE	5e-6

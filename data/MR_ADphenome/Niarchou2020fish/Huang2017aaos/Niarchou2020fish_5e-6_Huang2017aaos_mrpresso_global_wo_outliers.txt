@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DqeTkB	vjPBdq	Huang2017aaos	Niarchou2020fish	5e-6	TRUE	0	NA	NA
+WFwKZC	CM5RN3	Huang2017aaos	Niarchou2020fish	5e-6	TRUE	0	NA	NA

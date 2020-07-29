@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-FsELJd	Fpifc0	Wells2019hdiff	Grasby2020thickness	5e-8	FALSE	2	44.44747210329931	<0.001
+mQPGBm	6mGe4J	Wells2019hdiff	Grasby2020thickness	5e-8	FALSE	2	44.44747210329931	<1e-04

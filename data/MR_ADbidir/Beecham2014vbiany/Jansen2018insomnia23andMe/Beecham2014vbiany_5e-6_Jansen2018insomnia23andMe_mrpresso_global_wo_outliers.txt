@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-IPQ5Zd	06er6x	Jansen2018insomnia23andMe	Beecham2014vbiany	5e-6	TRUE	0	NA	NA

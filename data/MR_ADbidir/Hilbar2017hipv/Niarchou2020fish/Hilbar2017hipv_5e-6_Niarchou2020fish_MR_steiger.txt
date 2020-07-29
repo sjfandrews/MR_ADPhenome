@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+ZV0toJ	RR5Shj	Hilbar2017hipv	Niarchou2020fish	0.029733881139736296	1.6899383932907032e-4	TRUE	0	FALSE	5e-6

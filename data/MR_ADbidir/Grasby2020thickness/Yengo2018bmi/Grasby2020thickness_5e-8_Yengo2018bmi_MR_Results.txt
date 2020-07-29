@@ -1,9 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	FALSE	Inverse variance weighted (fixed effects)	6	2	-0.5070946521949491	0.15054837822480296	7.562860241009673e-4
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	FALSE	Weighted median	6	2	-0.10492848263760635	0.28676528165038784	0.7144369222005524
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	FALSE	Weighted mode	6	2	0.2007665744269831	0.2914193554295811	0.5215266879805129
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	FALSE	MR Egger	6	2	-0.7287964472231422	2.0660684268102534	0.7420821704330611
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	TRUE	Inverse variance weighted (fixed effects)	4	2	-0.5243819469202362	0.19717649489978123	0.007826726516664906
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	TRUE	Weighted median	4	2	-0.41936545759193045	0.26353549523588554	0.11154086134236024
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	TRUE	Weighted mode	4	2	-0.1422793116330836	0.46541690852741147	0.779816091207305
-rZzg66	yIzh6u	Yengo2018bmi	Grasby2020thickness	5e-8	TRUE	MR Egger	4	2	5.388673059734597	2.4434596266670687	0.1582128647273008

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+1Wwc6a	QafmyJ	Yengo2018bmi	Deming2017tau	0.051800805974108445	0.15954483140846126	FALSE	0	FALSE	5e-8

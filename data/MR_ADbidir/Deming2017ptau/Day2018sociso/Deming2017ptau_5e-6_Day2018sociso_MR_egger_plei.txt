@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-KedBoX	H3cKKw	Day2018sociso	Deming2017ptau	5e-6	FALSE	-4.221570860878535e-4	0.0023393216813541546	0.8600721494836839	NA
+MAOBr0	sUXE4o	Day2018sociso	Deming2017ptau	5e-6	FALSE	-4.651645712807671e-4	0.0029204438776779546	0.8766203090309947	NA

@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-AyFFTu	tKDVya	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted (fixed effects)	11	0	5.762647925490343e-7	1.780054195218123e-6	0.7461391180610801
-AyFFTu	tKDVya	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	Weighted median	11	0	-6.994482990832618e-8	2.378268054500631e-6	0.9765376086680019
-AyFFTu	tKDVya	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	Weighted mode	11	0	4.841459400703795e-7	2.8620909413892685e-6	0.8690450666676457
-AyFFTu	tKDVya	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	MR Egger	11	0	-9.37021974433619e-7	6.940732148641544e-6	0.8955803261821778
+PnDAdr	3s1g2u	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted (fixed effects)	11	0	5.762647925490343e-7	1.780054195218123e-6	0.7461391180610801
+PnDAdr	3s1g2u	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	Weighted median	11	0	-6.994482990832618e-8	2.3828319321694605e-6	0.9765825336590952
+PnDAdr	3s1g2u	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	Weighted mode	11	0	4.841459400703795e-7	2.7204149109642262e-6	0.8623018281511173
+PnDAdr	3s1g2u	Willer2013hdl	Grasby2020surfarea	5e-8	FALSE	MR Egger	11	0	-9.37021974433619e-7	6.940732148641544e-6	0.8955803261821778

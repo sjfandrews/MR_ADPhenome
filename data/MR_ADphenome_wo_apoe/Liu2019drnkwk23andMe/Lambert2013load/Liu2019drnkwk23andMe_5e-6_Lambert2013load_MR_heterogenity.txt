@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+lgeyfF	Gis1zJ	Lambert2013load	Liu2019drnkwk23andMe	5e-6	FALSE	MR Egger	277.3923155960221	207	7.820833395543414e-4
+lgeyfF	Gis1zJ	Lambert2013load	Liu2019drnkwk23andMe	5e-6	FALSE	Inverse variance weighted	281.0025624936675	208	5.541104690938902e-4
+lgeyfF	Gis1zJ	Lambert2013load	Liu2019drnkwk23andMe	5e-6	TRUE	MR Egger	258.57187573810626	206	0.007553073100448405
+lgeyfF	Gis1zJ	Lambert2013load	Liu2019drnkwk23andMe	5e-6	TRUE	Inverse variance weighted	261.4536306911989	207	0.006136462168314829

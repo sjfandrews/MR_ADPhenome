@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+G3lSD0	jhJJbK	Liu2019drnkwk23andMe	Chauhan2019bi	5e-6	FALSE	0	9.10266963361231	0.8098

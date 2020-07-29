@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-vyULli	gH9J1g	Willer2013ldl	Huang2017aaos	5e-6	TRUE	0	NA	NA
+xfveLN	Mkk1dD	Willer2013ldl	Huang2017aaos	5e-6	TRUE	0	NA	NA

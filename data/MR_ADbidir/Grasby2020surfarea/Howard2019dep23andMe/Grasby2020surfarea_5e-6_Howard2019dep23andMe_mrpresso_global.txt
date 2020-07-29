@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BpPJqh	u8sADI	Howard2019dep23andMe	Grasby2020surfarea	5e-6	FALSE	0	103.26365957878558	<2e-04
+NN8j2d	fLGsSu	Howard2019dep23andMe	Grasby2020surfarea	5e-6	FALSE	1	103.26365957878558	<1e-04

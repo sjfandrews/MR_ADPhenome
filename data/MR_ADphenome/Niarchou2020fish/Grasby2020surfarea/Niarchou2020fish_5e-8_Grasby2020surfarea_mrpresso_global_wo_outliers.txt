@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-rpprOb	bBo67R	Grasby2020surfarea	Niarchou2020fish	5e-8	TRUE	0	NA	NA
+o3Q4Mz	m2jpLu	Grasby2020surfarea	Niarchou2020fish	5e-8	TRUE	0	NA	NA

@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-IqiErx	Dl6oQ9	Evangelou2018pp	Grasby2020thickness	5e-8	FALSE	0.04988492122130705	0.12656505683565414	0.7135843004209903
-IqiErx	Dl6oQ9	Evangelou2018pp	Grasby2020thickness	5e-8	TRUE	-0.023417139015241634	0.050075748380476334	0.6860511701393652
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+M5BaTh	HTmWBH	Evangelou2018pp	Grasby2020thickness	5e-8	FALSE	-0.03255842487183539	0.07385206844553122	0.689149878703201	NA

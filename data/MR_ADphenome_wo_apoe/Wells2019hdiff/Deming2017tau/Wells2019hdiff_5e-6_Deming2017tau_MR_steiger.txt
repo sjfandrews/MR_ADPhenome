@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+eDFOy2	bm5A4R	Wells2019hdiff	Deming2017tau	0.011120643389214183	0.026041466717873045	FALSE	0.0015095662985404878	FALSE	5e-6

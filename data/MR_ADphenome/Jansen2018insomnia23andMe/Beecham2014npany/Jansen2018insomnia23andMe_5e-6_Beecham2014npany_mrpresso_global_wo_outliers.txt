@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-mRm8GB	uQILsZ	Beecham2014npany	Jansen2018insomnia23andMe	5e-6	TRUE	0	NA	NA
+UowDHE	g1A9iS	Beecham2014npany	Jansen2018insomnia23andMe	5e-6	TRUE	0	NA	NA

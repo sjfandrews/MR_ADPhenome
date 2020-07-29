@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-getivH	YJLWWD	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	Inverse variance weighted (fixed effects)	21	0	0.009244909246237663	0.013109395543036532	0.48067802046615715
-getivH	YJLWWD	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	Weighted median	21	0	0.028433901076269686	0.019513607111260604	0.14507995064838392
-getivH	YJLWWD	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	Weighted mode	21	0	0.04517277083483928	0.04368068411189352	0.3134055045851844
-getivH	YJLWWD	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	MR Egger	21	0	-0.06508297646635386	0.0620104162738287	0.30709291762146984
+JKwfAu	xaruoT	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	Inverse variance weighted (fixed effects)	21	0	0.009244909246237663	0.013109395543036532	0.48067802046615715
+JKwfAu	xaruoT	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	Weighted median	21	0	0.028433901076269686	0.020366779188758583	0.1626867395840763
+JKwfAu	xaruoT	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	Weighted mode	21	0	0.04517277083483928	0.03889245556308988	0.2591219722412944
+JKwfAu	xaruoT	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	MR Egger	21	0	-0.06508297646635386	0.0620104162738287	0.30709291762146984

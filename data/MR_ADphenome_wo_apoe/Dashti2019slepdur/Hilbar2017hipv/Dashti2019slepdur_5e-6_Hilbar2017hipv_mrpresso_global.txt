@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+sgC30S	J3hRK6	Hilbar2017hipv	Dashti2019slepdur	5e-6	FALSE	0	254.7664682767521	0.0022

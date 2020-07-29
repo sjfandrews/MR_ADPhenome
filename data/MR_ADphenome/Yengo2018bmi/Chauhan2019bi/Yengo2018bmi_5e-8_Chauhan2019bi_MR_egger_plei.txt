@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+ZKhAY2	cG2Pw2	Chauhan2019bi	Yengo2018bmi	5e-8	FALSE	0.0047696001320923	0.0038427290890227506	0.2151122489794581	NA

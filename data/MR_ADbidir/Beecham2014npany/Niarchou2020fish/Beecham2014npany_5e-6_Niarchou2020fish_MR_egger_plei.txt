@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-EkMuwa	k9Bf1S	Niarchou2020fish	Beecham2014npany	5e-6	FALSE	-4.965164934220994e-4	0.004280422667344651	0.9102018815979455
-EkMuwa	k9Bf1S	Niarchou2020fish	Beecham2014npany	5e-6	TRUE	-0.006377277164739158	0.004443554032231332	0.18915510020787693
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+fiF0zT	UeMv55	Niarchou2020fish	Beecham2014npany	5e-6	FALSE	-0.006377277164739158	0.004443554032231332	0.18915510020787693	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+k8F0Q1	Jg5uJZ	Beecham2014vbiany	Lee2018education23andMe	5e-8	FALSE	0.010678816406030276	0.011271383086368311	0.3439038171732801	NA

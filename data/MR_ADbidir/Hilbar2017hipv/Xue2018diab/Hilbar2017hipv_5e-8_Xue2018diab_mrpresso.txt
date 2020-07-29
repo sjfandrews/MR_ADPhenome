@@ -12,15 +12,15 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 27.51439
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.004
+[1] 0.0032
 
 
 $`MR-PRESSO results`$`Outlier Test`
         RSSobs Pvalue
-1 0.0006090259   0.04
-2 0.0003249475   0.14
-3 0.0005710012  0.032
-4 0.0008182423  0.624
+1 0.0006090259  0.022
+2 0.0003249475 0.1304
+3 0.0005710012  0.034
+4 0.0008182423 0.5836
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
@@ -31,7 +31,7 @@ beta.exposure
     -107.6934 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] "<0.001"
+[1] "<1e-04"
 
 
 

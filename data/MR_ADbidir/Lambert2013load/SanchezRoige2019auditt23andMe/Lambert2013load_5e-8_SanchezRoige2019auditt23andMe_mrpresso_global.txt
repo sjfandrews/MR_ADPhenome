@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-TfYkmK	8PpsIj	SanchezRoige2019auditt23andMe	Lambert2013load	5e-8	FALSE	0	25.07181044103212	0.046
+5KdW6f	BdMckD	SanchezRoige2019auditt23andMe	Lambert2013load	5e-8	FALSE	0	25.07181044103212	0.0492

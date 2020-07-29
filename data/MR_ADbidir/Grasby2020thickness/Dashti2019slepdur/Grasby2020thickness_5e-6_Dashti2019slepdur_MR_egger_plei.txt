@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-dP6SGF	3puaIW	Dashti2019slepdur	Grasby2020thickness	5e-6	FALSE	-0.0018454352125335304	0.0032631669514992085	0.5755352769843541
-dP6SGF	3puaIW	Dashti2019slepdur	Grasby2020thickness	5e-6	TRUE	-6.823539784267984e-4	0.0031922267264140407	0.8321379257472201
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+v87g2X	lUmPRi	Dashti2019slepdur	Grasby2020thickness	5e-6	FALSE	-0.0018454352125335304	0.0032631669514992085	0.5755352769843541	NA

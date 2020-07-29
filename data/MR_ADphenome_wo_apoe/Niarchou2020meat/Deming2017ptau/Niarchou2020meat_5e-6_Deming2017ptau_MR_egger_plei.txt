@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+ZEI2BM	pIw8nm	Deming2017ptau	Niarchou2020meat	5e-6	FALSE	0.002027172800792508	0.0032817278454312917	0.5385858211890127	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-BVXUfQ	62LKvp	Lee2018education23andMe	Beecham2014npany	5e-6	TRUE	0	NA	NA
+uK5GjL	6cd4Kb	Lee2018education23andMe	Beecham2014npany	5e-6	TRUE	0	NA	NA

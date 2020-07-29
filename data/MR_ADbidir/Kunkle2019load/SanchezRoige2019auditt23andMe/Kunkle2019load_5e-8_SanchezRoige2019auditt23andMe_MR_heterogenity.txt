@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-sdtwta	WxMj9M	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	FALSE	MR Egger	43.230194210228625	16	2.579909310298468e-4
-sdtwta	WxMj9M	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	FALSE	Inverse variance weighted	44.64526795664056	17	2.7493604939991725e-4
-sdtwta	WxMj9M	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	TRUE	MR Egger	13.550388599426942	10	0.19450481525220792
-sdtwta	WxMj9M	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	TRUE	Inverse variance weighted	13.658460455887152	11	0.252471540276114
+zZi3Go	GU4LvT	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	FALSE	MR Egger	40.6896174844268	12	5.521288238045789e-5
+zZi3Go	GU4LvT	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	FALSE	Inverse variance weighted	41.895651652547166	13	6.811417159999144e-5
+zZi3Go	GU4LvT	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	TRUE	MR Egger	13.550388599426942	10	0.19450481525220792
+zZi3Go	GU4LvT	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	TRUE	Inverse variance weighted	13.658460455887152	11	0.252471540276114

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-5Ex3Xc	WecLZp	Deming2017ab42	Niarchou2020meat	5e-6	FALSE	0	76.86135534871741	0.4578
+rHMpF3	xeEfOH	Deming2017ab42	Niarchou2020meat	5e-6	FALSE	0	76.86135534871741	0.4534

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+wKzW66	5T3pyZ	Grasby2020surfarea	Liu2019smkcpd23andMe	5e-6	TRUE	1	168.90121402563753	0.0134

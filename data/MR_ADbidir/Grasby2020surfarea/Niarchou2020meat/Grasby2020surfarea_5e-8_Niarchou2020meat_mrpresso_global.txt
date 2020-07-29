@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	2	53.34237848349543	<0.001
+KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	1	53.34237848349543	<1e-04

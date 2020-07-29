@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-QMhdFe	Mz2bCi	Willer2013ldl	Kunkle2019load	5e-8	FALSE	0.01998108316851394	0.013807681171351933	0.20751795859510447	NA
+d8UbFl	WRAmPn	Willer2013ldl	Kunkle2019load	5e-8	FALSE	0.01998108316851394	0.013807681171351933	0.20751795859510447	NA

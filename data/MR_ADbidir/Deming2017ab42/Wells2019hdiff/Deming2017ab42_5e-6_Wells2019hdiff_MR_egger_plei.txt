@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-YcWZlo	0DZU9Y	Wells2019hdiff	Deming2017ab42	5e-6	FALSE	0.001494857894263067	0.0012418709168893986	0.25641999786994596
-YcWZlo	0DZU9Y	Wells2019hdiff	Deming2017ab42	5e-6	TRUE	0.002814356583403204	0.002326034753491533	0.26083851171711947
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+u8jrnz	2Z46EZ	Wells2019hdiff	Deming2017ab42	5e-6	FALSE	0.002981756777000788	0.0022674990533615358	0.22102778585662092	NA

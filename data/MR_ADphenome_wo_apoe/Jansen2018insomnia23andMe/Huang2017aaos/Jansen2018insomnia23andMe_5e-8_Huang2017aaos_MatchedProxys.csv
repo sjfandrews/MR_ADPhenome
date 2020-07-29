@@ -1,0 +1,2 @@
+target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHROM,POS,REF.proxy,ALT.proxy,AF,BETA,SE,Z,P,N,TRAIT,ref,ref.proxy,alt,alt.proxy,ALT,REF,proxy.outcome
+rs77641763,rs112535944,0.821117,0.913844,TA/CC,NA,9,140278206,C,A,0.0871,-0,0.0849,-0,0.9998,40255,AAOS,T,A,C,C,T,C,TRUE

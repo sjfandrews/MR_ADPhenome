@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+LDo1EM	DPZ1qt	Hilbar2017hipv	Willer2013tg	0.02072428509204759	1.2610526540707837e-4	TRUE	0	FALSE	5e-6

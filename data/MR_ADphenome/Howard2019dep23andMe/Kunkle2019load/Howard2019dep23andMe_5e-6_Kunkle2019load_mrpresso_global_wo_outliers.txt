@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ToDYCA	LCIoMv	Kunkle2019load	Howard2019dep23andMe	5e-6	TRUE	0	NA	NA
+ztL5y7	yOJuAp	Kunkle2019load	Howard2019dep23andMe	5e-6	TRUE	0	NA	NA

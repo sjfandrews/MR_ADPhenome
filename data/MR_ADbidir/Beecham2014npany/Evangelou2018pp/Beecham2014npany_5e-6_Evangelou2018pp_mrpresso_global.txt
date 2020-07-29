@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-FUHFoi	yxZASO	Evangelou2018pp	Beecham2014npany	5e-6	FALSE	0	13.94821845913942	0.285
+a32r57	cGrzQw	Evangelou2018pp	Beecham2014npany	5e-6	FALSE	0	13.94821845913942	0.2685

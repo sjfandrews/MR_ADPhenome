@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-JGojYW	zBrG39	Grasby2020thickness	Liu2019drnkwk23andMe	5e-6	TRUE	3	292.98675767592306	1e-4
+6N0ISA	qTexQl	Grasby2020thickness	Liu2019drnkwk23andMe	5e-6	TRUE	1	319.37785617892484	<1e-04

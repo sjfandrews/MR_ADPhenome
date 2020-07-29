@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	MR Egger	23.84981939506968	10	0.008009150388760752
-vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted	39.74828937015297	11	3.949989144760625e-5
-vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	MR Egger	14.522864056366947	8	0.06911460941181875
-vcCxdO	CM4PRt	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	Inverse variance weighted	14.987678587033765	9	0.09127498117099798
+KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	MR Egger	23.84981939506968	10	0.008009150388760752
+KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted	39.74828937015297	11	3.949989144760625e-5
+KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	MR Egger	18.14972358615302	9	0.033475683704176744
+KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	Inverse variance weighted	20.337752016404202	10	0.026215195142455176

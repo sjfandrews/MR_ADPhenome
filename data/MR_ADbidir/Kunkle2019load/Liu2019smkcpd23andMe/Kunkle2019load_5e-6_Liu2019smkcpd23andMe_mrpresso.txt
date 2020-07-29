@@ -12,7 +12,7 @@ $`MR-PRESSO results`$`Global Test`$RSSobs
 [1] 70.37656
 
 $`MR-PRESSO results`$`Global Test`$Pvalue
-[1] 0.0012
+[1] 0.0016
 
 
 $`MR-PRESSO results`$`Outlier Test`
@@ -39,7 +39,7 @@ $`MR-PRESSO results`$`Outlier Test`
 20 1.439051e-06       1
 21 3.414139e-06       1
 22 6.196535e-06       1
-23 4.795397e-05 <0.0074
+23 4.795397e-05 <0.0037
 24 7.829541e-06       1
 25 6.106817e-06       1
 26 1.179755e-07       1
@@ -48,10 +48,10 @@ $`MR-PRESSO results`$`Outlier Test`
 29 7.461900e-07       1
 30 2.373295e-06       1
 31 1.223203e-05       1
-32 3.116043e-05   0.037
+32 3.116043e-05  0.0296
 33 1.822744e-06       1
 34 1.431795e-06       1
-35 3.651656e-05  0.0074
+35 3.651656e-05  0.0296
 36 8.411726e-06       1
 37 7.585428e-06       1
 
@@ -64,7 +64,7 @@ beta.exposure
      64.80479 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.7342
+[1] 0.7443
 
 
 

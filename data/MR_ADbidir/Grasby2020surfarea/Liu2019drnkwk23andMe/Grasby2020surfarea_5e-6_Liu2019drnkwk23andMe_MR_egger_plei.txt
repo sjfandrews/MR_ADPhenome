@@ -1,2 +1,3 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-SWnAhf	tvWIdK	Liu2019drnkwk23andMe	Grasby2020surfarea	5e-6	FALSE	-5.904174171871022e-4	5.163565403967792e-4	0.2590433582475141	NA
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+bAxmdJ	zs8p9Z	Liu2019drnkwk23andMe	Grasby2020surfarea	5e-6	FALSE	-5.904174171871022e-4	5.163565403967792e-4	0.2590433582475141
+bAxmdJ	zs8p9Z	Liu2019drnkwk23andMe	Grasby2020surfarea	5e-6	TRUE	-5.508245854180369e-4	4.896052203173422e-4	0.26681359870496074

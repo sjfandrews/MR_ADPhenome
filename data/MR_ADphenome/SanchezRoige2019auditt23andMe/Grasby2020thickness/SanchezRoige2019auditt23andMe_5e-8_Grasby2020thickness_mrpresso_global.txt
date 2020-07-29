@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-jWlsZO	BeHpLV	Grasby2020thickness	SanchezRoige2019auditt23andMe	5e-8	FALSE	2	41.45564701503578	0.001
+y0pMIN	QwIW15	Grasby2020thickness	SanchezRoige2019auditt23andMe	5e-8	FALSE	2	41.45564701503578	<1e-04

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+TszS5H	ufKJL9	Liu2019smkcpd23andMe	Kunkle2019load	0.013048644039796544	9.105898350591301e-4	TRUE	0	FALSE	5e-8

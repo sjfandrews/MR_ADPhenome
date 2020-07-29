@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-IiLHds	lbcCPB	Beecham2014vbiany	Willer2013ldl	5e-8	FALSE	0	77.48622965143659	0.405
+LoocRv	Jd3WJ2	Beecham2014vbiany	Willer2013ldl	5e-8	FALSE	0	77.48622965143659	0.3956

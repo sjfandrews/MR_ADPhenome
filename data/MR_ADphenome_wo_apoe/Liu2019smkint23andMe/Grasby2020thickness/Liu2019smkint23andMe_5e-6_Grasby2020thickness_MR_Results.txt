@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+n9cJlv	Sj3Gpv	Grasby2020thickness	Liu2019smkint23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	553	0	-0.02099194857682502	0.006455546874278714	0.0011468910551224694
+n9cJlv	Sj3Gpv	Grasby2020thickness	Liu2019smkint23andMe	5e-6	FALSE	Weighted median	553	0	-0.018550983933556336	0.010025541456516717	0.06425991244204117
+n9cJlv	Sj3Gpv	Grasby2020thickness	Liu2019smkint23andMe	5e-6	FALSE	Weighted mode	553	0	0.005365681767583785	0.028457840817888547	0.8505160361617752
+n9cJlv	Sj3Gpv	Grasby2020thickness	Liu2019smkint23andMe	5e-6	FALSE	MR Egger	553	0	-0.08395788964421572	0.029519573890357056	0.004618517591625699

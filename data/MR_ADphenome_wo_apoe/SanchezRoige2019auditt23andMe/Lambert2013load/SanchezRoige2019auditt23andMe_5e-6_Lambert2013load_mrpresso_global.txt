@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+dNdACF	UBx3vv	Lambert2013load	SanchezRoige2019auditt23andMe	5e-6	FALSE	2	89.61144937644569	8e-4

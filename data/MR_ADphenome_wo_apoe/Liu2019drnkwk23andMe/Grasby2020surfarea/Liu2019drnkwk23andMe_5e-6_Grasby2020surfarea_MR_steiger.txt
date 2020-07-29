@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+P0s8R7	7Cop5d	Liu2019drnkwk23andMe	Grasby2020surfarea	0.008261718309879944	0.007783996005773772	TRUE	0.6276771183791987	TRUE	5e-6
+P0s8R7	7Cop5d	Liu2019drnkwk23andMe	Grasby2020surfarea	0.008785446950308742	0.010744597955176604	FALSE	0.07059372525573959	FALSE	5e-6

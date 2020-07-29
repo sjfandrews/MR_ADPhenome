@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-21Oq2P	XkWv5Y	Liu2019smkcpd23andMe	Grasby2020thickness	5e-8	FALSE	-0.0013419811716603878	0.004077808746962552	0.7637209380410506	NA
+pZKpwp	5fwTGk	Liu2019smkcpd23andMe	Grasby2020thickness	5e-8	FALSE	-0.0013419811716603878	0.004077808746962552	0.7637209380410506	NA
