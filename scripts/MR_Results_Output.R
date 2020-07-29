@@ -186,7 +186,7 @@ message('Number of tests: ', nrow(distinct(mrresults.methods_presso, exposure.na
 ##                      Filter results for MR-PRESSO and best PT                    ## 
 mr_res <- MRsummary %>% 
   filter(method == 'IVW') %>% 
-  group_by(outcome, exposure) %>% 
+  group_by(outcome, exposure, pt) %>% 
   filter(outliers_removed == ifelse(TRUE %in% outliers_removed, TRUE, FALSE)) %>% 
   ungroup()
 
