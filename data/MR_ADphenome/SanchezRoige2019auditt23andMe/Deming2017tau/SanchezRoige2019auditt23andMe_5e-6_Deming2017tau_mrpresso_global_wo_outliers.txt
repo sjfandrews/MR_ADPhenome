@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Tm72Rk	9EaZlS	Deming2017tau	SanchezRoige2019auditt23andMe	5e-6	TRUE	0	NA	NA
+gtq2PR	xppbaH	Deming2017tau	SanchezRoige2019auditt23andMe	5e-6	TRUE	0	NA	NA

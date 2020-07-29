@@ -1,0 +1,131 @@
+outcome,exposure,outcome.name,exposure.name,pt,nsnp,n_outliers,snp_r2.exposure,snp_r2.outcome,correct_causal_direction,steiger_pval,IVW,qval,MR-Egger,Weighted median,Weighted mode,MRPRESSO.pval,Egger.pval,pass
+Liu2019drnkwk23andMe,Grasby2020thickness,Alcohol Consumption,Cortical Thickness,5e-6,36,2,0.02544167123422409,6.722346844340634e-5,TRUE,0,"-0.14
+(0.04)",0.006,"-0.38
+(0.23) ","-0.2
+(0.059)***","-0.21
+(0.1).",0.0303,0.29,TRUE
+SanchezRoige2019auditt23andMe,Grasby2020thickness,AUDIT,Cortical Thickness,5e-8,4,0,0.0054388441438853645,1.325609264387691e-4,TRUE,0,"-0.85
+(0.21)",7.77e-04,"-0.96
+(0.8) ","-0.85
+(0.25)***","-0.87
+(0.32).",0.9871,0.9,TRUE
+SanchezRoige2019auditt23andMe,Hilbar2017hipv,AUDIT,Hippocampal Volume,5e-8,6,0,0.013162192356299375,1.108931575340876e-4,TRUE,0,"0.03
+(0.012)",0.084,"-0.0096
+(0.036) ","0.02
+(0.015) ","0.012
+(0.015) ",0.0762,0.29,FALSE
+Yengo2018bmi,Grasby2020thickness,BMI,Cortical Thickness,5e-8,6,2,0.004265829338113553,2.6328120893713896e-5,TRUE,0,"-0.52
+(0.2)",0.06,"5.4
+(2.4) ","-0.42
+(0.26).","-0.14
+(0.43) ",0.0219,0.14,FALSE
+Liu2019smkcpd23andMe,Grasby2020surfarea,Cigarettes per Day,Cortical Surface Area,5e-6,47,1,0.04403027474420932,3.8123836172841843e-4,TRUE,0,"-1.2e-06
+(2.9e-07)",0.001,"-8.7e-07
+(9.3e-07) ","-8.4e-07
+(5.2e-07) ","-5.3e-07
+(5.7e-07) ",3e-4,0.74,FALSE
+Howard2019dep23andMe,Grasby2020surfarea,Depression,Cortical Surface Area,5e-8,12,1,0.01900821907504289,2.6497646720430813e-5,TRUE,0,"-3.7e-06
+(1.2e-06)",0.027,"-2.8e-06
+(5.3e-06) ","-3.4e-06
+(1.7e-06)*","-3.4e-06
+(2.1e-06) ",0.0637,0.86,TRUE
+Evangelou2018dbp,Grasby2020surfarea,Diastolic Blood Pressure,Cortical Surface Area,5e-6,44,8,0.03335661417385962,2.0978315520972697e-4,TRUE,0,"-3.8e-05
+(4.6e-06)",3.45e-14,"-3.7e-05
+(2.4e-05) ","-3.4e-05
+(7.9e-06)***","-5.1e-05
+(1.5e-05)**",<1e-04,0.99,TRUE
+Lee2018education23andMe,Grasby2020surfarea,Educational Attainment,Cortical Surface Area,5e-6,40,3,0.031866945553477986,2.573646673202212e-4,TRUE,0,"5.1e-06
+(3.8e-07)",4.60e-38,"5.7e-06
+(2.4e-06)*","5.9e-06
+(7e-07)***","7.3e-06
+(1.5e-06)***",<1e-04,0.79,TRUE
+Lee2018education23andMe,Hilbar2015hipv,Educational Attainment,Hippocampal Volume,5e-6,10,1,0.017491276537642274,2.3359770787350888e-5,TRUE,0,"5.2e-05
+(1.9e-05)",0.044,"1.9e-06
+(7.5e-05) ","5.4e-05
+(2.8e-05)*","5.3e-05
+(5e-05) ",0.0181,0.49,FALSE
+Lee2018education23andMe,Hilbar2017hipv,Educational Attainment,Hippocampal Volume,5e-6,23,2,0.023221578353888026,4.805817297981071e-5,TRUE,0,"0.023
+(0.0061)",0.002,"0.00039
+(0.017) ","0.028
+(0.01)**","0.032
+(0.017).",0.0056,0.13,TRUE
+Niarchou2020fish,Grasby2020surfarea,Fish and Plant diet,Cortical Surface Area,5e-6,42,1,0.03838320518137822,2.9530362126221915e-4,TRUE,0,"3.1e-06
+(5.9e-07)",3.56e-06,"3.3e-06
+(2.3e-06) ","2.9e-06
+(9.5e-07)**","2.8e-06
+(1.5e-06).",0.0032,0.94,TRUE
+Jansen2018insomnia23andMe,Grasby2020surfarea,Insomnia Symptoms,Cortical Surface Area,5e-6,46,5,0.03810030018035614,6.0613138813965916e-6,TRUE,0,"-9.6e-07
+(1.5e-07)",1.40e-08,"-2.1e-07
+(5.3e-07) ","-2.4e-07
+(2.7e-07) ","-3.3e-07
+(2.4e-07) ",<1e-04,0.13,FALSE
+Willer2013ldl,Grasby2020surfarea,Low-density lipoproteins,Cortical Surface Area,5e-8,11,0,0.017125805989343462,9.369764806573653e-5,TRUE,0,"-4.8e-06
+(1.9e-06)",0.097,"-5.7e-06
+(7.7e-06) ","-6.5e-06
+(2.6e-06)*","-6.1e-06
+(3e-06).",0.1663,0.89,FALSE
+Niarchou2020meat,Grasby2020thickness,Meat diet,Cortical Thickness,5e-8,6,0,0.006617115013832747,8.50730840686023e-5,TRUE,0,"-0.59
+(0.21)",0.042,"-3.9
+(1.5).","-0.34
+(0.3) ","0.34
+(0.68) ",0.0016,0.081,FALSE
+Klimentidis2018mvpa,Grasby2020surfarea,Moderate-to-vigorous PA,Cortical Surface Area,5e-8,12,3,0.015072811594825153,8.612432563757106e-5,TRUE,0,"-4.5e-06
+(8.6e-07)",3.76e-06,"-6.7e-06
+(2.4e-06)*","-4.3e-06
+(1.2e-06)***","-3.4e-06
+(1.7e-06).",0.7088,0.36,TRUE
+Evangelou2018pp,Huang2017aaos,Pulse Pressure,AAOS,5e-6,29,1,0.022767412466299253,5.4976780492106454e-5,TRUE,0,"0.12
+(0.038)",0.018,"0.095
+(0.066) ","0.063
+(0.057) ","0.0021
+(0.085) ",0.2513,0.64,TRUE
+Evangelou2018pp,Grasby2020surfarea,Pulse Pressure,Cortical Surface Area,5e-6,41,6,0.028323785878002262,1.4704380652752e-4,TRUE,0,"-3.7e-05
+(5.9e-06)",2.20e-08,"-2.9e-05
+(3.3e-05) ","-2.3e-05
+(9.7e-06)*","-2.1e-05
+(1.9e-05) ",1e-4,0.8,TRUE
+Dashti2019slepdur,Grasby2020surfarea,Sleep Duration,Cortical Surface Area,5e-6,44,3,0.03707154463644883,2.0790281954355844e-4,TRUE,0,"3.3e-06
+(5.6e-07)",1.80e-07,"3.2e-06
+(2.2e-06) ","3e-06
+(9.2e-07)**","9.3e-07
+(1.5e-06) ",0.0359,0.95,TRUE
+Dashti2019slepdur,Hilbar2017hipv,Sleep Duration,Hippocampal Volume,5e-8,6,1,0.010134570031052541,3.4166402066687105e-5,TRUE,0,"-0.052
+(0.016)",0.015,"-0.0094
+(0.044) ","-0.047
+(0.02)*","-0.039
+(0.024) ",0.3535,0.37,TRUE
+Liu2019smkint23andMe,Grasby2020thickness,Smoking Initiation,Cortical Thickness,5e-6,37,4,0.024643645748596142,6.019892259680918e-6,TRUE,0,"0.097
+(0.036)",0.053,"0.11
+(0.28) ","0.15
+(0.057)*","0.15
+(0.087).",<1e-04,0.96,FALSE
+Day2018sociso,Grasby2020surfarea,Social Isolation,Cortical Surface Area,5e-6,45,2,0.042083659212821485,1.6779230820322073e-4,TRUE,0,"-1.8e-06
+(4.7e-07)",0.004,"-3.7e-06
+(1.6e-06)*","-1.9e-06
+(7.9e-07)*","-1.7e-06
+(1.8e-06) ",0.0203,0.22,TRUE
+Day2018sociso,Grasby2020thickness,Social Isolation,Cortical Thickness,5e-6,39,2,0.027878107904987,2.046078474130391e-4,TRUE,0,"0.28
+(0.086)",0.016,"-0.047
+(0.57) ","0.16
+(0.14) ","-0.28
+(0.4) ",<1e-04,0.57,FALSE
+Evangelou2018sbp,Grasby2020surfarea,Systolic Blood Pressure,Cortical Surface Area,5e-6,39,5,0.027859550514526522,2.0464431351800466e-4,TRUE,0,"-7.3e-05
+(8.8e-06)",1.10e-14,"-3.6e-05
+(5.3e-05) ","-4.3e-05
+(1.6e-05)**","-1.5e-05
+(4.1e-05) ",<1e-04,0.47,TRUE
+Evangelou2018sbp,Hilbar2017hipv,Systolic Blood Pressure,Hippocampal Volume,5e-8,6,0,0.013162192356299375,1.304284592965264e-5,TRUE,0,"0.51
+(0.19)",0.053,"0.42
+(0.48) ","0.42
+(0.23).","0.39
+(0.28) ",0.7993,0.85,FALSE
+Willer2013tc,Grasby2020surfarea,Total Cholesterol,Cortical Surface Area,5e-6,34,0,0.033706549468375695,1.9529295905001368e-4,TRUE,0,"-3.8e-06
+(1.3e-06)",0.039,"-6.9e-06
+(4.4e-06) ","-5e-06
+(2e-06)*","-5.7e-06
+(2.8e-06)*",0.5075,0.47,TRUE
+Xue2018diab,Grasby2020surfarea,Type 2 Diabetes,Cortical Surface Area,5e-6,33,0,0.030834069384401638,3.165180761733377e-4,TRUE,0,"-6.8e-06
+(2.2e-06)",0.017,"-6.3e-06
+(9.5e-06) ","-6.1e-06
+(3.5e-06).","-5.5e-06
+(4.5e-06) ",0.0055,0.95,FALSE

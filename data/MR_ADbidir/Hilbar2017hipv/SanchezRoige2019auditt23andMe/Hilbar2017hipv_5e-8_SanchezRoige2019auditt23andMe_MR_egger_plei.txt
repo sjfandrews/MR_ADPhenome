@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+q8BjZL	7G3dvG	SanchezRoige2019auditt23andMe	Hilbar2017hipv	5e-8	FALSE	0.004033944234766841	0.003312464464349385	0.29022012342051867	NA

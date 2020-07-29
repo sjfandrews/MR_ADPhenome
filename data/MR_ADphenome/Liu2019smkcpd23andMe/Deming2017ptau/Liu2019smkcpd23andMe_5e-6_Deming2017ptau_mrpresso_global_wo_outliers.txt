@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-z1gQ0a	lWOswg	Deming2017ptau	Liu2019smkcpd23andMe	5e-6	TRUE	0	NA	NA
+O8BxAN	LQAEPW	Deming2017ptau	Liu2019smkcpd23andMe	5e-6	TRUE	0	NA	NA

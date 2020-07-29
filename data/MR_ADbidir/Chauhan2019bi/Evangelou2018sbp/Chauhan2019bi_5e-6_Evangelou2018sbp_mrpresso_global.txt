@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+nB9qut	zIntmx	Evangelou2018sbp	Chauhan2019bi	5e-6	FALSE	2	48.440867876100405	<1e-04

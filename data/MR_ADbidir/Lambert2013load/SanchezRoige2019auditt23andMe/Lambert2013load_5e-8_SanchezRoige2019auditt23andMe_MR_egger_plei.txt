@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+5KdW6f	BdMckD	SanchezRoige2019auditt23andMe	Lambert2013load	5e-8	FALSE	-0.0012685625398297573	0.0019104201809136475	0.5233208291477205	NA

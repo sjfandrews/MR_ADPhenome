@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-lSEcDQ	cI1Y7Q	Hilbar2017hipv	Niarchou2020fish	5e-8	FALSE	2	103.5581586024655	<2e-04
+VoGIEO	glIcAs	Hilbar2017hipv	Niarchou2020fish	5e-8	FALSE	2	103.5581586024655	<1e-04

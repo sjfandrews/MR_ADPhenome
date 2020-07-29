@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-c25dXZ	BzsAMc	Deming2017ptau	SanchezRoige2019auditt23andMe	5e-8	FALSE	0	13.908321137603263	0.238
+6MoQSW	RNXbA4	Deming2017ptau	SanchezRoige2019auditt23andMe	5e-8	FALSE	0	13.908321137603263	0.2632

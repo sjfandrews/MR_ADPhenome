@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+ZV0toJ	RR5Shj	Niarchou2020fish	Hilbar2017hipv	5e-6	FALSE	MR Egger	41.50016272309596	20	0.0032113491187395217
+ZV0toJ	RR5Shj	Niarchou2020fish	Hilbar2017hipv	5e-6	FALSE	Inverse variance weighted	42.3347656664465	21	0.0038182738608692024

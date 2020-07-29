@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+KST3MP	HYGMPU	Day2018sociso	Deming2017ptau	0.004224594209975166	0.024971626846743915	FALSE	1.3882735849790606e-7	FALSE	5e-6

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+wZiowj	7X7jhA	Chauhan2019bi	Willer2013ldl	5e-8	FALSE	0	71.08882084582345	0.7212

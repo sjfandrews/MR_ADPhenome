@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+AfSSIk	lO5Y79	Grasby2020thickness	Evangelou2018sbp	0.025487317126740613	9.231054739221825e-5	TRUE	0	TRUE	5e-6
+AfSSIk	lO5Y79	Grasby2020thickness	Evangelou2018sbp	0.027914407342053967	1.7513124301784681e-4	TRUE	0	FALSE	5e-6

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+1hKBFM	3QPm5t	Niarchou2020meat	Kunkle2019load	5e-6	TRUE	1	63.68763515269846	0.0041

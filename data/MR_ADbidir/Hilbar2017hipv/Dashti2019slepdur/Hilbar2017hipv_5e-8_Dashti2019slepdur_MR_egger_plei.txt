@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+tWcyai	lDMQES	Dashti2019slepdur	Hilbar2017hipv	5e-8	FALSE	-0.006782316273518551	0.005922139448763413	0.31597136256673897
+tWcyai	lDMQES	Dashti2019slepdur	Hilbar2017hipv	5e-8	TRUE	-0.0033071190008326606	0.0031481579704532732	0.37064591206891573

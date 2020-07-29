@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+JRj8iW	GFu1Lc	Day2018sociso	Grasby2020thickness	5e-8	FALSE	Inverse variance weighted (fixed effects)	5	0	0.2521666048778853	0.1972565710419972	0.20111949313412508
+JRj8iW	GFu1Lc	Day2018sociso	Grasby2020thickness	5e-8	FALSE	Weighted median	5	0	-0.14972425304071754	0.3462842367333782	0.6654697115186017
+JRj8iW	GFu1Lc	Day2018sociso	Grasby2020thickness	5e-8	FALSE	Weighted mode	5	0	-0.24427473647171993	0.5069588671137931	0.6550944248966661
+JRj8iW	GFu1Lc	Day2018sociso	Grasby2020thickness	5e-8	FALSE	MR Egger	5	0	0.038634910617827464	2.0829800148126014	0.9863663826586923

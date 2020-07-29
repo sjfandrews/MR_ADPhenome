@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+nxN7Xd	EtNICx	Wells2019hdiff	Kunkle2019load	5e-8	FALSE	MR Egger	19.73992132862406	13	0.1018877059483846
+nxN7Xd	EtNICx	Wells2019hdiff	Kunkle2019load	5e-8	FALSE	Inverse variance weighted	25.813657018660294	14	0.027334684797989457

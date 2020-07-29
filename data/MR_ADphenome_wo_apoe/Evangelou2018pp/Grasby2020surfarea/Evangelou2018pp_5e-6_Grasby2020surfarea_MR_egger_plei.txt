@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+k4cNds	DoBSwS	Grasby2020surfarea	Evangelou2018pp	5e-6	FALSE	-4.977422786831733	15.638475973107308	0.7503912197624407
+k4cNds	DoBSwS	Grasby2020surfarea	Evangelou2018pp	5e-6	TRUE	-2.451173650146615	15.331740215209537	0.87303700495424

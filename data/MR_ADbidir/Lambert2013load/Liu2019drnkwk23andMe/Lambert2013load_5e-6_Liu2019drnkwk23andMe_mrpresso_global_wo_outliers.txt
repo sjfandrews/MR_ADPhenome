@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+NsL1gO	kp957J	Liu2019drnkwk23andMe	Lambert2013load	5e-6	TRUE	2	33.81099322858941	0.3947

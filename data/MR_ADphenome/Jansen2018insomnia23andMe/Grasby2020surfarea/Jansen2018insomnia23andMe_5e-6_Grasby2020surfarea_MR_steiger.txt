@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+Ye3uI5	LhhOdh	Jansen2018insomnia23andMe	Grasby2020surfarea	5.467404548076293e-4	0.013765480353717486	FALSE	0	TRUE	5e-6
+Ye3uI5	LhhOdh	Jansen2018insomnia23andMe	Grasby2020surfarea	5.769768153447403e-4	0.01633038496954819	FALSE	0	FALSE	5e-6

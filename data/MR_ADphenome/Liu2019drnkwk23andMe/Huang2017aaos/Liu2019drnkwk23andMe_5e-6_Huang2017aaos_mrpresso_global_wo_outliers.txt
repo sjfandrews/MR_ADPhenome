@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-xBzDJ7	CQIbLG	Huang2017aaos	Liu2019drnkwk23andMe	5e-6	TRUE	0	NA	NA
+IhmJFs	jA45yF	Huang2017aaos	Liu2019drnkwk23andMe	5e-6	TRUE	0	NA	NA

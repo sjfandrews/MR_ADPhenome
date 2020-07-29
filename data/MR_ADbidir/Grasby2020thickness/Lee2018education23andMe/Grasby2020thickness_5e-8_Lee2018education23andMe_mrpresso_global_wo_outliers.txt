@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+FZVV6p	1RoOwr	Lee2018education23andMe	Grasby2020thickness	5e-8	TRUE	3	NA	NA

@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-pOhhEj	MKyMry	Deming2017ab42	Niarchou2020meat	5e-8	TRUE	0	NA	NA
+Aad9GV	cAPyOX	Deming2017ab42	Niarchou2020meat	5e-8	TRUE	0	NA	NA

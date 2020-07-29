@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+J8Zclf	JKkyjx	Chauhan2019bi	Xue2018diab	5e-6	FALSE	Inverse variance weighted (fixed effects)	218	0	0.07915452939799911	0.036138148747591935	0.02850019621786108
+J8Zclf	JKkyjx	Chauhan2019bi	Xue2018diab	5e-6	FALSE	Weighted median	218	0	0	0.07278602428146876	1
+J8Zclf	JKkyjx	Chauhan2019bi	Xue2018diab	5e-6	FALSE	Weighted mode	218	0	-0.001743916475680951	0.07871214612289905	0.9823441773444956
+J8Zclf	JKkyjx	Chauhan2019bi	Xue2018diab	5e-6	FALSE	MR Egger	218	0	0.09345313244934926	0.0837941580197157	0.26597390310076735

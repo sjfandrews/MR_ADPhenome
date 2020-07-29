@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+k5WsEt	keGlIW	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	MR Egger	91.63910768526465	49	2.139140987428227e-4
+k5WsEt	keGlIW	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	Inverse variance weighted	96.47617615128503	50	8.765781655290027e-5
+k5WsEt	keGlIW	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	MR Egger	74.03464232156146	48	0.0093010703920345765
+k5WsEt	keGlIW	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	Inverse variance weighted	75.73909312139803	49	0.008452886520081125

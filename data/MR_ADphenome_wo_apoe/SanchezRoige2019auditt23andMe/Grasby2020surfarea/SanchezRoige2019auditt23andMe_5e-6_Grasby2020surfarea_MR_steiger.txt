@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+k5WsEt	keGlIW	SanchezRoige2019auditt23andMe	Grasby2020surfarea	0.010063978204596176	0.002698001501442924	TRUE	8.881784197001252e-16	TRUE	5e-6
+k5WsEt	keGlIW	SanchezRoige2019auditt23andMe	Grasby2020surfarea	0.01046979277162203	0.0031945808190742817	TRUE	2.7755575615628914e-14	FALSE	5e-6

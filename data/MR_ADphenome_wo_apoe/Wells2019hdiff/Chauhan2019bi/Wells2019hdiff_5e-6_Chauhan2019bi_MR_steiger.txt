@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+yDRyku	SLku6M	Wells2019hdiff	Chauhan2019bi	0.01316233458458488	0.009263385675616765	TRUE	0.008294119837241931	FALSE	5e-6

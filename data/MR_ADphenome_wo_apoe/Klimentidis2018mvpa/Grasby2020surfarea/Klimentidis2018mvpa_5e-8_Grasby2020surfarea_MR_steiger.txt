@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+20Xc0G	FmCILS	Klimentidis2018mvpa	Grasby2020surfarea	0.0017623177708771193	9.559680156740608e-4	TRUE	0.05137943361662134	FALSE	5e-8

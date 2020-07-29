@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+k0opir	4eFOOI	Klimentidis2018mvpa	Grasby2020thickness	5e-8	FALSE	0	1.8769920861080884	0.8732

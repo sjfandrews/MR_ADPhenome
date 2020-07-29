@@ -1,9 +1,9 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	51	1	4574.385912004438	1366.2383383390222	8.134973927867039e-4
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	Weighted median	51	1	3018.8358764642194	2247.7122176898033	0.1792491604923634
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	Weighted mode	51	1	219.31546657301806	3820.087893753729	0.9544465418820949
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	MR Egger	51	1	-12176.87657249112	10582.196359805563	0.25544247070935744
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	Inverse variance weighted (fixed effects)	50	1	5370.997723411508	1377.3920704288369	9.643277508167355e-5
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	Weighted median	50	1	3361.858630124749	2292.229846361232	0.14247607303115736
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	Weighted mode	50	1	462.5225096657814	4100.589142001489	0.9106545894962506
-yamb9t	64kHD3	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	MR Egger	50	1	-4829.584113285314	9853.154492905842	0.6262564761417918
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	51	1	4574.385912004438	1366.2383383390222	8.134973927867039e-4
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	Weighted median	51	1	3018.8358764642194	2217.3511433722756	0.17336822521877213
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	Weighted mode	51	1	219.31546657301806	3719.4770299471083	0.9532157696316904
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	FALSE	MR Egger	51	1	-12176.87657249112	10582.196359805563	0.25544247070935744
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	Inverse variance weighted (fixed effects)	50	1	5370.997723411508	1377.3920704288369	9.643277508167355e-5
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	Weighted median	50	1	3361.858630124749	2274.7948838991606	0.13944169312073473
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	Weighted mode	50	1	462.5225096657814	4024.223449972547	0.9089666582485199
+z5r2kf	wv2rQa	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-6	TRUE	MR Egger	50	1	-4829.584113285314	9853.154492905842	0.6262564761417918

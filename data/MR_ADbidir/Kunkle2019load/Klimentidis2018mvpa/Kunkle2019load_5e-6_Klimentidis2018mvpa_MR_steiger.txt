@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+2pa8c5	TFRpQA	Kunkle2019load	Klimentidis2018mvpa	0.023027022577389894	9.994955724237989e-5	TRUE	0	FALSE	5e-6

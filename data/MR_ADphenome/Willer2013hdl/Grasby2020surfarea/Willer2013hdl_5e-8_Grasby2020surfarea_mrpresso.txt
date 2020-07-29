@@ -1,7 +1,7 @@
 $`Main MR results`
        Exposure       MR Analysis Causal Estimate       Sd    T-stat   P-value
 1 beta.exposure               Raw         57.5706 379.2202 0.1518131 0.8796941
-2 beta.exposure Outlier-corrected        226.2614 340.3986 0.6646956 0.5080878
+2 beta.exposure Outlier-corrected        177.6378 327.2677 0.5427904 0.5887465
 
 $`MR-PRESSO results`
 $`MR-PRESSO results`$`Global Test`
@@ -20,7 +20,7 @@ $`MR-PRESSO results`$`Outlier Test`
 4  2.521502e+03       1
 5  3.207152e+03       1
 6  2.770332e+02       1
-7  8.931759e+04  0.5934
+7  8.931759e+04  0.5074
 8  6.322069e+02       1
 9  7.447853e+03       1
 10 5.645063e+04       1
@@ -34,7 +34,7 @@ $`MR-PRESSO results`$`Outlier Test`
 18 4.264947e+04       1
 19 8.362154e+02       1
 20 1.197981e+02       1
-21 4.143706e+05  0.1032
+21 4.143706e+05  0.0344
 22 9.768512e+05 <0.0086
 23 1.847972e+03       1
 24 2.290894e+01       1
@@ -45,12 +45,12 @@ $`MR-PRESSO results`$`Outlier Test`
 29 1.419077e+04       1
 30 1.696905e+03       1
 31 2.748561e+04       1
-32 1.727649e+05  0.0086
+32 1.727649e+05  0.0258
 33 3.372644e+04       1
 34 6.857323e+03       1
 35 1.387012e+03       1
 36 6.887941e+03       1
-37 8.464627e+04  0.7568
+37 8.464627e+04  0.7224
 38 2.500617e+03       1
 39 1.126857e+04       1
 40 1.861790e+04       1
@@ -62,11 +62,11 @@ $`MR-PRESSO results`$`Outlier Test`
 46 2.788398e+04       1
 47 8.335002e+03       1
 48 1.360652e+04       1
-49 9.810858e+04  0.6536
+49 9.810858e+04  0.5418
 50 6.665972e+03       1
 51 4.223174e+03       1
 52 1.144199e+04       1
-53 3.009024e+05  0.3698
+53 3.009024e+05  0.3956
 54 1.144470e+02       1
 55 8.338358e+02       1
 56 6.322605e+03       1
@@ -103,14 +103,14 @@ $`MR-PRESSO results`$`Outlier Test`
 
 $`MR-PRESSO results`$`Distortion Test`
 $`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
-[1] 22 32
+[1] 21 22 32
 
 $`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
 beta.exposure 
-    -74.55571 
+    -67.59101 
 
 $`MR-PRESSO results`$`Distortion Test`$Pvalue
-[1] 0.7601
+[1] 0.8197
 
 
 

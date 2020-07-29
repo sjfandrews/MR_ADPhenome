@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+klCuEp	5Fsm2Z	Dashti2019slepdur	Grasby2020surfarea	5e-8	FALSE	MR Egger	37.61778161747609	9	2.0409510779483888e-5
+klCuEp	5Fsm2Z	Dashti2019slepdur	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted	38.46048294934042	10	3.1547313112262885e-5
+klCuEp	5Fsm2Z	Dashti2019slepdur	Grasby2020surfarea	5e-8	TRUE	MR Egger	13.989923651802515	7	0.0513608615284229
+klCuEp	5Fsm2Z	Dashti2019slepdur	Grasby2020surfarea	5e-8	TRUE	Inverse variance weighted	15.054766355957772	8	0.05808926977995617

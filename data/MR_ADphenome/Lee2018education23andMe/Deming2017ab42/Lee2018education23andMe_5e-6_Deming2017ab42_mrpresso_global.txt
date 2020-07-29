@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-cpqhtY	OAMZTm	Deming2017ab42	Lee2018education23andMe	5e-6	FALSE	0	681.828610930934	0.1152
+G0CtBl	EAuIFV	Deming2017ab42	Lee2018education23andMe	5e-6	FALSE	0	681.828610930934	0.1124

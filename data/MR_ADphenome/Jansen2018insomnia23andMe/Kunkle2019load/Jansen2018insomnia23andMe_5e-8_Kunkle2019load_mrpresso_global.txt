@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-uztd4j	CsSfNI	Kunkle2019load	Jansen2018insomnia23andMe	5e-8	FALSE	0	188.5030470104514	0.1005
+YvNR3W	K5KsrG	Kunkle2019load	Jansen2018insomnia23andMe	5e-8	FALSE	0	188.5030470104514	0.1032

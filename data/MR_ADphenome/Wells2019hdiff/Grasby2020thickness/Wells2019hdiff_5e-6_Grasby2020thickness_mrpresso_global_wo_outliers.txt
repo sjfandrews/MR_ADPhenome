@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Zs3Gtp	sKLTHA	Grasby2020thickness	Wells2019hdiff	5e-6	TRUE	2	134.88557451445837	0.0142
+MzKCCi	iaIVI1	Grasby2020thickness	Wells2019hdiff	5e-6	TRUE	2	134.88557451445837	0.0158

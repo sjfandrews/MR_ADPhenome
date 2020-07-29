@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+syncqZ	I0wYWI	Niarchou2020meat	Deming2017ab42	5e-6	FALSE	Inverse variance weighted (fixed effects)	11	0	-0.02436516255116196	0.036907459005215276	0.5091453443577794
+syncqZ	I0wYWI	Niarchou2020meat	Deming2017ab42	5e-6	FALSE	Weighted median	11	0	-0.0037423206918737214	0.05540912601474742	0.9461519871074578
+syncqZ	I0wYWI	Niarchou2020meat	Deming2017ab42	5e-6	FALSE	Weighted mode	11	0	0.04674714379876299	0.09449039380096215	0.6314796823567097
+syncqZ	I0wYWI	Niarchou2020meat	Deming2017ab42	5e-6	FALSE	MR Egger	11	0	-0.028766884707124723	0.15438748331076313	0.8563188891437777

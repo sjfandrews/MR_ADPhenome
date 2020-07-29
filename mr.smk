@@ -3,21 +3,25 @@
 import os
 from itertools import product
 import pandas as pd
+from datetime import date
 RWD = os.getcwd()
 
-shell.prefix('module load plink/1.90 R/3.5.3; ')
+shell.prefix('module load plink/1.90 R/3.6.3; ')
 
 
 REF = config['REF']
 r2 = config['clumpr2']
 kb = config['clumpkb']
+RLIB = config['RLIB']
 EXPOSURES = pd.DataFrame.from_records(config["EXPOSURES"], index = "CODE")
 OUTCOMES = pd.DataFrame.from_records(config["OUTCOMES"], index = "CODE")
+EXCLUSION = pd.DataFrame.from_records(config["EXCLUSION"], index = "NAME")
 Pthreshold = config['Pthreshold']
-DataOut = config['DataOut']
-DataOutput = config['DataOutput']
+Project = config['PROJECT']
+today_date = date.today()
+# today_date = '2020-07-27'
 
-localrules: all, html_Report
+localrules: all, html_Report, aggregate_Report
 
 # Filter forbidden wild card combinations
 ## https://stackoverflow.com/questions/41185567/how-to-use-expand-in-snakemake-when-some-particular-combinations-of-wildcards-ar
@@ -36,20 +40,29 @@ filtered_product = filter_combinator(product, forbidden)
 
 rule all:
     input:
-        lambda wildcards: expand(DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html",
+        lambda wildcards: expand("results/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html",
             filtered_product,
             ExposureCode=EXPOSURES.index.tolist(),
             OutcomeCode=OUTCOMES.index.tolist(),
-            Pthreshold=Pthreshold),
-        expand(DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png',
+            Pthreshold=Pthreshold,
+            Project = Project),
+        expand('results/formated/Manhattan/{ExposureCode}_ManhattanPlot.png',
             filtered_product,
-            ExposureCode=EXPOSURES.index.tolist()),
-        DataOutput + 'All/mrpresso_MRdat.csv',
-        DataOutput + 'All/global_mrpresso.txt',
-        DataOutput + 'All/heterogenity.txt',
-        DataOutput + 'All/pleiotropy.txt',
-        DataOutput + 'All/MRresults.txt',
-        DataOutput + 'All/global_mrpresso_wo_outliers.txt',
+            ExposureCode=EXPOSURES.index.tolist(), Project = Project),
+        expand('results/{Project}/All/mrpresso_MRdat.csv', Project = Project),
+        expand('results/{Project}/All/global_mrpresso.txt', Project = Project),
+        expand('results/{Project}/All/heterogenity.txt', Project = Project),
+        expand('results/{Project}/All/pleiotropy.txt', Project = Project),
+        expand('results/{Project}/All/MRresults.txt', Project = Project),
+        expand('results/{Project}/All/global_mrpresso_wo_outliers.txt', Project = Project),
+        expand('results/{Project}/All/power.txt', Project = Project),
+        expand('results/{Project}/All/steiger.txt', Project = Project),
+        expand("results/{Project}/All/{Project}_MR_Analaysis_{DATE}.html", Project = Project, DATE = today_date),
+        # expand("results/{Project}/All/{Project}_MRsummary_{DATE}.csv", Project = Project, DATE = today_date),
+        # expand("results/{Project}/All/{Project}_WideMRResults_{DATE}.csv", Project = Project, DATE = today_date),
+        # expand("results/{Project}/All/{Project}_MRbest_{DATE}.csv", Project = Project, DATE = today_date),
+        # expand("results/{Project}/All/{Project}_PublicationRes_{DATE}.csv", Project = Project, DATE = today_date),
+        # expand("results/{Project}/All/{Project}_heatmap{DATE}.png", Project = Project, DATE = today_date),
 
 ## Read in Exposure summar statistics and format them to input required for pipeline
 ## Formated summary stats are a temp file that is delted as the end
@@ -57,7 +70,7 @@ rule FormatExposure:
     input:
         ss = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['FILE'],
     output:
-        formated_ss = temp(DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz")
+        formated_ss = temp("data/formated/{ExposureCode}/{ExposureCode}_formated.txt.gz")
     params:
         snp_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['SNP'],
         chrom_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['CHROM'],
@@ -81,7 +94,7 @@ rule FormatOutcome:
         script = 'src/FormatGwas.R',
         ss = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['FILE'],
     output:
-        formated_ss = temp(DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz")
+        formated_ss = temp("data/formated/{OutcomeCode}/{OutcomeCode}_formated.txt.gz")
     params:
         snp_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['SNP'],
         chrom_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['CHROM'],
@@ -102,13 +115,13 @@ rule FormatOutcome:
 ## user defines r2 and window in config file
 rule clump:
     input:
-        ss = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz"
+        ss = "data/formated/{ExposureCode}/{ExposureCode}_formated.txt.gz"
     output:
-        exp_clumped = temp(DataOut + '{ExposureCode}/{ExposureCode}.clumped'),
-        exp_clumped_zipped = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
+        exp_clumped = temp('data/formated/{ExposureCode}/{ExposureCode}.clumped'),
+        exp_clumped_zipped = 'data/formated/{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
         ref = REF,
-        out =  DataOut + '{ExposureCode}/{ExposureCode}',
+        out =  'data/formated/{ExposureCode}/{ExposureCode}',
         r2 = r2,
         kb = kb
     shell:
@@ -123,10 +136,10 @@ rule clump:
 rule ExposureSnps:
     input:
         script = 'src/ExposureData.R',
-        summary = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz",
-        ExposureClump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
+        summary = "data/formated/{ExposureCode}/{ExposureCode}_formated.txt.gz",
+        ExposureClump = 'data/formated/{ExposureCode}/{ExposureCode}.clumped.gz'
     output:
-        out = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt"
+        out = "data/{Project}/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt"
     params:
         Pthreshold = '{Pthreshold}'
     shell:
@@ -135,12 +148,12 @@ rule ExposureSnps:
 ## Plot manhattan plot of exposure gwas highlight instruments
 rule manhattan_plot:
     input:
-        ingwas = DataOut + "{ExposureCode}/{ExposureCode}_formated.txt.gz",
-        inclump = DataOut + '{ExposureCode}/{ExposureCode}.clumped.gz'
+        ingwas = "data/formated/{ExposureCode}/{ExposureCode}_formated.txt.gz",
+        inclump = 'data/formated/{ExposureCode}/{ExposureCode}.clumped.gz'
     params:
         PlotTitle = "{ExposureCode}"
     output:
-        out = DataOutput + 'plots/Manhattan/{ExposureCode}_ManhattanPlot.png'
+        out = 'results/formated/Manhattan/{ExposureCode}_ManhattanPlot.png'
     script:
         "src/manhattan_plot.R"
 
@@ -148,24 +161,24 @@ rule manhattan_plot:
 rule OutcomeSnps:
     input:
         script = 'src/OutcomeData.R',
-        ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSummary = DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz"
+        ExposureSummary = "data/{Project}/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSummary = "data/formated/{OutcomeCode}/{OutcomeCode}_formated.txt.gz"
     output:
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt",
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt",
     params:
-        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        Outcome = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     shell:
         'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {params.Outcome}'
 
 ## Use plink to identify proxy snps instruments that were not avaliable in the outcome
 rule FindProxySnps:
     input:
-        MissingSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt"
+        MissingSNPs = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MissingSNPs.txt"
     output:
-        ProxyList = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld",
+        ProxyList = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld",
     params:
-        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys",
+        Outcome = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys",
         ref = REF
     shell:
         """
@@ -183,45 +196,47 @@ rule FindProxySnps:
 ## Extract proxy SNPs from outcome gwas
 rule ExtractProxySnps:
     input:
-        OutcomeSummary = DataOut + "{OutcomeCode}/{OutcomeCode}_formated.txt.gz",
-        OutcomeSNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
-        OutcomeProxys = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld"
+        OutcomeSummary = "data/formated/{OutcomeCode}/{OutcomeCode}_formated.txt.gz",
+        OutcomeSNPs = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        OutcomeProxys = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_Proxys.ld"
     output:
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
     params:
-        Outcome = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        Outcome = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     script:
         'src/ExtractProxySNPs.R'
 
 ## Use TwoSampleMR to harmonize exposure and outcome datasets
 rule Harmonize:
     input:
-        script = 'src/DataHarmonization.R',
-        ExposureSummary = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSummary = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
-        ProxySNPs = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv"
+        ExposureSummary = "data/{Project}/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSummary = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_ProxySNPs.txt",
+        ProxySNPs = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv"
     output:
-        Harmonized = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
+        Harmonized = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
     params:
         Pthreshold = '{Pthreshold}',
         excposurecode = "{ExposureCode}",
-        outcomecode = "{OutcomeCode}"
-    shell:
-        'Rscript {input.script} {input.ExposureSummary} {input.OutcomeSummary} {input.ProxySNPs} {params.Pthreshold} {params.excposurecode} {params.outcomecode} {output.Harmonized}'
+        outcomecode = "{OutcomeCode}",
+        regions_chrm = EXCLUSION["CHROM"],
+        regions_start = EXCLUSION["START"],
+        regions_stop = EXCLUSION["STOP"],
+        rlib = RLIB
+    script: "src/DataHarmonization.R"
 
 ## Use MR-PRESSO to conduct a global heterogenity test and
 ## outlier test to identify SNPs that are outliers
 rule MrPresso:
     input:
         script = 'src/MRPRESSO.R',
-        mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
+        mrdat = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
     output:
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso.txt",
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso.txt",
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
     params:
-        out = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
+        out = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
     shell:
         'Rscript {input.script} {input.mrdat} {params.out}'
 
@@ -229,152 +244,187 @@ rule MrPresso:
 rule MRPRESSO_wo_outliers:
     input:
         script = 'src/MRPRESSO_wo_outliers.R',
-        mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        mrdat = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
     output:
-        DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
+        "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
     params:
-        out = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
+        out = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso"
     shell:
         'Rscript {input.script} {input.mrdat} {params.out}'
 
 ## Conduct MR analysis
 rule MR_analysis:
     input:
-        script = 'src/MR_analysis.R',
-        mrdat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+        mrdat = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
     output:
-        DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt',
-        DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_egger_plei.txt',
-        DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt'
+        'data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt',
+        'data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_egger_plei.txt',
+        'data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt'
     params:
-        out = DataOut + '{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}'
-    shell:
-        'Rscript {input.script} {input.mrdat} {params.out}'
+        out = 'data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}'
+    script: 'src/MR_analysis.R'
 
-## define list of harmonized datasets so they can be merged into a single file
-def mrpresso_MRdat_input(wildcards):
-    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+rule steiger:
+    input:
+        mrdat = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+    output:
+        outfile = 'data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_steiger.txt'
+    params:
+        rlib = RLIB,
+        pt = "{Pthreshold}"
+    script: 'src/SteigerTest.R'
+
+## define list of steiger estimates so they can be merged into a single file
+def MR_steiger_input(wildcards):
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_steiger.txt",
         filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
-        Pthreshold=Pthreshold)
+        Pthreshold=Pthreshold,
+        Project = Project)
+
+rule merge_steiger:
+        input: mr_steiger = MR_steiger_input
+        output: 'results/{Project}/All/steiger.txt'
+        shell: "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_steiger} > {output}"
+
+rule power:
+    input: infile = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
+    output: outfile = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_power.txt"
+    script: 'src/PowerEstimates.R'
+
+## define list of power estimates so they can be merged into a single file
+def MR_power_input(wildcards):
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_power.txt",
+        filtered_product,
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold,
+        Project = Project)
+
+rule merge_power:
+    input: mr_power = MR_power_input
+    output: 'results/{Project}/All/power.txt'
+    shell: "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_power} > {output}"
+
+## define list of harmonized datasets so they can be merged into a single file
+def mrpresso_MRdat_input(wildcards):
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        filtered_product,
+        ExposureCode=EXPOSURES.index.tolist(),
+        OutcomeCode=OUTCOMES.index.tolist(),
+        Pthreshold=Pthreshold,
+        Project = Project)
 
 rule merge_mrpresso_MRdat:
     input:
         dat = mrpresso_MRdat_input,
         script = 'src/ConcatMRdat.R'
     output:
-        DataOutput + 'All/mrpresso_MRdat.csv'
+        'results/{Project}/All/mrpresso_MRdat.csv'
     shell:
         'Rscript {input.script} {output} {input.dat}'
-        #"awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.dat} > {output}"
 
 ## define list of global MR-PRESSO tests so they can be merged into a single file
 def mrpresso_global_input(wildcards):
-    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
         filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
-        Pthreshold=Pthreshold)
+        Pthreshold=Pthreshold,
+        Project = Project)
 def mrpresso_global_wo_outliers_input(wildcards):
-    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
         filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
-        Pthreshold=Pthreshold)
+        Pthreshold=Pthreshold,
+        Project = Project)
 
 rule merge_mrpresso_global:
     input:
         mrpresso_global = mrpresso_global_input,
-        # mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
-        #script = 'src/ConcatMRpresso.R'
     output:
-        DataOutput + 'All/global_mrpresso.txt'
+        'results/{Project}/All/global_mrpresso.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mrpresso_global} {input.mrpresso_global_wo_outliers}'
-        # "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} {input.mrpresso_global_wo_outliers} > {output}"
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global} > {output}"
 
 rule merge_mrpresso_global_wo_outliers:
     input:
         mrpresso_global_wo_outliers = mrpresso_global_wo_outliers_input,
-        #script = 'src/ConcatMRpresso.R'
     output:
-        DataOutput + 'All/global_mrpresso_wo_outliers.txt'
+        'results/{Project}/All/global_mrpresso_wo_outliers.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mrpresso_global} {input.mrpresso_global_wo_outliers}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mrpresso_global_wo_outliers} > {output}"
 
 ## define list of Heterogenity tests so they can be merged into a single file
 def MR_heterogenity_input(wildcards):
-    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt",
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_heterogenity.txt",
         filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
-        Pthreshold=Pthreshold)
+        Pthreshold=Pthreshold,
+        Project = Project)
 
 rule merge_heterogenity:
     input:
         mr_heterogenity = MR_heterogenity_input,
-        #script = 'src/ConcatHeterogenity.R'
     output:
-        DataOutput + 'All/heterogenity.txt'
+        'results/{Project}/All/heterogenity.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mr_heterogenity}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_heterogenity} > {output}"
 
 ## define list of MR Egger intercept tests so they can be merged into a single file
 def MR_plei_input(wildcards):
-    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_egger_plei.txt",
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_egger_plei.txt",
         filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
-        Pthreshold=Pthreshold)
+        Pthreshold=Pthreshold,
+        Project = Project)
 
 rule merge_egger:
     input:
         mr_pleiotropy = MR_plei_input,
-        #script = 'src/ConcatPleiotropy.R'
     output:
-        DataOutput + 'All/pleiotropy.txt'
+        'results/{Project}/All/pleiotropy.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mr_heterogenity}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_pleiotropy} > {output}"
 
 ## define list of MR results so they can be merged into a single file
 def MR_Results_input(wildcards):
-    return expand(DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt",
+    return expand("data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt",
         filtered_product,
         ExposureCode=EXPOSURES.index.tolist(),
         OutcomeCode=OUTCOMES.index.tolist(),
-        Pthreshold=Pthreshold)
+        Pthreshold=Pthreshold,
+        Project = Project)
 
 rule merge_mrresults:
     input:
         mr_results = MR_Results_input,
-        #script = 'src/ConcatMRresults.R'
     output:
-        DataOutput + 'All/MRresults.txt'
+        'results/{Project}/All/MRresults.txt'
     shell:
-        #'Rscript {input.script} {output} {input.mr_results}'
         "awk 'FNR==1 && NR!=1{{next;}}{{print}}' {input.mr_results} > {output}"
 
 ## Write a html Rmarkdown report
 rule html_Report:
     input:
-        script = 'src/mr_report.Rmd',
-        ExposureSnps = DataOut + "{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
-        OutcomeSnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
-        ProxySnps = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
-        HarmonizedDat = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
-        mrpresso_global = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
-        mrpresso_global_wo_outliers = DataOut + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt"
+        markdown = "src/mr_report.Rmd",
+        ExposureSnps = "data/{Project}/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
+        OutcomeSnps = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_SNPs.txt",
+        ProxySnps = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MatchedProxys.csv",
+        HarmonizedDat = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
+        mrpresso_global = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global.txt",
+        mrpresso_global_wo_outliers = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
+        power = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_power.txt"
     output:
-        DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html"
+        outfile = "results/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Analaysis.html"
     params:
         rwd = RWD,
-        output_dir = DataOutput + "{ExposureCode}/{OutcomeCode}/",
-        output_name = DataOutput + "{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
+        output_dir = "results/{Project}/{ExposureCode}/{OutcomeCode}/",
+        output_name = "results/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
         ExposureCode = '{ExposureCode}',
         OutcomeCode = '{OutcomeCode}',
         Pthreshold = "{Pthreshold}",
@@ -382,21 +432,33 @@ rule html_Report:
         kbthreshold = kb,
         Exposure = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['NAME'],
         Outcome = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['NAME']
-    shell:
-        "R -e 'rmarkdown::render("
-        """"{input.script}", clean = TRUE, intermediates_dir = "{params.output_dir}", output_file = "{output}", output_dir = "{params.output_dir}", \
-params = list(rwd = "{params.rwd}", \
-exposure.snps = "{input.ExposureSnps}", \
-outcome.snps = "{input.OutcomeSnps}", \
-proxy.snps = "{input.ProxySnps}", \
-harmonized.dat = "{input.HarmonizedDat}", \
-mrpresso_global = "{input.mrpresso_global}", \
-outcome.code = "{params.OutcomeCode}", \
-exposure.code = "{params.ExposureCode}", \
-Outcome = "{params.Outcome}", \
-Exposure = "{params.Exposure}", \
-p.threshold = "{params.Pthreshold}", \
-r2.threshold = "{params.r2threshold}", \
-kb.threshold = "{params.kbthreshold}", \
-out = "{params.output_name}"))' --slave
-        """
+    script: "src/RenderReport.R"
+
+## Write a html Rmarkdown report
+rule aggregate_Report:
+    input:
+        markdown = "src/FinalReport.Rmd",
+        mrresults = "results/{Project}/All/MRresults.txt",
+        mrdat = "results/{Project}/All/mrpresso_MRdat.csv",
+        mrpresso_global = "results/{Project}/All/global_mrpresso.txt",
+        mrpresso_global_wo_outliers = "results/{Project}/All/global_mrpresso_wo_outliers.txt",
+        egger = "results/{Project}/All/pleiotropy.txt",
+        power = "results/{Project}/All/power.txt",
+        steiger = "results/{Project}/All/steiger.txt"
+    output:
+        outfile = "results/{Project}/All/{Project}_MR_Analaysis_{DATE}.html",
+        HarmonizedDatasets = "results/{Project}/All/{Project}_HarmonizedDatasets_{DATE}.csv",
+        MRsummary = "results/{Project}/All/{Project}_MRsummary_{DATE}.csv",
+        WideMRResults = "results/{Project}/All/{Project}_WideMRResults_{DATE}.csv",
+        MRbest = "results/{Project}/All/{Project}_MRbest_{DATE}.csv",
+        PublicationRes = "results/{Project}/All/{Project}_PublicationRes_{DATE}.csv",
+        heatmap = "results/{Project}/All/{Project}_heatmap{DATE}.png",
+    params:
+        rlib = RLIB,
+        rwd = RWD,
+        today_date = "{DATE}",
+        project = '{Project}',
+        output_dir = "results/{Project}/All/",
+        exposures = EXPOSURES.index,
+        outcomes = OUTCOMES.index
+    script: "src/RenderFinalReport.R"

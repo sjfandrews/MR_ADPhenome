@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+rujOGY	eSFJAe	Chauhan2019bi	Evangelou2018pp	5e-8	FALSE	0	383.3032306509454	0.6098

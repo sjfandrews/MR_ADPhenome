@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+K4DV5g	XoCFwu	Klimentidis2018mvpa	Grasby2020surfarea	5e-8	TRUE	3	7.2600732368374015	0.7088

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+R5tqeS	7UuubO	Yengo2018bmi	Deming2017ptau	5e-6	FALSE	2.6924230652152924e-4	0.005746207155033881	0.9637768378488133
+R5tqeS	7UuubO	Yengo2018bmi	Deming2017ptau	5e-6	TRUE	-0.0018668640945823415	0.0051804501435104506	0.733295670226013

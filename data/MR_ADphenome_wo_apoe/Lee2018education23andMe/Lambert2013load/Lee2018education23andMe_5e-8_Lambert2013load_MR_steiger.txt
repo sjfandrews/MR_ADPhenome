@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+ZBtLDE	Ibk5ff	Lee2018education23andMe	Lambert2013load	0.023805875802884905	0.013218693245314089	TRUE	0	FALSE	5e-8

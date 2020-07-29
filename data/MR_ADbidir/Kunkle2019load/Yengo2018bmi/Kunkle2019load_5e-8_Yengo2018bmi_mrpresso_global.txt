@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+COrj0g	Ypzig6	Yengo2018bmi	Kunkle2019load	5e-8	FALSE	2	26.086201176729805	0.0042

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+9vvY9j	zE1Q39	Niarchou2020fish	Huang2017aaos	5e-6	TRUE	0	NA	NA

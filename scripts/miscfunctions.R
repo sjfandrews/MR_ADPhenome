@@ -1,72 +1,67 @@
 ## ================================================================================ ##
 ##                                Misc functions                                    ##
 
-outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos", 
-             "Deming2017ab42", "Deming2017ptau", "Deming2017tau", 
+outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos",
+             "Deming2017ab42", "Deming2017ptau", "Deming2017tau",
              "Hilbar2017hipv", "Hilbar2015hipv", "Grasby2020surfarea", "Grasby2020thickness",
-             "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany", "Beecham2014status")
+             "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany", "Beecham2014status", 
+             "Chauhan2019bi")
 ## Exposures to include in the results
 exposures = c("Yengo2018bmi", "Xue2018diab",
               "Niarchou2020meat", "Niarchou2020fish",
               "Wells2019hdiff","Willer2013hdl", "Willer2013ldl", "Willer2013tc",
               "Willer2013tg", "Dashti2019slepdur",  "Day2018sociso",
-              "Klimentidis2018mvpa", "Evangelou2018dbp", "Evangelou2018sbp", 
+              "Klimentidis2018mvpa", "Evangelou2018dbp", "Evangelou2018sbp",
               "Evangelou2018pp", "Liu2019drnkwk23andMe", "Liu2019smkcpd23andMe", "Liu2019smkint23andMe",
-              "Jansen2018insomnia23andMe", "Howard2019dep23andMe", "SanchezRoige2019auditt23andMe", 
+              "Jansen2018insomnia23andMe", "Howard2019dep23andMe", "SanchezRoige2019auditt23andMe",
               "Lee2018education23andMe")
 
 ## Sample Sizes
-samplesize <- tibble(
-  code = c('Liu2019drnkwk', 'Liu2019smkint', 'Liu2019smkcpd', 'SanchezRoige2018auditt', 
-           'NealeLab2018oilfish', 'Wells2019hdiff', 'Xue2018diab',
-           'Yengo2018bmi', 'Willer2013tc', 'Willer2013ldl', 'Willer2013hdl', 
-           'Willer2013tg', 'Evangelou2018dbp', 'Evangelou2018sbp', 'Evangelou2018pp',
-           'Howard2018dep', 'Wray2018mdd', 'Jansen2018insom', 'Dashti2019slepdur',
-           'Day2018sociso', 'Lee2018educ', 'Huang2017aaos', 'Deming2017ab42',
-           'Hilbar2017hipv', 'Hilbar2015hipv', 'Lambert2013load', 'Kunkle2019load',
-           'Beecham2014braak4', 'Beecham2014npany', 'Deming2017ptau', 'Deming2017tau',
-           'Beecham2014vbiany', 'Klimentidis2018mvpa', "Lee2018education23andMe",
-           "Liu2019drnkwk23andMe", "Liu2019smkint23andMe", "Liu2019smkcpd23andMe", 
-           "SanchezRoige2019auditt23andMe", "Jansen2018insomnia23andMe", "Howard2019dep23andMe", 
-           "Niarchou2020meat", "Niarchou2020fish", "Grasby2020surfarea", "Grasby2020thickness"),
-  trait = c("Alcohol Consumption", "Smoking Initiation", "Cigarettes per Day", 
-            "AUDIT", "Oily Fish Intake", "Hearing Difficulties",
-            "Type 2 Diabetes", 'BMI', "Total Cholesterol", "Low-density lipoproteins",
-            "High-density lipoproteins", "Triglycerides", "Diastolic Blood Pressure",
-            "Systolic Blood Pressure", "Pulse Pressure", "Depressive Symptoms", 
-            "Major Depressive Disorder", "Insomnia Symptoms", "Sleep Duration",
-            "Social Isolation", "Educational Attainment", "AAOS", "AB42", 
-            "Hippocampal Volume", "Hippocampal Volume", "LOAD", "LOAD",
-            "Neurofibrillary Tangles", "Neuritic Plaques", "Ptau181", "Tau", 
-            "Vascular Brain Injury", "Moderate-to-vigorous PA", 
-            "Educational Attainment", "Alcohol Consumption", 
-            "Smoking Initiation", "Cigarettes per Day",
-            "AUDIT", "Insomnia Symptoms", "Depression", 
-            "Meat diet", "Fish and Plant diet", "Cortical Surface Area", "Cortical Thickness"),
-  pmid = c(30643251, 30643251, 30643251, 30336701, NA, 31564434, 30054458, 30124842, 24097068, 24097068, 24097068, 24097068, 30224653, 30224653, 30224653, 29662059, 29700475, 30804565, 30846698, 29970889, 30038396, 28628103, 28247064, 28098162, 25607358, 24162737, 30820047, 25188341, 25188341, 28247064, 28247064, 25188341, 29899525, 
-           30038396, 30643251, 30643251, 30643251, 30336701, 30804565, 30718901, 32066663, 32066663, 32193296, 32193296),
-  logistic = c(FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, 
-               FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE, 
-               TRUE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, 
-               FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE),
-  samplesize = c(537349, 286736, 263954, 121600, 359340, 250389, 659316, 690495, 188577, 
-                 188577, 188577, 188577, 757601, 757601, 757601, 322580, 480359, 386533, 446118, 
-                 452302, 766345, 40255, 3146, 26814, 13688, 54162, 63926, 4735, 4046, 3146, 3146, 
-                 2764, 377234, 
-                 1131881, 941280, 1232091, 337334, 141932, 1331010, 807553, 335576, 335576, 33709, 33709),
-  ncase = c(NA, 156452, NA, NA, NA, 87056, 62892, NA, NA, NA, NA, NA, NA, NA, NA,  113769, 
-            135458, 109402, NA, NA, NA, 14406, NA, NA, NA, 17008, 21982, 2927, 3426, NA, NA, 992, NA, 
-            NA, NA, 557337, NA, NA, 397972, 246363, NA, NA, NA, NA),
-  ncontrol = c(NA, 130284, NA, NA, NA, 163333, 596424, NA, NA, NA, NA, NA, NA, NA, NA,  208811, 
-               344901, 277131, NA, NA, NA, 25849, NA, NA, NA, 37154, 41944, 1808, 620, NA, NA, 1772, NA, 
-               NA, NA, 674754, NA, NA, 933038, 561190, NA, NA, NA, NA)) 
+samplesize = tribble(~code, ~domain, ~trait, ~pmid, ~logistic, ~samplesize, ~ncase, ~ncontrol, ~prevelance,
+                  "Lambert2013load", "Diagnosis", "LOAD", 0820047, TRUE, 63926, 21982, 41944, 0.31,
+                  "Kunkle2019load", "Diagnosis", "LOAD", 24162737, TRUE, 54162, 17008, 37154, 0.31,
+                  "Huang2017aaos", "Diagnosis", "AAOS", 28628103, TRUE, 40255, 14406, 25849, 0.31,
+                  "Deming2017ab42", "CSF", "AB42", 28247064, FALSE, 3146, NA, NA, NA,
+                  "Deming2017ptau", "CSF", "Ptau181", 28247064, FALSE, 3146, NA, NA, NA,
+                  "Deming2017tau", "CSF", "Tau", 28247064, FALSE, 3146, NA, NA, NA,
+                  "Hilbar2017hipv", "Neuroimaging", "Hippocampal Volume", 28098162, FALSE, 26814, NA, NA, NA,
+                  "Hilbar2015hipv", "Neuroimaging", "Hippocampal Volume", 25607358, FALSE, 13688, NA, NA, NA,
+                  "Grasby2020surfarea", "Neuroimaging", "Cortical Surface Area", 32193296, FALSE, 33709, NA, NA, NA,
+                  "Grasby2020thickness","Neuroimaging", "Cortical Thickness", 32193296, FALSE, 33709, NA, NA, NA,
+                  "Beecham2014npany", "Neuropathology", "Neuritic Plaques", 25188341, TRUE, 4046, 3426, 620, 0.36,
+                  "Beecham2014braak4", "Neuropathology", "Neurofibrillary Tangles", 25188341, TRUE, 4735, 2927, 1808, 0.93,
+                  "Beecham2014vbiany", "Neuropathology", "Vascular Brain Injury", 25188341, TRUE, 2764, 992, 1772, 0.2,
+                  "Yengo2018bmi", "Health", "BMI", 30124842, FALSE, 690495, NA, NA, NA,
+                  "Xue2018diab", "Health", "Type 2 Diabetes", 30054458, TRUE, 659316, 62892, 596424, 0.085,
+                  "Niarchou2020meat", "Lifestyle", "Meat diet", 32066663, FALSE, 335576, NA, NA, NA,
+                  "Niarchou2020fish", "Lifestyle", "Fish and Plant diet", 32066663, FALSE, 335576, NA, NA, NA,
+                  "Wells2019hdiff", "Health", "Hearing Difficulties", 31564434, FALSE, 250389, 87056, 163333, 0.35,
+                  "Willer2013hdl", "Health", "High-density lipoproteins", 24097068, FALSE, 188577, NA, NA, NA,
+                  "Willer2013ldl", "Health", "Low-density lipoproteins", 24097068, FALSE, 188577, NA, NA, NA,
+                  "Willer2013tc", "Health", "Total Cholesterol", 24097068, FALSE, 188577, NA, NA, NA,
+                  "Willer2013tg", "Health", "Triglycerides", 24097068, FALSE, 188577, NA, NA, NA,
+                  "Dashti2019slepdur",  "Psychosocial", "Sleep Duration", 30846698, FALSE, 446118, NA, NA, NA,
+                  "Day2018sociso", "Psychosocial", "Social Isolation", 29970889, FALSE, 452302, NA, NA, NA,
+                  "Klimentidis2018mvpa", "Lifestyle", "Moderate-to-vigorous PA", 29899525, FALSE, 377234, NA, NA, NA,
+                  "Evangelou2018dbp", "Health", "Diastolic Blood Pressure", 30224653, FALSE, 757601, NA, NA, NA,
+                  "Evangelou2018sbp", "Health", "Systolic Blood Pressure", 30224653, FALSE, 757601, NA, NA, NA,
+                  "Evangelou2018pp", "Health", "Pulse Pressure", 30224653, FALSE, 757601, NA, NA, NA,
+                  "Liu2019drnkwk23andMe", "Lifestyle", "Alcohol Consumption", 30643251, FALSE, 941280, NA, NA, NA,
+                  "Liu2019smkcpd23andMe", "Lifestyle", "Cigarettes per Day", 30643251, FALSE, 263954, NA, NA, NA,
+                  "Liu2019smkint23andMe","Lifestyle", "Smoking Initiation", 30643251, TRUE, 1232091, 557337, 674754, 0.45,
+                  "Jansen2018insomnia23andMe", "Psychosocial", "Insomnia Symptoms", 30804565, TRUE, 1331010, 397972, 933038, 0.29,
+                  "Howard2019dep23andMe", "Psychosocial", "Depression", 30718901, TRUE, 807553, 246363, 561190, 0.32,
+                  "SanchezRoige2019auditt23andMe", "Lifestyle", "AUDIT", 30336701, FALSE, 141932, NA, NA, NA,
+                  "Lee2018education23andMe", "Psychosocial", "Educational Attainment", 30038396, FALSE, 1131881, NA, NA, NA,
+                  "Chauhan2019bi", "Neuropathology", "Brain Infarcts", 30651383, TRUE, 21682, 3726, 17956, 0.2
+                  )
 
 
 ## negate
 `%nin%` = Negate(`%in%`)
 
-## Standardization of SNP effect and its standard error using z-statistic, allele 
-## frequency and sample size. Based on gsmr::std_effect. 
+## Standardization of SNP effect and its standard error using z-statistic, allele
+## frequency and sample size. Based on gsmr::std_effect.
 ## http://cnsgenomics.com/software/gsmr/#Tutorial
 std_beta = function(z, eaf, n){
   std.b = z/sqrt(2 * eaf * (1 - eaf) * (n + z^2))
@@ -78,13 +73,13 @@ std_se = function(z, eaf, n){
   std.se
 }
 
-# Calculated F-statistics 
-## Burgess, Stephen, Simon G. Thompson, and CRP CHD Genetics Collaboration. 2011. 
+# Calculated F-statistics
+## Burgess, Stephen, Simon G. Thompson, and CRP CHD Genetics Collaboration. 2011.
 ## International Journal of Epidemiology 40 (3): 755–64.
 f_stat = function(N, K, R){
   f = ((N-K-1) / K) * (R/(1-R))}
 
-## Proportion of phenotypic variance explained by SNP 
+## Proportion of phenotypic variance explained by SNP
 ## https://doi.org/10.1371/journal.pone.0120758.s001
 snp.pve <- function(eaf, beta, se, n){
   (2*eaf*(1 - eaf)*beta^2) / (2 * beta * eaf * (1-eaf) + se^2 * 2 * n * eaf * (1-eaf))
@@ -96,12 +91,12 @@ round_sci <- function(x){ifelse(x < 0.001, formatC(x, format = "e", digits = 2),
 ## replace pvalues with stars
 signif.num <- function(x) {
   symnum(x, corr = FALSE, na = FALSE, legend = FALSE,
-         cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1), 
+         cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
          symbols = c("***", "**", "*", ".", " "))
 }
 
-## Function for spreading multiple columns 
-# https://community.rstudio.com/t/spread-with-multiple-value-columns/5378 
+## Function for spreading multiple columns
+# https://community.rstudio.com/t/spread-with-multiple-value-columns/5378
 myspread <- function(df, key, value) {
   # quote key
   keyq <- rlang::enquo(key)
@@ -128,10 +123,10 @@ AllEqual <- structure(function(x) {
 
 passfunc <- function(ivw.p, ivw.b, mre.p, mre.b, wme.p, wme.b, wmb.p, wmb.b){
   ifelse(AllEqual(c(
-    ifelse(ivw.p < 0.05, sign(ivw.b), NA), 
+    ifelse(ivw.p < 0.05, sign(ivw.b), NA),
     ifelse(mre.p < 0.05, sign(mre.b), NA),
     ifelse(wme.p < 0.05, sign(wme.b), NA),
     ifelse(wmb.p < 0.05, sign(wmb.b), NA)
-  )) == TRUE, 
+  )) == TRUE,
   TRUE, FALSE)
 }

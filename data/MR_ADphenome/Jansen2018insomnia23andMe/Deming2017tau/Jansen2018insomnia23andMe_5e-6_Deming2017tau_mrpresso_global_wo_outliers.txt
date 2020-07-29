@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-wevfFq	WI9R9q	Deming2017tau	Jansen2018insomnia23andMe	5e-6	TRUE	0	NA	NA
+fkiAQk	bOpEFa	Deming2017tau	Jansen2018insomnia23andMe	5e-6	TRUE	0	NA	NA

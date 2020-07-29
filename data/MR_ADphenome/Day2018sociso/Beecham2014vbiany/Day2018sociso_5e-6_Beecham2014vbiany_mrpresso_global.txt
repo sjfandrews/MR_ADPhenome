@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-e1lKIA	8puu51	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	0	80.15839089067121	0.5233
+LDNEit	ZbfsA9	Beecham2014vbiany	Day2018sociso	5e-6	FALSE	0	80.15839089067121	0.5351

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+AoAPk7	duptjR	Liu2019smkint23andMe	Grasby2020surfarea	5e-6	FALSE	-9.98319703039767e-4	7.410824773749837e-4	0.1853434358296385
+AoAPk7	duptjR	Liu2019smkint23andMe	Grasby2020surfarea	5e-6	TRUE	-6.754990750057277e-4	5.794005061638357e-4	0.25202904758536815

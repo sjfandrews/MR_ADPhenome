@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+yBcpYH	i1FeP7	Grasby2020surfarea	Dashti2019slepdur	5e-6	TRUE	2	223.06473875174433	0.0467

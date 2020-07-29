@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	1	24.064920876223947	0.0346

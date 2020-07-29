@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+fiF0zT	UeMv55	Niarchou2020fish	Beecham2014npany	5e-6	FALSE	0	22.816100085595675	0.0319

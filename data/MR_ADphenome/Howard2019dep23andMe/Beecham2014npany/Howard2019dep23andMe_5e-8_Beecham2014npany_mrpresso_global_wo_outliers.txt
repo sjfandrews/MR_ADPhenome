@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-PC2TkJ	YnrD4x	Beecham2014npany	Howard2019dep23andMe	5e-8	TRUE	0	NA	NA
+PB967g	lPRHmR	Beecham2014npany	Howard2019dep23andMe	5e-8	TRUE	0	NA	NA

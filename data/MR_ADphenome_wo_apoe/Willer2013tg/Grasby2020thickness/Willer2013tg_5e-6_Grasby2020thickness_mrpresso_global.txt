@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+I4xxDT	2YUam6	Grasby2020thickness	Willer2013tg	5e-6	FALSE	1	166.57665943015118	<1e-04

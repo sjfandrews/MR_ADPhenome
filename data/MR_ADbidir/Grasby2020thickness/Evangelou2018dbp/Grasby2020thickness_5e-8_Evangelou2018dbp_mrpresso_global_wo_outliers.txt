@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+HurZgf	SRElGr	Evangelou2018dbp	Grasby2020thickness	5e-8	TRUE	2	NA	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gvL0Od	ysfE1f	Niarchou2020fish	Grasby2020surfarea	5e-6	FALSE	1	87.2517971490438	2e-4

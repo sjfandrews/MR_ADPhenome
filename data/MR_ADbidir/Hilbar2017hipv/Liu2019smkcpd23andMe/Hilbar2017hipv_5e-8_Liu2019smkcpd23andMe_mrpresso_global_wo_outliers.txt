@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+4o5oH2	4hHFV2	Liu2019smkcpd23andMe	Hilbar2017hipv	5e-8	TRUE	0	NA	NA

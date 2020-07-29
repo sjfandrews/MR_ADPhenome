@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+j32oQz	rER6Vf	Grasby2020thickness	Day2018sociso	5e-8	FALSE	MR Egger	23.79244886962301	13	0.033093744430673484
+j32oQz	rER6Vf	Grasby2020thickness	Day2018sociso	5e-8	FALSE	Inverse variance weighted	23.795044857739313	14	0.04850142384456651

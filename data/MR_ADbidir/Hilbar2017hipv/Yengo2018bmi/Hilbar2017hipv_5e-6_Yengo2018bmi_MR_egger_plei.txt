@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+YsLoBn	xI7sOy	Yengo2018bmi	Hilbar2017hipv	5e-6	FALSE	-0.004925941039788379	0.002517622523649944	0.07064586725090263
+YsLoBn	xI7sOy	Yengo2018bmi	Hilbar2017hipv	5e-6	TRUE	0.001901694681981322	0.00315672617338364	0.5603020090692792

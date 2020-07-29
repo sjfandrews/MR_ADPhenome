@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	FALSE	Inverse variance weighted (fixed effects)	12	1	-1.7443463747933104e-7	5.124203627122912e-7	0.7335454058399293
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	FALSE	Weighted median	12	1	-4.7203997959624996e-7	7.805386989641201e-7	0.5453372864210819
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	FALSE	Weighted mode	12	1	-5.073510690534112e-7	1.1316572833856722e-6	0.6626204329348439
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	FALSE	MR Egger	12	1	-2.8217850253465403e-6	2.450407257798624e-6	0.2762912193126265
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	TRUE	Inverse variance weighted (fixed effects)	11	1	-5.134308444141559e-7	5.21830101413964e-7	0.3251626034078042
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	TRUE	Weighted median	11	1	-6.322528263082781e-7	8.104478937094921e-7	0.43531573155184755
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	TRUE	Weighted mode	11	1	8.222963241356815e-7	1.3252810615696577e-6	0.5488274655299894
+KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	TRUE	MR Egger	11	1	-1.5948542233680604e-6	2.1665554396529595e-6	0.4804002387703957

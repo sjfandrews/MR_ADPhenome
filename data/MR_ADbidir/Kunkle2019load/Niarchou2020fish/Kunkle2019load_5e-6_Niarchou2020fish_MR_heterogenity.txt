@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+RBu43p	vagm0s	Niarchou2020fish	Kunkle2019load	5e-6	FALSE	MR Egger	83.42837271668894	34	4.88056670686072e-6
+RBu43p	vagm0s	Niarchou2020fish	Kunkle2019load	5e-6	FALSE	Inverse variance weighted	83.47656151119705	35	7.726870338156125e-6
+RBu43p	vagm0s	Niarchou2020fish	Kunkle2019load	5e-6	TRUE	MR Egger	57.22608548717516	33	0.005548069540568181
+RBu43p	vagm0s	Niarchou2020fish	Kunkle2019load	5e-6	TRUE	Inverse variance weighted	57.376580727797105	34	0.007335259267472321

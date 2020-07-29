@@ -1,0 +1,740 @@
+# snakemake -s mr.smk --configfile config/config.yaml -j 4 --keep-going
+# snakejob -s mr.smk --configfile config/config.yaml -j 1000 --max-jobs-per-second 1 --keep-going --notemp
+
+PROJECT: "MR_ADphenome"
+RLIB: "renv/library/R-3.6/x86_64-pc-linux-gnu"
+
+REF: 'raw/EUR_All_Chr'
+clumpr2: 0.001 ## Default in TwoSample MR
+clumpkb: 10000 ## 10 MB, default in TwoSampleMR
+Pthreshold: ['5e-8', '5e-6']
+
+EXCLUSION:
+  -
+    NAME: NULL
+    NOTE: NULL
+    CHROM: NULL
+    START: NULL
+    STOP: NULL
+
+
+# Forbidden wildcard combinations
+## Blacklist alcohol consumption onto Kunkle 2019 (LOAD) and Hilbar 2017 (HV) in line with data use aggreements
+## Blacklist all other phenotypes onto Lambert 2013 (LOAD) and Hilbar 2015 (HV)
+missing: [
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Yengo2018bmi", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Yengo2018bmi", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Yengo2018bmi", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Yengo2018bmi", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Xue2018diab", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Xue2018diab", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Xue2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Xue2018diab", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013hdl", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013hdl", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013hdl", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013hdl", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013ldl", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013ldl", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013ldl", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013ldl", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tc", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tc", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tc", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tc", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tg", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tg", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tg", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Willer2013tg", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Dashti2019slepdur", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Dashti2019slepdur", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Dashti2019slepdur", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Dashti2019slepdur", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020meat", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Niarchou2020fish", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Klimentidis2018mvpa", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Klimentidis2018mvpa", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Klimentidis2018mvpa", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Klimentidis2018mvpa", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Day2018sociso", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Day2018sociso", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Day2018sociso", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Day2018sociso", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Wells2019hdiff", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Wells2019hdiff", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Wells2019hdiff", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Wells2019hdiff", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018dbp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018dbp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018dbp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018dbp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018sbp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018sbp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018sbp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018sbp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Evangelou2018pp", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Howard2019dep23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Jansen2018insomnia23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkint23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019smkcpd23andMe", "OutcomeCode" : "Hilbar2015hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Lee2018education23andMe", "OutcomeCode" : "Kunkle2019load", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Liu2019drnkwk23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "SanchezRoige2018auditt23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-6"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Lee2018educ23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-8"},
+   {"Project" : "MR_ADphenome", "ExposureCode" : "Lee2018educ23andMe", "OutcomeCode" : "Hilbar2017hipv", "Pthreshold" : "5e-6"},
+   ]
+
+
+
+EXPOSURES:
+  -
+    CODE: Yengo2018bmi
+    NAME: BMI
+    FILE: raw/GWAS/Yengo2018bmi.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Xue2018diab
+    NAME: Diabetes
+    FILE: raw/GWAS/Xue2018diab.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Niarchou2020meat
+    NAME: 'Meat related diet'
+    FILE: raw/GWAS/Niarchou2020meat.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Niarchou2020fish
+    NAME: 'Fish and plant related diet'
+    FILE: raw/GWAS/Niarchou2020fish.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013hdl
+    NAME: 'HDL cholesterol'
+    FILE: raw/GWAS/Willer2013hdl.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013ldl
+    NAME: 'LDL cholesterol'
+    FILE: raw/GWAS/Willer2013ldl.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013tc
+    NAME: 'Total cholesterol'
+    FILE: raw/GWAS/Willer2013tc.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Willer2013tg
+    NAME: 'Triglycerides'
+    FILE: raw/GWAS/Willer2013tg.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Dashti2019slepdur
+    NAME: 'Sleep Duration'
+    FILE: raw/GWAS/Dashti2019slepdur.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Klimentidis2018mvpa
+    NAME: 'Moderate-Vigours Physical Activity'
+    FILE: raw/GWAS/Klimentidis2018mvpa.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Day2018sociso
+    NAME: 'Social Isolation'
+    FILE: raw/GWAS/Day2018sociso.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Wells2019hdiff
+    NAME: 'Hearing Difficulty'
+    FILE: raw/GWAS/Wells2019hdiff.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Evangelou2018dbp
+    NAME: 'Diastolic Blood Pressure'
+    FILE: raw/GWAS/Evangelou2018dbp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Evangelou2018sbp
+    NAME: 'Systolic Blood Pressure'
+    FILE: raw/GWAS/Evangelou2018sbp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Evangelou2018pp
+    NAME: 'Pulse Pressure'
+    FILE: raw/GWAS/Evangelou2018pp.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Lee2018education23andMe
+    NAME: 'Education'
+    FILE: raw/GWAS/Lee2018education23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: SanchezRoige2019auditt23andMe
+    NAME: 'AUDIT Total'
+    FILE: raw/GWAS/SanchezRoige2019auditt23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Howard2019dep23andMe
+    NAME: 'Depression'
+    FILE: raw/GWAS/Howard2019dep23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Jansen2018insomnia23andMe
+    NAME: 'Insomnia'
+    FILE: raw/GWAS/Jansen2018insomnia23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019smkint23andMe
+    NAME: 'Somking Initiation'
+    FILE: raw/GWAS/Liu2019smkint23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019smkcpd23andMe
+    NAME: 'Smoking Quantity'
+    FILE: raw/GWAS/Liu2019smkcpd23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Liu2019drnkwk23andMe
+    NAME: 'Alcohol Consumption'
+    FILE: raw/GWAS/Liu2019drnkwk23andMe.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+
+
+OUTCOMES:
+  -
+    CODE: Lambert2013load
+    NAME: LOAD
+    FILE: raw/GWAS/Lambert2013load.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Kunkle2019load
+    NAME: LOAD
+    FILE: raw/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Huang2017aaos
+    NAME: AAOS
+    FILE: raw/GWAS/Huang2017aaos.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Deming2017ab42
+    NAME: 'CSF Ab42'
+    FILE: raw/GWAS/Deming2017ab42.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Deming2017ptau
+    NAME: 'CSF Ptau'
+    FILE: raw/GWAS/Deming2017ptau.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Deming2017tau
+    NAME: 'CSF Tau'
+    FILE: raw/GWAS/Deming2017tau.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Hilbar2017hipv
+    NAME: 'Hippocampal Volume'
+    FILE: raw/GWAS/Hilbar2017hipv.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Hilbar2015hipv
+    NAME: 'Hippocampal Volume'
+    FILE: raw/GWAS/Hilbar2015hipv.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Grasby2020thickness
+    NAME: 'Cortical Thickness'
+    FILE: raw/GWAS/Grasby2020thickness.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Grasby2020surfarea
+    NAME: 'Cortical Surface Area'
+    FILE: raw/GWAS/Grasby2020surfarea.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Beecham2014npany
+    NAME: 'Any Neuritic Plaques'
+    FILE: raw/GWAS/Beecham2014npany.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Beecham2014braak4
+    NAME: 'Neurofibrillary Tangles'
+    FILE: raw/GWAS/Beecham2014braak4.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  -
+    CODE: Beecham2014vbiany
+    NAME: 'Vascular Brain Injury'
+    FILE: raw/GWAS/Beecham2014vbiany.chrall.CPRA_b37.tsv.gz
+    COLUMNS:
+      SNP: DBSNP_ID
+      CHROM: CHROM
+      POS: POS
+      REF: REF
+      ALT: ALT
+      AF: AF
+      BETA: BETA
+      SE: SE
+      P: P
+      Z: Z
+      N: N
+      TRAIT: TRAIT
+  # -
+  #   CODE: Chauhan2019bi
+  #   NAME: 'Brain Infarcts'
+  #   FILE: raw/GWAS/Chauhan2019bi.chrall.CPRA_b37.tsv.gz
+  #   COLUMNS:
+  #     SNP: DBSNP_ID
+  #     CHROM: CHROM
+  #     POS: POS
+  #     REF: REF
+  #     ALT: ALT
+  #     AF: AF
+  #     BETA: BETA
+  #     SE: SE
+  #     P: P
+  #     Z: Z
+  #     N: N
+  #     TRAIT: TRAIT

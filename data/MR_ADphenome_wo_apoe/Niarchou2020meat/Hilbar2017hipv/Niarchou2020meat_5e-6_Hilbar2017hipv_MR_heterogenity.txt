@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+kjStWT	jGmAxF	Hilbar2017hipv	Niarchou2020meat	5e-6	FALSE	MR Egger	143.0324861228155	97	0.0016524690243362376
+kjStWT	jGmAxF	Hilbar2017hipv	Niarchou2020meat	5e-6	FALSE	Inverse variance weighted	144.60840702011382	98	0.0015477563556746225
+kjStWT	jGmAxF	Hilbar2017hipv	Niarchou2020meat	5e-6	TRUE	MR Egger	129.86115293713112	96	0.0121954786900325
+kjStWT	jGmAxF	Hilbar2017hipv	Niarchou2020meat	5e-6	TRUE	Inverse variance weighted	130.58539149647223	97	0.01303721746508892

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+KJT0v2	4FAFIu	Xue2018diab	Chauhan2019bi	0.04779384526741616	0.015635232742530817	TRUE	0	FALSE	5e-6

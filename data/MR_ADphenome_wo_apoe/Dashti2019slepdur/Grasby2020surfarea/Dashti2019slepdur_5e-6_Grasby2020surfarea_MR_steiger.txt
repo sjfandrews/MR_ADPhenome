@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+yBcpYH	i1FeP7	Dashti2019slepdur	Grasby2020surfarea	0.012531033513957693	0.006544920294956627	TRUE	2.9031884896113525e-8	TRUE	5e-6
+yBcpYH	i1FeP7	Dashti2019slepdur	Grasby2020surfarea	0.013095618244882477	0.008288512615090459	TRUE	2.840677785709289e-5	FALSE	5e-6

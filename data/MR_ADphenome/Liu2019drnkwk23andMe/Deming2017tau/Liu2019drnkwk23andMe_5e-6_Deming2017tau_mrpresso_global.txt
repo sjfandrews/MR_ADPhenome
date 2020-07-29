@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-awqE8f	jDjwHq	Deming2017tau	Liu2019drnkwk23andMe	5e-6	FALSE	0	164.42691473602366	0.7379
+ADzQ05	WLuBsF	Deming2017tau	Liu2019drnkwk23andMe	5e-6	FALSE	0	164.42691473602366	0.745

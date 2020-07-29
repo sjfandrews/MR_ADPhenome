@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-kSdMtQ	CR0iAg	Kunkle2019load	Xue2018diab	5e-8	FALSE	1	191.45749979947502	<1e-04
+OtTR6x	FAggnF	Kunkle2019load	Xue2018diab	5e-8	FALSE	1	191.45749979947502	<1e-04

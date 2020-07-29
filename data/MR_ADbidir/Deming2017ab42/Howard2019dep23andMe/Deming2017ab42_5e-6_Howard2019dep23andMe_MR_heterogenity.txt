@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+zcVeVr	J2cVLs	Howard2019dep23andMe	Deming2017ab42	5e-6	FALSE	MR Egger	12.595182330496154	9	0.18179543065023787
+zcVeVr	J2cVLs	Howard2019dep23andMe	Deming2017ab42	5e-6	FALSE	Inverse variance weighted	20.788541410634824	10	0.022617300307259575
+zcVeVr	J2cVLs	Howard2019dep23andMe	Deming2017ab42	5e-6	TRUE	MR Egger	3.6945906964360873	8	0.8835742197570422
+zcVeVr	J2cVLs	Howard2019dep23andMe	Deming2017ab42	5e-6	TRUE	Inverse variance weighted	5.416001806392456	9	0.7966421875401144

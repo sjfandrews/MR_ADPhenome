@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-xxHkeD	SDFOMq	Hilbar2017hipv	Liu2019smkcpd23andMe	5e-8	TRUE	1	51.55275029405929	0.1954
+ILU4vq	yZQozD	Hilbar2017hipv	Liu2019smkcpd23andMe	5e-8	TRUE	1	51.55275029405929	0.1873

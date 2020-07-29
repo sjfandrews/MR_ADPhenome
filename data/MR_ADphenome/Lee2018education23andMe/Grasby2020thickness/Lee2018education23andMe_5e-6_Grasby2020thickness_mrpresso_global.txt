@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DHFtD0	9ChpAc	Grasby2020thickness	Lee2018education23andMe	5e-6	FALSE	3	1045.190991368145	<4e-05
+StYhgN	N5bdVo	Grasby2020thickness	Lee2018education23andMe	5e-6	FALSE	4	1045.190991368145	<4e-05

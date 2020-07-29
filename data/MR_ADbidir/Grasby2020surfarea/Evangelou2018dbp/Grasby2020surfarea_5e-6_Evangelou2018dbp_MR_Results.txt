@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	FALSE	Inverse variance weighted (fixed effects)	44	8	-3.179821214081538e-5	4.240461352343021e-6	6.44231821825747e-14
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	FALSE	Weighted median	44	8	-3.392973131301537e-5	8.207137660964258e-6	3.56234236474898e-5
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	FALSE	Weighted mode	44	8	-4.6701235477149755e-5	1.3699588884796225e-5	0.0014275780557172347
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	FALSE	MR Egger	44	8	-6.211317932950816e-5	3.3055622018173975e-5	0.0671887963684028
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	TRUE	Inverse variance weighted (fixed effects)	36	8	-3.751865391542064e-5	4.61209822158616e-6	4.1250282266316206e-16
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	TRUE	Weighted median	36	8	-3.4016981209910856e-5	7.920168109549587e-6	1.747073378813754e-5
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	TRUE	Weighted mode	36	8	-5.1361095894319136e-5	1.522305278649331e-5	0.0018235667272282507
+a19Uw8	Dhx18y	Evangelou2018dbp	Grasby2020surfarea	5e-6	TRUE	MR Egger	36	8	-3.732567854670906e-5	2.442812922150903e-5	0.1357684210059235

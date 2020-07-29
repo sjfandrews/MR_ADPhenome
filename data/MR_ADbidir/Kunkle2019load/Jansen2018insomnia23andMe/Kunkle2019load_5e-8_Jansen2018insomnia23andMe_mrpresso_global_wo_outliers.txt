@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Ad8rZV	K9z4JX	Jansen2018insomnia23andMe	Kunkle2019load	5e-8	TRUE	1	26.705633582855075	0.0373

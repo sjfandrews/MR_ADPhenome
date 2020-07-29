@@ -1,5 +1,5 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-kCNvtv	rclggY	Grasby2020surfarea	Day2018sociso	5e-6	FALSE	MR Egger	117.45532802434452	80	0.00407611862540798
-kCNvtv	rclggY	Grasby2020surfarea	Day2018sociso	5e-6	FALSE	Inverse variance weighted	117.45638889969325	81	0.005060653340885039
-kCNvtv	rclggY	Grasby2020surfarea	Day2018sociso	5e-6	TRUE	MR Egger	98.493754833232	79	0.06797534507322213
-kCNvtv	rclggY	Grasby2020surfarea	Day2018sociso	5e-6	TRUE	Inverse variance weighted	98.50814234924734	80	0.07849172786713206
+jBFFka	NEqoHq	Grasby2020surfarea	Day2018sociso	5e-6	FALSE	MR Egger	117.45532802434452	80	0.00407611862540798
+jBFFka	NEqoHq	Grasby2020surfarea	Day2018sociso	5e-6	FALSE	Inverse variance weighted	117.45638889969325	81	0.005060653340885039
+jBFFka	NEqoHq	Grasby2020surfarea	Day2018sociso	5e-6	TRUE	MR Egger	98.493754833232	79	0.06797534507322213
+jBFFka	NEqoHq	Grasby2020surfarea	Day2018sociso	5e-6	TRUE	Inverse variance weighted	98.50814234924734	80	0.07849172786713206

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+eG5zbP	i8voJT	Kunkle2019load	SanchezRoige2019auditt23andMe	5e-8	FALSE	1	36.04923780619511	0.0019

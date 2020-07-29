@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Zxo9OH	POj5SM	Beecham2014braak4	Howard2019dep23andMe	5e-8	FALSE	0	80.9629939118664	0.5407
+YaIRDx	m1bpCq	Beecham2014braak4	Howard2019dep23andMe	5e-8	FALSE	0	80.9629939118664	0.5407

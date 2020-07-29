@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+UCLjWc	ZUMHaW	Howard2019dep23andMe	Grasby2020thickness	5e-8	FALSE	1	18.628225535643264	0.0221

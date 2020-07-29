@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-inxgyb	Cy5Uce	Grasby2020surfarea	Niarchou2020meat	5e-8	FALSE	-134.5656460110332	186.59951589679562	0.479165102378281	NA
+63JzZ8	FSesYP	Grasby2020surfarea	Niarchou2020meat	5e-8	FALSE	-134.5656460110332	186.59951589679562	0.479165102378281	NA

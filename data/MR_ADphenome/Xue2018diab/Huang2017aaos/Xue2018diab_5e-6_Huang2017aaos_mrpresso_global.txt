@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-DyHjB1	ktkmZw	Huang2017aaos	Xue2018diab	5e-6	FALSE	0	300.37906029406	5e-4
+D4cr9X	C6SMn0	Huang2017aaos	Xue2018diab	5e-6	FALSE	0	300.37906029406	5e-4

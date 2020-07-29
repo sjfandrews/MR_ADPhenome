@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+YmJq34	9F1fmt	Chauhan2019bi	SanchezRoige2019auditt23andMe	5e-6	TRUE	0	NA	NA

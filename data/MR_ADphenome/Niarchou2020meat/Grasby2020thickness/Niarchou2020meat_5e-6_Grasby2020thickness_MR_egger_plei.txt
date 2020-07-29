@@ -1,3 +1,2 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-VI049s	EhJ6aF	Grasby2020thickness	Niarchou2020meat	5e-6	FALSE	-2.647713842687528e-4	3.015468211454773e-4	0.38213510722968846
-VI049s	EhJ6aF	Grasby2020thickness	Niarchou2020meat	5e-6	TRUE	-3.4795489620725547e-4	2.875929859255605e-4	0.2293562713264125
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+mI8WBx	OfMeqj	Grasby2020thickness	Niarchou2020meat	5e-6	FALSE	-2.647713842687528e-4	3.015468211454773e-4	0.38213510722968846	NA

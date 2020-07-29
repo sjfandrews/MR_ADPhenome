@@ -1,3 +1,3 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-ErA43z	8DCfHj	Deming2017ptau	Dashti2019slepdur	5e-6	FALSE	MR Egger	173.5178104074463	178	0.5808865192850667
-ErA43z	8DCfHj	Deming2017ptau	Dashti2019slepdur	5e-6	FALSE	Inverse variance weighted	175.10808751360474	179	0.5682403079281434
+XIjXlR	sUe6Wt	Deming2017ptau	Dashti2019slepdur	5e-6	FALSE	MR Egger	173.5178104074463	178	0.5808865192850667
+XIjXlR	sUe6Wt	Deming2017ptau	Dashti2019slepdur	5e-6	FALSE	Inverse variance weighted	175.10808751360474	179	0.5682403079281434

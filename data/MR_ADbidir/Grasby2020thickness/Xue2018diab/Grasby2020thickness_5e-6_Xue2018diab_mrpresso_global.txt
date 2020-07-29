@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+tyb0tD	MnnJZm	Xue2018diab	Grasby2020thickness	5e-6	FALSE	0	71.35383259086578	2e-4

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+br1TwL	pPNXWV	Niarchou2020meat	Huang2017aaos	0.008175535098619378	0.002984570740137034	TRUE	9.026113190202523e-12	FALSE	5e-6

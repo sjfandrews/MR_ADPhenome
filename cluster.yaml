@@ -28,3 +28,7 @@ FormatExposure:
   mem: 16000
   cores: 2
   time: '24:00'
+FormatOutcome:
+  mem: 16000
+  cores: 2
+  time: '24:00'

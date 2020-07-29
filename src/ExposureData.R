@@ -10,6 +10,7 @@ out.file = args[4] # SPECIFY THE OUTPUT FILE
 
 ### ===== Load packages ===== ###
 suppressMessages(library(tidyverse))   ## For data wrangling
+source('scripts/miscfunctions.R', chdir = TRUE)
 
 ### ===== Read in Data ===== ###
 message("\n READING IN EXPOSURE \n")
@@ -27,6 +28,39 @@ mr_exposure.dat_ld <- read_table2(exposure.clump) %>%
 
 # Filter exposure data for clumped SNPs
 exposure.dat <- exposure.dat %>% filter(SNP %in% mr_exposure.dat_ld$SNP)
+
+# message("Distanced based clumping on lead SNP \n")
+# # Distanced based clumping on lead SNP
+# ls.p <- exposure.dat
+# ls.mat <- ls.p %>%
+#   split(., .$CHROM) %>%
+#   map(., select, SNP,POS) %>%
+#   map(., column_to_rownames, var = "SNP") %>%
+#   map(., dist, method = "manhattan", upper = TRUE) %>%
+#   map_dfr(., tidy) %>%
+#   mutate(clump = case_when(distance <= 250000 ~ 1, distance > 250000 ~ 0))
+#
+# ls.clump <- list()
+# i = 1
+#
+# while(!plyr::empty(ls.p)){
+#   snp1 <- ls.p %>% slice(1) %>% pull(SNP)
+#   message("Distance Clumping: ", snp1)
+#   ls.clump[[i]] <- snp1
+#
+#   snprm <- ls.mat %>%
+#     filter(item1 == snp1 & clump == 1) %>%
+#     pull(item2)
+#
+#   ls.p <- ls.p %>% filter(SNP %nin% snprm) %>% filter(SNP %nin% snp1)
+#   i <- i + 1
+# }
+#
+# ls.clump <- unlist(ls.clump)
+#
+# exposure.dat <- exposure.dat %>%
+#   mutate(LSclump = case_when(SNP %nin% ls.clump ~ FALSE,
+#                            TRUE ~ TRUE)
 
 ### ===== Write Out Exposure ===== ###
 message("\n Writing Out Exposure \n")

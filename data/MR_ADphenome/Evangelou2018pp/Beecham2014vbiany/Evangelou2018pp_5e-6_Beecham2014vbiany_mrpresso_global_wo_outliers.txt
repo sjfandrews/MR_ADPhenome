@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-8QrEjU	7iXnnR	Beecham2014vbiany	Evangelou2018pp	5e-6	TRUE	0	NA	NA
+bfh6mT	wNZdwE	Beecham2014vbiany	Evangelou2018pp	5e-6	TRUE	0	NA	NA

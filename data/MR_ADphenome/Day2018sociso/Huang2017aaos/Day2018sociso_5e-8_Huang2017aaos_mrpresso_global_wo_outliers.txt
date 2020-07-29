@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-G0zBoE	InWVet	Huang2017aaos	Day2018sociso	5e-8	TRUE	0	NA	NA
+cCSSUk	A4IkXt	Huang2017aaos	Day2018sociso	5e-8	TRUE	0	NA	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+geQVJR	uLEA30	Xue2018diab	Kunkle2019load	5e-8	TRUE	1	20.885795752489347	0.0407

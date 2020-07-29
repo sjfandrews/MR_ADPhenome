@@ -1,2 +1,2 @@
 id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-3Zfli6	qs9bjm	Deming2017ptau	Day2018sociso	5e-6	FALSE	0.0015952922528911443	0.0035994061898204335	0.659020849824638	NA
+KST3MP	HYGMPU	Deming2017ptau	Day2018sociso	5e-6	FALSE	0.0015952922528911443	0.0035994061898204335	0.659020849824638	NA
