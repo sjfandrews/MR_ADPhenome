@@ -5,18 +5,19 @@ suppressMessages(library(tidyverse))
 
 summary.path = snakemake@input[["OutcomeSummary"]] # Outcome Summary statistics
 proxy.path = snakemake@input[["OutcomeProxys"]] # prox snps
-outcome.path = snakemake@input[["OutcomeSNPs"]]
+snps.path = snakemake@input[["OutcomeSNPs"]]
 out = snakemake@params[["Outcome"]]
 
 message("READING IN OUTCOME AND PROXY's \n")
 summary.dat <- read_tsv(summary.path, comment = '#', guess_max = 15000000)
 proxy.dat <- read_table2(proxy.path)
-outcome.raw <- read_tsv(outcome.path)
+outcome.raw <- read_tsv(snps.path)
 
 if(empty(proxy.dat)){
   message("NO PROXY SNPS AVALIABLE \n")
   outcome.dat <- outcome.raw %>% filter(!is.na(CHROM))
-} else if (empty(filter(proxy.dat, SNP_A != SNP_B))){
+} else if (empty(filter(proxy.dat, SNP_A != SNP_B)) |
+           empty(filter(summary.dat, SNP %in% (filter(proxy.dat, SNP_A != SNP_B) %>% pull(SNP_B)))) ){
   message("NO PROXY SNPS AVALIABLE \n")
   outcome.dat <- outcome.raw %>% filter(!is.na(CHROM))
   query_snps <- proxy.dat %>%
@@ -77,7 +78,8 @@ if(empty(proxy.dat)){
          AF = NA, BETA = NA, SE = NA, P = NA, N = NA, ref = NA, alt = NA,
          ALT = NA, REF = NA, PHASE = NA) %>%
     write_csv(paste0(out, '_MatchedProxys.csv'))
-} else if (empty(filter(proxy.dat, SNP_A != SNP_B))){
+} else if (empty(filter(proxy.dat, SNP_A != SNP_B)) |
+           empty(filter(summary.dat, SNP %in% (filter(proxy.dat, SNP_A != SNP_B) %>% pull(SNP_B)))) ){
   tibble(proxy.outcome = NA, target_snp = query_snps$SNP_A, proxy_snp = NA, ld.r2 = NA, Dprime = NA, ref.proxy = NA, alt.proxy = NA,
          CHROM = NA, POS = NA, ALT.proxy = NA, REF.proxy = NA,
          AF = NA, BETA = NA, SE = NA, P = NA, N = NA, ref = NA, alt = NA,

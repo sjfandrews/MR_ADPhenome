@@ -19,7 +19,7 @@ mrdat <- mrdat.raw %>%
 
 ## Data Frame of nsnps and number of iterations
 df.NbD <- data.frame(n = c(10, 50, 100, 500, 1000, 1500, 2000),
-                     NbDistribution = c(1000, 5000, 10000, 25000, 50000, 75000, 100000))
+                     NbDistribution = c(10000, 10000, 10000, 25000, 50000, 75000, 100000))
 
 nsnps <- nrow(mrdat)
 SignifThreshold <- 0.05
@@ -31,6 +31,7 @@ NbDistribution <- df.NbD[which.min(abs(df.NbD$n - nsnps)), 2]
 ### ===== MR-PRESSO ===== ###
 message("\n CALCULATING PLEITROPY \n")
 
+set.seed(333)
 mrpresso.out <- mr_presso(BetaOutcome = "beta.outcome",
                                BetaExposure = "beta.exposure",
                                SdOutcome = "se.outcome",
