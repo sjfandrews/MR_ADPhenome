@@ -1,9 +1,23 @@
+mrresults.methods_presso <- read_csv("results/MR_ADphenome/All/MR_ADphenome_WideMRResults_2020-07-27.csv")
+out.final <- read_csv('results/MR_ADphenome/All/MR_ADphenome_PublicationRes_2020-07-27.csv')
+out.final_NOapoe <- read_csv('results/MR_ADphenome_wo_apoe/All/MR_ADphenome_wo_apoe_PublicationRes_2020-07-27.csv')
+
+mr_best <-  read_csv('results/MR_ADphenome/All/MR_ADphenome_MRbest_2020-07-27.csv')
+mr_best_NOapoe <- read_csv('results/MR_ADphenome_wo_apoe/All/MR_ADphenome_wo_apoe_MRbest_2020-07-27.csv')
+mr_best_rev <- read_csv('results/MR_ADbidir/All/MR_ADbidir_MRbest_2020-07-27.csv')
+
 ##--------------------- Writen Report  ------------------------##
 
 ## Summary of tests
-message('We conducted a total of ', nrow(mrresults.methods_presso), ' tests') 
-message('We observed ', nrow(filter(out.final, qval < 0.05)), ' tests that were significant at an FDR < 0.05') 
-message('Of these ', nrow(filter(out.final, qval < 0.05)), ' significant tests, ', nrow(filter(out.final, qval < 0.05 & pass == TRUE)), ' exposure-outcome pairs showed either no evidence of horizontal pleiotropy, or in the presence of horizontal pleiotropy the additional MR sensitivity analysis was significant')
+glue('We conducted a total of {n} tests. 
+     We observed {q} tests that were significant at an FDR < 0.05.
+     Of these {q} significant tests, {p} exposure-outcome pairs showed either no evidence of horizontal pleiotropy, 
+     or in the presence of horizontal pleiotropy the additional MR sensitivity analysis was significant.
+     ', 
+     n = nrow(mrresults.methods_presso), 
+     q = nrow(filter(out.final, qval < 0.05)), 
+     p = nrow(filter(out.final, qval < 0.05 & pass == TRUE))
+     ) 
 
 ## Generate Odds ratios
 res_odds <- mr_best %>% 
@@ -17,7 +31,9 @@ res_odds <- mr_best %>%
                       paste0(round(b, 2), ' [', round(lo_ci, 2), ', ', round(up_ci, 2), ']'))) %>% 
   print(n = Inf) 
 
-res_odds %>% select(outcome, exposure, pt, outliers_removed, b, se, qval, lo_ci, up_ci, or, or_lci95, or_uci95, out) %>% print(n = Inf)
+res_odds %>% 
+  select(outcome, exposure, pt, outliers_removed, b, se, qval, lo_ci, up_ci, or, or_lci95, or_uci95, out) %>% 
+  print(n = Inf)
 
 mr_senseitivy <- function(x){
   senesetivy_p <- select(x, Egger_MR.pval, WME_MR.pval, WMBE_MR.pval)
@@ -122,4 +138,146 @@ written_res <- lapply(1:nrow(res_odds), function(x){
   }
   
 }) %>% unlist()
-written_res
+
+res_odds$written <- written_res
+
+##--------------------- Writen Report  ------------------------##
+
+## Table 4
+out.final %>% 
+  filter(qval < 0.05) %>% 
+  select(-outcome, -exposure, -n_outliers, -snp_r2.exposure, -snp_r2.outcome, 
+         -correct_causal_direction, -steiger_pval) %>% 
+  mutate(outcome.name = fct_relevel(outcome.name, "LOAD", "AAOS", "Neuritic Plaques", "Neurofibrillary Tangles", "Vascular Brain Injury", "Hippocampal Volume", "Cortical Surface Area", "Cortical Thickness")) %>% 
+  arrange(outcome.name) %>% 
+  print(n = Inf) %>%
+  write_csv("sandbox/table4.csv")
+
+# Join results from w/ APOE, wo/ APOE, reverse direction 
+mr_best_joint <- full_join(
+  mr_best %>% 
+    mutate(out = glue("{b} ({se}){p}", 
+                      b = IVW_b, se = IVW_se, p = gtools::stars.pval(qval)), 
+           pt = as.character(pt)) %>% 
+    select(exposure, outcome, pt, qval,  dir = correct_causal_direction, pass, out), 
+  
+  mr_best_NOapoe %>% 
+    mutate(out = glue("{b} ({se}){p}", 
+                      b = IVW_b, se = IVW_se, p = gtools::stars.pval(qval)), 
+           pt = as.character(pt)) %>% 
+    select(exposure, outcome, pt, qval, dir = correct_causal_direction, pass, out),
+  
+  by = c("exposure", "outcome"), 
+  suffix = c(".w_apoe", ".wo_apoe")
+  
+) %>% 
+  left_join(., 
+            mr_best_rev %>%
+              mutate(out = glue("{b} ({se}){p}", 
+                                b = IVW_b, se = IVW_se, p = gtools::stars.pval(qval)), 
+                     pt = as.character(pt)) %>% 
+              select(exposure, outcome, pt, qval,  dir = correct_causal_direction, pass, out), 
+            
+            mr_best_rev, by = c("exposure" = "outcome", "outcome" = "exposure")
+            
+  ) %>% 
+  rename(pt.rev = pt, dir.rev = dir, qval.rev = qval, pass.rev = pass, out.rev = out) %>%
+  left_join(select(res_odds, outcome, exposure, written))
+
+## Print results 
+### w/ APOE results 
+mr_best_joint %>%
+  # filter(qval.wo_apoe < 0.1 | qval.w_apoe < 0.1) %>% 
+  filter(qval.wo_apoe < 0.05 | qval.w_apoe < 0.05) %>% 
+  arrange(qval.w_apoe) %>%
+  select(-qval.wo_apoe, -qval.w_apoe, -qval.rev) %>%
+  select(-dir.w_apoe, -dir.wo_apoe, -dir.rev) %>%
+  print(n = Inf)
+
+mr_best_joint %>%
+  # filter(qval.wo_apoe < 0.1 | qval.w_apoe < 0.1) %>% 
+  filter(qval.w_apoe < 0.05 & pass.w_apoe == TRUE) %>%
+  pull(written)
+
+### Dont pass sensitivy analysis
+mr_best_joint %>%
+  # filter(qval.wo_apoe < 0.1 | qval.w_apoe < 0.1) %>% 
+  filter(qval.w_apoe < 0.05 & pass.w_apoe == FALSE) %>% 
+  arrange(qval.w_apoe) %>%
+  select(-qval.wo_apoe, -qval.w_apoe, -qval.rev) %>%
+  select(-dir.w_apoe, -dir.wo_apoe, -dir.rev) %>%
+  print(n = Inf)
+
+mr_best_joint %>%
+  # filter(qval.wo_apoe < 0.1 | qval.w_apoe < 0.1) %>% 
+  filter(qval.w_apoe < 0.05 & pass.w_apoe == FALSE) %>%
+  pull(written)
+
+### causal estimates that become non-significant after exclusion of APOE 
+mr_best_joint %>%
+  filter(qval.wo_apoe > 0.05 & qval.w_apoe < 0.05) %>% 
+  #filter(qval.wo_apoe < 0.05 & qval.w_apoe < 0.05 & pass.w_apoe == TRUE) %>% 
+  arrange(qval.w_apoe) %>%
+  select(-qval.wo_apoe, -qval.w_apoe, -qval.rev) %>%
+  select(-dir.w_apoe, -dir.wo_apoe, -dir.rev) %>%
+  print(n = Inf)
+
+mr_best_joint %>%
+  filter(qval.wo_apoe > 0.05 & qval.w_apoe < 0.05) %>%
+  select(exposure, outcome)
+  
+### Bi-directional MR results
+mr_best_joint %>%
+  filter(qval.rev < 0.05 & qval.w_apoe < 0.05) %>% 
+  #filter(qval.wo_apoe < 0.05 & qval.w_apoe < 0.05 & pass.w_apoe == TRUE) %>% 
+  arrange(qval.w_apoe) %>%
+  select(-qval.wo_apoe, -qval.w_apoe, -qval.rev) %>%
+  select(-dir.w_apoe, -dir.wo_apoe, -dir.rev) %>%
+  print(n = Inf)
+
+mr_best_joint %>%
+  filter(qval.rev < 0.05 & qval.w_apoe < 0.05) %>% 
+  #filter(qval.wo_apoe < 0.05 & qval.w_apoe < 0.05 & pass.w_apoe == TRUE) %>% 
+  select(exposure, outcome, out.rev, pass.rev)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
