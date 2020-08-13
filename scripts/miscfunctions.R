@@ -4,7 +4,7 @@
 outcomes = c("Lambert2013load", "Kunkle2019load", "Huang2017aaos",
              "Deming2017ab42", "Deming2017ptau", "Deming2017tau",
              "Hilbar2017hipv", "Hilbar2015hipv", "Grasby2020surfarea", "Grasby2020thickness",
-             "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany", "Beecham2014status", 
+             "Beecham2014npany", "Beecham2014braak4", "Beecham2014vbiany", "Beecham2014status",
              "Chauhan2019bi")
 ## Exposures to include in the results
 exposures = c("Yengo2018bmi", "Xue2018diab",
@@ -47,13 +47,19 @@ samplesize = tribble(~code, ~domain, ~trait, ~pmid, ~logistic, ~samplesize, ~nca
                   "Evangelou2018sbp", "Health", "Systolic Blood Pressure", 30224653, FALSE, 757601, NA, NA, NA,
                   "Evangelou2018pp", "Health", "Pulse Pressure", 30224653, FALSE, 757601, NA, NA, NA,
                   "Liu2019drnkwk23andMe", "Lifestyle", "Alcohol Consumption", 30643251, FALSE, 941280, NA, NA, NA,
-                  "Liu2019smkcpd23andMe", "Lifestyle", "Cigarettes per Day", 30643251, FALSE, 263954, NA, NA, NA,
-                  "Liu2019smkint23andMe","Lifestyle", "Smoking Initiation", 30643251, TRUE, 1232091, 557337, 674754, 0.45,
+                  "Liu2019drnkwk", "Lifestyle", "Alcohol Consumption", 30643251, FALSE, 537349,  NA, NA, NA,
+                  "Liu2019smkcpd23andMe", "Lifestyle", "Cigarettes per Day", 30643251, FALSE, 337334, NA, NA, NA,
+                  "Liu2019smkcpd", "Lifestyle", "Cigarettes per Day", 30643251, FALSE, 263954, NA, NA, NA,
+                  "Liu2019smkint23andMe", "Lifestyle", "Smoking Initiation", 30643251, TRUE, 1232091, 557337, 674754, 0.45,
+                  "Liu2019smkint", "Lifestyle", "Smoking Initiation", 30643251, TRUE, 632802, 311628, 321174, 0.45,
                   "Jansen2018insomnia23andMe", "Psychosocial", "Insomnia Symptoms", 30804565, TRUE, 1331010, 397972, 933038, 0.29,
+                  "Jansen2018insom", "Psychosocial", "Insomnia Symptoms", 30804565, TRUE, 386533, 108229, 278304, 0.28,
                   "Howard2019dep23andMe", "Psychosocial", "Depression", 30718901, TRUE, 807553, 246363, 561190, 0.32,
+                  "Howard2018dep", "Psychosocial", "Depression", 30718901, TRUE, 322580, 113769, 208811, 0.35,
                   "SanchezRoige2019auditt23andMe", "Lifestyle", "AUDIT", 30336701, FALSE, 141932, NA, NA, NA,
                   "Lee2018education23andMe", "Psychosocial", "Educational Attainment", 30038396, FALSE, 1131881, NA, NA, NA,
-                  "Chauhan2019bi", "Neuropathology", "Brain Infarcts", 30651383, TRUE, 21682, 3726, 17956, 0.2
+                  "Lee2018educ", "Psychosocial", "Educational Attainment", 30038396, FALSE, 775120, NA, NA, NA,
+                  "Chauhan2019bi", "Neuropathology", "Brain Infarcts", 30651383, TRUE, 21682, 3726, 17956, 0.2,
                   )
 
 

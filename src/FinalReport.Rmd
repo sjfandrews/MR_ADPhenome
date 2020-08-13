@@ -379,6 +379,7 @@ Reportining the Median (min, max) for nsnps, PVE, F-statistic and power, for eac
 ```{r power}
 power_dsc <- mrresults.methods_presso %>% 
   select(outcome.name, exposure.name, pt, nsnp, pve.exposure, F, Power) %>%
+  mutate_at(vars("nsnp", "pve.exposure", "F", "Power"), as.numeric) %>%
  # filter(pt == 5e-8) %>% 
   group_by(exposure.name, pt) %>% 
   summarise(min_nsnp = min(nsnp), 
