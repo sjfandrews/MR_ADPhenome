@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-TQagTJ	Jlww5V	Jansen2018insomnia23andMe	Grasby2020thickness	5e-8	TRUE	2	NA	NA

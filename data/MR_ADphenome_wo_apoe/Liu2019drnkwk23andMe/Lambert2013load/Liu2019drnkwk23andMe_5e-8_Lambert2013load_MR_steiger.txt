@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-MbljiM	LsGxd0	Liu2019drnkwk23andMe	Lambert2013load	0.005413891580137009	0.0026268621165165093	TRUE	4.160348865411834e-8	TRUE	5e-8
-MbljiM	LsGxd0	Liu2019drnkwk23andMe	Lambert2013load	0.00559182744555674	0.0030197479627943314	TRUE	1.1084556690299507e-6	FALSE	5e-8

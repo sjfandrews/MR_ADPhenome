@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-d4NPYk	CmePGv	Kunkle2019load	Klimentidis2018mvpa	5e-6	TRUE	1	122.21243304964938	0.0517

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-LIPKrd	CSICAC	Deming2017ptau	Liu2019smkint23andMe	5e-6	FALSE	MR Egger	482.87251695875	509	0.7917033210933428
-LIPKrd	CSICAC	Deming2017ptau	Liu2019smkint23andMe	5e-6	FALSE	Inverse variance weighted	482.976711910565	510	0.799710173727458

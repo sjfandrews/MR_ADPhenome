@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-rb8kv4	AZYCB3	Klimentidis2018mvpa	Grasby2020surfarea	5e-6	FALSE	0.0028646883978259265	0.001677439293178095	0.0948894671458791
-rb8kv4	AZYCB3	Klimentidis2018mvpa	Grasby2020surfarea	5e-6	TRUE	0.0010957997429361505	0.0015926528425708332	0.495305703741333

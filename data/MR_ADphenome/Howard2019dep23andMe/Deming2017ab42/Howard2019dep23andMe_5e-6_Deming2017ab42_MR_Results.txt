@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-pmTgn2	Y3IIrh	Deming2017ab42	Howard2019dep23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	218	0	-0.009781531241630085	0.013986826068721947	0.4843402762167801
-pmTgn2	Y3IIrh	Deming2017ab42	Howard2019dep23andMe	5e-6	FALSE	Weighted median	218	0	-0.012140959745688023	0.01973714823147655	0.5384672736482476
-pmTgn2	Y3IIrh	Deming2017ab42	Howard2019dep23andMe	5e-6	FALSE	Weighted mode	218	0	-0.02758673122332056	0.068644355245756	0.6881685403142688
-pmTgn2	Y3IIrh	Deming2017ab42	Howard2019dep23andMe	5e-6	FALSE	MR Egger	218	0	0.020649078055875836	0.0626754018719087	0.7421267940098413

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-DesClr	4hBdO2	Beecham2014npany	Wells2019hdiff	0.2146254452196637	4.107904061739947e-5	TRUE	0	FALSE	5e-6

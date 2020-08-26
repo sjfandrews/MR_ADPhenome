@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-BZo0mb	NOjuGr	Beecham2014npany	Lee2018education23andMe	5e-8	FALSE	MR Egger	511.6460687483869	476	0.12525079490831675
-BZo0mb	NOjuGr	Beecham2014npany	Lee2018education23andMe	5e-8	FALSE	Inverse variance weighted	511.7068551397624	477	0.13157382382692545

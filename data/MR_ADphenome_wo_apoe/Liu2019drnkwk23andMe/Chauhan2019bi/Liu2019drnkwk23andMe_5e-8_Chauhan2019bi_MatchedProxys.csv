@@ -1,3 +1,0 @@
-target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHROM,POS,REF.proxy,ALT.proxy,AF,BETA,SE,Z,P,N,TRAIT,ref,ref.proxy,alt,alt.proxy,ALT,REF,proxy.outcome
-rs9860769,rs12638482,1,1,CC/TT,NA,3,85454815,C,T,0.5783,-0.0233,0.0289,-0.8062283737024222,0.4189,20949,brain_infarcts,C,C,T,T,T,C,TRUE
-rs10711214,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-DTO4Ad	PrrDQJ	Chauhan2019bi	Day2018sociso	5e-6	FALSE	MR Egger	90.62417979933407	82	0.24108276451201208
-DTO4Ad	PrrDQJ	Chauhan2019bi	Day2018sociso	5e-6	FALSE	Inverse variance weighted	93.10763621636501	83	0.21011730182062005

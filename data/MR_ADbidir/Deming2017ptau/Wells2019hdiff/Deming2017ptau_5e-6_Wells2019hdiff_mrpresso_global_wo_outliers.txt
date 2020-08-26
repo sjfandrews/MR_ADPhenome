@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-QrPro1	OnPSLO	Wells2019hdiff	Deming2017ptau	5e-6	TRUE	1	9.5684072812830685	0.645

@@ -1,2 +1,0 @@
- CHR_A         BP_A                                                                                     SNP_A      MAF_A  CHR_B         BP_B                                                                                     SNP_B      PHASE      MAF_B           R2           DP 
-    17     29206421                                                                                 rs6505216   0.251491     17     29206421                                                                                 rs6505216      TT/GG   0.251491            1            1 

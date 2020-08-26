@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-Incggx	nGF93r	Chauhan2019bi	Wells2019hdiff	5e-8	FALSE	MR Egger	32.164949055730155	38	0.7354684440276011
-Incggx	nGF93r	Chauhan2019bi	Wells2019hdiff	5e-8	FALSE	Inverse variance weighted	39.098209166428916	39	0.46546651968192615

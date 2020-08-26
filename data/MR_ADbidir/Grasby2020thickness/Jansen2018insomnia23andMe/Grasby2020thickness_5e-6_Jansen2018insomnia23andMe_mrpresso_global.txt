@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-19IsB2	ygmMpq	Jansen2018insomnia23andMe	Grasby2020thickness	5e-6	FALSE	3	119.70935768388685	<1e-04

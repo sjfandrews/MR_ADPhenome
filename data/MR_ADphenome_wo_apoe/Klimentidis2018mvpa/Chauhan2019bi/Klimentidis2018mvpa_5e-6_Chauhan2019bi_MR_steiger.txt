@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-LrAUYp	CIdBvG	Klimentidis2018mvpa	Chauhan2019bi	0.00647791031490949	0.008430532142239955	FALSE	0.10210222923452861	FALSE	5e-6

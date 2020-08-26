@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-OalIP7	5V6D0V	Lambert2013load	SanchezRoige2019auditt23andMe	5e-8	FALSE	0.0265898707813642	0.049014800364095876	0.6006563718896973
-OalIP7	5V6D0V	Lambert2013load	SanchezRoige2019auditt23andMe	5e-8	TRUE	0.0069397632631162985	0.044214742812160056	0.879168513178627

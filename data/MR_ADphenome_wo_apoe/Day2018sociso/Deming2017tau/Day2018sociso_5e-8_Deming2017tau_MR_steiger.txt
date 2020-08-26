@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-2DSaUV	VZkIY9	Day2018sociso	Deming2017tau	9.716882533797517e-4	0.005255343202760821	FALSE	0.020604753863397773	TRUE	5e-8
-2DSaUV	VZkIY9	Day2018sociso	Deming2017tau	0.00104105721920052	0.007472959014710332	FALSE	0.0023778091035415727	FALSE	5e-8

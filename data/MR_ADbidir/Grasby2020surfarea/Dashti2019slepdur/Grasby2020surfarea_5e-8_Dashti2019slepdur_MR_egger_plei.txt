@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-klCuEp	5Fsm2Z	Dashti2019slepdur	Grasby2020surfarea	5e-8	FALSE	0.0026058982684320333	0.005803579699171109	0.6640372190707182
-klCuEp	5Fsm2Z	Dashti2019slepdur	Grasby2020surfarea	5e-8	TRUE	0.00318637151269161	0.004365282285360634	0.4891310595987858

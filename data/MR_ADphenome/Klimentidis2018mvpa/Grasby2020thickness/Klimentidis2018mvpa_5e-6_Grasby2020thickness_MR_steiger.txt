@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-2CiCs1	ZLpykD	Klimentidis2018mvpa	Grasby2020thickness	0.00632052998442605	0.003815913382135079	TRUE	0.0017230870909110685	TRUE	5e-6
-2CiCs1	ZLpykD	Klimentidis2018mvpa	Grasby2020thickness	0.006457654331633445	0.00431576161768991	TRUE	0.009500788602360144	FALSE	5e-6

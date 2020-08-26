@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-2yksb8	NdBMZu	Deming2017ab42	Niarchou2020fish	5e-6	FALSE	MR Egger	137.79655108557526	113	0.05639014502969213
-2yksb8	NdBMZu	Deming2017ab42	Niarchou2020fish	5e-6	FALSE	Inverse variance weighted	138.0687409391284	114	0.06210761680415706

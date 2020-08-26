@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-tFtHSK	6BRCLz	Chauhan2019bi	Day2018sociso	5e-8	TRUE	0	NA	NA

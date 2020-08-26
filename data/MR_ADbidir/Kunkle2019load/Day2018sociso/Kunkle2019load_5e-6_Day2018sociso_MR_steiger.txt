@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-wBmETS	t6hXiD	Kunkle2019load	Day2018sociso	0.020094245105766177	9.407655617580205e-5	TRUE	0	TRUE	5e-6
-wBmETS	t6hXiD	Kunkle2019load	Day2018sociso	0.022053965294741972	1.5984336389041724e-4	TRUE	0	FALSE	5e-6

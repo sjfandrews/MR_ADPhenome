@@ -1,33 +1,44 @@
+# snakejob -j 1000 --max-jobs-per-second 1 --keep-going --notemp
 
 from datetime import date
 today_date = date.today()
+shell.prefix('module load plink/1.90 R/3.6.3; ')
 
-subworkflow mr_fwd_apoe:
+subworkflow test:
     workdir:
         "../"
     snakefile:
         "rules/mr.smk"
     configfile:
-        "config/config.yaml"
+        "config/config0.yaml"
 
-subworkflow mr_fwd_wo_apoe:
-    workdir:
-        "../"
-    snakefile:
-        "rules/mr.smk"
-    configfile:
-        "config/config_wo_apoe.yaml"
-
-subworkflow mr_bidir:
-    workdir:
-        "../"
-    snakefile:
-        "rules/mr.smk"
-    configfile:
-        "config/config_bidir.yaml"
-
+# subworkflow mr_fwd_apoe:
+#     workdir:
+#         "../"
+#     snakefile:
+#         "rules/mr.smk"
+#     configfile:
+#         "config/config.yaml"
+#
+# subworkflow mr_fwd_wo_apoe:
+#     workdir:
+#         "../"
+#     snakefile:
+#         "rules/mr.smk"
+#     configfile:
+#         "config/config_wo_apoe.yaml"
+#
+# subworkflow mr_bidir:
+#     workdir:
+#         "../"
+#     snakefile:
+#         "rules/mr.smk"
+#     configfile:
+#         "config/config_bidir.yaml"
+#
 rule all:
     input:
-        mr_fwd_apoe(expand("results/MR_ADphenome/All/MR_ADphenome_MR_Analaysis_{DATE}.html", DATE = today_date)),
-        mr_fwd_wo_apoe(expand("results/MR_ADphenome_wo_apoe/All/MR_ADphenome_wo_apoe_MR_Analaysis_{DATE}.html", DATE = today_date)),
-        mr_bidir(expand("results/MR_ADbidir/All/MR_ADbidir_MR_Analaysis_{DATE}.html", DATE = today_date))
+        test(expand("results/test/All/test_MR_Analaysis_{DATE}.html", DATE = today_date)),
+        # mr_fwd_apoe(expand("results/MR_ADphenome/All/MR_ADphenome_MR_Analaysis_{DATE}.html", DATE = today_date)),
+        # mr_fwd_wo_apoe(expand("results/MR_ADphenome_wo_apoe/All/MR_ADphenome_wo_apoe_MR_Analaysis_{DATE}.html", DATE = today_date)),
+        # mr_bidir(expand("results/MR_ADbidir/All/MR_ADbidir_MR_Analaysis_{DATE}.html", DATE = today_date))

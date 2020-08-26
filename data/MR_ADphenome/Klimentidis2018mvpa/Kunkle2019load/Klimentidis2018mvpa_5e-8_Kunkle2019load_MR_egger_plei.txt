@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-jtgPVj	QrAH41	Kunkle2019load	Klimentidis2018mvpa	5e-8	FALSE	-0.019507095453271794	0.013138513249041589	0.15491845478614522	NA

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-GTV2aQ	kKgAiC	Willer2013tg	Deming2017ab42	5e-6	FALSE	MR Egger	6.875287048344934	7	0.4419795480801524
-GTV2aQ	kKgAiC	Willer2013tg	Deming2017ab42	5e-6	FALSE	Inverse variance weighted	6.982922016887341	8	0.5384763770079205

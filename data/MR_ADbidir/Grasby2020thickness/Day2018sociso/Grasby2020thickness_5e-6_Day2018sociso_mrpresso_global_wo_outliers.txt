@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-wMPdZa	aEkPYy	Day2018sociso	Grasby2020thickness	5e-6	TRUE	2	86.96790056731625	<1e-04

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-dHRPGB	UJt8O8	Grasby2020thickness	SanchezRoige2019auditt23andMe	5e-6	FALSE	-0.0018547312510426546	0.0010508420201797452	0.08367163150490783
-dHRPGB	UJt8O8	Grasby2020thickness	SanchezRoige2019auditt23andMe	5e-6	TRUE	-0.0011415411913704425	9.682386907993366e-4	0.24409648268356307

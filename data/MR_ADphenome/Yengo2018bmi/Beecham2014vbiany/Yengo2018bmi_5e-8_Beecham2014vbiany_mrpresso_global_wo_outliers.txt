@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-w571nE	X8F42m	Beecham2014vbiany	Yengo2018bmi	5e-8	TRUE	0	NA	NA

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-FZ7eH3	CnNdUN	Willer2013tg	Grasby2020surfarea	0.038748058809057434	0.002153743059024988	TRUE	0	TRUE	5e-8
-FZ7eH3	CnNdUN	Willer2013tg	Grasby2020surfarea	0.038912819641956684	0.0025441327087227707	TRUE	0	FALSE	5e-8

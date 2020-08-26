@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-hblIC7	m8eu05	Jansen2018insomnia23andMe	Chauhan2019bi	5.89601257062727e-4	0.030002538648133972	FALSE	0	FALSE	5e-6

@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-aa43NG	5Avpeg	Howard2019dep23andMe	Grasby2020thickness	5e-6	FALSE	MR Egger	90.90675019420148	36	1.2096310035373845e-6
-aa43NG	5Avpeg	Howard2019dep23andMe	Grasby2020thickness	5e-6	FALSE	Inverse variance weighted	91.32108616978512	37	1.7277384101271504e-6
-aa43NG	5Avpeg	Howard2019dep23andMe	Grasby2020thickness	5e-6	TRUE	MR Egger	56.92457702155558	33	0.005973095524836711
-aa43NG	5Avpeg	Howard2019dep23andMe	Grasby2020thickness	5e-6	TRUE	Inverse variance weighted	57.355626619086124	34	0.007371965054521449

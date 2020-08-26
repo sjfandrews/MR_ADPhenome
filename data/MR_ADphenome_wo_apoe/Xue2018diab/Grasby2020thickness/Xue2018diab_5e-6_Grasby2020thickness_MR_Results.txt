@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-EpThyN	HBPdfe	Grasby2020thickness	Xue2018diab	5e-6	FALSE	Inverse variance weighted (fixed effects)	218	0	-0.0021412813626469824	9.698133944444161e-4	0.027249061549207344
-EpThyN	HBPdfe	Grasby2020thickness	Xue2018diab	5e-6	FALSE	Weighted median	218	0	0	0.0016321152052164573	1
-EpThyN	HBPdfe	Grasby2020thickness	Xue2018diab	5e-6	FALSE	Weighted mode	218	0	-3.036569931751665e-4	0.0021370609844009454	0.8871400127174907
-EpThyN	HBPdfe	Grasby2020thickness	Xue2018diab	5e-6	FALSE	MR Egger	218	0	4.776055648706255e-4	0.0024875757943094426	0.8479254105851536

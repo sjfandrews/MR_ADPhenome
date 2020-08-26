@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-FYmmbk	tMDrKf	Grasby2020thickness	Xue2018diab	0.0030159221820948543	3.097813884901768e-5	TRUE	0	TRUE	5e-8
-FYmmbk	tMDrKf	Grasby2020thickness	Xue2018diab	0.004265829338113553	5.986989460191854e-5	TRUE	0	FALSE	5e-8

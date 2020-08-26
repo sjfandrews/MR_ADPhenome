@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-5YSFs9	ynuLHx	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-6	FALSE	1	81.20786541544037	2e-4

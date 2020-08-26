@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Ye3uI5	LhhOdh	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	4	456.87736929248933	0.0016

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-P0mkuT	fAZBmp	Hilbar2017hipv	Niarchou2020fish	5e-6	FALSE	-0.006381518298557061	0.004428768510566054	0.15192158231476285
-P0mkuT	fAZBmp	Hilbar2017hipv	Niarchou2020fish	5e-6	TRUE	-0.0073870912113649465	0.004017173969307813	0.06816367253782947

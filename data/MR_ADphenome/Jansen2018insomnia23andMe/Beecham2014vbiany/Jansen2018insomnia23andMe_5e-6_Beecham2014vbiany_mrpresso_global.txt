@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-LAM1wS	ZbwiGW	Beecham2014vbiany	Jansen2018insomnia23andMe	5e-6	FALSE	0	387.21620031720045	0.291

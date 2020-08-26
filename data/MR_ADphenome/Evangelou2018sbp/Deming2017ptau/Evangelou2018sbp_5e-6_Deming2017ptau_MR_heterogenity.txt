@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-YZ8lCw	MeS6lV	Deming2017ptau	Evangelou2018sbp	5e-6	FALSE	MR Egger	592.7446302061254	543	0.06866647495039124
-YZ8lCw	MeS6lV	Deming2017ptau	Evangelou2018sbp	5e-6	FALSE	Inverse variance weighted	592.8473730224982	544	0.07230587275110177

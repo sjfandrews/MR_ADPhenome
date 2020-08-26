@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-228Lw2	JBYlzl	Beecham2014braak4	Yengo2018bmi	5e-6	FALSE	0	715.9713267155337	0.19548

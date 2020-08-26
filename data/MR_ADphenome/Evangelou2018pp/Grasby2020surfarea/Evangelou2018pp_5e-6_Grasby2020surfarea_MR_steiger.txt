@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-UmuMw4	srEP3W	Evangelou2018pp	Grasby2020surfarea	0.04322193330350841	0.021631594527647395	TRUE	0	TRUE	5e-6
-UmuMw4	srEP3W	Evangelou2018pp	Grasby2020surfarea	0.044867149616408086	0.023578237321665536	TRUE	0	FALSE	5e-6

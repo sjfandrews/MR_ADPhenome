@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-7P746Q	dQsbfp	Willer2013tc	Beecham2014braak4	0.05478292172564888	0.04585974166394392	TRUE	0.1543814312069023	FALSE	5e-6

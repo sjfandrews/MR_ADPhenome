@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-BpXBIQ	9LT08t	Jansen2018insomnia23andMe	Hilbar2017hipv	3.234110111490707e-4	0.006973493004430405	FALSE	0	TRUE	5e-8
-BpXBIQ	9LT08t	Jansen2018insomnia23andMe	Hilbar2017hipv	3.454651884029743e-4	0.008163126183276345	FALSE	0	FALSE	5e-8

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-hlmV91	yIySJb	SanchezRoige2019auditt23andMe	Grasby2020thickness	5e-6	FALSE	0.0018068895915019964	0.0023499585991426024	0.44741946644684805	NA

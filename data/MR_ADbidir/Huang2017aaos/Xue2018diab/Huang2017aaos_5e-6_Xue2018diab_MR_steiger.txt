@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-0ZLcBc	UHjzJK	Huang2017aaos	Xue2018diab	0.009424319820840292	1.184243451628603e-4	TRUE	0	TRUE	5e-6
-0ZLcBc	UHjzJK	Huang2017aaos	Xue2018diab	0.010406366205490757	1.8795945686004122e-4	TRUE	0	FALSE	5e-6

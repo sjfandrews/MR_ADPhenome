@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-pMJopw	QDUSGz	Chauhan2019bi	Lee2018education23andMe	5e-6	TRUE	0	NA	NA

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-u8geTt	vtiYkF	Beecham2014npany	Willer2013tc	5e-6	FALSE	0	89.01050884836552	0.9837

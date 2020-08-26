@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-mQPGBm	6mGe4J	Grasby2020thickness	Wells2019hdiff	0.004395153282767182	1.5604103804966384e-5	TRUE	0	TRUE	5e-8
-mQPGBm	6mGe4J	Grasby2020thickness	Wells2019hdiff	0.006617115013832747	1.316581038806106e-4	TRUE	0	FALSE	5e-8

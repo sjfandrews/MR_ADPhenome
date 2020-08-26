@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-YMAjpU	EVI07j	Huang2017aaos	Yengo2018bmi	0.01191288004759229	5.993774452425103e-5	TRUE	0	TRUE	5e-6
-YMAjpU	EVI07j	Huang2017aaos	Yengo2018bmi	0.013669850646037207	1.280932762668224e-4	TRUE	0	FALSE	5e-6

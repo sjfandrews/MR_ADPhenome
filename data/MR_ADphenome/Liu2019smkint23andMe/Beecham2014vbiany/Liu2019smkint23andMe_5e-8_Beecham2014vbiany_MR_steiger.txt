@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-hSr1KB	ZM5A22	Liu2019smkint23andMe	Beecham2014vbiany	9.065519812337035e-4	0.09973909092325571	FALSE	0	FALSE	5e-8

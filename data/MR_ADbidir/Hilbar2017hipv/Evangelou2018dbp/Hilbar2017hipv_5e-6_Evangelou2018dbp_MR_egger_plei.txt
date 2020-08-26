@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-JCWYjz	gInXle	Evangelou2018dbp	Hilbar2017hipv	5e-6	FALSE	0.044239426237280215	0.02028873389972844	0.04273547443959282
-JCWYjz	gInXle	Evangelou2018dbp	Hilbar2017hipv	5e-6	TRUE	-0.007040079014410712	0.014363899743439936	0.631138084922889

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-cRH7yi	PCDjyy	Niarchou2020meat	Kunkle2019load	5e-8	FALSE	-0.005545629326219426	0.004741272113829313	0.2631402332985452
-cRH7yi	PCDjyy	Niarchou2020meat	Kunkle2019load	5e-8	TRUE	0.003054592292297044	0.004502274184916957	0.511503628541645

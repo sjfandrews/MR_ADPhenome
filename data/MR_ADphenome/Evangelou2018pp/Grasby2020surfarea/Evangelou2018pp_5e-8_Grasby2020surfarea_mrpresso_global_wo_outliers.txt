@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-0q1eWE	zd5Wt0	Grasby2020surfarea	Evangelou2018pp	5e-8	TRUE	2	526.6186807730026	<4e-05

@@ -1,9 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	FALSE	Inverse variance weighted (fixed effects)	32	2	-4.067242412087144e-4	4.2531994492428385e-4	0.33893164149886384
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	FALSE	Weighted median	32	2	-4.193772556177873e-4	5.93034355760591e-4	0.479459634124454
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	FALSE	Weighted mode	32	2	-7.236416816038399e-4	4.500559689419682e-4	0.11799753706295792
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	FALSE	MR Egger	32	2	-0.0014901811243896576	9.620984874800287e-4	0.13189507755961055
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	Inverse variance weighted (fixed effects)	30	2	-5.970055992364628e-4	4.262669109978943e-4	0.16135045269471646
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	Weighted median	30	2	-4.205155228398582e-4	5.833942042784885e-4	0.4710273222596587
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	Weighted mode	30	2	-7.064196382364635e-4	4.7999310839788513e-4	0.1518638894238761
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	MR Egger	30	2	-9.317945278270571e-4	7.258170534382493e-4	0.20973904845706606

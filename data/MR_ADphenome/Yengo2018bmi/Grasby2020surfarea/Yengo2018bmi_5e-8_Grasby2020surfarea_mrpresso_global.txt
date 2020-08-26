@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-suw2Ws	F5U0GX	Grasby2020surfarea	Yengo2018bmi	5e-8	FALSE	3	751.669759596988	<4e-05

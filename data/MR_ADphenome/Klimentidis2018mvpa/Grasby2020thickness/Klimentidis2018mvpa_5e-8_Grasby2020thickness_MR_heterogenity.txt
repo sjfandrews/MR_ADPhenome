@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-JKwfAu	xaruoT	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	MR Egger	33.32751981084051	19	0.02203031624894086
-JKwfAu	xaruoT	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	Inverse variance weighted	36.06202396801004	20	0.015124912239707449

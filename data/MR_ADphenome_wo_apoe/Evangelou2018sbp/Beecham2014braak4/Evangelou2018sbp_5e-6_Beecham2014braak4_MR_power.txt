@@ -1,2 +1,0 @@
-exposure	outcome	pt	pve.exposure	samplesize.exposure	samplesize.outcome	nsnps	k.outcome	method	b	se	pval	outliers_removed	logistic	or	beta	F	Alpha	NCP	Power
-Evangelou2018sbp	Beecham2014braak4	5e-6	0.04791551019588437	757601	4735	605	0.6181626187961985	Inverse variance weighted (fixed effects)	-0.0327116068558164	0.14582904665833607	0.8225123959853797	FALSE	TRUE	0.9678176313156028	NA	62.970662565927555	0.05	0.05775341642819394	0.05664193127763617

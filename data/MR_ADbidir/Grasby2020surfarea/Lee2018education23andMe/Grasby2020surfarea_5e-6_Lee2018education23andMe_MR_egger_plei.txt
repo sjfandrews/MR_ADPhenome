@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-NAXnsV	uDq1dm	Lee2018education23andMe	Grasby2020surfarea	5e-6	FALSE	-0.002124669939524635	0.0019974408517293633	0.2941793532007273
-NAXnsV	uDq1dm	Lee2018education23andMe	Grasby2020surfarea	5e-6	TRUE	-4.510791842191761e-4	0.0017071346774998033	0.7931510784124336

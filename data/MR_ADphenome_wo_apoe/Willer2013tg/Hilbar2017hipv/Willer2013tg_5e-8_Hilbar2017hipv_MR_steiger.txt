@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-WSKIga	5TE2FI	Willer2013tg	Hilbar2017hipv	0.03938490427697109	0.0024843375293893423	TRUE	0	FALSE	5e-8

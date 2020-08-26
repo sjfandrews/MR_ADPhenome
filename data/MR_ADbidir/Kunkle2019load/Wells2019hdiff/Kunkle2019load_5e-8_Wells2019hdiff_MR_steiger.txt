@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-nxN7Xd	EtNICx	Kunkle2019load	Wells2019hdiff	0.012650478507487965	1.2023838894885687e-4	TRUE	0	FALSE	5e-8

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-Poza4t	apEVEl	Deming2017tau	Dashti2019slepdur	5e-8	FALSE	MR Egger	65.657542425947085	60	0.2872252633603783
-Poza4t	apEVEl	Deming2017tau	Dashti2019slepdur	5e-8	FALSE	Inverse variance weighted	65.66621028864513	61	0.31840172764151886

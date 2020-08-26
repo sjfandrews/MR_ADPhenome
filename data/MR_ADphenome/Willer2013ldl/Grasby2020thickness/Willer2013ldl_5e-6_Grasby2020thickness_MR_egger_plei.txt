@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-3cSEXH	KtrTMK	Grasby2020thickness	Willer2013ldl	5e-6	FALSE	9.793749781429862e-5	1.4579708598552464e-4	0.5031846500397107	NA

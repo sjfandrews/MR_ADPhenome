@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-JKwfAu	xaruoT	Grasby2020thickness	Klimentidis2018mvpa	5e-8	FALSE	0.00118710096821306	9.507647295721854e-4	0.22698698103026305	NA

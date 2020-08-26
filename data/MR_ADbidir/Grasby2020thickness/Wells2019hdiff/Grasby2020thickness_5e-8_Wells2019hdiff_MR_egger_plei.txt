@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-mQPGBm	6mGe4J	Wells2019hdiff	Grasby2020thickness	5e-8	FALSE	-0.0028742815638859555	0.007898663071613448	0.7343554034474686
-mQPGBm	6mGe4J	Wells2019hdiff	Grasby2020thickness	5e-8	TRUE	0.004242899473267531	0.0033134022247928666	0.3287985096544821

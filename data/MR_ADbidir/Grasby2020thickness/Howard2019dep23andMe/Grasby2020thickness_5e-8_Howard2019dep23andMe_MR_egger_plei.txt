@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-UCLjWc	ZUMHaW	Howard2019dep23andMe	Grasby2020thickness	5e-8	FALSE	0.005523521425804597	0.016586556034150532	0.7610400651441738
-UCLjWc	ZUMHaW	Howard2019dep23andMe	Grasby2020thickness	5e-8	TRUE	0.011066192514678766	0.01044133027492857	0.40029521743144847

@@ -1,9 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	FALSE	Inverse variance weighted (fixed effects)	37	2	0.058561214684642975	0.7366908242347509	0.9366410919199644
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	FALSE	Weighted median	37	2	0.6762692349102705	1.2239284429843575	0.5805785416277969
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	FALSE	Weighted mode	37	2	1.0988106924724406	2.4216452394154393	0.6527356275590472
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	FALSE	MR Egger	37	2	-7.552832482192705	6.005925110866622	0.21687606971801843
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	TRUE	Inverse variance weighted (fixed effects)	35	2	0.5031100402774007	0.7652058082679167	0.5108702053198484
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	TRUE	Weighted median	35	2	0.6782885815141384	1.25477021871933	0.5888054045873372
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	TRUE	Weighted mode	35	2	0.938268912599078	2.7148422198914686	0.7317672665872188
-NRDeoM	2takV8	Evangelou2018dbp	Grasby2020thickness	5e-6	TRUE	MR Egger	35	2	3.3143685851039475	5.945787028811502	0.5809944776860722

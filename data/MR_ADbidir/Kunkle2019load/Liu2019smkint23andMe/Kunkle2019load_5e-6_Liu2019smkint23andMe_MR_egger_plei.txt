@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-eWIGJ6	ylNor6	Liu2019smkint23andMe	Kunkle2019load	5e-6	FALSE	6.753653498384846e-4	5.63254054188667e-4	0.23880171328751493
-eWIGJ6	ylNor6	Liu2019smkint23andMe	Kunkle2019load	5e-6	TRUE	3.2723159892101184e-4	4.6498432126044136e-4	0.4868427626320754

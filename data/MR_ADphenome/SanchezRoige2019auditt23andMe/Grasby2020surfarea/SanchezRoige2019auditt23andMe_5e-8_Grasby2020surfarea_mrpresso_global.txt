@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-b1TAmS	PayzPx	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	FALSE	2	40.68195374611544	1e-4

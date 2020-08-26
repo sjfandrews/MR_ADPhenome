@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-xaSMPp	SERRRq	Beecham2014npany	Day2018sociso	5e-8	FALSE	MR Egger	11.687378613003927	13	0.5534302864152152
-xaSMPp	SERRRq	Beecham2014npany	Day2018sociso	5e-8	FALSE	Inverse variance weighted	11.715960954520298	14	0.6291014768638767

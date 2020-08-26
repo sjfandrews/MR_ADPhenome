@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-cudhA1	IJ3KdS	Dashti2019slepdur	Deming2017ab42	5e-6	FALSE	0	11.206518312268114	0.5188

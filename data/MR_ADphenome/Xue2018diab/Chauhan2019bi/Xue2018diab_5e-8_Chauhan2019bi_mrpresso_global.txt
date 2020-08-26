@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-fk6aZb	40Mhkz	Chauhan2019bi	Xue2018diab	5e-8	FALSE	0	134.00204827297097	0.149

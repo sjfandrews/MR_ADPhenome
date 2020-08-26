@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-OtTR6x	FAggnF	Xue2018diab	Kunkle2019load	0.03546721653699809	0.002736230188242291	TRUE	0	TRUE	5e-8
-OtTR6x	FAggnF	Xue2018diab	Kunkle2019load	0.03637817735595489	0.0030718407765793596	TRUE	0	FALSE	5e-8

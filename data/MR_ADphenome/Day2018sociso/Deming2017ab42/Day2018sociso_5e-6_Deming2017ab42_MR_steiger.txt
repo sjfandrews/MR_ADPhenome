@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-euoMRp	PodjkG	Day2018sociso	Deming2017ab42	0.004055505035962303	0.026959106167551337	FALSE	1.238774105516427e-8	FALSE	5e-6

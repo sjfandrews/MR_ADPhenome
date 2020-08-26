@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-XEYDBI	hNyaUJ	Niarchou2020fish	Deming2017tau	5e-6	FALSE	0	12.704823086461365	0.1553

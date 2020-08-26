@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-zcrb5L	r1I5te	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	FALSE	2	182.03946540740233	<1e-04

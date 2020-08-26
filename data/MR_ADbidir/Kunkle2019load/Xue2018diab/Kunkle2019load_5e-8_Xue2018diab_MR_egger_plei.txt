@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-geQVJR	uLEA30	Xue2018diab	Kunkle2019load	5e-8	FALSE	-0.010409888002455214	0.02213312916022304	0.6506745752707276
-geQVJR	uLEA30	Xue2018diab	Kunkle2019load	5e-8	TRUE	0.005164788302258753	0.0200202702556018	0.8038440392057032

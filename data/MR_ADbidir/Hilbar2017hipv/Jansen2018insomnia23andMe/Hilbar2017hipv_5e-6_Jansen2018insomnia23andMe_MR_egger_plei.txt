@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-gyXnnZ	kCaA1N	Jansen2018insomnia23andMe	Hilbar2017hipv	5e-6	FALSE	-4.482226456265182e-5	3.566049000086532e-4	0.9010682360205093	NA

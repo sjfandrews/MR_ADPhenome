@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-U7a1fE	QgPgP5	Yengo2018bmi	Grasby2020thickness	0.058885561298845375	0.02854357666166419	TRUE	0	TRUE	5e-6
-U7a1fE	QgPgP5	Yengo2018bmi	Grasby2020thickness	0.06034504792902483	0.02985447877366992	TRUE	0	FALSE	5e-6

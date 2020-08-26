@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-KUe7nW	53EakU	Chauhan2019bi	Niarchou2020meat	5e-8	FALSE	Inverse variance weighted (fixed effects)	22	0	0.3654251181395754	0.42468834624152535	0.38953839941107204
-KUe7nW	53EakU	Chauhan2019bi	Niarchou2020meat	5e-8	FALSE	Weighted median	22	0	0.604648613109811	0.5980454177838503	0.31199666610589954
-KUe7nW	53EakU	Chauhan2019bi	Niarchou2020meat	5e-8	FALSE	Weighted mode	22	0	0.6181173532740951	0.9132191661775023	0.5058857577303277
-KUe7nW	53EakU	Chauhan2019bi	Niarchou2020meat	5e-8	FALSE	MR Egger	22	0	-0.4564578229685742	2.7968801645529546	0.8719968370574975

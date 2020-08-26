@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-JaXGfK	ccaTic	Klimentidis2018mvpa	Deming2017ab42	5e-6	FALSE	0	7.01892129561915	0.8412

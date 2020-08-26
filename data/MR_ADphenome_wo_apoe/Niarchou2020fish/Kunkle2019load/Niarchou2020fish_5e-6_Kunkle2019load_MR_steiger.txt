@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-TygJeB	HAiPNd	Niarchou2020fish	Kunkle2019load	0.013132677210048857	0.0031487770664641018	TRUE	0	FALSE	5e-6

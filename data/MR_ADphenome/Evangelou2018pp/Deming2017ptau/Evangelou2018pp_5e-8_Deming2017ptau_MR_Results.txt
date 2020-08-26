@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-GvlCX4	6vIva2	Deming2017ptau	Evangelou2018pp	5e-8	FALSE	Inverse variance weighted (fixed effects)	354	0	0.0013838448729327313	0.001629145754914783	0.3956422042865296
-GvlCX4	6vIva2	Deming2017ptau	Evangelou2018pp	5e-8	FALSE	Weighted median	354	0	0.00253094120552228	0.002558733178886634	0.3225954391703765
-GvlCX4	6vIva2	Deming2017ptau	Evangelou2018pp	5e-8	FALSE	Weighted mode	354	0	0.004917829433467191	0.005274880396417546	0.35181299721114223
-GvlCX4	6vIva2	Deming2017ptau	Evangelou2018pp	5e-8	FALSE	MR Egger	354	0	0.0012858207594737623	0.00416687843219593	0.7578225913986916

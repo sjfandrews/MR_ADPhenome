@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	FALSE	5.75158816353345e-4	3.514988121339705e-4	0.11222583424572376
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	1.8139033871509403e-4	2.7356699497859945e-4	0.5127165487193612

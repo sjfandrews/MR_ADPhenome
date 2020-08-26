@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-6n3h1r	3tq5Lf	Grasby2020thickness	Wells2019hdiff	5e-6	FALSE	MR Egger	174.79937739217377	100	5.457788099821558e-6
-6n3h1r	3tq5Lf	Grasby2020thickness	Wells2019hdiff	5e-6	FALSE	Inverse variance weighted	174.8461421047347	101	7.245780636992714e-6
-6n3h1r	3tq5Lf	Grasby2020thickness	Wells2019hdiff	5e-6	TRUE	MR Egger	131.8960520366155	98	0.012742380615837158
-6n3h1r	3tq5Lf	Grasby2020thickness	Wells2019hdiff	5e-6	TRUE	Inverse variance weighted	132.05313678336506	99	0.014806298852256906

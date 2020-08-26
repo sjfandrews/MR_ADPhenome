@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-qx65mZ	mfrmW5	Grasby2020thickness	Yengo2018bmi	5e-8	FALSE	MR Egger	723.9980121070946	503	3.4358860773776666e-10
-qx65mZ	mfrmW5	Grasby2020thickness	Yengo2018bmi	5e-8	FALSE	Inverse variance weighted	724.0625968126465	504	4.100352790688931e-10
-qx65mZ	mfrmW5	Grasby2020thickness	Yengo2018bmi	5e-8	TRUE	MR Egger	684.1268907822346	501	8.891814031598327e-8
-qx65mZ	mfrmW5	Grasby2020thickness	Yengo2018bmi	5e-8	TRUE	Inverse variance weighted	684.3317361218722	502	1.0156953109551405e-7

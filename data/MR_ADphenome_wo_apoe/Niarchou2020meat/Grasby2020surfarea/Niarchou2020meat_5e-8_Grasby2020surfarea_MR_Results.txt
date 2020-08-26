@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-bcoMox	TG5YQI	Grasby2020surfarea	Niarchou2020meat	5e-8	FALSE	Inverse variance weighted (fixed effects)	21	0	-230.2950260623986	1647.3516105137237	0.8888202815266215
-bcoMox	TG5YQI	Grasby2020surfarea	Niarchou2020meat	5e-8	FALSE	Weighted median	21	0	1419.0606186772845	2486.673491216237	0.5682259055514136
-bcoMox	TG5YQI	Grasby2020surfarea	Niarchou2020meat	5e-8	FALSE	Weighted mode	21	0	3893.3225427488505	5361.437531720758	0.476146906387091
-bcoMox	TG5YQI	Grasby2020surfarea	Niarchou2020meat	5e-8	FALSE	MR Egger	21	0	13174.827528106032	12752.535950607607	0.3145221937874173

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-dnaFtl	A8gKVN	Deming2017ptau	Liu2019smkcpd23andMe	5e-8	FALSE	0.001961474348506911	0.0017222280618110057	0.26226010832422103	NA

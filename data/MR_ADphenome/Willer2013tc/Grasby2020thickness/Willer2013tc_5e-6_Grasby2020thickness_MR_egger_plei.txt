@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-3sZtrw	lTTsEl	Grasby2020thickness	Willer2013tc	5e-6	FALSE	1.1299962417203051e-4	1.5182988059150412e-4	0.45816723204090837
-3sZtrw	lTTsEl	Grasby2020thickness	Willer2013tc	5e-6	TRUE	9.454457544154855e-5	1.458032989483121e-4	0.5179398399272921

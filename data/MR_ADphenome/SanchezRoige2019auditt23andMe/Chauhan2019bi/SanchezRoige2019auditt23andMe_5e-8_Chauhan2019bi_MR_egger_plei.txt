@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-ii6o2m	jh0ruJ	Chauhan2019bi	SanchezRoige2019auditt23andMe	5e-8	FALSE	-0.09271301669410846	0.07331527764477316	0.23469890949419148
-ii6o2m	jh0ruJ	Chauhan2019bi	SanchezRoige2019auditt23andMe	5e-8	TRUE	-0.060194203746212975	0.06176841234374834	0.35526455283748326

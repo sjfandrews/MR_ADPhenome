@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-8PdyEy	KZwqmd	Chauhan2019bi	Yengo2018bmi	5e-6	FALSE	0	708.0133859518955	0.30856

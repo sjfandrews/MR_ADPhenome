@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-jzfsqu	nbUdTX	Wells2019hdiff	Deming2017ptau	5e-8	FALSE	0.012398313127269123	0.0059951791858263905	0.17455026622593212
-jzfsqu	nbUdTX	Wells2019hdiff	Deming2017ptau	5e-8	TRUE	-0.00890241685732086	0.012667979677194652	0.6100265207224512

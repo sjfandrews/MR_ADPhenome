@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-gZ1aAz	Tt7JlZ	Beecham2014braak4	Willer2013ldl	5e-6	FALSE	0	123.74040050719199	0.1895

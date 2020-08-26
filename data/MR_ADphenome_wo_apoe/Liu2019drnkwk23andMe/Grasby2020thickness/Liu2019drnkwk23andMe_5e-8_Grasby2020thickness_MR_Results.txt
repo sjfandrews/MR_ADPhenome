@@ -1,9 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	FALSE	Inverse variance weighted (fixed effects)	83	2	-0.013578283164656516	0.013113091064332906	0.3004469508900257
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	FALSE	Weighted median	83	2	0.014280772646809612	0.022275656673551057	0.5214621136490288
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	FALSE	Weighted mode	83	2	0.013723619855389946	0.02915369928568678	0.6390809362221768
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	FALSE	MR Egger	83	2	0.011765483693747626	0.05543847511372376	0.8324638959047163
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	TRUE	Inverse variance weighted (fixed effects)	81	2	-0.015040908707869756	0.013230173954797692	0.2555951365214241
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	TRUE	Weighted median	81	2	0.014278596872021529	0.02175184031882942	0.5115464187545884
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	TRUE	Weighted mode	81	2	0.015715359342032387	0.031021229816403872	0.613828836621656
-Aulbnt	g5dmu4	Grasby2020thickness	Liu2019drnkwk23andMe	5e-8	TRUE	MR Egger	81	2	-0.012461998607841232	0.04958867819935883	0.8022290477871714

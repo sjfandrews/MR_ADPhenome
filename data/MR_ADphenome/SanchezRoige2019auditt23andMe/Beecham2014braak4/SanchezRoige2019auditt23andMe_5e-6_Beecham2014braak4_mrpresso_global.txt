@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-wkf2nj	0FT9Km	Beecham2014braak4	SanchezRoige2019auditt23andMe	5e-6	FALSE	0	33.97069277500006	0.987

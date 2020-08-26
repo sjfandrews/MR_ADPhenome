@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-KtgrrJ	jIpbLw	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-8	FALSE	1	34.51693700751084	0.0032

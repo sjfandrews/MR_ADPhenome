@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-xaSMPp	SERRRq	Day2018sociso	Beecham2014npany	0.0012764604247813773	0.006757047091377524	FALSE	0.003150129268432389	FALSE	5e-8

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-P3xcqR	EIBFap	Niarchou2020meat	Beecham2014braak4	0.0026065902452598756	0.0050132972374863525	FALSE	0.17567985237297945	FALSE	5e-8

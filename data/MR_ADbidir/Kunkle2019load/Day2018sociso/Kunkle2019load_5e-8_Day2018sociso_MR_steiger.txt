@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-5wOZQX	QysJ9P	Kunkle2019load	Day2018sociso	0.01128507079063897	2.6705851734894303e-5	TRUE	0	TRUE	5e-8
-5wOZQX	QysJ9P	Kunkle2019load	Day2018sociso	0.01194170011616192	6.055310991025472e-5	TRUE	0	FALSE	5e-8

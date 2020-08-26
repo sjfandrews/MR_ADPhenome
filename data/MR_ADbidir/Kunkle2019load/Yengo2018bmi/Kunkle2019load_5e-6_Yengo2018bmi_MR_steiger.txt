@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-X8nmhS	Unr3dd	Kunkle2019load	Yengo2018bmi	0.008736244976408895	3.294745036271927e-5	TRUE	0	TRUE	5e-6
-X8nmhS	Unr3dd	Kunkle2019load	Yengo2018bmi	0.011825117372150506	1.6460202476206403e-4	TRUE	0	FALSE	5e-6

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-vGSFEB	y9iy8k	Deming2017ab42	Day2018sociso	5e-8	FALSE	1	24.896508802215017	0.0379

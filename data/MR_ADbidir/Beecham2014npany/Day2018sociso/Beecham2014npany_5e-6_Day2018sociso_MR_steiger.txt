@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-zPD80Y	CVwGiT	Beecham2014npany	Day2018sociso	0.2146254452196637	3.240204713170765e-5	TRUE	0	FALSE	5e-6

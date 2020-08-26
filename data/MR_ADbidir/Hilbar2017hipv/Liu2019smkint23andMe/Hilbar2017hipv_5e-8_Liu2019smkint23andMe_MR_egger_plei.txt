@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-7THDGY	wEvKjy	Liu2019smkint23andMe	Hilbar2017hipv	5e-8	FALSE	-0.0021589813275635582	0.0015737062928001056	0.2636826399742681
-7THDGY	wEvKjy	Liu2019smkint23andMe	Hilbar2017hipv	5e-8	TRUE	-6.470276580944217e-4	0.0010988408748826297	0.6156228076454777

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-bREm99	ndQzMQ	Xue2018diab	Kunkle2019load	5e-6	FALSE	0.004159197367604597	0.009958761545404288	0.6804480871577265
-bREm99	ndQzMQ	Xue2018diab	Kunkle2019load	5e-6	TRUE	0.010773859136830604	0.008987721248501206	0.24464387716021574

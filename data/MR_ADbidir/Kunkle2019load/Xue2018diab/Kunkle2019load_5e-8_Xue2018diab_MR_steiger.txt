@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-geQVJR	uLEA30	Kunkle2019load	Xue2018diab	0.008859327090912378	7.884053026439962e-5	TRUE	0	TRUE	5e-8
-geQVJR	uLEA30	Kunkle2019load	Xue2018diab	0.0093525837713438	1.3556094471190436e-4	TRUE	0	FALSE	5e-8

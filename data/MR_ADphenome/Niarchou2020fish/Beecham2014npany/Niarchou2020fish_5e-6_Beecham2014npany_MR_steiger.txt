@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-wEheAG	NMshqN	Niarchou2020fish	Beecham2014npany	0.012861860972836887	0.051700494947454996	FALSE	1.1035616864774056e-13	FALSE	5e-6

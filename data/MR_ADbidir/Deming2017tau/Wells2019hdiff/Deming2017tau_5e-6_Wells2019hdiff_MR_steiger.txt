@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-dMP16d	f5zgcA	Deming2017tau	Wells2019hdiff	0.04185990667900048	9.591854927313505e-6	TRUE	0	TRUE	5e-6
-dMP16d	f5zgcA	Deming2017tau	Wells2019hdiff	0.05580063493846667	8.11714357566561e-5	TRUE	0	FALSE	5e-6

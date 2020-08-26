@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-ruypNl	quzbYd	Kunkle2019load	Evangelou2018sbp	0.019256380399441716	6.580287503538004e-5	TRUE	0	TRUE	5e-6
-ruypNl	quzbYd	Kunkle2019load	Evangelou2018sbp	0.020890062645592056	9.279620757226515e-5	TRUE	0	FALSE	5e-6

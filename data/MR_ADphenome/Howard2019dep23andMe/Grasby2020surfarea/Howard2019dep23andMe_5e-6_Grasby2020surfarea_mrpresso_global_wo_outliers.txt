@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-xbbNkU	HWD5ES	Grasby2020surfarea	Howard2019dep23andMe	5e-6	TRUE	3	323.3931300033519	0.0014

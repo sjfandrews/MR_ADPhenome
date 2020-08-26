@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	FALSE	MR Egger	80.79872514563607	30	1.5156040702568906e-6
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	FALSE	Inverse variance weighted	88.00998412818105	31	2.3007175068933128e-7
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	MR Egger	41.89417292698051	28	0.04436426773031336
-Y5l8p0	tvFEuB	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	Inverse variance weighted	42.551976901804274	29	0.050052474789329296

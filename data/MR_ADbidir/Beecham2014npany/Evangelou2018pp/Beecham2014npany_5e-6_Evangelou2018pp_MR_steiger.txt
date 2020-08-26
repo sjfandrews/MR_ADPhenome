@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-a32r57	cGrzQw	Beecham2014npany	Evangelou2018pp	0.2146254452196637	2.167987405285154e-5	TRUE	0	FALSE	5e-6

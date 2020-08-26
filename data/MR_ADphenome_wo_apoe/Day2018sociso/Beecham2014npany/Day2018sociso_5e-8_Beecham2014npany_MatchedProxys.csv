@@ -1,3 +1,0 @@
-target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHROM,POS,REF.proxy,ALT.proxy,AF,BETA,SE,Z,P,N,TRAIT,ref,ref.proxy,alt,alt.proxy,ALT,REF,proxy.outcome
-rs62085660,rs34417254,1,1,CT/GC,NA,17,66097429,T,C,0.7299,-0.0879,0.0916,-0.959607,0.337,4046,Neuritic_Plaques,C,T,G,C,G,C,TRUE
-rs1022688,rs6019557,0.96745,1,AG/GT,NA,20,47583372,T,G,0.3268,-0.0122,0.0753,-0.162019,0.8717,4046,Neuritic_Plaques,A,G,G,T,A,G,TRUE

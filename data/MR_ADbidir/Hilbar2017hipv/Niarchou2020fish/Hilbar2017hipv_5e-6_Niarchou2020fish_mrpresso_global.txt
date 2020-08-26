@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-ZV0toJ	RR5Shj	Niarchou2020fish	Hilbar2017hipv	5e-6	FALSE	0	46.17128722500935	0.004

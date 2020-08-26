@@ -1,2 +1,0 @@
-target_snp,proxy_snp,ld.r2,Dprime,PHASE,X12,CHROM,POS,REF.proxy,ALT.proxy,AF,BETA,SE,Z,P,N,TRAIT,ref,ref.proxy,alt,alt.proxy,ALT,REF,proxy.outcome
-rs11654699,rs7225208,0.829211,0.91424,TA/CG,NA,17,30922784,G,A,0.502603,-8.21945e-4,0.00243041,-0.338192,0.74,335576,fish_plant_diet,T,A,C,G,T,C,TRUE

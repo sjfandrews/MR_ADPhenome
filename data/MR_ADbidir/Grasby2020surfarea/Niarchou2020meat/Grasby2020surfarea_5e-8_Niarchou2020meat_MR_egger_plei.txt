@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	FALSE	-0.009251795621833493	0.0035833638836771735	0.027328285793605273
-KEE877	S4Pt2a	Niarchou2020meat	Grasby2020surfarea	5e-8	TRUE	-0.004515600762261753	0.00433513683559384	0.3247556498837141

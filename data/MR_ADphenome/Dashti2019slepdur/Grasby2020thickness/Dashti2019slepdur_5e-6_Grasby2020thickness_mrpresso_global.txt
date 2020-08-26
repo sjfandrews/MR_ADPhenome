@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-cv08M8	ik8k3U	Grasby2020thickness	Dashti2019slepdur	5e-6	FALSE	2	284.991891473684	<1e-04

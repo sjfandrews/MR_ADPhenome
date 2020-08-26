@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-z4GdnQ	mopgmT	Day2018sociso	Huang2017aaos	0.005062671227632769	0.0025219869383920636	TRUE	5.355545790153293e-5	FALSE	5e-6

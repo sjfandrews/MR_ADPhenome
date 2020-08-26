@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-kY9qsS	gWAPen	Grasby2020thickness	Evangelou2018pp	5e-8	TRUE	1	515.178700153021	4e-5

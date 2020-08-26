@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-228Lw2	JBYlzl	Yengo2018bmi	Beecham2014braak4	0.059747495001434794	0.12071846634655589	FALSE	9.103828801926284e-15	FALSE	5e-6

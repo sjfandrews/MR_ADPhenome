@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-7B4nqD	l5weTH	Hilbar2017hipv	Day2018sociso	5e-6	FALSE	0	110.07948979316292	0.038

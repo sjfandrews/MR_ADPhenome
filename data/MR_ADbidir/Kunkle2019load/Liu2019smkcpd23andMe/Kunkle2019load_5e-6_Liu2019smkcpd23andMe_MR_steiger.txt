@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-Ses7xj	gR8pmi	Kunkle2019load	Liu2019smkcpd23andMe	0.01981424387729191	1.1299490458322986e-4	TRUE	0	TRUE	5e-6
-Ses7xj	gR8pmi	Kunkle2019load	Liu2019smkcpd23andMe	0.023027022577389894	2.8254027681492874e-4	TRUE	0	FALSE	5e-6

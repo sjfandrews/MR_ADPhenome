@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-Aad9GV	cAPyOX	Deming2017ab42	Niarchou2020meat	5e-8	FALSE	MR Egger	9.820184826972405	17	0.9109809196973684
-Aad9GV	cAPyOX	Deming2017ab42	Niarchou2020meat	5e-8	FALSE	Inverse variance weighted	10.678824857412225	18	0.9074855539382269

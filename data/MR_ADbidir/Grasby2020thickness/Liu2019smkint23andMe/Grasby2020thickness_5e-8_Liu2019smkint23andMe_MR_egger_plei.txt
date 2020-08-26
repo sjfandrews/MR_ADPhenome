@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-OnF5cm	OtAFXO	Liu2019smkint23andMe	Grasby2020thickness	5e-8	FALSE	0.001849808766731452	0.010548577358681574	0.8769435015808984
-OnF5cm	OtAFXO	Liu2019smkint23andMe	Grasby2020thickness	5e-8	TRUE	NA	NA	NA

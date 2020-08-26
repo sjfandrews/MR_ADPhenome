@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-5Itk3q	3jzyti	Chauhan2019bi	Yengo2018bmi	5e-6	TRUE	0	NA	NA

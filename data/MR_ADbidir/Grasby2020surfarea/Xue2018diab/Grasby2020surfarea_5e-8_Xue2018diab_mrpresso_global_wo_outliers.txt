@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-02hG1j	vdTLNY	Xue2018diab	Grasby2020surfarea	5e-8	TRUE	0	NA	NA

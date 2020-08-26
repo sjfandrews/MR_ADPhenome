@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-SLBffk	pr92dm	Lee2018education23andMe	Grasby2020thickness	0.022947732908446365	0.019739030914296976	TRUE	0.042203786586077374	TRUE	5e-8
-SLBffk	pr92dm	Lee2018education23andMe	Grasby2020thickness	0.023780092726177066	0.022698620994001037	TRUE	0.5111519867830918	FALSE	5e-8

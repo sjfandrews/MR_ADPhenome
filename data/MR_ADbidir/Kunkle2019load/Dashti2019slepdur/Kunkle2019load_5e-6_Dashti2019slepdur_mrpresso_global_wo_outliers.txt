@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-6rzSGs	mNvzSk	Dashti2019slepdur	Kunkle2019load	5e-6	TRUE	2	42.3181894313166	0.2256

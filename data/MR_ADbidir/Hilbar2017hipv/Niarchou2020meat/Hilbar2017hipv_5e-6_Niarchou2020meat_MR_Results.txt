@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
-DPpLTn	3ge31O	Niarchou2020meat	Hilbar2017hipv	5e-6	FALSE	Inverse variance weighted (fixed effects)	23	0	0.014823903973592236	0.009623258736977947	0.12345690194016573
-DPpLTn	3ge31O	Niarchou2020meat	Hilbar2017hipv	5e-6	FALSE	Weighted median	23	0	0.006872063026531833	0.01473645254701431	0.6409786715287785
-DPpLTn	3ge31O	Niarchou2020meat	Hilbar2017hipv	5e-6	FALSE	Weighted mode	23	0	-5.514232502579486e-4	0.02491380366336189	0.9825411931882296
-DPpLTn	3ge31O	Niarchou2020meat	Hilbar2017hipv	5e-6	FALSE	MR Egger	23	0	0.015634674978867617	0.025507451742777153	0.5464939611363112

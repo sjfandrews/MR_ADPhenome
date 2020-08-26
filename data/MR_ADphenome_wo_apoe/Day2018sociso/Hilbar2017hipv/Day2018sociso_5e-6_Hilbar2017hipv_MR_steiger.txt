@@ -1,2 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-7B4nqD	l5weTH	Day2018sociso	Hilbar2017hipv	0.005015850095419598	0.004440238902315044	TRUE	0.5032572034247855	FALSE	5e-6

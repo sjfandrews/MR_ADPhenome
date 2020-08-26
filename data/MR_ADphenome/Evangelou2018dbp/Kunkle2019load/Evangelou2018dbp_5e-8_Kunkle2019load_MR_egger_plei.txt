@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-FfdiPg	6TMJWQ	Kunkle2019load	Evangelou2018dbp	5e-8	FALSE	0.0029804702679014543	0.0022564930984089945	0.1872284245300281
-FfdiPg	6TMJWQ	Kunkle2019load	Evangelou2018dbp	5e-8	TRUE	0.0032779795567906807	0.0021985196768802987	0.13666840225894986

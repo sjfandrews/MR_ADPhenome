@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-WfS9uT	moRMOc	Jansen2018insomnia23andMe	Chauhan2019bi	5e-6	FALSE	0	27.992872760736848	0.0308

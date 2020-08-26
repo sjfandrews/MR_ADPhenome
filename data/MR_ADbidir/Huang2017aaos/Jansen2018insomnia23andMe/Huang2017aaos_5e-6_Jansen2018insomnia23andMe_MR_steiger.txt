@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-Y5l8p0	tvFEuB	Huang2017aaos	Jansen2018insomnia23andMe	0.026948235137326495	1.1308053293796596e-6	TRUE	0	TRUE	5e-6
-Y5l8p0	tvFEuB	Huang2017aaos	Jansen2018insomnia23andMe	0.028769170092770458	3.4290651017450437e-6	TRUE	0	FALSE	5e-6

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-bidjLO	RS4Kbv	Willer2013tg	Deming2017tau	0.03894499400892873	0.015889610925545198	TRUE	4.656495180732634e-5	TRUE	5e-8
-bidjLO	RS4Kbv	Willer2013tg	Deming2017tau	0.04051917043229761	0.02223567398182329	TRUE	0.0027554128907540942	FALSE	5e-8

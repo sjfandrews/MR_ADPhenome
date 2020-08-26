@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-zKYHcm	SEFNP7	Lambert2013load	Liu2019drnkwk23andMe	5e-8	FALSE	1	150.76722720372553	<1e-04

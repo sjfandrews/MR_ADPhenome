@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-VoGIEO	glIcAs	Hilbar2017hipv	Niarchou2020fish	5e-8	FALSE	-0.00336182321783159	0.010623107186484165	0.7531474370604704
-VoGIEO	glIcAs	Hilbar2017hipv	Niarchou2020fish	5e-8	TRUE	-0.0026409485179652195	0.008318961142439995	0.7524664785034568

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
-6rzSGs	mNvzSk	Kunkle2019load	Dashti2019slepdur	0.021012247201978595	9.30084355014344e-5	TRUE	0	TRUE	5e-6
-6rzSGs	mNvzSk	Kunkle2019load	Dashti2019slepdur	0.023027022577389894	1.3719208258324199e-4	TRUE	0	FALSE	5e-6

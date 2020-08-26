@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-oaDAZ8	DapxE5	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	FALSE	2	40.68195374611544	1e-4

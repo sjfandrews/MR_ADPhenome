@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-hfOSlW	RjxAFc	Chauhan2019bi	Klimentidis2018mvpa	5e-6	FALSE	0	81.41956693920774	0.853

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-Lipmix	98b8CI	Hilbar2017hipv	Wells2019hdiff	5e-8	FALSE	0	56.884072356564545	0.0551

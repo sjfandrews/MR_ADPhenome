@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-zD71z0	1c2bZn	Howard2019dep23andMe	Grasby2020surfarea	5e-8	FALSE	0.002179888266810083	0.005555414860601217	0.703003557663477
-zD71z0	1c2bZn	Howard2019dep23andMe	Grasby2020surfarea	5e-8	TRUE	-9.025393873855007e-4	0.005077573437083486	0.8628555287489255

@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
-0cwPH1	BCaIGo	Kunkle2019load	Liu2019smkcpd23andMe	5e-6	FALSE	0	171.09463274921185	0.0237

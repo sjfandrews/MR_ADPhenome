@@ -1,2 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
-FCKJpa	BWeuEp	Beecham2014vbiany	Yengo2018bmi	5e-8	FALSE	0.0030138743352020993	0.007788132512820108	0.6989344906128232	NA

@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-YKkCut	a9kaRo	Grasby2020surfarea	Xue2018diab	5e-6	FALSE	2.340918179635829	24.718111874127175	0.9246376909903222
-YKkCut	a9kaRo	Grasby2020surfarea	Xue2018diab	5e-6	TRUE	-3.492758794988351	24.20808530749365	0.8854146230729835

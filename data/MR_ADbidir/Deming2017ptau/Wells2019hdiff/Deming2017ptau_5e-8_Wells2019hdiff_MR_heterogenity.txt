@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-jzfsqu	nbUdTX	Wells2019hdiff	Deming2017ptau	5e-8	FALSE	MR Egger	3.7282911061910395	2	0.1550286170313415
-jzfsqu	nbUdTX	Wells2019hdiff	Deming2017ptau	5e-8	FALSE	Inverse variance weighted	11.700904122876985	3	0.008481226496176775
-jzfsqu	nbUdTX	Wells2019hdiff	Deming2017ptau	5e-8	TRUE	MR Egger	0.5148990799320928	1	0.47302573780615104
-jzfsqu	nbUdTX	Wells2019hdiff	Deming2017ptau	5e-8	TRUE	Inverse variance weighted	1.0087559921791873	2	0.6038810750239106

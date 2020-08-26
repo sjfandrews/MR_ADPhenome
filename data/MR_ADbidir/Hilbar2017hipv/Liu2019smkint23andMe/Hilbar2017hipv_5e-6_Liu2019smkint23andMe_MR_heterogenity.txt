@@ -1,5 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
-NtYlrP	9mySax	Liu2019smkint23andMe	Hilbar2017hipv	5e-6	FALSE	MR Egger	46.78425051429989	22	0.0015656779721839225
-NtYlrP	9mySax	Liu2019smkint23andMe	Hilbar2017hipv	5e-6	FALSE	Inverse variance weighted	56.78746584884641	23	1.0976491547789465e-4
-NtYlrP	9mySax	Liu2019smkint23andMe	Hilbar2017hipv	5e-6	TRUE	MR Egger	19.671585246091762	20	0.4786348271210374
-NtYlrP	9mySax	Liu2019smkint23andMe	Hilbar2017hipv	5e-6	TRUE	Inverse variance weighted	21.402487791170486	21	0.43461162517440344

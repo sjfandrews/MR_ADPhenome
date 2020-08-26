@@ -1,3 +1,0 @@
-id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
-HvX6n4	GaRh12	Evangelou2018pp	Chauhan2019bi	5e-6	FALSE	0.0707242804393234	0.040224252515389455	0.11257219107213247
-HvX6n4	GaRh12	Evangelou2018pp	Chauhan2019bi	5e-6	TRUE	0.010959817526830593	0.044216236080422876	0.8113498605671476
