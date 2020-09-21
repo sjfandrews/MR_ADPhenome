@@ -57,6 +57,7 @@ mrbase.oauth
 *.clumped.gz
 *.clumped
 *.log
+*.nosex
 Rplots.pdf
 data/test/*
 results/test/*
