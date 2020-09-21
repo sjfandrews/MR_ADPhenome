@@ -22,7 +22,7 @@ EXCLUSION:
 ## Blacklist alcohol consumption onto Kunkle 2019 (LOAD) and Hilbar 2017 (HV) in line with data use aggreements
 ## Blacklist all other phenotypes onto Lambert 2013 (LOAD) and Hilbar 2015 (HV)
 missing: [
-   {"Project" : "MR_ADphenome", "ExposureCode" : "Yengo2018bmi", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
+   {"Project" : "test", "ExposureCode" : "Willer2013ldl", "OutcomeCode" : "Lambert2013load", "Pthreshold" : "5e-8"},
    ]
 
 
@@ -31,7 +31,7 @@ EXPOSURES:
   -
     CODE: Willer2013ldl
     NAME: 'LDL cholesterol'
-    FILE: raw/GWAS/Willer2013ldl.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Willer2013ldl.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -50,7 +50,7 @@ OUTCOMES:
   -
     CODE: Lambert2013load
     NAME: LOAD
-    FILE: raw/GWAS/Lambert2013load.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Lambert2013load.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -67,7 +67,7 @@ OUTCOMES:
   -
     CODE: Kunkle2019load
     NAME: LOAD
-    FILE: raw/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
