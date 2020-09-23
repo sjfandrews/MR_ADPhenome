@@ -85,7 +85,7 @@ rule FormatExposure:
         n_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['N'],
         trait_col = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['COLUMNS']['TRAIT']
     script:
-        '../scripts/FormatGwas.R'
+        '../scripts/mr_FormatGwas.R'
 
 ## Read in Outcome summary statistics and format them to input required for pipeline
 ## Formated summary stats are a temp file that is delted as the end
@@ -108,7 +108,7 @@ rule FormatOutcome:
         n_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['N'],
         trait_col = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['COLUMNS']['TRAIT']
     script:
-        '../scripts/FormatGwas.R'
+        '../scripts/mr_FormatGwas.R'
 
 ## Peform LD clumping on exposure summary statisitics
 ## user defines r2 and window in config file
@@ -134,7 +134,7 @@ rule clump:
 ## Extract SNPs to be used as instruments in exposure
 rule ExposureSnps:
     input:
-        script = 'workflow/scripts/ExposureData.R',
+        script = 'workflow/scripts/mr_ExposureData.R',
         summary = "data/formated/{ExposureCode}/{ExposureCode}_formated.txt.gz",
         ExposureClump = 'data/formated/{ExposureCode}/{ExposureCode}.clumped.gz'
     output:
@@ -159,7 +159,7 @@ rule manhattan_plot:
 ## Extract exposure instruments from outcome gwas
 rule OutcomeSnps:
     input:
-        script = 'workflow/scripts/OutcomeData.R',
+        script = 'workflow/scripts/mr_OutcomeData.R',
         ExposureSummary = "data/{Project}/{ExposureCode}/{ExposureCode}_{Pthreshold}_SNPs.txt",
         OutcomeSummary = "data/formated/{OutcomeCode}/{OutcomeCode}_formated.txt.gz"
     output:
@@ -204,7 +204,7 @@ rule ExtractProxySnps:
     params:
         Outcome = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}",
     script:
-        '../scripts/ExtractProxySNPs.R'
+        '../scripts/mr_ExtractProxySNPs.R'
 
 ## Use TwoSampleMR to harmonize exposure and outcome datasets
 rule Harmonize:
@@ -222,13 +222,13 @@ rule Harmonize:
         regions_start = EXCLUSION["START"],
         regions_stop = EXCLUSION["STOP"],
         rlib = RLIB
-    script: "../scripts/DataHarmonization.R"
+    script: "../scripts/mr_DataHarmonization.R"
 
 ## Use MR-PRESSO to conduct a global heterogenity test and
 ## outlier test to identify SNPs that are outliers
 rule MrPresso:
     input:
-        script = 'workflow/scripts/MRPRESSO.R',
+        script = 'workflow/scripts/mr_MRPRESSO.R',
         mrdat = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MRdat.csv",
     output:
         "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso.txt",
@@ -242,7 +242,7 @@ rule MrPresso:
 ## Conduct a second MR-PRESSO test after removing outliers
 rule MRPRESSO_wo_outliers:
     input:
-        script = 'workflow/scripts/MRPRESSO_wo_outliers.R',
+        script = 'workflow/scripts/mr_MRPRESSO_wo_outliers.R',
         mrdat = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv",
     output:
         "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_global_wo_outliers.txt",
@@ -261,7 +261,7 @@ rule MR_analysis:
         'data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_Results.txt'
     params:
         out = 'data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}'
-    script: '../scripts/MR_analysis.R'
+    script: '../scripts/mr_analysis.R'
 
 rule steiger:
     input:
@@ -271,7 +271,7 @@ rule steiger:
     params:
         rlib = RLIB,
         pt = "{Pthreshold}"
-    script: '../scripts/SteigerTest.R'
+    script: '../scripts/mr_SteigerTest.R'
 
 ## define list of steiger estimates so they can be merged into a single file
 def MR_steiger_input(wildcards):
@@ -290,7 +290,7 @@ rule merge_steiger:
 rule power:
     input: infile = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_mrpresso_MRdat.csv"
     output: outfile = "data/{Project}/{ExposureCode}/{OutcomeCode}/{ExposureCode}_{Pthreshold}_{OutcomeCode}_MR_power.txt"
-    script: '../scripts/PowerEstimates.R'
+    script: '../scripts/mr_PowerEstimates.R'
 
 ## define list of power estimates so they can be merged into a single file
 def MR_power_input(wildcards):
@@ -318,7 +318,7 @@ def mrpresso_MRdat_input(wildcards):
 rule merge_mrpresso_MRdat:
     input:
         dat = mrpresso_MRdat_input,
-        script = 'workflow/scripts/ConcatMRdat.R'
+        script = 'workflow/scripts/mr_ConcatMRdat.R'
     output:
         'results/{Project}/All/mrpresso_MRdat.csv'
     shell:
@@ -431,12 +431,12 @@ rule html_Report:
         kbthreshold = kb,
         Exposure = lambda wildcards: EXPOSURES.loc[wildcards.ExposureCode]['NAME'],
         Outcome = lambda wildcards: OUTCOMES.loc[wildcards.OutcomeCode]['NAME']
-    script: "../scripts/RenderReport.R"
+    script: "../scripts/mr_RenderReport.R"
 
 ## Write a html Rmarkdown report
 rule aggregate_Report:
     input:
-        markdown = "workflow/scripts/FinalReport.Rmd",
+        markdown = "workflow/scripts/mr_FinalReport.Rmd",
         mrresults = "results/{Project}/All/MRresults.txt",
         mrdat = "results/{Project}/All/mrpresso_MRdat.csv",
         mrpresso_global = "results/{Project}/All/global_mrpresso.txt",
@@ -460,4 +460,4 @@ rule aggregate_Report:
         output_dir = "results/{Project}/All/",
         exposures = EXPOSURES.index,
         outcomes = OUTCOMES.index
-    script: "../scripts/RenderFinalReport.R"
+    script: "../scripts/mr_RenderFinalReport.R"
