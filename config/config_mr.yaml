@@ -1,4 +1,4 @@
-# snakemake -s mr.smk --configfile config/config.yaml -j 4 --keep-going
+# snakemake -s workflow/rules/mr.smk --configfile config/config_mr.yaml --keep-going --notemp
 # snakejob -s mr.smk --configfile config/config.yaml -j 1000 --max-jobs-per-second 1 --keep-going --notemp
 
 PROJECT: "MR_ADphenome"

@@ -155,27 +155,27 @@ def PRS_Results_input(wildcards):
 
 rule aggregate_glm:
     input: res = PRS_Results_input
-    output: summ = expand('results{cohort}/prs_association_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort)
+    output: summ = expand('results/{cohort}/prs_association_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort)
     params: file_type = "association"
     script: '../scripts/prs_concat.R'
 
 rule aggregate_prsice:
     input: res = expand('data/{cohort}/{pheno}/prs_{pheno}_{cohort}.prsice', pheno = pheno, cohort = cohort)
-    output: summ = expand('results{cohort}/prs_prsice_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort)
+    output: summ = expand('results/{cohort}/prs_prsice_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort)
     params: file_type = "prsice"
     script: '../scripts/prs_concat.R'
 
 rule aggregate_summary:
     input: res = expand('data/{cohort}/{pheno}/prs_{pheno}_{cohort}.summary', pheno = pheno, cohort = cohort)
-    output: summ = expand('results{cohort}/prs_summary_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort)
+    output: summ = expand('results/{cohort}/prs_summary_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort)
     params: file_type = "summary"
     script: '../scripts/prs_concat.R'
 
 rule report:
     input:
-        association = expand('results{cohort}/prs_association_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort),
-        prsice = expand('results{cohort}/prs_prsice_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort),
-        summary = expand('results{cohort}/prs_summary_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort),
+        association = expand('results/{cohort}/prs_association_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort),
+        prsice = expand('results/{cohort}/prs_prsice_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort),
+        summary = expand('results/{cohort}/prs_summary_{cohort}_rsq{r2}_{window}kb.csv', r2 = r2, window = kb, cohort = cohort),
     output: "results/{cohort}/output_{cohort}_rsq{r2}_{window}kb.html"
     params:
         rwd = RWD,

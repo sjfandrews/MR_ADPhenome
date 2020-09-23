@@ -3,19 +3,19 @@
 
 pheno: ['Evangelou2018dbp', 'Yengo2018bmi', 'Xue2018diab', 'Niarchou2020meat', 'Niarchou2020fish', 'Willer2013hdl', 'Willer2013ldl', 'Willer2013tc', 'Willer2013tg', 'Dashti2019slepdur', 'Klimentidis2018mvpa', 'Day2018sociso', 'Wells2019hdiff', 'Evangelou2018sbp', 'Evangelou2018pp', 'Liu2019drnkwk23andMe', 'Liu2019smkcpd23andMe', 'Liu2019smkint23andMe', 'Jansen2018insomnia23andMe', 'Howard2019dep23andMe', 'SanchezRoige2019auditt23andMe', 'Lee2018education23andMe']
 # pheno: ['Willer2013ldl', 'Lee2018education23andMe']
-target: 'raw/target/ADGC/all_chrall_filtered'
+target: 'data/raw/target/ADGC/all_chrall_filtered'
 cohort: 'adgcNOapoe'
-pheno_file: 'raw/target/ADGC/all_chrall_filtered.pheno'
+pheno_file: 'data/raw/target/ADGC/all_chrall_filtered.pheno'
 outcome: 'status'
-covar_file: 'raw/target/ADGC/all_chrall_filtered.pheno'
+covar_file: 'data/raw/target/ADGC/all_chrall_filtered.pheno'
 covar: '@jointPC[1-10],aaoaae2,sex,apoe4dose,cohort_ADC1,cohort_UPITT,cohort_ACT,cohort_LOAD,cohort_MAYO,cohort_ADC9,cohort_ADC7,cohort_ADC10,cohort_ADC3,cohort_TGEN2,cohort_ROSMAP,cohort_ADC8,cohort_ADC5,cohort_MIRAGE,cohort_ADC2,cohort_ADC4,cohort_WHICAP,cohort_UKS,cohort_ADC6,cohort_WASHU,cohort_TARC1,cohort_ADNI,cohort_MTV,cohort_OHSU,cohort_RMayo,cohort_CHAP,cohort_EAS,cohort_ROSMAP2,cohort_BIOCARD,cohort_WASHU2,cohort_NBB,cohort_ACT2'
 covar_factors: 'sex,cohort_ADC1,cohort_UPITT,cohort_ACT,cohort_LOAD,cohort_MAYO,cohort_ADC9,cohort_ADC7,cohort_ADC10,cohort_ADC3,cohort_TGEN2,cohort_ROSMAP,cohort_ADC8,cohort_ADC5,cohort_MIRAGE,cohort_ADC2,cohort_ADC4,cohort_WHICAP,cohort_UKS,cohort_ADC6,cohort_WASHU,cohort_TARC1,cohort_ADNI,cohort_MTV,cohort_OHSU,cohort_RMayo,cohort_CHAP,cohort_EAS,cohort_ROSMAP2,cohort_BIOCARD,cohort_WASHU2,cohort_NBB,cohort_ACT2'
-reference: 'raw/reference/EUR_chrAll'
-SampKeep: 'raw/target/ADGC/adgc_samples.keep'
-# bar_levels: '0.00000005,0.000001,0.00001,0.0001,0.001,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11,0.12,0.13,0.14,0.15,0.16,0.17,0.18,0.19,0.2,0.21,0.22,0.23,0.24,0.25,0.26,0.27,0.28,0.29,0.3,0.31,0.32,0.33,0.34,0.35,0.36,0.37,0.38,0.39,0.4,0.41,0.42,0.43,0.44,0.45,0.46,0.47,0.48,0.49,0.5,1'
+reference: 'data/raw/reference/EUR_chrAll'
 bar_levels: '0.00000005,0.000001,0.00001,0.0001,0.001,0.01,0.05,0.1,0.2,0.3,0.4,0.5'
 # bar_levels: '0.00000005, 0.000005'
 perm: 1000
+r2: 0.001
+kb: 10000
 
 EXCLUSION:
   -

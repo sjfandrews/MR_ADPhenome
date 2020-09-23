@@ -1,8 +1,8 @@
 # snakemake -s prs.smk --configfile config/adgc.yaml --keep-going --notemp
 # snakejob -s prs.smk --configfile config/adgc.yaml --keep-going --notemp -j1000
 
-# pheno: ['Evangelou2018dbp', 'Yengo2018bmi', 'Xue2018diab', 'Niarchou2020meat', 'Niarchou2020fish', 'Willer2013hdl', 'Willer2013ldl', 'Willer2013tc', 'Willer2013tg', 'Dashti2019slepdur', 'Klimentidis2018mvpa', 'Day2018sociso', 'Wells2019hdiff', 'Evangelou2018sbp', 'Evangelou2018pp', 'Liu2019drnkwk23andMe', 'Liu2019smkcpd23andMe', 'Liu2019smkint23andMe', 'Jansen2018insomnia23andMe', 'Howard2019dep23andMe', 'SanchezRoige2019auditt23andMe', 'Lee2018education23andMe']
-pheno: ['Willer2013ldl']
+pheno: ['Evangelou2018dbp', 'Yengo2018bmi', 'Xue2018diab', 'Niarchou2020meat', 'Niarchou2020fish', 'Willer2013hdl', 'Willer2013ldl', 'Willer2013tc', 'Willer2013tg', 'Dashti2019slepdur', 'Klimentidis2018mvpa', 'Day2018sociso', 'Wells2019hdiff', 'Evangelou2018sbp', 'Evangelou2018pp', 'Liu2019drnkwk23andMe', 'Liu2019smkcpd23andMe', 'Liu2019smkint23andMe', 'Jansen2018insomnia23andMe', 'Howard2019dep23andMe', 'SanchezRoige2019auditt23andMe', 'Lee2018education23andMe']
+# pheno: ['Willer2013ldl']
 target: 'data/raw/target/ADGC/all_chrall_filtered'
 cohort: 'adgc'
 project: 'adgc'
