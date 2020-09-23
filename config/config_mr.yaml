@@ -4,7 +4,7 @@
 PROJECT: "MR_ADphenome"
 RLIB: "renv/library/R-3.6/x86_64-pc-linux-gnu"
 
-REF: 'raw/EUR_All_Chr'
+REF: 'data/raw/EUR_All_Chr'
 clumpr2: 0.001 ## Default in TwoSample MR
 clumpkb: 10000 ## 10 MB, default in TwoSampleMR
 Pthreshold: ['5e-8', '5e-6']
@@ -126,7 +126,7 @@ EXPOSURES:
   -
     CODE: Yengo2018bmi
     NAME: BMI
-    FILE: raw/GWAS/Yengo2018bmi.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Yengo2018bmi.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -143,7 +143,7 @@ EXPOSURES:
   -
     CODE: Xue2018diab
     NAME: Diabetes
-    FILE: raw/GWAS/Xue2018diab.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Xue2018diab.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -160,7 +160,7 @@ EXPOSURES:
   -
     CODE: Niarchou2020meat
     NAME: 'Meat related diet'
-    FILE: raw/GWAS/Niarchou2020meat.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Niarchou2020meat.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -177,7 +177,7 @@ EXPOSURES:
   -
     CODE: Niarchou2020fish
     NAME: 'Fish and plant related diet'
-    FILE: raw/GWAS/Niarchou2020fish.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Niarchou2020fish.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -194,7 +194,7 @@ EXPOSURES:
   -
     CODE: Willer2013hdl
     NAME: 'HDL cholesterol'
-    FILE: raw/GWAS/Willer2013hdl.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Willer2013hdl.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -211,7 +211,7 @@ EXPOSURES:
   -
     CODE: Willer2013ldl
     NAME: 'LDL cholesterol'
-    FILE: raw/GWAS/Willer2013ldl.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Willer2013ldl.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -228,7 +228,7 @@ EXPOSURES:
   -
     CODE: Willer2013tc
     NAME: 'Total cholesterol'
-    FILE: raw/GWAS/Willer2013tc.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Willer2013tc.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -245,7 +245,7 @@ EXPOSURES:
   -
     CODE: Willer2013tg
     NAME: 'Triglycerides'
-    FILE: raw/GWAS/Willer2013tg.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Willer2013tg.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -262,7 +262,7 @@ EXPOSURES:
   -
     CODE: Dashti2019slepdur
     NAME: 'Sleep Duration'
-    FILE: raw/GWAS/Dashti2019slepdur.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Dashti2019slepdur.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -279,7 +279,7 @@ EXPOSURES:
   -
     CODE: Klimentidis2018mvpa
     NAME: 'Moderate-Vigours Physical Activity'
-    FILE: raw/GWAS/Klimentidis2018mvpa.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Klimentidis2018mvpa.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -296,7 +296,7 @@ EXPOSURES:
   -
     CODE: Day2018sociso
     NAME: 'Social Isolation'
-    FILE: raw/GWAS/Day2018sociso.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Day2018sociso.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -313,7 +313,7 @@ EXPOSURES:
   -
     CODE: Wells2019hdiff
     NAME: 'Hearing Difficulty'
-    FILE: raw/GWAS/Wells2019hdiff.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Wells2019hdiff.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -330,7 +330,7 @@ EXPOSURES:
   -
     CODE: Evangelou2018dbp
     NAME: 'Diastolic Blood Pressure'
-    FILE: raw/GWAS/Evangelou2018dbp.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Evangelou2018dbp.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -347,7 +347,7 @@ EXPOSURES:
   -
     CODE: Evangelou2018sbp
     NAME: 'Systolic Blood Pressure'
-    FILE: raw/GWAS/Evangelou2018sbp.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Evangelou2018sbp.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -364,7 +364,7 @@ EXPOSURES:
   -
     CODE: Evangelou2018pp
     NAME: 'Pulse Pressure'
-    FILE: raw/GWAS/Evangelou2018pp.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Evangelou2018pp.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -381,7 +381,7 @@ EXPOSURES:
   -
     CODE: Lee2018education23andMe
     NAME: 'Education'
-    FILE: raw/GWAS/Lee2018education23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Lee2018education23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -398,7 +398,7 @@ EXPOSURES:
   -
     CODE: SanchezRoige2019auditt23andMe
     NAME: 'AUDIT Total'
-    FILE: raw/GWAS/SanchezRoige2019auditt23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/SanchezRoige2019auditt23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -415,7 +415,7 @@ EXPOSURES:
   -
     CODE: Howard2019dep23andMe
     NAME: 'Depression'
-    FILE: raw/GWAS/Howard2019dep23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Howard2019dep23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -432,7 +432,7 @@ EXPOSURES:
   -
     CODE: Jansen2018insomnia23andMe
     NAME: 'Insomnia'
-    FILE: raw/GWAS/Jansen2018insomnia23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Jansen2018insomnia23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -449,7 +449,7 @@ EXPOSURES:
   -
     CODE: Liu2019smkint23andMe
     NAME: 'Somking Initiation'
-    FILE: raw/GWAS/Liu2019smkint23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Liu2019smkint23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -466,7 +466,7 @@ EXPOSURES:
   -
     CODE: Liu2019smkcpd23andMe
     NAME: 'Smoking Quantity'
-    FILE: raw/GWAS/Liu2019smkcpd23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Liu2019smkcpd23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -483,7 +483,7 @@ EXPOSURES:
   -
     CODE: Liu2019drnkwk23andMe
     NAME: 'Alcohol Consumption'
-    FILE: raw/GWAS/Liu2019drnkwk23andMe.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Liu2019drnkwk23andMe.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -503,7 +503,7 @@ OUTCOMES:
   -
     CODE: Lambert2013load
     NAME: LOAD
-    FILE: raw/GWAS/Lambert2013load.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Lambert2013load.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -520,7 +520,7 @@ OUTCOMES:
   -
     CODE: Kunkle2019load
     NAME: LOAD
-    FILE: raw/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Kunkle2019load.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -537,7 +537,7 @@ OUTCOMES:
   -
     CODE: Huang2017aaos
     NAME: AAOS
-    FILE: raw/GWAS/Huang2017aaos.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Huang2017aaos.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -554,7 +554,7 @@ OUTCOMES:
   -
     CODE: Deming2017ab42
     NAME: 'CSF Ab42'
-    FILE: raw/GWAS/Deming2017ab42.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Deming2017ab42.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -571,7 +571,7 @@ OUTCOMES:
   -
     CODE: Deming2017ptau
     NAME: 'CSF Ptau'
-    FILE: raw/GWAS/Deming2017ptau.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Deming2017ptau.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -588,7 +588,7 @@ OUTCOMES:
   -
     CODE: Deming2017tau
     NAME: 'CSF Tau'
-    FILE: raw/GWAS/Deming2017tau.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Deming2017tau.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -605,7 +605,7 @@ OUTCOMES:
   -
     CODE: Hilbar2017hipv
     NAME: 'Hippocampal Volume'
-    FILE: raw/GWAS/Hilbar2017hipv.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Hilbar2017hipv.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -622,7 +622,7 @@ OUTCOMES:
   -
     CODE: Hilbar2015hipv
     NAME: 'Hippocampal Volume'
-    FILE: raw/GWAS/Hilbar2015hipv.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Hilbar2015hipv.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -639,7 +639,7 @@ OUTCOMES:
   -
     CODE: Grasby2020thickness
     NAME: 'Cortical Thickness'
-    FILE: raw/GWAS/Grasby2020thickness.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Grasby2020thickness.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -656,7 +656,7 @@ OUTCOMES:
   -
     CODE: Grasby2020surfarea
     NAME: 'Cortical Surface Area'
-    FILE: raw/GWAS/Grasby2020surfarea.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Grasby2020surfarea.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -673,7 +673,7 @@ OUTCOMES:
   -
     CODE: Beecham2014npany
     NAME: 'Any Neuritic Plaques'
-    FILE: raw/GWAS/Beecham2014npany.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Beecham2014npany.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -690,7 +690,7 @@ OUTCOMES:
   -
     CODE: Beecham2014braak4
     NAME: 'Neurofibrillary Tangles'
-    FILE: raw/GWAS/Beecham2014braak4.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Beecham2014braak4.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -707,7 +707,7 @@ OUTCOMES:
   -
     CODE: Beecham2014vbiany
     NAME: 'Vascular Brain Injury'
-    FILE: raw/GWAS/Beecham2014vbiany.chrall.CPRA_b37.tsv.gz
+    FILE: data/raw/GWAS/Beecham2014vbiany.chrall.CPRA_b37.tsv.gz
     COLUMNS:
       SNP: DBSNP_ID
       CHROM: CHROM
@@ -724,7 +724,7 @@ OUTCOMES:
   # -
   #   CODE: Chauhan2019bi
   #   NAME: 'Brain Infarcts'
-  #   FILE: raw/GWAS/Chauhan2019bi.chrall.CPRA_b37.tsv.gz
+  #   FILE: data/raw/GWAS/Chauhan2019bi.chrall.CPRA_b37.tsv.gz
   #   COLUMNS:
   #     SNP: DBSNP_ID
   #     CHROM: CHROM

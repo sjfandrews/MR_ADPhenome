@@ -4,7 +4,7 @@
 PROJECT: "test"
 RLIB: "renv/library/R-3.6/x86_64-pc-linux-gnu"
 
-REF: 'raw/EUR_All_Chr'
+REF: 'data/raw/EUR_All_Chr'
 clumpr2: 0.001 ## Default in TwoSample MR
 clumpkb: 10000 ## 10 MB, default in TwoSampleMR
 Pthreshold: ['5e-8', '5e-6']

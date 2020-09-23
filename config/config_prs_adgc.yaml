@@ -1,0 +1,49 @@
+# snakemake -s prs.smk --configfile config/adgc.yaml --keep-going --notemp
+# snakejob -s prs.smk --configfile config/adgc.yaml --keep-going --notemp -j1000
+
+# pheno: ['Evangelou2018dbp', 'Yengo2018bmi', 'Xue2018diab', 'Niarchou2020meat', 'Niarchou2020fish', 'Willer2013hdl', 'Willer2013ldl', 'Willer2013tc', 'Willer2013tg', 'Dashti2019slepdur', 'Klimentidis2018mvpa', 'Day2018sociso', 'Wells2019hdiff', 'Evangelou2018sbp', 'Evangelou2018pp', 'Liu2019drnkwk23andMe', 'Liu2019smkcpd23andMe', 'Liu2019smkint23andMe', 'Jansen2018insomnia23andMe', 'Howard2019dep23andMe', 'SanchezRoige2019auditt23andMe', 'Lee2018education23andMe']
+pheno: ['Willer2013ldl']
+target: 'data/raw/target/ADGC/all_chrall_filtered'
+cohort: 'adgc'
+project: 'adgc'
+pheno_file: 'data/raw/target/ADGC/all_chrall_filtered.pheno'
+outcome: 'status'
+covar_file: 'data/raw/target/ADGC/all_chrall_filtered.pheno'
+covar: '@jointPC[1-10],aaoaae2,sex,apoe4dose,cohort_ADC1,cohort_UPITT,cohort_ACT,cohort_LOAD,cohort_MAYO,cohort_ADC9,cohort_ADC7,cohort_ADC10,cohort_ADC3,cohort_TGEN2,cohort_ROSMAP,cohort_ADC8,cohort_ADC5,cohort_MIRAGE,cohort_ADC2,cohort_ADC4,cohort_WHICAP,cohort_UKS,cohort_ADC6,cohort_WASHU,cohort_TARC1,cohort_ADNI,cohort_MTV,cohort_OHSU,cohort_RMayo,cohort_CHAP,cohort_EAS,cohort_ROSMAP2,cohort_BIOCARD,cohort_WASHU2,cohort_NBB,cohort_ACT2'
+covar_factors: 'sex,cohort_ADC1,cohort_UPITT,cohort_ACT,cohort_LOAD,cohort_MAYO,cohort_ADC9,cohort_ADC7,cohort_ADC10,cohort_ADC3,cohort_TGEN2,cohort_ROSMAP,cohort_ADC8,cohort_ADC5,cohort_MIRAGE,cohort_ADC2,cohort_ADC4,cohort_WHICAP,cohort_UKS,cohort_ADC6,cohort_WASHU,cohort_TARC1,cohort_ADNI,cohort_MTV,cohort_OHSU,cohort_RMayo,cohort_CHAP,cohort_EAS,cohort_ROSMAP2,cohort_BIOCARD,cohort_WASHU2,cohort_NBB,cohort_ACT2'
+reference: 'data/raw/reference/EUR_chrAll'
+bar_levels: '0.00000005,0.000001,0.00001,0.0001,0.001,0.01,0.05,0.1,0.2,0.3,0.4,0.5'
+# bar_levels: '0.00000005, 0.000005'
+perm: 1000
+r2: 0.001
+kb: 10000
+
+EXCLUSION:
+  -
+    NAME: NULL
+    NOTE: NULL
+    CHROM: NULL
+    START: NULL
+    STOP: NULL
+  # -
+  #   NAME: APOE
+  #   NOTE: "Exclude APOE locus, 250kb either side of APOE e4: rs429358 = 19:45411941 (GRCh37.p13)"
+  #   CHROM: 19
+  #   START: 45161941
+  #   STOP: 45661941
+  # -
+  #   NAME: MHC
+  #   NOTE: "MHC region"
+  #   CHROM: 6
+  #   START: 28477797
+  #   STOP: 33448354
+
+# pheno: ['Evangelou2018dbp']
+# target: '/Users/sheaandrews/LOAD_minerva/dummy/Data/ADGC/ADGC_2018/Brian_pipeline_withfamily/post_impute/data/all_chrall_filtered'
+# cohort: 'adgc'
+# pheno_file: '/Users/sheaandrews/LOAD_minerva/dummy/Data/ADGC/ADGC_2018/Brian_pipeline_withfamily/PCA/out/ADGC_withAllPCs.pheno.tsv'
+# outcome: 'status'
+# covar_file: '/Users/sheaandrews/LOAD_minerva/dummy/Data/ADGC/ADGC_2018/Brian_pipeline_withfamily/PCA/out/ADGC_withAllPCs.pheno.tsv'
+# covar: '@jointPC[1-10],cohort,aaoaae2,sex'
+# covar_factors: 'sex,cohort'
+# perm: 10000
