@@ -1,4 +1,8 @@
-#suppressMessages(library(Hmisc))       ## Contains miscillaneous funtions
+## ========================================================================== ##
+## MR: Extract proxy SNPs from outcome GWAS
+## ========================================================================== ##
+
+## ==== Load required packages ==== ##
 suppressMessages(library(plyr))
 suppressMessages(library(tidyverse))
 `%nin%` = Negate(`%in%`)

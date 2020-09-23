@@ -1,4 +1,8 @@
 #!/usr/bin/Rscript
+## ========================================================================== ##
+## Use TwoSampleMR to harmonize exposure and outcome datasets
+## ========================================================================== ##
+
 .libPaths(c(snakemake@params[["rlib"]], .libPaths()))
 
 message("Begining Harmonization \n")
@@ -44,6 +48,7 @@ proxy.dat <- read_csv(proxy.snps) %>%
 
 ### ===== Harmonization ===== ###
 message("Formating Exposure and Outcome \n")
+# Format Exposure
 mr_exposure.dat <- format_data(exposure.dat, type = 'exposure',
                             snp_col = 'SNP',
                             chr_col = 'CHROM',
@@ -59,7 +64,7 @@ mr_exposure.dat <- format_data(exposure.dat, type = 'exposure',
                             phenotype_col = 'TRAIT')
 mr_exposure.dat$exposure =  ExposureCode
 
-# Format LOAD
+# Format Outcome
 mr_outcome.dat <- format_data(outcome.dat, type = 'outcome',
                                  snp_col = 'SNP',
                                  chr_col = 'CHROM',
@@ -75,10 +80,10 @@ mr_outcome.dat <- format_data(outcome.dat, type = 'outcome',
                                 phenotype_col = 'TRAIT')
 mr_outcome.dat$outcome =  OutcomeCode
 
-# harmonize LOAD
+# Harmonize Datasets
 # Remove Plietropic variatns
-## Exclude APOE locus, 1MB either side of APOE e4: rs429358 = 19:45411941 (GRCh37.p13)
 ## Exclude variants that are genome-wide significant for outcome
+## Exclude variants within genomic regions
 if(is.null(regions_chrm)){
   message("Harmonizing data \n")
   harmonized.MRdat <- harmonise_data(mr_exposure.dat, mr_outcome.dat) %>%

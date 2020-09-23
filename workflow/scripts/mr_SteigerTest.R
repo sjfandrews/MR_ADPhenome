@@ -1,5 +1,10 @@
+## ========================================================================== ##
+## MR: Conduct Steiger test for variants
+## ========================================================================== ##
+
 .libPaths(c(snakemake@params[["rlib"]], .libPaths()))
 
+## Load Packages
 library(tidyverse)
 library(TwoSampleMR)
 source('workflow/scripts/miscfunctions.R', chdir = TRUE)
@@ -20,6 +25,7 @@ r_func <- function(x){
   }
   x
 }
+
 ## -------------------- TEST -------------------------##
 # exposure.code = "Kunkle2019load"
 # outcome.code = "Yengo2018bmi"

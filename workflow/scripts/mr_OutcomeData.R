@@ -1,4 +1,7 @@
 #!/usr/bin/Rscript
+## ========================================================================== ##
+## Extract exposure instruments from outcome gwas
+## ========================================================================== ##
 
 ### ===== Command Line Arguments ===== ##
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
@@ -16,7 +19,7 @@ message("READING IN EXPOSURE \n")
 exposure.dat <- read_tsv(exposure.summary)
 
 message("\n READING IN OUTCOME \n")
-outcome.dat.raw <- read_tsv(outcome.summary, comment = '##', guess_max = 15000000) 
+outcome.dat.raw <- read_tsv(outcome.summary, comment = '##', guess_max = 15000000)
 
 ### ===== EXTACT SNPS ===== ###
 message("\n EXTRACTING SNP EFFECTS FROM OUTCOME GWAS  \n")

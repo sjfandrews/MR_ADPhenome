@@ -1,4 +1,8 @@
 #!/usr/bin/Rscript
+## ========================================================================== ##
+## Concat Harmonized MR datasets
+## ========================================================================== ##
+
 library(tidyverse)
 
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line

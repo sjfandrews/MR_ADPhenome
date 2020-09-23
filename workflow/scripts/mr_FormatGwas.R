@@ -1,4 +1,7 @@
 #!/usr/bin/Rscript
+## ========================================================================== ##
+## MR: Format input GWAS to be in standardized format
+## ========================================================================== ##
 
 infile_gwas = snakemake@input[["ss"]]
 outfile = snakemake@output[["formated_ss"]]

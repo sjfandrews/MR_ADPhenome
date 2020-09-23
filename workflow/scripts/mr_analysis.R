@@ -1,12 +1,17 @@
 #!/usr/bin/Rscript
+## ========================================================================== ##
 ## Run MR analysis and Senstivity analysis for w/ outliers retained and removed
+## ========================================================================== ##
 
+## LOAD packages
 library(tidyverse)
 library(TwoSampleMR) ## For conducting MR https://mrcieu.github.io/TwoSampleMR/
 
+## Path to input/output
 input = snakemake@input[["mrdat"]] # Harmonized MR data
 output = snakemake@params[["out"]] # Output
 
+##
 mrdat <- read_csv(input) %>%
   filter(mr_keep == TRUE) %>%
   filter(pleitropy_keep == TRUE)

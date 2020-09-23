@@ -1,4 +1,7 @@
 #!/usr/bin/Rscript
+## ========================================================================== ##
+## MR: Identify outliers using MR-PRESSO
+## ========================================================================== ##
 
 ### ===== Command Line Arguments ===== ##
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line

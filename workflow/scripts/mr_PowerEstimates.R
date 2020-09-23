@@ -1,13 +1,17 @@
+## ========================================================================== ##
+## MR: Estimate power to detect to observed effect
+## ========================================================================== ##
+
 ## Load librarys and functions
 library(tidyverse)
 library(TwoSampleMR)
-source('src/PowerFunctions.R', chdir = TRUE)
-source('scripts/miscfunctions.R', chdir = TRUE)
+source('workflow/scripts/mr_PowerFunctions.R', chdir = TRUE)
+source('workflow/scripts/miscfunctions.R', chdir = TRUE)
 
 infile = snakemake@input[["infile"]]
 outfile = snakemake@output[["outfile"]]
 
-## -------------------------------------------------------------------------------- ##
+## -------------------------------------------------------------------------- ##
 ## Read in Harmonized datasets
 
 MRdat.raw <- infile %>%
@@ -18,7 +22,6 @@ n_outliers <- MRdat.raw %>%
   pull(n_outliers)
 
 std.MRdat <- MRdat.raw %>%
-  mutate(pleitropy_keep = case_when(pval.outcome <= 5e-8 ~ FALSE, TRUE ~ TRUE)) %>%
   filter(pleitropy_keep == TRUE) %>%
   select(-samplesize.outcome, -samplesize.exposure) %>%
   left_join(samplesize, by = c('exposure' = 'code')) %>%
@@ -48,7 +51,7 @@ std.MRdat <- MRdat.raw %>%
          beta.exposure = st_beta.exposure,
          se.exposure = st_se.exposure)
 
-## -------------------------------------------------------------------------------- ##
+## -------------------------------------------------------------------------- ##
 ##            Rerun IVW MR analysis using standardized beta estimates
 ##            Outliers retained
 std.res <- mr(std.MRdat, method_list = c("mr_ivw_fe")) %>%
@@ -74,7 +77,7 @@ mrdat.power <- std.MRdat %>%
   select(-id.exposure, -id.outcome)
 
 
-## -------------------------------------------------------------------------------- ##
+## -------------------------------------------------------------------------- ##
 ##            Rerun IVW MR analysis using standardized beta estimates
 ##            Outliers retained
 
@@ -105,8 +108,8 @@ if(n_outliers > 0){
 
 }
 
-## -------------------------------------------------------------------------------- ##
-##                        Power to detect observed effect                           ##
+## -------------------------------------------------------------------------- ##
+##                        Power to detect observed effect                     ##
 
 observed_power.df <- mrdat.power %>%
   {if(n_outliers > 0) bind_rows(., mrdat.power_wo_outliers) else .} %>%

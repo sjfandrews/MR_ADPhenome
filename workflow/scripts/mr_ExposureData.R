@@ -1,4 +1,7 @@
 #!/usr/bin/Rscript
+## ========================================================================== ##
+## Extract SNPs to be used as instruments in exposure
+## ========================================================================== ##
 
 ### ===== Command Line Arguments ===== ##
 args = commandArgs(trailingOnly = TRUE) # Set arguments from the command line
@@ -10,7 +13,8 @@ out.file = args[4] # SPECIFY THE OUTPUT FILE
 
 ### ===== Load packages ===== ###
 suppressMessages(library(tidyverse))   ## For data wrangling
-source('scripts/miscfunctions.R', chdir = TRUE)
+library(here)
+source(here("workflow", "scripts", "miscfunctions.R"), chdir = TRUE)
 
 ### ===== Read in Data ===== ###
 message("\n READING IN EXPOSURE \n")
