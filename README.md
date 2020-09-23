@@ -1,5 +1,5 @@
-# Causal effect of modifiable risk factors on the Alzheimer’s phenome
-Esimating the causal associations between potentially modifiable risk factors and the Alzheimer’s phenome using Mendelian randomization.
+# Causal associations between modifiable risk factors and the Alzheimer’s phenome
+Esimating the causal associations between potentially modifiable risk factors and the Alzheimer’s phenome using polygenic risk scoring and Mendelian randomization.
 
 _Shea J Andrews, Brian Fulton-Howard, Paul O’Reilly, Edoardo Marcora, & Alison M Goate and collaborators of the Alzheimer’s Disease Genetics Consortium_. 2020. **Causal associations between modifiable risk factors and the Alzheimer’s phenome.** Annals of Neurology. In Press.
 
@@ -14,10 +14,46 @@ _Shea J Andrews, Brian Fulton-Howard, Paul O’Reilly, Lindsay A Farrer, Jonatha
 
 **Interpretation**: Our comprehensive examination of the genetic evidence for the causal relationships between previously reported risk factors in AD using PRS and MR, supports a causal role for education, blood pressure, cholesterol levels, smoking, and diabetes with the AD phenome.
 
-## MR Analysis
-Mendelian randomization was conducted using the [MR snakemake pipeline](https://github.com/marcoralab/MRPipeline). See the corresponding repo for more information.
+## Data Analysis
 
-Mendelian Randomization results for each exposure-outcome pair can be found in `docs/TableS3-4.xlsx`.
+The Snakemake workflow management system was used implement pipelines for the PRS and MR anlaysis. The master work flow is `workflow/Snakefile` with `workflow/rules/mr.smk` and `workflow/rules/mr.smk` used to implment the PRS and MR pipelines respectively.
+
+### PRS Analysis
+
+_PRSice-2_ was used to construct polygenic risk scores across a range of p-value thresholds for each of the exposures of interest in ADGC. Prinicpal compoent analysis was perfomed on the resulting PRS, with the first PRS-PC used in subsequent association tests with AD.
+
+Snakefile
++ `workflow/rules/prs.smk`: workflow for implementing PRS anlaysis
+
+Configuration files
++ `config_prs_adgc.yaml`: analysis parameters for assocation including APOE region
++ `config_prs_adgc_wo_apoe.yaml`: analysis parameters for assocation excluding APOE region
+
+Script files
++ `workflow/scripts/prs_*`: script files for implementing spefific rules in PRS workflow
+
+Results
++ `data/adgc` and `data/adgcNOapoe` contain intermeditary working files
++ `results/adgc` and `results/adgcNOapoe` contain results files
+
+### MR Analysis
+Mendelian randomization analysis was conducted using the `TwoSampleMR` package. Primary analysis was conducted using IVW to estimated causal relationships, while senstivity analysis were conducted using WME, WMBE, MR-Egger and MR-PRESSO.
+
+Snakefile
++ `workflow/rules/mr.smk`: workflow for implementing MR anlaysis
+
+Configuration files
++ `config_mr.yaml`: analysis parameters for MR analysis including APOE region
++ `config_mr_wo_apoe.yaml`: analysis parameters for MR analysis excluding APOE region
++ `config_bidir.yaml`: analysis parameters for bidirectional MR anlaysis excluding APOE region
+
+Script files
++ `workflow/scripts/mr_*`: script files for implementing spefific rules in MR workflow
+
+Results
++ `data/MR_ADphenome`, `data/MR_ADphenome_wo_apoe`, and `data/MR_ADbidir` contain intermediatry files generated during MR workflow
++ `results/MR_ADphenome`, `results/MR_ADphenome_wo_apoe`, and `results/MR_ADbidir` contain final results for MR analysis
++ Mendelian Randomization results for each exposure-outcome pair can be found in `docs/TableS3-4.xlsx`.
 
 ## Data Avaliability
 The data used in these analysis are either pubilicaly avaliable or were made avaliable by request from the authors. Summary Statistics were harmonized using the [Summary Statistic Munging pipeline](https://github.com/marcoralab/sumstats_munger). For more details on harmonizing and using VCF's for efficient and robust storage of GWAS summary statistics see [Lyon et al 2020. BioRxiv](https://dx.doi.org/10.1101/2020.05.29.115824).
