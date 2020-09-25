@@ -59,7 +59,7 @@ Results
 + Mendelian Randomization results for each exposure-outcome pair can be found in `docs/TableS3-4.xlsx`.
 
 
-![MR Workflow](./docs/mr_dag.png)
+![MR Workflow](./docs/mr_dag.pdf)
 
 ## Data Avaliability
 The data used in these analysis are either pubilicaly avaliable or were made avaliable by request from the authors. Summary Statistics were harmonized using the [Summary Statistic Munging pipeline](https://github.com/marcoralab/sumstats_munger). For more details on harmonizing and using VCF's for efficient and robust storage of GWAS summary statistics see [Lyon et al 2020. BioRxiv](https://dx.doi.org/10.1101/2020.05.29.115824).
