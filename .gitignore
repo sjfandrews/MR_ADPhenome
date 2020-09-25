@@ -44,26 +44,30 @@ vignettes/*.pdf
 # translation temp files
 po/*~
 
-# Snakemake logfiles
+# Folers and files
+## Snakemake logfiles
 .snakemake/*
 .snakejob/*
 
-# Plink files
+## Plink files
 *.bim
 *.bed
 *.fam
 *.pheno
+*.log
+*.nosex
 
-# Folers and files
+## Plink clumping files
+*.clumped.gz
+*.clumped
+
+*_formated.txt.gz
+
 .DS_Store
 ._.DS_Store
 data/raw/*
 Drafts*
 mrbase.oauth
-*.clumped.gz
-*.clumped
-*.log
-*.nosex
 Rplots.pdf
 data/test/*
 data/temp/*
@@ -73,6 +77,4 @@ shiny/rsconnect
 shiny/user_base.rds
 shiny/.httr-oauth
 workflow/scripts/._*
-
-*_formated.txt.gz
 sandbox/*
