@@ -48,6 +48,12 @@ po/*~
 .snakemake/*
 .snakejob/*
 
+# Plink files
+*.bim
+*.bed
+*.fam
+*.pheno
+
 # Folers and files
 .DS_Store
 ._.DS_Store
