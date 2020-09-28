@@ -99,5 +99,6 @@ Harmonized exposure - outcome SNP sets for conducting MR analysis can be found i
 
 <sup>†</sup> Includes data from 23andMe, which is avaliable upon request from 23andMe
 
-test. 
+
+
 
