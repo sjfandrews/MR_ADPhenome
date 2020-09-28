@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+vgdaic	twSM4t	Grasby2020thickness	Niarchou2020meat	5e-6	FALSE	MR Egger	118.59317338895346	95	0.0510312266175696
+vgdaic	twSM4t	Grasby2020thickness	Niarchou2020meat	5e-6	FALSE	Inverse variance weighted	119.55560231621178	96	0.052060458650305334

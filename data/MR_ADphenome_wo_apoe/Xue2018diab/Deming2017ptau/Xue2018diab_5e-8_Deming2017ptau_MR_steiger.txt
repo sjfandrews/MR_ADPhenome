@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+h7edTD	iH7104	Xue2018diab	Deming2017ptau	0.034803550389699726	0.039029392767747216	FALSE	0.5229018567875832	FALSE	5e-8

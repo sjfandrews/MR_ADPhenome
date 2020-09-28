@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+4pMRIY	lhfEaE	Klimentidis2018mvpa	Hilbar2017hipv	5e-6	TRUE	2	20.57460001054383	0.5419

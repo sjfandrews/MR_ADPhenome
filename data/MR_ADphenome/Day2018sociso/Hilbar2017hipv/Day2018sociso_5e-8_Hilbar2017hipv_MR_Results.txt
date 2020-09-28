@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+9Chcb9	2iOubj	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	Inverse variance weighted (fixed effects)	15	0	-0.118355050123997	0.1842237042861727	0.5205791719611804
+9Chcb9	2iOubj	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	Weighted median	15	0	-0.044003602591517255	0.25277832875051715	0.8618027428559979
+9Chcb9	2iOubj	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	Weighted mode	15	0	0.3092424589915459	0.4072043540891443	0.4601934207640662
+9Chcb9	2iOubj	Hilbar2017hipv	Day2018sociso	5e-8	FALSE	MR Egger	15	0	0.9294649036536586	0.950199208671132	0.3458389715839033

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+2FzTFq	QaXMhD	Grasby2020thickness	Yengo2018bmi	5e-8	TRUE	2	687.3262945577972	<4e-05

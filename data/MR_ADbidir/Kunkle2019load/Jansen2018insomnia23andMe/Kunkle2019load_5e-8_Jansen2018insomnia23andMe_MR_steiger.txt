@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+XhQQIT	wmsfMs	Kunkle2019load	Jansen2018insomnia23andMe	0.01128507079063897	1.2039848680579337e-6	TRUE	0	TRUE	5e-8
+XhQQIT	wmsfMs	Kunkle2019load	Jansen2018insomnia23andMe	0.01194170011616192	2.03129425366561e-6	TRUE	0	FALSE	5e-8

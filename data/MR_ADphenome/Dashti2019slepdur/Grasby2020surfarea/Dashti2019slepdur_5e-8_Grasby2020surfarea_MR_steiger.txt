@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+WxGFaE	VvwUdh	Dashti2019slepdur	Grasby2020surfarea	0.00560503599911412	0.002451319525152902	TRUE	6.595364394179626e-6	TRUE	5e-8
+WxGFaE	VvwUdh	Dashti2019slepdur	Grasby2020surfarea	0.0060236916476800115	0.003790539369752026	TRUE	0.004313379746255119	FALSE	5e-8

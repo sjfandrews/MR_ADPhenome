@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+uBpw1E	WTFfYd	Liu2019drnkwk23andMe	Deming2017tau	5e-6	FALSE	0.0032902720763905192	0.003021330680587193	0.325829696197659
+uBpw1E	WTFfYd	Liu2019drnkwk23andMe	Deming2017tau	5e-6	TRUE	0.0016758292268614294	0.0020009180090891842	0.4494192612362204

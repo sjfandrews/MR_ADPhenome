@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+vh3HlB	cJzo3o	Jansen2018insomnia23andMe	Grasby2020surfarea	5e-6	TRUE	5	106.14046442119052	<1e-04

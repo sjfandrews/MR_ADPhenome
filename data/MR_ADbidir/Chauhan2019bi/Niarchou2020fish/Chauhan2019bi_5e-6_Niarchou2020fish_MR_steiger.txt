@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+slfFiD	Q0JP6O	Chauhan2019bi	Niarchou2020fish	0.10016669756829633	6.504443698244849e-5	TRUE	0	FALSE	5e-6

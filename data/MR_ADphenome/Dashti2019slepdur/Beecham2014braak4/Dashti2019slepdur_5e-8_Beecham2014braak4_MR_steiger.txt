@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+lNmYPl	kwJ4FY	Dashti2019slepdur	Beecham2014braak4	0.00622617647285277	0.007925864083572362	FALSE	0.4854944368642018	FALSE	5e-8

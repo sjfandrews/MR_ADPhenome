@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+5ZyAZq	icdxgd	Deming2017tau	Xue2018diab	5e-8	FALSE	Inverse variance weighted (fixed effects)	106	0	0.010543449512440925	0.008704617635677786	0.22580042381833842
+5ZyAZq	icdxgd	Deming2017tau	Xue2018diab	5e-8	FALSE	Weighted median	106	0	0.02341827123239915	0.015952132660162186	0.14209501971511102
+5ZyAZq	icdxgd	Deming2017tau	Xue2018diab	5e-8	FALSE	Weighted mode	106	0	0.021686847045325697	0.01592370640729778	0.17613728431461503
+5ZyAZq	icdxgd	Deming2017tau	Xue2018diab	5e-8	FALSE	MR Egger	106	0	0.013806587321428657	0.020042742620778653	0.4924470513391841

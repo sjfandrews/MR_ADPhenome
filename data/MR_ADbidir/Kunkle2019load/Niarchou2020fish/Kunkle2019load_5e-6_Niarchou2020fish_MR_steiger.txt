@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+L89EBe	UjEBso	Kunkle2019load	Niarchou2020fish	0.020862866645096817	1.7436335087367983e-4	TRUE	0	TRUE	5e-6
+L89EBe	UjEBso	Kunkle2019load	Niarchou2020fish	0.022548697957050255	2.509830396384584e-4	TRUE	0	FALSE	5e-6

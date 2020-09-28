@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+bnZxeV	RFQByP	Beecham2014npany	Wells2019hdiff	5e-6	FALSE	0	102.01458410205574	0.5306

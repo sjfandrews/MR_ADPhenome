@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+AT9DEI	iKpjfn	Deming2017ab42	Jansen2018insomnia23andMe	5e-6	FALSE	2.3765094244412724e-4	0.0014849381723857603	0.872945545561568	NA

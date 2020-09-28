@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	FALSE	Inverse variance weighted (fixed effects)	10	2	1802.2901115542409	2313.148465047914	0.4358912360547762
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted median	10	2	72.42804832175216	3362.401406727298	0.9828144394885036
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted mode	10	2	-563.4820703316655	3503.6420364469254	0.8757813799316361
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	FALSE	MR Egger	10	2	-26409.878006623607	21210.235841448015	0.24831210238787357
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	TRUE	Inverse variance weighted (fixed effects)	8	2	2117.9594158942195	2468.859145150961	0.39096442563409867
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	TRUE	Weighted median	8	2	-255.98756277884354	3362.5468494991314	0.9393164131322735
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	TRUE	Weighted mode	8	2	-2101.3652300736067	4082.7407445143876	0.6226143078334434
+4B5pcV	tQHRxr	Grasby2020surfarea	SanchezRoige2019auditt23andMe	5e-8	TRUE	MR Egger	8	2	-13491.201909240981	12099.491309378942	0.30749924972593334

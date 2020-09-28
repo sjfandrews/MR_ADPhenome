@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+KD6Gzw	pdTFdF	Beecham2014vbiany	SanchezRoige2019auditt23andMe	5e-8	FALSE	Inverse variance weighted (fixed effects)	11	0	0.8713501630283031	1.1879971344540385	0.4632769998505004
+KD6Gzw	pdTFdF	Beecham2014vbiany	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted median	11	0	-0.9375998274244972	1.649622443874372	0.5697821437976089
+KD6Gzw	pdTFdF	Beecham2014vbiany	SanchezRoige2019auditt23andMe	5e-8	FALSE	Weighted mode	11	0	-0.9820423433569587	2.0843730381529673	0.6476470127082921
+KD6Gzw	pdTFdF	Beecham2014vbiany	SanchezRoige2019auditt23andMe	5e-8	FALSE	MR Egger	11	0	-8.508391496660577	6.047920866502254	0.19305829841567287

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Ukwj3U	pGibYK	Lambert2013load	Liu2019drnkwk23andMe	5e-8	FALSE	-0.007315843454026364	0.007409078782124021	0.32627442981809407
+Ukwj3U	pGibYK	Lambert2013load	Liu2019drnkwk23andMe	5e-8	TRUE	-0.00745250669982385	0.006946334403242824	0.2864393596740738

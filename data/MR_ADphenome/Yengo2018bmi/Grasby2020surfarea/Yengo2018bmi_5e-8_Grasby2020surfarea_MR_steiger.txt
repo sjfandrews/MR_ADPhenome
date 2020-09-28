@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+zkawOh	jDjzYG	Yengo2018bmi	Grasby2020surfarea	0.05171774395301049	0.02033002334100791	TRUE	0	TRUE	5e-8
+zkawOh	jDjzYG	Yengo2018bmi	Grasby2020surfarea	0.05331153107391974	0.023039797806691183	TRUE	0	FALSE	5e-8

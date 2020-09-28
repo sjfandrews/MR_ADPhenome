@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+Gasl5H	cX69c7	Grasby2020surfarea	Liu2019smkint23andMe	5e-6	FALSE	-70.01466663996901	27.702843049772543	0.011771884608603084
+Gasl5H	cX69c7	Grasby2020surfarea	Liu2019smkint23andMe	5e-6	TRUE	-61.417234180718495	25.393881023091556	0.015909508291091074

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+rkgu4x	fbuj7s	Kunkle2019load	Willer2013tc	5e-6	FALSE	0.005445663294377735	0.0035374485328144253	0.1263098225829886
+rkgu4x	fbuj7s	Kunkle2019load	Willer2013tc	5e-6	TRUE	0.006661207800103307	0.003404161654445926	0.052695425187278974

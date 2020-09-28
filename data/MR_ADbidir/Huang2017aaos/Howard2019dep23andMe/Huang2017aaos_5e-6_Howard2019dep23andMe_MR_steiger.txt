@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+g7cVjs	IJGzs3	Huang2017aaos	Howard2019dep23andMe	0.029427754839729748	5.29168180332274e-5	TRUE	0	TRUE	5e-6
+g7cVjs	IJGzs3	Huang2017aaos	Howard2019dep23andMe	0.030721747725248865	7.080033385366037e-5	TRUE	0	FALSE	5e-6

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+trTy4j	iqYYB2	Grasby2020thickness	Yengo2018bmi	5e-6	FALSE	1.151070506521107e-5	1.0030098962976133e-4	0.9086674010211715
+trTy4j	iqYYB2	Grasby2020thickness	Yengo2018bmi	5e-6	TRUE	-4.29321808107067e-5	9.89063655944845e-5	0.6643742711335809

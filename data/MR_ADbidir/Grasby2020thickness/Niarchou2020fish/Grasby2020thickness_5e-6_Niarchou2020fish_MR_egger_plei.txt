@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+IkvWig	mZ81Ix	Niarchou2020fish	Grasby2020thickness	5e-6	FALSE	8.511325109245803e-4	0.003604746341213409	0.8147202170825475
+IkvWig	mZ81Ix	Niarchou2020fish	Grasby2020thickness	5e-6	TRUE	-0.003012853898101567	0.003332304947333908	0.37247714746752447

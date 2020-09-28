@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+ve6s8m	GSFlir	Grasby2020surfarea	Wells2019hdiff	5e-8	FALSE	MR Egger	58.41589220518048	37	0.013895319663707452
+ve6s8m	GSFlir	Grasby2020surfarea	Wells2019hdiff	5e-8	FALSE	Inverse variance weighted	60.73274660889709	38	0.011003797658883017

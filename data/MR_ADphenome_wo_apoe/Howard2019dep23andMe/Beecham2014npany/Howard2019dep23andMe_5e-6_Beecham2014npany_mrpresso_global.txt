@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+SFZiPF	J2bi7R	Beecham2014npany	Howard2019dep23andMe	5e-6	FALSE	0	253.44335203683485	0.4049

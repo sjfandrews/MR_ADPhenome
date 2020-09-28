@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+C7PlAB	mQVY74	Evangelou2018sbp	Grasby2020thickness	0.04823076755291883	0.024438633036519924	TRUE	0	TRUE	5e-6
+C7PlAB	mQVY74	Evangelou2018sbp	Grasby2020thickness	0.05101119458834707	0.026191249464723593	TRUE	0	FALSE	5e-6

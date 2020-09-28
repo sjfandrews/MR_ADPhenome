@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+rxXxoQ	ROVBjh	Willer2013hdl	Hilbar2017hipv	0.05245530754210716	0.006070321174624012	TRUE	0	TRUE	5e-6
+rxXxoQ	ROVBjh	Willer2013hdl	Hilbar2017hipv	0.05335962931204406	0.00685136463601597	TRUE	0	FALSE	5e-6

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+5E3Bb5	FLgG5G	Deming2017ptau	Lee2018education23andMe	5e-8	FALSE	-0.0014566066015628731	0.0011043327599215525	0.1878394542395436	NA

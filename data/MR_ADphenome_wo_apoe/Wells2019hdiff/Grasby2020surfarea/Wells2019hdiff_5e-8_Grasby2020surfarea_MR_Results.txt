@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+H2NLCa	mlSVdC	Grasby2020surfarea	Wells2019hdiff	5e-8	FALSE	Inverse variance weighted (fixed effects)	39	0	-1383.8582227506706	2085.462780440494	0.5069632041435905
+H2NLCa	mlSVdC	Grasby2020surfarea	Wells2019hdiff	5e-8	FALSE	Weighted median	39	0	-3469.3873879302955	3135.4340023727473	0.2685060713022371
+H2NLCa	mlSVdC	Grasby2020surfarea	Wells2019hdiff	5e-8	FALSE	Weighted mode	39	0	-5398.136752844017	5309.299866121349	0.315710849381845
+H2NLCa	mlSVdC	Grasby2020surfarea	Wells2019hdiff	5e-8	FALSE	MR Egger	39	0	-13519.79532585683	10355.206417464286	0.19974753730833716

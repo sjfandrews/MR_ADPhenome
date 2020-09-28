@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+1YSQEo	o78Npu	Liu2019smkcpd23andMe	Grasby2020thickness	0.016012867469366487	0.005203790652109145	TRUE	0	FALSE	5e-6

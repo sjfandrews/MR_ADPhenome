@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+75C6cF	goyLHC	Huang2017aaos	Liu2019drnkwk23andMe	5e-8	FALSE	1	124.61436571966243	0.0085

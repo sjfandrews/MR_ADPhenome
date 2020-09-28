@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gXEay3	VssOTX	Jansen2018insomnia23andMe	Huang2017aaos	5e-6	TRUE	2	44.33702626352679	0.0682

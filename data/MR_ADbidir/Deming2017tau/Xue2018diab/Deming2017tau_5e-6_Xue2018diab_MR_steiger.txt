@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+VQ4LV8	qsrNdA	Deming2017tau	Xue2018diab	0.04242137887735759	5.449549070012666e-5	TRUE	0	TRUE	5e-6
+VQ4LV8	qsrNdA	Deming2017tau	Xue2018diab	0.04905664464214065	1.3622613443723351e-4	TRUE	0	FALSE	5e-6

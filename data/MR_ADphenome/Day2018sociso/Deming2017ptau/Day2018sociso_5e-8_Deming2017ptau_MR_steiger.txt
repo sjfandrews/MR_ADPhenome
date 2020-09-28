@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+olIiVo	hET2js	Day2018sociso	Deming2017ptau	0.00104105721920052	0.006411857635793712	FALSE	0.00736266953014475	FALSE	5e-8

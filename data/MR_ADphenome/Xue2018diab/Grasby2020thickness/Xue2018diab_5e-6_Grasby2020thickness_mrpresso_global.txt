@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+SrPVP3	3w6Jeb	Grasby2020thickness	Xue2018diab	5e-6	FALSE	0	282.4200188565236	0.0029

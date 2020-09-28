@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+Dm1t20	BndOX3	Hilbar2017hipv	Xue2018diab	5e-8	FALSE	1	179.83127952165077	1e-4

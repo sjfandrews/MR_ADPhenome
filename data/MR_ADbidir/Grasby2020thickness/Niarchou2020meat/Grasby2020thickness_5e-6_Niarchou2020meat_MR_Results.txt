@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+oKAjKq	qTGXQl	Niarchou2020meat	Grasby2020thickness	5e-6	FALSE	Inverse variance weighted (fixed effects)	37	0	-0.24839205162777003	0.1029293228121218	0.015811871048398474
+oKAjKq	qTGXQl	Niarchou2020meat	Grasby2020thickness	5e-6	FALSE	Weighted median	37	0	-0.1172945663470446	0.17066676101876363	0.4919110439943194
+oKAjKq	qTGXQl	Niarchou2020meat	Grasby2020thickness	5e-6	FALSE	Weighted mode	37	0	0.19621772959734152	0.34225170642690467	0.5699963324431563
+oKAjKq	qTGXQl	Niarchou2020meat	Grasby2020thickness	5e-6	FALSE	MR Egger	37	0	-1.298365459879775	0.6936089315856728	0.0695964122556923

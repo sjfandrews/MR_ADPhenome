@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+AG7U0w	S2aQQq	Evangelou2018sbp	Chauhan2019bi	5e-6	TRUE	2	22.44226722663622	0.0288

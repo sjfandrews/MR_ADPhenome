@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+3pIaOY	rygyws	Day2018sociso	Kunkle2019load	0.001205395855746553	2.6963583647536885e-4	TRUE	5.649345005864781e-5	FALSE	5e-8

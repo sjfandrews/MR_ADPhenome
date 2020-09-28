@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+vbf1zO	FJfJY1	Willer2013tg	Huang2017aaos	5e-6	FALSE	2	41.61122616503205	0.0097

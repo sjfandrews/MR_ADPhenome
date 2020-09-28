@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+q8rzdb	wopGD5	Grasby2020surfarea	Day2018sociso	5e-8	FALSE	Inverse variance weighted (fixed effects)	15	0	1468.5216565516344	2310.4010000665307	0.5250284837401206
+q8rzdb	wopGD5	Grasby2020surfarea	Day2018sociso	5e-8	FALSE	Weighted median	15	0	3690.2036068925945	3670.3823285932144	0.31470412070421366
+q8rzdb	wopGD5	Grasby2020surfarea	Day2018sociso	5e-8	FALSE	Weighted mode	15	0	7005.904519567208	7344.29662644855	0.35630336915986305
+q8rzdb	wopGD5	Grasby2020surfarea	Day2018sociso	5e-8	FALSE	MR Egger	15	0	5370.375005785082	15864.749821261496	0.7403838318707847

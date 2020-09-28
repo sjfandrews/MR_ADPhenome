@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+EhC6tb	CTLjdo	Grasby2020thickness	Howard2019dep23andMe	5e-6	FALSE	1	347.58162809487794	<1e-04

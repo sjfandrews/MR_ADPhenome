@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+SZ8lZ7	d6ijp0	Evangelou2018dbp	Beecham2014braak4	5e-6	FALSE	-3.929144366228476e-4	0.03456767354907291	0.9912995328624358
+SZ8lZ7	d6ijp0	Evangelou2018dbp	Beecham2014braak4	5e-6	TRUE	-4.103924051401943e-4	0.022395903409152162	0.9860887736295362

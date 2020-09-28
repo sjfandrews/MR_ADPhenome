@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+7uHGDi	v37Yh6	Hilbar2017hipv	Jansen2018insomnia23andMe	5e-6	FALSE	8.09188037756621e-4	0.0031452328220673586	0.7971065365233563
+7uHGDi	v37Yh6	Hilbar2017hipv	Jansen2018insomnia23andMe	5e-6	TRUE	0.0010133950364561643	0.0030134618666476528	0.736839801342097

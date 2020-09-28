@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+qVYf6F	C8hVgT	Klimentidis2018mvpa	Kunkle2019load	0.006616787902361827	0.0023748007676733115	TRUE	1.0196288258157438e-12	TRUE	5e-6
+qVYf6F	C8hVgT	Klimentidis2018mvpa	Kunkle2019load	0.006738767083825006	0.0026646573527321334	TRUE	2.7162494475874155e-11	FALSE	5e-6

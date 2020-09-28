@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+SerpU2	mc0jnC	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	FALSE	0.001988295093252025	0.003333897284468525	0.5619983309596643
+SerpU2	mc0jnC	SanchezRoige2019auditt23andMe	Kunkle2019load	5e-8	TRUE	6.315470756559496e-4	0.0022362754579196785	0.7833878819450788

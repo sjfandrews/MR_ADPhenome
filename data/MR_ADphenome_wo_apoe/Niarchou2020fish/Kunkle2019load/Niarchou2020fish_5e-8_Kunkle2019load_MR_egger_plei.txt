@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+Eitpsx	udLTK5	Kunkle2019load	Niarchou2020fish	5e-8	FALSE	-0.01984495977261	0.012240058522029288	0.1122615674469605	NA

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+OLXkIX	tTnw26	Wells2019hdiff	Hilbar2017hipv	5e-6	FALSE	0	46.11813247191586	0.0039

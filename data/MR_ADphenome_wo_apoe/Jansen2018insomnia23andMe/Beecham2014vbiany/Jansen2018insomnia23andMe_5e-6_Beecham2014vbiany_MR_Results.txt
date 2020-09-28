@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+oFC5gH	GVo4bH	Beecham2014vbiany	Jansen2018insomnia23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	371	0	-0.5738120771251349	0.6947655797550163	0.40885658696921967
+oFC5gH	GVo4bH	Beecham2014vbiany	Jansen2018insomnia23andMe	5e-6	FALSE	Weighted median	371	0	-0.374730276255707	1.0446286179122357	0.7198037783239428
+oFC5gH	GVo4bH	Beecham2014vbiany	Jansen2018insomnia23andMe	5e-6	FALSE	Weighted mode	371	0	0.542510856180968	3.040509320914255	0.8584848093995411
+oFC5gH	GVo4bH	Beecham2014vbiany	Jansen2018insomnia23andMe	5e-6	FALSE	MR Egger	371	0	-3.062047395968962	3.9727860756172095	0.4413449821253451

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+ZLw0ic	oXt56R	Niarchou2020fish	Hilbar2017hipv	0.012438637886358747	0.0069810656447847185	TRUE	8.558175853767835e-6	TRUE	5e-6
+ZLw0ic	oXt56R	Niarchou2020fish	Hilbar2017hipv	0.0130690175448061	0.00802188559144203	TRUE	8.089985907111519e-5	FALSE	5e-6

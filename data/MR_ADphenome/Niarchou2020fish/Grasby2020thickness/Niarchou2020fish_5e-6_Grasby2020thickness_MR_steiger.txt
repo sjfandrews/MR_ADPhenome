@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+ov1Exs	fkmH0c	Niarchou2020fish	Grasby2020thickness	0.013169113379000843	0.004926013147503863	TRUE	3.552713678800501e-15	FALSE	5e-6

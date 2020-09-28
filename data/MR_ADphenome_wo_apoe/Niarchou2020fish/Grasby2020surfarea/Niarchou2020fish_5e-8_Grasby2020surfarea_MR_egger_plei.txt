@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+OeLDTu	4QfuEg	Grasby2020surfarea	Niarchou2020fish	5e-8	FALSE	-25.333049670460806	125.04209178074011	0.8404289254574235	NA

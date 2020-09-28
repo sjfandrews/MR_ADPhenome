@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+aP0btf	1mgWHo	Grasby2020surfarea	Niarchou2020fish	5e-8	FALSE	-24.908228575011094	124.20628200610436	0.8420044095255345	NA

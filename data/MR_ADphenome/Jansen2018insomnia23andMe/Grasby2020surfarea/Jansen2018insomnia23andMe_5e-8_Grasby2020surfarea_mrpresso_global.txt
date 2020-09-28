@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+IJ6YFn	WcBNP1	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-8	FALSE	2	275.55294365388136	<1e-04

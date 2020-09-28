@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	FALSE	Inverse variance weighted (fixed effects)	135	1	493.253756069881	710.8775903120502	0.4877662775869468
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	FALSE	Weighted median	135	1	-115.20777033859989	1111.7294766409627	0.9174635184674202
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	FALSE	Weighted mode	135	1	-1033.897539875048	3340.6629587407515	0.7574305179479093
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	FALSE	MR Egger	135	1	2860.702914904778	3522.538635749195	0.4181773924139657
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	TRUE	Inverse variance weighted (fixed effects)	134	1	273.27816117074053	713.4092222138843	0.7016756673127933
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	TRUE	Weighted median	134	1	-217.32024976809112	1090.2617569036108	0.8420057801174672
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	TRUE	Weighted mode	134	1	-934.849147856723	3260.2016411922045	0.7747531817901065
+oocUuO	EUnBXr	Grasby2020surfarea	Niarchou2020fish	5e-6	TRUE	MR Egger	134	1	2438.161722046933	3413.6596453591783	0.4763418084282868

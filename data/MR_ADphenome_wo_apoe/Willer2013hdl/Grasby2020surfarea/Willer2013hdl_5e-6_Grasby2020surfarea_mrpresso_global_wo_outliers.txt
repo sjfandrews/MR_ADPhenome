@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+YKAFx3	76LZpj	Grasby2020surfarea	Willer2013hdl	5e-6	TRUE	3	163.48999237873133	0.0108

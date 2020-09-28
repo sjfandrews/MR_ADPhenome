@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+0kx6Yu	is31Jj	SanchezRoige2019auditt23andMe	Huang2017aaos	5e-6	FALSE	0	44.05568895693276	0.1272

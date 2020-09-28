@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+AA5bpI	dzhaDt	Kunkle2019load	Wells2019hdiff	5e-6	FALSE	MR Egger	116.26182339998702	105	0.2128411339803493
+AA5bpI	dzhaDt	Kunkle2019load	Wells2019hdiff	5e-6	FALSE	Inverse variance weighted	116.26690453776766	106	0.23299382511338543

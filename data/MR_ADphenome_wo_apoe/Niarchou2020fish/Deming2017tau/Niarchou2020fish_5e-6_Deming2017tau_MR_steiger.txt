@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+65INkS	pZ3iwM	Niarchou2020fish	Deming2017tau	0.011325129114537818	0.044227191745764345	FALSE	2.6483557569179084e-9	FALSE	5e-6

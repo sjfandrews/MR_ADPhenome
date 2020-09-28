@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+xwQIeC	4hcINe	Niarchou2020fish	Beecham2014npany	5e-6	FALSE	Inverse variance weighted (fixed effects)	10	0	-7.332403973741969e-4	0.001916800869416872	0.7020657426999855
+xwQIeC	4hcINe	Niarchou2020fish	Beecham2014npany	5e-6	FALSE	Weighted median	10	0	-2.736144579511417e-4	0.002689952017443523	0.9189811284987154
+xwQIeC	4hcINe	Niarchou2020fish	Beecham2014npany	5e-6	FALSE	Weighted mode	10	0	0.001671068070924736	0.003170374168832813	0.610875904639631
+xwQIeC	4hcINe	Niarchou2020fish	Beecham2014npany	5e-6	FALSE	MR Egger	10	0	0.00547925432183838	0.005080848242466482	0.3122886154329202

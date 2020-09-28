@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+NYeL8S	wsjPBf	Grasby2020surfarea	Lee2018education23andMe	5e-8	TRUE	6	760.9281682463085	<4e-05

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+3OGjaR	14RJRV	Xue2018diab	Grasby2020surfarea	0.046513941034154585	0.009969448185547198	TRUE	0	TRUE	5e-6
+3OGjaR	14RJRV	Xue2018diab	Grasby2020surfarea	0.047581448707906725	0.011066386703154601	TRUE	0	FALSE	5e-6

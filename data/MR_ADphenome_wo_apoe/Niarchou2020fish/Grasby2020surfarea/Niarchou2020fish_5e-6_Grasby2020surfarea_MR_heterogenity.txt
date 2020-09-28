@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+r2S2kN	2retRt	Grasby2020surfarea	Niarchou2020fish	5e-6	FALSE	MR Egger	191.1523952225157	132	5.863245427416159e-4
+r2S2kN	2retRt	Grasby2020surfarea	Niarchou2020fish	5e-6	FALSE	Inverse variance weighted	191.80485546421923	133	6.429057447180692e-4
+r2S2kN	2retRt	Grasby2020surfarea	Niarchou2020fish	5e-6	TRUE	MR Egger	177.79976679452264	131	0.004087126344084316
+r2S2kN	2retRt	Grasby2020surfarea	Niarchou2020fish	5e-6	TRUE	Inverse variance weighted	178.34023824092463	132	0.004482316330012445

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+IkvWig	mZ81Ix	Niarchou2020fish	Grasby2020thickness	5e-6	TRUE	2	76.01855995343026	1e-4

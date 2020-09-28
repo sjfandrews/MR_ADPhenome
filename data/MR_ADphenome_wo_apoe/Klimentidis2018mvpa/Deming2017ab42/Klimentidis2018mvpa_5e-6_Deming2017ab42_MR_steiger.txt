@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+CHGegk	zRVhSI	Klimentidis2018mvpa	Deming2017ab42	0.004715812985504693	0.022695221959992996	FALSE	3.5641644569039954e-6	FALSE	5e-6

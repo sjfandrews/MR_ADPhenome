@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+beGrpt	24z21l	Hilbar2017hipv	Yengo2018bmi	5e-6	FALSE	Inverse variance weighted (fixed effects)	691	0	0.026566164058837063	0.02526768905908793	0.29308007981707496
+beGrpt	24z21l	Hilbar2017hipv	Yengo2018bmi	5e-6	FALSE	Weighted median	691	0	0.09914101964350917	0.04230016411716134	0.01909095098049768
+beGrpt	24z21l	Hilbar2017hipv	Yengo2018bmi	5e-6	FALSE	Weighted mode	691	0	0.13125490690435893	0.07686077006719685	0.08814239945113791
+beGrpt	24z21l	Hilbar2017hipv	Yengo2018bmi	5e-6	FALSE	MR Egger	691	0	0.11896916831207957	0.07434489824019737	0.11000527533017662

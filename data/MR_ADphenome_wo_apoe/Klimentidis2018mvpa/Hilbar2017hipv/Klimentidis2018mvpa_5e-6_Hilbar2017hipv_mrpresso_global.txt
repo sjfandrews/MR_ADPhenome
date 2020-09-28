@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+9MeTjn	7oLPs1	Hilbar2017hipv	Klimentidis2018mvpa	5e-6	FALSE	1	128.2769154140086	0.0087

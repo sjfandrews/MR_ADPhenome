@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+eSMRAP	Y9KS29	Deming2017ab42	Yengo2018bmi	5e-8	TRUE	0	NA	NA

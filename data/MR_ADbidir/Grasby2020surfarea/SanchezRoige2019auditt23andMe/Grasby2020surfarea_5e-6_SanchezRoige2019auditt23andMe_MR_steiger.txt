@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+kO7yoA	5IamW0	Grasby2020surfarea	SanchezRoige2019auditt23andMe	0.03821251350973213	5.809929778332536e-4	TRUE	0	TRUE	5e-6
+kO7yoA	5IamW0	Grasby2020surfarea	SanchezRoige2019auditt23andMe	0.04083768200402171	7.0590002984718e-4	TRUE	0	FALSE	5e-6

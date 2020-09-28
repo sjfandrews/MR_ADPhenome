@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+QsFZL8	VybOUb	Grasby2020thickness	Dashti2019slepdur	5e-6	TRUE	2	247.5943489087233	0.0034

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+LlvXKV	MNXW58	Grasby2020thickness	Evangelou2018pp	5e-6	FALSE	-8.071634801548274e-5	1.0461719989584203e-4	0.44071239436483955
+LlvXKV	MNXW58	Grasby2020thickness	Evangelou2018pp	5e-6	TRUE	-7.423498390977189e-5	1.0284744149798227e-4	0.4707210449876975

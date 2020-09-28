@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+cE8pCl	bv8jXN	Wells2019hdiff	Grasby2020surfarea	5e-8	TRUE	1	10.005851199576387	0.6163

@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+CzwN0E	89qwTi	Dashti2019slepdur	Huang2017aaos	5e-6	FALSE	7.576413607242301e-5	0.0011608865586634806	0.9483460183443964
+CzwN0E	89qwTi	Dashti2019slepdur	Huang2017aaos	5e-6	TRUE	-9.013055430737634e-4	0.0010127865785918321	0.37994744692220594

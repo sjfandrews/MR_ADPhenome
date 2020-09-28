@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+rAO04m	UQiaaq	Lee2018education23andMe	Hilbar2017hipv	5e-6	TRUE	2	44.02659549429114	0.0056

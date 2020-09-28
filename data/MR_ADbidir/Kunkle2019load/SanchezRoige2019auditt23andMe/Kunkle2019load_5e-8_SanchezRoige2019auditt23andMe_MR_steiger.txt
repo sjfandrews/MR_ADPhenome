@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+SerpU2	mc0jnC	Kunkle2019load	SanchezRoige2019auditt23andMe	0.010282048997094546	9.636968182546959e-5	TRUE	0	TRUE	5e-8
+SerpU2	mc0jnC	Kunkle2019load	SanchezRoige2019auditt23andMe	0.01194170011616192	2.9578939889261037e-4	TRUE	0	FALSE	5e-8

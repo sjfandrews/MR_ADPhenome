@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+7H86N9	Jjksr7	Grasby2020surfarea	Willer2013tg	5e-8	FALSE	-14.069960277322926	37.30269461351075	0.7076659562889969
+7H86N9	Jjksr7	Grasby2020surfarea	Willer2013tg	5e-8	TRUE	-32.53857411298019	34.88219387615322	0.35558503392324026

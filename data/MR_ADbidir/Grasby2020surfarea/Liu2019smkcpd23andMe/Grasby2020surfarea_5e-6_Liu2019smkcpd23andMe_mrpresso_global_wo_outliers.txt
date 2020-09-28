@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+TZmZpT	IOEgMx	Liu2019smkcpd23andMe	Grasby2020surfarea	5e-6	TRUE	1	89.34373769786342	3e-4

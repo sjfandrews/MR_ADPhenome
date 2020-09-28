@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+qKAXb4	e23aXK	Huang2017aaos	Liu2019drnkwk23andMe	5e-6	FALSE	0	264.1440350803937	0.012

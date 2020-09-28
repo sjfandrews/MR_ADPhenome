@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+1s4DCM	iQkFI6	Grasby2020surfarea	Willer2013tg	5e-8	FALSE	MR Egger	85.4590362256906	51	0.0017802724504688411
+1s4DCM	iQkFI6	Grasby2020surfarea	Willer2013tg	5e-8	FALSE	Inverse variance weighted	85.71224724910216	52	0.002242419641928526
+1s4DCM	iQkFI6	Grasby2020surfarea	Willer2013tg	5e-8	TRUE	MR Egger	71.11761941551354	50	0.026432751025636768
+1s4DCM	iQkFI6	Grasby2020surfarea	Willer2013tg	5e-8	TRUE	Inverse variance weighted	72.39049916302646	51	0.026052595831266085

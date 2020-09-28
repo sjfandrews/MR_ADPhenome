@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+i7shjy	ZpDGi7	Beecham2014braak4	Day2018sociso	5e-8	FALSE	Inverse variance weighted (fixed effects)	15	0	1.3256213989792862	0.9673772461701052	0.1705854162644433
+i7shjy	ZpDGi7	Beecham2014braak4	Day2018sociso	5e-8	FALSE	Weighted median	15	0	1.0656531626574641	1.1992560904663152	0.37422069091238847
+i7shjy	ZpDGi7	Beecham2014braak4	Day2018sociso	5e-8	FALSE	Weighted mode	15	0	0.8283627522701913	1.7375560921542659	0.6409027519370432
+i7shjy	ZpDGi7	Beecham2014braak4	Day2018sociso	5e-8	FALSE	MR Egger	15	0	-2.032093196276311	5.047692388781402	0.6937998454881376

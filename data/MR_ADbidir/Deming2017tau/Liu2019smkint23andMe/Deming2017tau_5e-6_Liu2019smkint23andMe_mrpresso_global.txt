@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+fqE7h1	m5d54w	Liu2019smkint23andMe	Deming2017tau	5e-6	FALSE	0	13.132850876269961	0.1396

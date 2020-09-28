@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+0p7Cow	cyGvaz	Liu2019smkcpd23andMe	Hilbar2017hipv	0.009756998388531146	0.0019254728745829361	TRUE	0	TRUE	5e-8
+0p7Cow	cyGvaz	Liu2019smkcpd23andMe	Hilbar2017hipv	0.009999666523328954	0.00234039509421562	TRUE	2.220446049250313e-16	FALSE	5e-8

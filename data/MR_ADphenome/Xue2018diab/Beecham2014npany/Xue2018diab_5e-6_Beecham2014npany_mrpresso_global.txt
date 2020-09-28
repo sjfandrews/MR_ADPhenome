@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+osT93A	B5pFDf	Beecham2014npany	Xue2018diab	5e-6	FALSE	0	178.92789160008198	0.9698

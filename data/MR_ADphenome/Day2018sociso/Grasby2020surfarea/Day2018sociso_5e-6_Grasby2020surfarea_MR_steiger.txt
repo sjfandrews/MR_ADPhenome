@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+HNeRPY	TsG8ri	Day2018sociso	Grasby2020surfarea	0.004760902294881158	0.002997546100553274	TRUE	0.011293658895396907	TRUE	5e-6
+HNeRPY	TsG8ri	Day2018sociso	Grasby2020surfarea	0.0049166811388883375	0.0036464375806464088	TRUE	0.08340474098722739	FALSE	5e-6

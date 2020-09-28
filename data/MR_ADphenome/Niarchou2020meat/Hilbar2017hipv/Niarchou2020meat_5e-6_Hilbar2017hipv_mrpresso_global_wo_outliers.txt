@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+qXoU2G	SLMJ2L	Hilbar2017hipv	Niarchou2020meat	5e-6	TRUE	2	133.34068424203087	0.0117

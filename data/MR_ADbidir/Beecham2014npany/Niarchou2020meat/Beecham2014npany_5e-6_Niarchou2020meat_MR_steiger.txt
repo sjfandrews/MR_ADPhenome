@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+HHsUPG	u2h3vk	Beecham2014npany	Niarchou2020meat	0.2146254452196637	2.411117254408611e-5	TRUE	0	FALSE	5e-6

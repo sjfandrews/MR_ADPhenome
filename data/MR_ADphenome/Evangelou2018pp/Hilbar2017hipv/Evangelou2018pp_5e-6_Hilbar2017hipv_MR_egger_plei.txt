@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+kQuXuF	tvqvCu	Hilbar2017hipv	Evangelou2018pp	5e-6	FALSE	-3.9305379126210004e-5	0.0011663213380987125	0.9731280837961989
+kQuXuF	tvqvCu	Hilbar2017hipv	Evangelou2018pp	5e-6	TRUE	1.1534082556925378e-4	0.001148187347209831	0.9200191630347334

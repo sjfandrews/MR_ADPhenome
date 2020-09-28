@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+QsFZL8	VybOUb	Grasby2020thickness	Dashti2019slepdur	5e-6	FALSE	3.0533812738950623e-5	3.049833675902058e-4	0.9203580955787296
+QsFZL8	VybOUb	Grasby2020thickness	Dashti2019slepdur	5e-6	TRUE	6.027263070542702e-5	2.8584452742593853e-4	0.8332276053627317

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+7c3YhX	R3pchi	Kunkle2019load	Day2018sociso	5e-6	FALSE	Inverse variance weighted (fixed effects)	85	0	-0.035817509436884984	0.15351267595598028	0.8155132739078174
+7c3YhX	R3pchi	Kunkle2019load	Day2018sociso	5e-6	FALSE	Weighted median	85	0	-0.0678673687001356	0.23139251708510458	0.7692930404703682
+7c3YhX	R3pchi	Kunkle2019load	Day2018sociso	5e-6	FALSE	Weighted mode	85	0	-0.1848762730200635	0.5069504305895982	0.7162644566593301
+7c3YhX	R3pchi	Kunkle2019load	Day2018sociso	5e-6	FALSE	MR Egger	85	0	-0.19903558721074907	0.6098950329744196	0.7449855507475595

@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+Y0JfxU	A5cMAS	Deming2017ptau	Lee2018education23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	661	0	0.0022632697717157725	0.02232945234472161	0.9192662352992607
+Y0JfxU	A5cMAS	Deming2017ptau	Lee2018education23andMe	5e-6	FALSE	Weighted median	661	0	0.011520636380774012	0.03551606807199035	0.7456517615831282
+Y0JfxU	A5cMAS	Deming2017ptau	Lee2018education23andMe	5e-6	FALSE	Weighted mode	661	0	0.03961191503883699	0.09980011084054644	0.6915602708779729
+Y0JfxU	A5cMAS	Deming2017ptau	Lee2018education23andMe	5e-6	FALSE	MR Egger	661	0	0.038105204010498786	0.0779937059410139	0.6253103355310725

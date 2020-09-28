@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+OeLDTu	4QfuEg	Niarchou2020fish	Grasby2020surfarea	0.005858080173661506	0.0020915610967639	TRUE	6.237874705661284e-8	FALSE	5e-8

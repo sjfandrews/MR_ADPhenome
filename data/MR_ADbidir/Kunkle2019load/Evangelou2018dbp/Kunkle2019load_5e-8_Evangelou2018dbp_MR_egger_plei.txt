@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+a19mpl	Z21qHP	Evangelou2018dbp	Kunkle2019load	5e-8	FALSE	-0.04999613926816399	0.0263699531953677	0.08452754568119643
+a19mpl	Z21qHP	Evangelou2018dbp	Kunkle2019load	5e-8	TRUE	-0.04636719930672801	0.020516253570247608	0.047366670756553424

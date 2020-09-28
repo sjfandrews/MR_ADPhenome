@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+g1Is7T	VOZOux	Hilbar2017hipv	Jansen2018insomnia23andMe	5e-8	FALSE	MR Egger	183.16624602973135	163	0.13339727110070224
+g1Is7T	VOZOux	Hilbar2017hipv	Jansen2018insomnia23andMe	5e-8	FALSE	Inverse variance weighted	186.07631008603516	164	0.11417500256216326

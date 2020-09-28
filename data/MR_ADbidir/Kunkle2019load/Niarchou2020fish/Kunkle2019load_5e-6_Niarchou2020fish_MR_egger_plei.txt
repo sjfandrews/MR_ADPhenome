@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+L89EBe	UjEBso	Niarchou2020fish	Kunkle2019load	5e-6	FALSE	3.313034957815647e-4	0.002364124888974347	0.8893779490214615
+L89EBe	UjEBso	Niarchou2020fish	Kunkle2019load	5e-6	TRUE	-5.896284428876517e-4	0.0020015069017400274	0.7701506720944605

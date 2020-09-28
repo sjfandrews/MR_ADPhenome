@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+4pMRIY	lhfEaE	Hilbar2017hipv	Klimentidis2018mvpa	0.025616434339800306	5.1016315370628586e-5	TRUE	0	TRUE	5e-6
+4pMRIY	lhfEaE	Hilbar2017hipv	Klimentidis2018mvpa	0.02972310621366184	1.3224884309716325e-4	TRUE	0	FALSE	5e-6

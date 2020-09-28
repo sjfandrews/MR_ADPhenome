@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+4pMRIY	lhfEaE	Klimentidis2018mvpa	Hilbar2017hipv	5e-6	FALSE	-8.080435859722255e-4	0.001977328283476368	0.6869307023357683
+4pMRIY	lhfEaE	Klimentidis2018mvpa	Hilbar2017hipv	5e-6	TRUE	1.3791550219098656e-4	0.0013874488535770956	0.9218602183194561

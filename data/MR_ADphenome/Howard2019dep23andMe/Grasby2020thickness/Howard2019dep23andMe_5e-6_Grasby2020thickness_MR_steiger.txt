@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+EhC6tb	CTLjdo	Howard2019dep23andMe	Grasby2020thickness	0.007367121770937713	0.009884186413517331	FALSE	0.013692697489445349	TRUE	5e-6
+EhC6tb	CTLjdo	Howard2019dep23andMe	Grasby2020thickness	0.00774367314723434	0.010892266361833018	FALSE	0.0029610206360615177	FALSE	5e-6

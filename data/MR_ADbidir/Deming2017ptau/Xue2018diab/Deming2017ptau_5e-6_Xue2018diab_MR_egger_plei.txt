@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+9BQcTC	uuihlN	Xue2018diab	Deming2017ptau	5e-6	FALSE	0.01658897631245848	0.01777035370866346	0.3865785501888986	NA

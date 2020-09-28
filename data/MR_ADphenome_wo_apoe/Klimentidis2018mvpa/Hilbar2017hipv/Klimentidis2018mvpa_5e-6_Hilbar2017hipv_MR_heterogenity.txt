@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+9MeTjn	7oLPs1	Hilbar2017hipv	Klimentidis2018mvpa	5e-6	FALSE	MR Egger	124.49230986919052	89	0.007763463854864705
+9MeTjn	7oLPs1	Hilbar2017hipv	Klimentidis2018mvpa	5e-6	FALSE	Inverse variance weighted	125.20031767642025	90	0.008389336574794065
+9MeTjn	7oLPs1	Hilbar2017hipv	Klimentidis2018mvpa	5e-6	TRUE	MR Egger	109.8653391121333	88	0.05729715897763425
+9MeTjn	7oLPs1	Hilbar2017hipv	Klimentidis2018mvpa	5e-6	TRUE	Inverse variance weighted	110.86754900140646	89	0.05817097764322605

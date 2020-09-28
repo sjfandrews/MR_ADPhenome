@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	377	1	0.007300531876770864	0.009077863345323631	0.42127421631619116
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	FALSE	Weighted median	377	1	0	0.014381719457094088	1
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	FALSE	Weighted mode	377	1	0.009706707300057182	0.04302639352477993	0.821635962595645
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	FALSE	MR Egger	377	1	-0.04099333717756956	0.0579649120477349	0.4798755297599663
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	TRUE	Inverse variance weighted (fixed effects)	376	1	0.009156643106493112	0.009086191908647354	0.31357273973185534
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	TRUE	Weighted median	376	1	0	0.01370173085045657	1
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	TRUE	Weighted mode	376	1	0.00940457042995857	0.04233996346249422	0.8243410600018469
+yR68on	rQX1C4	Grasby2020thickness	Jansen2018insomnia23andMe	5e-6	TRUE	MR Egger	376	1	-0.02411104225890403	0.05685139982534148	0.6717320529471493

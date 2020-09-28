@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+nvzCP3	lxgKQh	Lee2018education23andMe	Hilbar2015hipv	0.02862514823152305	0.050984518759616494	FALSE	7.289946424293703e-12	FALSE	5e-6

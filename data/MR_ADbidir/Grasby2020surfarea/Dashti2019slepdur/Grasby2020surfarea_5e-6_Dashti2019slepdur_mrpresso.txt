@@ -1,0 +1,77 @@
+$`Main MR results`
+       Exposure       MR Analysis Causal Estimate           Sd   T-stat
+1 beta.exposure               Raw    3.629639e-06 8.365420e-07 4.338860
+2 beta.exposure Outlier-corrected    3.302667e-06 6.843492e-07 4.825997
+       P-value
+1 8.520627e-05
+2 2.058007e-05
+
+$`MR-PRESSO results`
+$`MR-PRESSO results`$`Global Test`
+$`MR-PRESSO results`$`Global Test`$RSSobs
+[1] 104.6448
+
+$`MR-PRESSO results`$`Global Test`$Pvalue
+[1] "<1e-04"
+
+
+$`MR-PRESSO results`$`Outlier Test`
+         RSSobs Pvalue
+1  2.072749e-06      1
+2  4.023765e-06      1
+3  9.439952e-08      1
+4  4.157360e-06      1
+5  4.110979e-06      1
+6  9.057652e-06      1
+7  1.630085e-07      1
+8  4.423610e-06      1
+9  5.806006e-06      1
+10 7.922477e-09      1
+11 2.189551e-07      1
+12 9.778464e-05 0.0044
+13 9.722547e-06      1
+14 4.796946e-05      1
+15 2.622529e-06      1
+16 2.457262e-05      1
+17 1.516524e-07      1
+18 6.412524e-06      1
+19 1.412036e-05      1
+20 1.447183e-05      1
+21 4.253148e-06      1
+22 6.128794e-06      1
+23 4.067822e-08      1
+24 2.681839e-06      1
+25 9.266199e-05 0.0044
+26 1.316186e-05      1
+27 1.276731e-04 0.8096
+28 5.632553e-05 0.1364
+29 6.001264e-05  0.022
+30 7.225226e-06      1
+31 1.070934e-06      1
+32 1.777445e-05      1
+33 2.551425e-07      1
+34 5.590925e-06      1
+35 2.764116e-05      1
+36 4.418372e-06      1
+37 1.931295e-08      1
+38 1.948083e-08      1
+39 1.888604e-06      1
+40 1.712353e-05      1
+41 3.768552e-05      1
+42 1.204606e-04      1
+43 3.488532e-05 0.5368
+44 6.213575e-06      1
+
+$`MR-PRESSO results`$`Distortion Test`
+$`MR-PRESSO results`$`Distortion Test`$`Outliers Indices`
+[1] 12 25 29
+
+$`MR-PRESSO results`$`Distortion Test`$`Distortion Coefficient`
+beta.exposure 
+     9.900229 
+
+$`MR-PRESSO results`$`Distortion Test`$Pvalue
+[1] 0.5931
+
+
+

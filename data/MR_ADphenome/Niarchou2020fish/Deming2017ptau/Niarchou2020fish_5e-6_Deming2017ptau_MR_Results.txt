@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+BfQiXy	BrVlhK	Deming2017ptau	Niarchou2020fish	5e-6	FALSE	Inverse variance weighted (fixed effects)	119	0	-0.047816174381799505	0.036653579720233	0.19204847550396154
+BfQiXy	BrVlhK	Deming2017ptau	Niarchou2020fish	5e-6	FALSE	Weighted median	119	0	-0.024604281865848572	0.054308072565540315	0.6505126108791155
+BfQiXy	BrVlhK	Deming2017ptau	Niarchou2020fish	5e-6	FALSE	Weighted mode	119	0	0.05868875235121429	0.1219608519900249	0.6312585558520813
+BfQiXy	BrVlhK	Deming2017ptau	Niarchou2020fish	5e-6	FALSE	MR Egger	119	0	0.27935719482734295	0.16301409008692994	0.08923214186897499

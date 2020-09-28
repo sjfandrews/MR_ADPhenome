@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval	method
+qD7QTB	C9iiJ8	Grasby2020surfarea	Klimentidis2018mvpa	5e-8	FALSE	-125.98206977936687	130.00612348720244	0.3446965179394581	NA

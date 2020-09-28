@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+5k8MvD	vfVvhu	Beecham2014npany	Yengo2018bmi	5e-8	FALSE	Inverse variance weighted (fixed effects)	499	0	-0.10331454129988199	0.2266020907968218	0.6484407916797172
+5k8MvD	vfVvhu	Beecham2014npany	Yengo2018bmi	5e-8	FALSE	Weighted median	499	0	0.3124610318230128	0.3874369248582274	0.41996479555140775
+5k8MvD	vfVvhu	Beecham2014npany	Yengo2018bmi	5e-8	FALSE	Weighted mode	499	0	0.7640807703258972	0.6833231063869204	0.2640276418542434
+5k8MvD	vfVvhu	Beecham2014npany	Yengo2018bmi	5e-8	FALSE	MR Egger	499	0	0.7955414898574963	0.6023616261178891	0.18720784288307749

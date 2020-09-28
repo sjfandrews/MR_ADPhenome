@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+lvUVFy	se9Tql	Kunkle2019load	Howard2019dep23andMe	5e-8	FALSE	1	125.70823778743276	0.0028

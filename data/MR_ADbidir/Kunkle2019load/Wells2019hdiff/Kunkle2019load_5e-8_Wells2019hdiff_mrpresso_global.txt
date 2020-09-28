@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+9TLkyq	PxdKDH	Wells2019hdiff	Kunkle2019load	5e-8	FALSE	0	29.689618840579712	0.0299

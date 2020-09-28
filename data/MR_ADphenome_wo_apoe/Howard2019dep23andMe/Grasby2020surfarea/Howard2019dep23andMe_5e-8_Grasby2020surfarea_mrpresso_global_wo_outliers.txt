@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+gFTWdQ	6B4o9A	Grasby2020surfarea	Howard2019dep23andMe	5e-8	TRUE	0	NA	NA

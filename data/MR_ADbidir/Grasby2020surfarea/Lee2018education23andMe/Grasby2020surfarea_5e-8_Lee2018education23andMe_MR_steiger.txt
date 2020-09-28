@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+WnSIc3	n9O1dS	Grasby2020surfarea	Lee2018education23andMe	0.011130365147260136	1.384515455014923e-4	TRUE	0	FALSE	5e-8

@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+nv8Spy	ArmmeO	Kunkle2019load	Evangelou2018dbp	5e-8	TRUE	1	563.2591251488803	2.8e-4

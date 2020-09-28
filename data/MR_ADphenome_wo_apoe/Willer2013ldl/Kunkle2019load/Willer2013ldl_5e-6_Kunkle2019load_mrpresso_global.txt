@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+yyUsLD	LJHlri	Kunkle2019load	Willer2013ldl	5e-6	FALSE	2	144.62476472771445	0.016

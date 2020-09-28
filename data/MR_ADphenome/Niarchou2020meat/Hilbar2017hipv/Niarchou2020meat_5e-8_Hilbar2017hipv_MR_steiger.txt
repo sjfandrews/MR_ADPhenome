@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+i4BuWk	IF88sw	Niarchou2020meat	Hilbar2017hipv	0.0023044612589363245	9.071856483227576e-4	TRUE	0.004764871357572531	TRUE	5e-8
+i4BuWk	IF88sw	Niarchou2020meat	Hilbar2017hipv	0.0027627639564936106	0.001917731332273584	TRUE	0.16602140485003658	FALSE	5e-8

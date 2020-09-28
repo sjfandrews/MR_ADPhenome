@@ -1,0 +1,5 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+VB0NVb	Lo858E	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	FALSE	MR Egger	527.0687423280534	372	2.0048036572491484e-7
+VB0NVb	Lo858E	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	FALSE	Inverse variance weighted	527.278121492301	373	2.3269005991967116e-7
+VB0NVb	Lo858E	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	MR Egger	484.0934496765497	370	5.8809445572919014e-5
+VB0NVb	Lo858E	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	Inverse variance weighted	484.1637601180218	371	6.724808266357668e-5

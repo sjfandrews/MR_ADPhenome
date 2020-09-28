@@ -1,0 +1,9 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	nsnp	n_outliers	b	se	pval
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	FALSE	Inverse variance weighted (fixed effects)	375	4	-4670.705092108376	1308.0516975233875	3.559818310805326e-4
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	FALSE	Weighted median	375	4	-2985.7966731618803	1972.1434099131338	0.13002949826857935
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	FALSE	Weighted mode	375	4	1521.228314066393	5728.212649645144	0.7907184798462545
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	FALSE	MR Egger	375	4	-1282.4221545677567	8751.086562067881	0.8835708632154046
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	Inverse variance weighted (fixed effects)	371	4	-4077.062983141003	1314.0905965728286	0.0019184574338976914
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	Weighted median	371	4	-2679.7558826863824	2056.0071561257646	0.19244551325807271
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	Weighted mode	371	4	700.7471667259233	5586.603407752829	0.9002485006871193
+UazokP	yeIrLu	Grasby2020surfarea	Jansen2018insomnia23andMe	5e-6	TRUE	MR Egger	371	4	-4914.265996697865	8207.408215342784	0.5497004647865349

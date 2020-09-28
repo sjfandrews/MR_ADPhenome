@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	method	Q	Q_df	Q_pval
+bSAULE	uVVH48	Kunkle2019load	Dashti2019slepdur	5e-8	FALSE	MR Egger	77.32476474924809	64	0.12247290280269889
+bSAULE	uVVH48	Kunkle2019load	Dashti2019slepdur	5e-8	FALSE	Inverse variance weighted	78.79755378880824	65	0.11676813196225687

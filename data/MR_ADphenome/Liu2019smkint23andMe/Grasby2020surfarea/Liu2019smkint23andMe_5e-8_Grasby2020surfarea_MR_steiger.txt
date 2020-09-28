@@ -1,0 +1,3 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+Thy0cM	yxkQQG	Liu2019smkint23andMe	Grasby2020surfarea	8.285940528598301e-4	0.014604046095985443	FALSE	0	TRUE	5e-8
+Thy0cM	yxkQQG	Liu2019smkint23andMe	Grasby2020surfarea	9.118172497072499e-4	0.019616521122362097	FALSE	0	FALSE	5e-8

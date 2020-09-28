@@ -1,0 +1,2 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	n_outliers	RSSobs	pval
+NWLoor	MC53N9	Huang2017aaos	Day2018sociso	5e-6	TRUE	0	NA	NA

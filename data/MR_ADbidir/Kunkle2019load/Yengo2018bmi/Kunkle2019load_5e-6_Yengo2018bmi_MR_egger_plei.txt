@@ -1,0 +1,3 @@
+id.exposure	id.outcome	outcome	exposure	pt	outliers_removed	egger_intercept	se	pval
+eOKRkO	Z2vIwj	Yengo2018bmi	Kunkle2019load	5e-6	FALSE	-0.0020997893914843344	0.0040032608517630635	0.6063170891285721
+eOKRkO	Z2vIwj	Yengo2018bmi	Kunkle2019load	5e-6	TRUE	0.0036271212104492727	0.0024421556596350767	0.16132911407604397

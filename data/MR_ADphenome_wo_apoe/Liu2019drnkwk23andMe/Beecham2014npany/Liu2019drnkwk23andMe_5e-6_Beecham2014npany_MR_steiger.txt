@@ -1,0 +1,2 @@
+id.exposure	id.outcome	exposure	outcome	snp_r2.exposure	snp_r2.outcome	correct_causal_direction	steiger_pval	outliers_removed	pt
+tM03oQ	Fg19mk	Liu2019drnkwk23andMe	Beecham2014npany	0.008683090690343892	0.0957042574703836	FALSE	0	FALSE	5e-6
