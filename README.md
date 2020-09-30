@@ -1,7 +1,7 @@
 # Causal associations between modifiable risk factors and the Alzheimer’s phenome
 Esimating the causal associations between potentially modifiable risk factors and the Alzheimer’s phenome using polygenic risk scoring and Mendelian randomization.
 
-_Shea J Andrews, Brian Fulton-Howard, Paul O’Reilly, Edoardo Marcora, & Alison M Goate and collaborators of the Alzheimer’s Disease Genetics Consortium_. 2020. **Causal associations between modifiable risk factors and the Alzheimer’s phenome.** Annals of Neurology. In Press.
+_Shea J Andrews, Brian Fulton-Howard, Paul O’Reilly, Edoardo Marcora, & Alison M Goate and collaborators of the Alzheimer’s Disease Genetics Consortium_. 2020. **Causal associations between modifiable risk factors and the Alzheimer’s phenome.** [Annals of Neurology. In Press](https://doi.org/10.1002/ana.25918).
 
 _Shea J Andrews, Brian Fulton-Howard, Paul O’Reilly, Lindsay A Farrer, Jonathan L Haines, Richard Mayeux, Adam C Naj, Margaret A Pericak-Vance, Gerard D Schellenberg, Li-San Wang, Edoardo Marcora, and Alison M. Goate_. 2019. **Causal Associations between Potentially Modifiable Risk Factors and the Alzheimer’s Phenome: A Mendelian Randomization Study**. [bioRxiv](https://doi.org/10.1101/689752v2)
 
